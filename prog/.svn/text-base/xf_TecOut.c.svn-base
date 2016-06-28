@@ -1,0 +1,250 @@
+/*------------------------------------------------------------------*/
+/* XFLOW: A discontinuous Galerkin finite element software library. */
+/*                                                                  */
+/*                    Copyright  2007-2008                          */
+/*           Krzysztof J. Fidkowski, kfid@alum.mit.edu              */
+/*                                                                  */
+/*                    Copyright  2008-2012                          */
+/*                 The University of Michigan                       */
+/*                    All rights reserved                           */
+/*                                                                  */
+/* This library is intended to be useful but is distributed without */
+/* any warranty, not even merchantability or fitness for a          */
+/* particular purpose.  It is free software: you can redistribute   */
+/* it and/or modify it under the terms of the GNU Lesser General    */
+/* Public License (LGPLv3).                                         */
+/*                                                                  */
+/* You should have received a copy of the GNU Lesser General Public */
+/* License along with this library; if not, write to the Free       */
+/* Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.        */
+/*------------------------------------------------------------------*/
+
+/* Written by Daniel W. Zaide with help from K. J. Fidkowski*/
+
+/*
+  FILE:  xf_TecOut.c
+
+  This program converts an .xfa file to a TecPlot File.
+
+*/
+
+#include "xf_AllStruct.h"
+#include "xf_IO.h"
+#include "xf_String.h"
+#include "xf_All.h"
+#include "xf_Mesh.h"
+#include "xf_EqnSet.h"
+#include "xf_MeshTools.h"
+#include "xf_Basis.h"
+#include "xf_Math.h"
+#include "xf_Data.h"
+#include "xf_Memory.h"
+
+/* List of ZoneTypesNames For TecPlot that Correspond to xfe_BasisType */
+static char *xfe_ZoneTypeName[xfe_BasisLast] = {
+  "FETRIANGLE",
+  "FETRIANGLE",
+  "FETETRAHEDRON",
+  "FETETRAHEDRON",
+  "FEQUADRILATERAL",
+  "FEQUADRILATERAL",
+  "FEBRICK",
+  "FEBRICK"
+};
+/******************************************************************/
+//   FUNCTION Definition: main
+int 
+main(int argc, char *argv[])
+{
+  int len, dir, ierr;
+  char InputFile[xf_MAXSTRLEN];
+  char OutputFile[xf_MAXSTRLEN];
+  char *pext;
+  char filestr[xf_MAXSTRLEN] = "";
+  xf_All *All;
+  xf_Data *D;
+  xf_BasisData *PhiData = NULL;
+  real *xref, *xglob;
+  real **v = NULL;
+  xf_Vector *Ui;
+  int nn, iNode, iItem, i, egrp, elem;
+  FILE *fid;
+  xref = NULL;
+  xf_printf("\n");
+  xf_printf("=== xf_TecOut, A .xfa to .dat Converter ===\n");
+  xf_printf("\n");
+
+  /* Check number of arguments */
+  if ( (argc != 2)){
+    xf_printf("Usage:\n");
+    xf_printf("xf_TecPlot <xfafile> <outputfile> \n");
+    xf_printf("\n");
+    xf_printf("<xfafile> is the name of the xfa file to read.\n");
+    xf_printf("<outputfile>(optional) is the name of the outputted TecPlot File.\n");
+    xf_printf("Default <outputfile> is in the input file with .dat extension");
+    xf_printf("\n");
+    return xf_Error(xf_INPUT_ERROR);
+  }
+  
+  /* Get InputFile name */
+  strcpy(InputFile, argv[1]);
+  len = strlen(InputFile);
+  pext = InputFile + len - 4; // pointer to extension
+  if ((len < 4) || (strncmp(pext, ".xfa", 4) != 0)){
+    xf_printf("Error, InputFile requires .xfa extension.\n");
+    return xf_Error(xf_INPUT_ERROR);
+  }
+  
+  /* Set OutputFile name */
+  strncpy(filestr,InputFile, len-4);
+  strcat(filestr,".dat");
+  strcpy(OutputFile, filestr);
+  
+  /* Create .xfa structure */
+  ierr = xf_Error(xf_CreateAll(&All, xfe_False));
+  if (ierr != xf_OK) return ierr;
+  
+  /* Read .xfa file*/
+  ierr = xf_Error(xf_ReadAllBinary(InputFile, All));
+  if (ierr!=xf_OK) return ierr;
+
+  /* Open OutputFile */
+  ierr = xf_Error(xf_fopen(OutputFile, "w",&fid));
+  if (ierr!=xf_OK) return ierr;
+  
+  /* Write Header for Tecplot File */
+  sprintf(filestr,"TITLE = \"%s\"\n",OutputFile);
+  ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+  if (ierr!=xf_OK) return ierr;
+   
+  sprintf(filestr,"FILETYPE = FULL\n");
+  ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+  if (ierr!=xf_OK) return ierr;
+
+  /* Writes Second Line */
+  if(All->Mesh->Dim >= 2){
+    sprintf(filestr,"VARIABLES = \"X\", \"Y\",");
+    ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+    if (ierr!=xf_OK) return ierr;
+  }
+
+  if(All->Mesh->Dim == 3){
+    sprintf(filestr," \"Z\",");
+    ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+    if (ierr!=xf_OK) return ierr;
+  }
+  
+  /* Outputs Variable Names as seen in StateName */
+  /* May want to add calculated Outputs at some point */
+
+  for(iItem=0;iItem<All->EqnSet->StateRank;iItem++){
+    sprintf(filestr," \"%s\",",All->EqnSet->StateName[iItem]);
+    ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+    if (ierr !=xf_OK) return ierr;
+  }
+
+  sprintf(filestr,"\n");
+  ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+  if (ierr!=xf_OK) return ierr;
+  
+  /* Gets Node Based Data */
+  ierr = xf_FindPrimalState(All->DataSet, 0, &D, NULL);
+  if (ierr!= xf_OK) return ierr;
+  
+  Ui = (xf_Vector *) D->Data;
+  /* Start Iterating Through the Element Groups */
+  if(All->Mesh->nElemGroup > 10){
+    xf_printf("Error, TecPlot can only handle 10 Element Groups\n");
+    return xf_Error(xf_INPUT_ERROR);
+  }
+  for(egrp=0;egrp<All->Mesh->nElemGroup;egrp++){
+    
+    ierr = xf_Error(xf_printf("ZONE %d Written to file\n",egrp));
+    if (ierr != xf_OK) return ierr;
+    
+    /* determine nn = # actual nodes for elements in this group */
+    ierr = xf_Error(xf_Order2nNode(All->Mesh->ElemGroup[egrp].QBasis,1, &nn));
+    if (ierr != xf_OK) return ierr; 
+    
+    sprintf(filestr,"ZONE T=\"GROUP=%d\" NODES=%d ELEMENTS=%d DATAPACKING=POINT ZONETYPE=%s\n",egrp,nn*All->Mesh->ElemGroup[egrp].nElem,All->Mesh->ElemGroup[egrp].nElem,xfe_ZoneTypeName[All->Mesh->ElemGroup[egrp].QBasis]);
+    ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+    if (ierr!=xf_OK) return ierr;
+    
+    /* Get Reference Node Locations */
+    ierr = xf_Error(xf_LagrangeNodes(All->Mesh->ElemGroup[egrp].QBasis,1, NULL, NULL, &xref));
+    if (ierr != xf_OK) return ierr;
+
+    /* Evaluate the Basis At those Nodes */
+    ierr = xf_Error(xf_EvalBasis(All->Mesh->ElemGroup[egrp].QBasis, All->Mesh->ElemGroup[egrp].QOrder,xfe_True,nn,xref,xfb_Phi,&PhiData));    
+    if (ierr != xf_OK) return ierr;
+   
+    /* Allocate Memory for the global coordinates and nodal data */
+    ierr = xf_Error(xf_Alloc2( (void ***) &v, All->Mesh->ElemGroup[egrp].nElem, nn*All->EqnSet->StateRank, sizeof(real)));
+    if (ierr != xf_OK) return ierr;
+     ierr = xf_Error(xf_Alloc( (void **) &xglob, nn*All->Mesh->Dim, sizeof(real)));
+    if (ierr != xf_OK) return ierr;
+    
+    /* Output Coordinates and State Data as 
+       X Y (Z) S1 S2 S3 S4 .. 
+       Note that each element has its own nodes, thus 
+       some node coords will be repeated. */
+    for(elem=0;elem<All->Mesh->ElemGroup[egrp].nElem;elem++){
+      xf_MxM_Set(PhiData->Phi,Ui->GenArray[egrp].rValue[elem], nn, PhiData->nn, All->EqnSet->StateRank, v[elem]);
+      
+      ierr = xf_Ref2GlobElem(All->Mesh, egrp, elem, &PhiData, xfe_True ,nn , xref ,xglob);
+      if (ierr != xf_OK) return ierr;
+      for(iNode=0;iNode<nn;iNode++){
+	
+	for(iItem=0;iItem < All->Mesh->Dim; iItem++){
+	  sprintf(filestr,"%lf ",xglob[iNode*(nn-1)+iItem]);
+	  ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+	  if (ierr != xf_OK) return ierr;
+	}
+	for(iItem=0;iItem < All->EqnSet->StateRank; iItem++){
+	  sprintf(filestr,"%lf ",v[elem][iNode*(nn+1)+iItem]);
+	  ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+	  if (ierr != xf_OK) return ierr;
+	}
+	sprintf(filestr,"\n");
+	ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+	if (ierr != xf_OK) return ierr;
+      }
+    }
+     xf_Release2((void **) v);
+     xf_Release((void *) xglob);
+    /* Now Do Connectivity, as
+       As 1 2 3 4 \n 5 6 7 8 .. */
+    for(elem=0;elem<All->Mesh->ElemGroup[egrp].nElem;elem++){ 
+      for(iItem=1;iItem <= nn; iItem++){
+	sprintf(filestr,"%d ",elem*nn+iItem);
+	ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+	if (ierr != xf_OK) return ierr;
+      } 
+      sprintf(filestr,"\n");
+      ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+      if (ierr != xf_OK) return ierr;
+    }
+    sprintf(filestr,"\n");
+    ierr = xf_fwrite(filestr,sizeof(char),strlen(filestr),fid);
+    if (ierr != xf_OK) return ierr;
+   
+  }
+
+
+ 
+  //ierr = xf_Error(xf_DestroyVector(Ui, xfe_False));
+  if (ierr!=xf_OK) return ierr;
+  ierr = xf_Error(xf_DestroyBasisData(PhiData, xfe_True));
+  if (ierr!=xf_OK) return ierr;
+  
+  xf_Release((void *) xref);
+
+  ierr = xf_Error(xf_fclose(fid));
+  if (ierr!=xf_OK) return ierr;
+ /* Destroy .xfa structure */
+  ierr = xf_Error(xf_DestroyAll(All));
+  if (ierr!=xf_OK) return ierr;
+  xf_printf("xf_TecOut finished - Outputted to %s.\n", OutputFile);
+ 
+  return xf_OK;
+}

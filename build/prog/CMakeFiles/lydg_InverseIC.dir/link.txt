@@ -1,0 +1,1 @@
+/usr/bin/cc   -g -pg -O2 -g -DNDEBUG    CMakeFiles/lydg_InverseIC.dir/xf_InverseIC.c.o CMakeFiles/lydg_InverseIC.dir/xf_Arg.c.o CMakeFiles/lydg_InverseIC.dir/xf_InverseIC_Common.c.o CMakeFiles/lydg_InverseIC.dir/__/src/xf_EqnSetHook.c.o  -o ../bin/lydg_InverseIC -rdynamic -ldl ../lib/libxfSerial.a -lm -lblas -llapack -lblas -llapack -Wl,-rpath,:::::::::::::::::::::::::::: 

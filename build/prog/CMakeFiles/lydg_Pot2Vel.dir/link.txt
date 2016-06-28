@@ -1,0 +1,1 @@
+/usr/bin/cc   -g -pg -O2 -g -DNDEBUG    CMakeFiles/lydg_Pot2Vel.dir/xf_Pot2Vel.c.o CMakeFiles/lydg_Pot2Vel.dir/xf_Arg.c.o CMakeFiles/lydg_Pot2Vel.dir/__/src/xf_EqnSetHook.c.o  -o ../bin/lydg_Pot2Vel -rdynamic -ldl ../lib/libxfSerial.a -lm -lblas -llapack -lblas -llapack -Wl,-rpath,:::::::::::::::::::::::::::: 

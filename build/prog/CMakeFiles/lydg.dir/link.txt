@@ -1,0 +1,1 @@
+/usr/bin/cc   -g -pg -O2 -g -DNDEBUG    CMakeFiles/lydg.dir/xf_XFlow.c.o CMakeFiles/lydg.dir/__/src/xf_EqnSetHook.c.o  -o ../bin/lydg -rdynamic -ldl ../lib/libxfSerial.a -lm -lblas -llapack -lblas -llapack -Wl,-rpath,:::::::::::::::::::::::::::: 

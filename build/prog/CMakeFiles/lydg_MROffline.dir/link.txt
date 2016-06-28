@@ -1,0 +1,1 @@
+/usr/bin/cc   -g -pg -O2 -g -DNDEBUG    CMakeFiles/lydg_MROffline.dir/xf_MROffline.c.o CMakeFiles/lydg_MROffline.dir/xf_Arg.c.o CMakeFiles/lydg_MROffline.dir/xf_MRCommon.c.o CMakeFiles/lydg_MROffline.dir/__/src/xf_EqnSetHook.c.o  -o ../bin/lydg_MROffline -rdynamic -ldl ../lib/libxfSerial.a -lm -lblas -llapack -lblas -llapack -Wl,-rpath,:::::::::::::::::::::::::::: 

@@ -1,0 +1,8 @@
+set(TOPDIR ${CMAKE_SOURCE_DIR})
+set(BINDIR ${TOPDIR}/bin)
+set(XFDIR  ${TOPDIR}/src)
+set(PROGDIR ${TOPDIR}/prog)
+set(DYNDIR ${TOPDIR}/dyn)
+set(TESTDIR ${TOPDIR}/test)
+set(INCDIR ${TOPDIR}/include)
+set(LIBDIR ${TOPDIR}/lib)

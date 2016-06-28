@@ -1,0 +1,102 @@
+# This file defines the equation set being solved.
+#
+# Specified here are:
+#  -  Equation-specific parameters
+#  -  Initial condition 
+#  -  Boundary conditions
+#  -  Residual terms
+#  -  Outputs 
+
+EqnSetLibrary = libCompressibleNS.so
+
+
+#------------------------------#
+# Equation-specific parameters #
+#------------------------------#
+
+STARTBLOCK PARAM
+
+SpecificHeatRatio = 1.4
+GasConstant = 1.0
+
+ENDBLOCK
+
+
+#----------------#
+# Residual terms #
+#----------------#
+
+STARTBLOCK RESTERM
+
+nResTerm = 1
+
+TermType = Convection
+InteriorFlux = Standard
+FluxFunction = HLLC
+
+ENDBLOCK
+
+
+#---------------------#
+#  Initial condition  #
+#---------------------#
+
+STARTBLOCK IC
+
+ICType = FullState
+Data = 1.0 1.0 0.0 1000.0
+
+ENDBLOCK
+
+
+#-----------------------#
+#  Boundary conditions  #
+#-----------------------#
+
+STARTBLOCK BC
+
+nBC = 6
+
+BFGTitle = Bottom
+BCType = FullState
+Data = 1.0 1.0 0.0 0.0 1000.0
+
+BFGTitle = Front
+BCType = FullState
+Data = 1.0 1.0 0.0 0.0 1000.0
+
+BFGTitle = Right
+BCType = FullState
+Data = 1.0 1.0 0.0 0.0 1000.0
+
+BFGTitle = Back
+BCType = FullState
+Data = 1.0 1.0 0.0 0.0 1000.0
+
+BFGTitle = Left
+BCType = FullState
+Data = 1.0 1.0 0.0 0.0 1000.0
+
+BFGTitle = Top
+BCType = FullState
+Data = 1.0 1.0 0.0 0.0 1000.0
+
+ENDBLOCK
+
+
+#---------#
+# Outputs #
+#---------#
+
+STARTBLOCK OUTPUT
+
+nOutput = 1
+
+OutputName = Drag
+OutputType = BoundaryIntegral
+UsesFlux = True
+FluxComponentNames = XMomentum
+FluxComponentWeights = 1.0
+BFGTitles = Bottom
+
+ENDBLOCK

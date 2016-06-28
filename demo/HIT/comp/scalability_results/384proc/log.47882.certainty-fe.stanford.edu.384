@@ -1,0 +1,488 @@
+Warning: Permanently added 'compute-102-1' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-95-2' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-76-4' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-101-4' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-95-4' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-101-3' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-95-3' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-95-1' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-69-3' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-78-2' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-77-1' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-78-1' (RSA) to the list of known hosts.
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+
++-----------------------------------+
+| xflow: A DG Finite Element Solver |
++-----------------------------------+
+Parallel run on 384 processors
+
+Reading model.yu!
+Time stepping scheme is 1
+Basis HexLegendre used!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Boundary condition read!
+Entropy bound:0.080000
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Chemistry is disabled!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Output specified!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Reading .gri file.
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+** In ReadGri: NOT CHECKING VALIDITY OF Q>1 VOLUMES **
+Calling PartitionMesh ...  done.
+
+** NOT CHECKING ALL **
+
+Calculating HeatCapacityRatio ... done.
+start loading data for initialization...
+Calculating MaxPressure ... Entropy Bounding DG is activiated; low bound is intialized!done.
+Calculating ElemMaxCharSpeed ... done.
+Calculating ElemMinFaceLen ... done.
+Starting timer
+Calculating RiemannIndicator ... done.
+158.806800
+Warning; not computing surface areas for elems in halo group = 1.
+Current Time 0.000000e+00, Estimated Time Step 3.253945e-06 Actual Taken Time Step 3.253945e-06
+      1   3.25394535E-06   3.25394535E-06   1.09097087E+03 0
+Current Time 3.253945e-06, Estimated Time Step 3.253945e-06 Actual Taken Time Step 3.253945e-06
+      2   6.50789069E-06   3.25394535E-06   1.09081972E+03 0
+Current Time 6.507891e-06, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      3   9.76183626E-06   3.25394557E-06   1.09066899E+03 0
+Current Time 9.761836e-06, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      4   1.30157821E-05   3.25394579E-06   1.09051869E+03 0
+Current Time 1.301578e-05, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      5   1.62697281E-05   3.25394601E-06   1.09036880E+03 0
+Current Time 1.626973e-05, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      6   1.95236743E-05   3.25394624E-06   1.09021932E+03 0
+Current Time 1.952367e-05, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      7   2.27776208E-05   3.25394646E-06   1.09007027E+03 0
+Current Time 2.277762e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+      8   2.60315674E-05   3.25394668E-06   1.08992162E+03 0
+Current Time 2.603157e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+      9   2.92855143E-05   3.25394690E-06   1.08977338E+03 0
+Current Time 2.928551e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+     10   3.25394615E-05   3.25394712E-06   1.08962556E+03 0
+Current Time 3.253946e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+     11   3.57934088E-05   3.25394734E-06   1.08947814E+03 0
+Current Time 3.579341e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     12   3.90473564E-05   3.25394757E-06   1.08933113E+03 0
+Current Time 3.904736e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     13   4.23013042E-05   3.25394779E-06   1.08918452E+03 0
+Current Time 4.230130e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     14   4.55552522E-05   3.25394801E-06   1.08903832E+03 0
+Current Time 4.555525e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     15   4.88092004E-05   3.25394823E-06   1.08889253E+03 0
+Current Time 4.880920e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     16   5.20631488E-05   3.25394845E-06   1.08874714E+03 0
+Current Time 5.206315e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     17   5.53170975E-05   3.25394867E-06   1.08860215E+03 0
+Current Time 5.531710e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     18   5.85710464E-05   3.25394889E-06   1.08845756E+03 0
+Current Time 5.857105e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     19   6.18249955E-05   3.25394911E-06   1.08831338E+03 0
+Current Time 6.182500e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     20   6.50789448E-05   3.25394933E-06   1.08816959E+03 0
+Current Time 6.507894e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     21   6.83328944E-05   3.25394955E-06   1.08802621E+03 0
+Current Time 6.833289e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     22   7.15868441E-05   3.25394977E-06   1.08788322E+03 0
+Current Time 7.158684e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     23   7.48407941E-05   3.25394998E-06   1.08774062E+03 0
+Current Time 7.484079e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     24   7.80947443E-05   3.25395020E-06   1.08759842E+03 0
+Current Time 7.809474e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     25   8.13486948E-05   3.25395042E-06   1.08745661E+03 0
+Current Time 8.134869e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     26   8.46026454E-05   3.25395064E-06   1.08731519E+03 0
+Current Time 8.460265e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     27   8.78565963E-05   3.25395086E-06   1.08717416E+03 0
+Current Time 8.785660e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     28   9.11105473E-05   3.25395108E-06   1.08703352E+03 0
+Current Time 9.111055e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     29   9.43644986E-05   3.25395129E-06   1.08689327E+03 0
+Current Time 9.436450e-05, Estimated Time Step 3.253952e-06 Actual Taken Time Step 3.253952e-06
+     30   9.76184501E-05   3.25395151E-06   1.08675340E+03 0
+Current Time 9.761845e-05, Estimated Time Step 3.253952e-06 Actual Taken Time Step 2.381550e-06
+     31   1.00000000E-04   2.38154987E-06   1.08661392E+03 0
+Time = 0.0001 >= EndTime = 0.0001.  Stopping unsteady simulation.
+Forward CPU time = 4.2865000000E+02
+finished by YU!~

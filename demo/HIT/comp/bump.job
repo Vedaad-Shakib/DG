@@ -1,0 +1,33 @@
+####### Case Information ####### 
+#InputFile = ./uniform.gri
+#InputFile = ./detail_uniform.gri
+#InputFile = ./bump_0.xfa
+#DataMerge = ./bump_U200.data
+#InputFile = ./uniform_lv1.gri
+Restart = False
+InputFile = ./box8elem.gri
+SavePrefix = bump
+EqnSetFile = bump.eqn
+InterpBasis = TriHierarch
+InterpOrder = 2
+
+####### General Solver Information ####### 
+nIterNonlinear = 100
+nIterGMRESOuter = 10
+nIterGMRESInner = 100
+LinearSolver = GMRES
+Preconditioner = LineJacobi
+ResidualTolerance = 1e-10
+
+###### Temporal parameters ####### 
+CFL = 1
+CFLIncreaseFactor = 2
+TimeScheme = RK4
+Time = 0.0
+EndTime = 0.0005
+nTimeStep = 10
+UnsteadyWriteInterval = 10
+
+###### Outputs ######
+#LogOutput = Drag
+

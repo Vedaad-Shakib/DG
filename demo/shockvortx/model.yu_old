@@ -1,0 +1,127 @@
+######################################
+#format changed on Apr 6 2014 by Yu  #
+######################################
+
+#if study convergence#
+ConvergStudy = False
+
+#problem dimension#
+dim = 2
+
+#whether perform mesh adaptation
+MeshAdaptation = False
+
+#if include curved element#
+CurvedMesh  = True
+
+#if use sophiscated IC#
+# 1 - function specify#
+# 2 - data file given #
+# 0 - vars data given #
+InterpolateIC = 17
+
+#polynomial basis#
+#basis = QuadLegendre
+basis = TriHierarch
+
+#time integration scheme#
+timescheme = RK45 
+
+timefactor = 2.0
+
+#polynomial order#
+order = 4
+
+#No. of variables#
+#note that the variable names and #
+#init values are given immediately#
+Vars = 5
+Density MomentumX MomentumY Energy Scalar
+1.0 3.0 0.0 7.0 1.0
+
+#boundary setup#
+nBC = 4
+Left fullBC 5
+Density 1.0 MomX 1.301537552281916  MomY 0.0 Energy 3.347 Scalar 8.0
+Bottom slipwallBC 0
+Top slipwallBC 0
+Right noneBC 0
+
+#Whether limiting solution#
+# 0 - no treatment #
+# 1 - only limiter #
+# 2 - only entropy bounding#
+WhetherLimiting = 2
+
+#user-defined entropy bound#
+LimiterEntropy = 0.28
+
+#whether diffusion#
+# 1 - constant transport#
+# 2 - Sutherland law    #
+# 0 - no diffusion      #
+DiffFlag = 3 
+
+#gas constant#
+Ru = 8.31446
+
+#visconsity# 
+Viscosity = 0.0 
+
+#conductivity#
+Conductivity = 0.0 
+
+#scalar diffusivity#
+Diffusivity = 0.0 
+
+#gas molecular weight#
+#if detailed chemistry used;#
+#take from CHEMKIN          #
+MolecularWeight = 0.029
+
+#whether use double flux#
+VariableGamma = False
+
+#initial gamma value#
+InitGammaValue = 1.4
+
+#gamma threshold#
+Gammathreshold = 1.0e-5
+
+#chemistry included?#
+#0 - no chemistry    #
+#1 - function specify#
+#2 - CHEMKIN         #
+IncludeReaction = 0
+
+######################
+#####Output###########
+######################
+nOutput = 0
+
+#UserDataFile
+#Prod_znd.dat
+#NumberRow
+#332
+#NumberCol
+#15
+#Locus
+#-0.005
+
+
+
+#%Sep 2013 for Proceeding
+#density 1.0 momX 3.0 momY 0.0 energy 7.0 Scalar 1.0
+#Density 0.230891  MomentumX 2.918387833724645e+02 MomentumY 0.0 Energy 1.341652415485285e+06 H2 0.0 O2 0.0 H2O 0.230891
+#%Compressible Laminar boundary layer at Ma_e = 2
+##%Interpolate 1 (just use user-defined function)
+#%Interpolate 2 (use user-defined file will be read from)
+#%In the user-defined data file, the first line has to be used to defined the following parameters:
+#%variable_length  variable_number  axis_offset
+#%below is for comment and desciption; not input%
+#Density 1.0 MomentumX 0.0  MomentumY 0.0 Pressure 2.5331250e+5 Air 1.0
+#999 means use user defined boundary conditions
+#Density 1.0 MomentumX 40.0 MomentumY 0.0 Energy 1000.0
+#Right fullBC 5
+#Density 1.7755560 MomentumX -1.6600603139e+02 MomentumY 0.0 Energy 2.917960742347e+05 Air 1.7755560
+#Header of input file: westbrook_flame_AR7.profile

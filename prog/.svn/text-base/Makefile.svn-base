@@ -1,0 +1,384 @@
+SHELL = /bin/sh
+
+TOPDIR = ..
+
+# all target
+all: serial
+
+include $(TOPDIR)/Makefile.in
+include $(SRCDIR)/Makefile.in
+
+
+#-----------------#
+# Build programs  #
+#-----------------#
+
+PROGS = \
+	$(BINDIR)/xflow  \
+	$(BINDIR)/xf_Info \
+	$(BINDIR)/xf_AlterState \
+	$(BINDIR)/xf_ICSensitivity \
+	$(BINDIR)/xf_Post \
+	$(BINDIR)/xf_Convert \
+	$(BINDIR)/xf_Pot2Vel \
+	$(BINDIR)/xf_MROffline \
+	$(BINDIR)/xf_MROnline \
+	$(BINDIR)/xf_MRReconstruct \
+	$(BINDIR)/xf_MRTest \
+	$(BINDIR)/xf_InverseIC\
+	$(BINDIR)/xf_InverseIC_MCMC\
+        $(BINDIR)/xf_TecOut\
+        $(BINDIR)/xf_DataCompare\
+        $(BINDIR)/xf_DataCompareDiffMesh \
+        $(BINDIR)/xf_DataPeel\
+	$(BINDIR)/xf_Refine \
+	$(BINDIR)/xf_StructuredHO \
+	$(BINDIR)/xf_Edit \
+        $(BINDIR)/xf_DataOper \
+	$(BINDIR)/xf_Data2Text \
+	$(BINDIR)/xf_AdaptToVol
+
+# only build plotter if have X directory
+ifdef XDIR
+ifeq "$(origin XDIR)" "file"
+PROGS += $(BINDIR)/xf_Plot
+endif
+endif
+
+# only build Lapack-dependent progs if have Lapack
+ifdef LAPACKDIR
+PROGS += $(BINDIR)/xf_MRHessianIC
+PROGS += $(BINDIR)/xf_EigSolve
+endif
+
+serial : $(PROGS)
+
+
+PPROGS = \
+	$(BINDIR)/pxflow \
+	$(BINDIR)/pxf_MROffline \
+	$(BINDIR)/pxf_InverseIC \
+	$(BINDIR)/pxf_InverseIC_MCMC \
+	$(BINDIR)/pxf_Post \
+	$(BINDIR)/pxf_DataOper \
+	$(BINDIR)/pxf_AdaptToVol
+
+# only build Lapack-dependent pprogs if have Lapack
+ifdef LAPACKDIR
+PPROGS += $(BINDIR)/pxf_MRHessianIC
+PPROGS += $(BINDIR)/pxf_EigSolve
+endif
+
+parallel : $(PPROGS)
+
+# objects and dependency files exist here
+PROGBUILDDIR = $(BUILDDIR)/$(PROG)
+
+# state alteration
+$(BINDIR)/xf_AlterState: $(PROGBUILDDIR)/xf_AlterState.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	echo 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_AlterState.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_AlterState.d
+
+# info program
+$(BINDIR)/xf_Info: $(PROGBUILDDIR)/xf_Info.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	echo 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_Info.o \
+	$(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_Info.d
+
+
+# dependency on Arg.d
+-include $(PROGBUILDDIR)/xf_Arg.d
+
+# Build xflow: serial, dynamic
+xflow : $(BINDIR)/xflow
+$(BINDIR)/xflow: $(PROGBUILDDIR)/xf_XFlow.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	echo 'Linking $@, XF_SERIAL = $(XF_SERIAL)'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_XFlow.o \
+	$(OBJ_XF_HOOK) $(ADDDIR) $(ADDLIB) -l$(XF_SERIAL) 
+
+# dependency of xf_XFlow.c on includes
+-include $(PROGBUILDDIR)/xf_XFlow.d
+
+# Build xflow: parallel, dynamic
+pxflow : $(BINDIR)/pxflow
+$(BINDIR)/pxflow: $(PROGBUILDDIR)/xf_XFlow.o $(LIB_XF_PARALLEL) $(OBJ_XF_HOOK)
+	@set -e; echo 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ \
+	$(PROGBUILDDIR)/xf_XFlow.o $(OBJ_XF_HOOK) -l$(XF_PARALLEL) \
+	$(ADDDIR) $(ADDLIB) $(PARTLIB) $(MPILIB) 
+
+
+
+
+
+# tecplot converter
+$(BINDIR)/xf_TecOut: $(PROGBUILDDIR)/xf_TecOut.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_TecOut.o \
+	$(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB)
+
+-include $(PROGBUILDDIR)/xf_TecOut.d
+
+
+# post-processor
+$(BINDIR)/xf_Post: $(PROGBUILDDIR)/xf_Post.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_Post.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_Post.d
+
+# post-processor, parallel
+$(BINDIR)/pxf_Post : $(PROGBUILDDIR)/xf_Post.o $(OBJ_MR) $(LIB_XF_PARALLEL)
+	@set -e; echo 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC)  \
+	-o $@ $(PROGBUILDDIR)/xf_Post.o $(OBJ_MR) -l$(XF_PARALLEL) \
+	$(ADDDIR) $(ADDLIB)  $(PARTLIB) $(MPILIB)
+
+
+# mesh conversion program
+$(BINDIR)/xf_Convert: $(PROGBUILDDIR)/xf_Convert.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_Convert.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_Convert.d
+
+# for converting a scalar potential to a velocity field
+$(BINDIR)/xf_Pot2Vel: $(PROGBUILDDIR)/xf_Pot2Vel.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_Pot2Vel.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_Pot2Vel.d
+
+# plotter
+$(BINDIR)/xf_Plot: $(PROGBUILDDIR)/xf_Plot.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_Plot.o $(PROGBUILDDIR)/xf_Arg.o \
+	$(OBJ_XF_HOOK) $(ADDDIR) $(XDIR) -l$(XF_SERIAL) $(ADDLIB) $(XLIB) 
+
+-include $(PROGBUILDDIR)/xf_Plot.d
+
+# data comparison program
+$(BINDIR)/xf_DataCompare: $(PROGBUILDDIR)/xf_DataCompare.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_DataCompare.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_DataCompare.d
+
+# data comparison program, different mesh
+$(BINDIR)/xf_DataCompareDiffMesh: $(PROGBUILDDIR)/xf_DataCompareDiffMesh.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_DataCompareDiffMesh.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_DataCompareDiffMesh.d
+
+
+# data peeling program
+$(BINDIR)/xf_DataPeel: $(PROGBUILDDIR)/xf_DataPeel.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_DataPeel.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_DataPeel.d
+
+
+# mesh refinement
+$(BINDIR)/xf_Refine: $(PROGBUILDDIR)/xf_Refine.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_Refine.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_Refine.d
+
+
+# high order mesh generation from structured mesh
+$(BINDIR)/xf_StructuredHO: $(PROGBUILDDIR)/xf_StructuredHO.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_StructuredHO.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_StructuredHO.d
+
+# interactive all/mesh editing
+$(BINDIR)/xf_Edit: $(PROGBUILDDIR)/xf_Edit.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_Edit.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_Edit.d
+
+
+# data operation program
+$(BINDIR)/xf_DataOper: $(PROGBUILDDIR)/xf_DataOper.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_DataOper.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_DataOper.d
+
+# post-processor, parallel
+$(BINDIR)/pxf_DataOper : $(PROGBUILDDIR)/xf_DataOper.o $(OBJ_MR) $(LIB_XF_PARALLEL)
+	@set -e; echo 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC)  \
+	-o $@ $(PROGBUILDDIR)/xf_DataOper.o $(OBJ_MR) -l$(XF_PARALLEL) \
+	$(ADDDIR) $(ADDLIB)  $(PARTLIB) $(MPILIB)
+
+
+# initial-condition sensitivity
+$(BINDIR)/xf_ICSensitivity: $(PROGBUILDDIR)/xf_ICSensitivity.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_ICSensitivity.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_ICSensitivity.d
+
+# data to text conversion
+$(BINDIR)/xf_Data2Text: $(PROGBUILDDIR)/xf_Data2Text.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_Data2Text.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_Data2Text.d
+
+# mesh adaptation to volume
+$(BINDIR)/xf_AdaptToVol: $(PROGBUILDDIR)/xf_AdaptToVol.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_AdaptToVol.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_AdaptToVol.d
+
+# mesh adaptation to volume, parallel version
+$(BINDIR)/pxf_AdaptToVol: $(PROGBUILDDIR)/xf_AdaptToVol.o $(PROGBUILDDIR)/xf_Arg.o $(LIB_XF_PARALLEL) $(OBJ_XF_HOOK)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) -o $@ $(PROGBUILDDIR)/xf_AdaptToVol.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_PARALLEL) \
+	$(ADDDIR) $(ADDLIB) $(PARTLIB) $(MPILIB)
+
+
+#--------------------------#
+# Model Reduction programs #
+#--------------------------#
+
+OBJ_MR = $(PROGBUILDDIR)/xf_Arg.o $(PROGBUILDDIR)/xf_MRCommon.o $(OBJ_XF_HOOK)
+
+# Offline, serial
+$(BINDIR)/xf_MROffline: $(PROGBUILDDIR)/xf_MROffline.o $(OBJ_MR) $(LIB_XF_SERIAL)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_MROffline.o \
+	$(OBJ_MR) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_MROffline.d
+
+# Offline, parallel
+$(BINDIR)/pxf_MROffline : $(PROGBUILDDIR)/xf_MROffline.o $(OBJ_MR) $(LIB_XF_PARALLEL)
+	@set -e; echo 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC)  \
+	-o $@ $(PROGBUILDDIR)/xf_MROffline.o $(OBJ_MR) -l$(XF_PARALLEL) \
+	$(ADDDIR) $(ADDLIB)  $(PARTLIB) $(MPILIB)
+
+
+# Online
+$(BINDIR)/xf_MROnline: $(PROGBUILDDIR)/xf_MROnline.o $(OBJ_MR) $(LIB_XF_SERIAL)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_MROnline.o \
+	$(OBJ_MR) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_MROnline.d
+
+# Solution reconstruction program
+$(BINDIR)/xf_MRReconstruct: $(PROGBUILDDIR)/xf_MRReconstruct.o $(OBJ_MR) $(LIB_XF_SERIAL)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_MRReconstruct.o \
+	$(OBJ_MR) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_MRReconstruct.d
+
+# Tester
+$(BINDIR)/xf_MRTest: $(PROGBUILDDIR)/xf_MRTest.o $(OBJ_MR) $(LIB_XF_SERIAL)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_MRTest.o \
+	$(OBJ_MR) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_MRTest.d
+
+# Hessian-based Initial Condition calculation
+$(BINDIR)/xf_MRHessianIC: $(PROGBUILDDIR)/xf_MRHessianIC.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK) $(PROGBUILDDIR)/xf_Arg.o
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_MRHessianIC.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK)  -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_MRHessianIC.d
+
+# Hessian-based Initial Condition calculation : parallel version
+$(BINDIR)/pxf_MRHessianIC: $(PROGBUILDDIR)/xf_MRHessianIC.o $(LIB_XF_PARALLEL) $(OBJ_XF_HOOK) $(PROGBUILDDIR)/xf_Arg.o
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_MRHessianIC.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_PARALLEL) $(ADDDIR) $(ADDLIB) \
+	$(PARTLIB) $(MPILIB)
+
+
+#-----------------------------#
+# Initial Condition Inversion #
+#-----------------------------#
+
+OBJ_IC = $(PROGBUILDDIR)/xf_Arg.o $(PROGBUILDDIR)/xf_InverseIC_Common.o $(OBJ_XF_HOOK)
+
+# Inverse Initial Condition calculation
+$(BINDIR)/xf_InverseIC: $(PROGBUILDDIR)/xf_InverseIC.o $(LIB_XF_SERIAL) $(OBJ_IC)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_InverseIC.o \
+	$(OBJ_IC) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_InverseIC.d
+
+# Inverse Initial Condition calculation : parallel version
+$(BINDIR)/pxf_InverseIC: $(PROGBUILDDIR)/xf_InverseIC.o $(LIB_XF_PARALLEL) $(OBJ_IC)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_InverseIC.o \
+	$(OBJ_IC) $(ADDDIR) -l$(XF_PARALLEL) $(ADDLIB) \
+	$(PARTLIB) $(MPILIB)
+
+
+#MCMC  Inverse Initial Condition calculation
+$(BINDIR)/xf_InverseIC_MCMC: $(PROGBUILDDIR)/xf_InverseIC_MCMC.o $(LIB_XF_SERIAL) $(OBJ_IC)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_InverseIC_MCMC.o \
+	$(OBJ_IC) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_InverseIC_MCMC.d
+
+# MCMC Inverse Initial Condition calculation : parallel version
+$(BINDIR)/pxf_InverseIC_MCMC: $(PROGBUILDDIR)/xf_InverseIC_MCMC.o $(LIB_XF_PARALLEL) $(OBJ_IC)
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_InverseIC_MCMC.o \
+	$(OBJ_IC) $(ADDDIR) -l$(XF_PARALLEL) $(ADDLIB) \
+	$(PARTLIB) $(MPILIB)
+
+# Eigenvalue solver
+$(BINDIR)/xf_EigSolve: $(PROGBUILDDIR)/xf_EigSolve.o $(LIB_XF_SERIAL) $(OBJ_XF_HOOK) $(PROGBUILDDIR)/xf_Arg.o
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_EigSolve.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_SERIAL) $(ADDDIR) $(ADDLIB) 
+
+-include $(PROGBUILDDIR)/xf_EigSolve.d
+
+# Eigenvalue solver : parallel version
+$(BINDIR)/pxf_EigSolve: $(PROGBUILDDIR)/xf_EigSolve.o $(LIB_XF_PARALLEL) $(OBJ_XF_HOOK) $(PROGBUILDDIR)/xf_Arg.o
+	@set -e; echo -e 'Linking $@'; \
+	$(CC) $(CFLAGS) $(RDYNAMIC) -o $@ $(PROGBUILDDIR)/xf_EigSolve.o \
+	$(PROGBUILDDIR)/xf_Arg.o $(OBJ_XF_HOOK) -l$(XF_PARALLEL) $(ADDDIR) $(ADDLIB) \
+	$(PARTLIB) $(MPILIB)
+
+
+
+

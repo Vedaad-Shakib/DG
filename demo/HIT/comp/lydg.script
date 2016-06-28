@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#PBS -N ffs
+#PBS -e ffs.err
+#PBS -o ffs.out
+#PBS -l nodes=5:ppn=24
+#PBS -l walltime=10:00:00
+#PBS -V
+
+
+PBS_O_WORKDIR='/home/vshakib/LYDG/demo/HIT/comp'
+export PBS_O_WORKDIR
+
+### ---------------------------------------
+### BEGINNING OF EXECUTION
+### ---------------------------------------
+
+echo The master node of this job is `hostname`
+echo The working directory is `echo $PBS_O_WORKDIR`
+echo This job runs on the following nodes:
+echo `cat $PBS_NODEFILE`
+
+cd $PBS_O_WORKDIR 
+cmd="mpiexec -np 60 -ppn 12 ../../../bin/plydg bump.job"
+echo "Running MPIEXEC with: $cmd in directory "`pwd`
+$cmd >& $PBS_O_WORKDIR/logs/$PBS_JOBID

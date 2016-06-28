@@ -1,0 +1,1 @@
+/usr/bin/cc   -g -pg -O2 -g -DNDEBUG    CMakeFiles/lydg_EigSolve.dir/xf_EigSolve.c.o CMakeFiles/lydg_EigSolve.dir/xf_Arg.c.o CMakeFiles/lydg_EigSolve.dir/__/src/xf_EqnSetHook.c.o  -o ../bin/lydg_EigSolve -rdynamic -ldl ../lib/libxfSerial.a -lm -lblas -llapack -lblas -llapack -Wl,-rpath,:::::::::::::::::::::::::::: 

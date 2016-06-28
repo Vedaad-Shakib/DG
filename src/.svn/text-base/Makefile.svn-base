@@ -1,0 +1,56 @@
+SHELL = /bin/sh
+
+TOPDIR = ..
+
+include $(TOPDIR)/Makefile.in
+include Makefile.in
+
+
+#  targets
+serial   : $(LIB_XF_SERIAL)
+parallel : $(LIB_XF_PARALLEL)
+
+#------------#
+# Unit tests #
+#------------#
+UTESTS_SHORT = \
+	xf_Basis.utest \
+	xf_MeshTools.utest \
+	xf_AdaptHang.utest \
+	xf_Adapt.utest \
+	xf_Heap.utest \
+	xf_MathNoBlas.utest \
+	xf_MeshDistance.utest \
+	xf_MeshMotionAnalytical.utest \
+	xf_ResidualStab.utest \
+	xf_QuadRule.utest \
+	xf_DataMath.utest \
+	xf_String.utest \
+	xf_BasisFcn.utest \
+	xf_LinearSolver.utest \
+	xf_Line.utest \
+	xf_ErrEst.utest \
+	xf_SolverTools.utest \
+	xf_Output.utest \
+	xf_Math.utest \
+	xf_Solver.utest \
+	xf_Residual.utest \
+
+
+ifdef BLASDIR
+UTESTS_SHORT += \
+	xf_MathBlas.utest
+endif
+
+ifdef LAPACKDIR
+UTESTS_SHORT += \
+	xf_MathLapack.utest \
+	xf_EigSolver.utest
+endif
+
+UTESTS = $(addprefix $(BUILDDIR)/$(SRC)/,$(UTESTS_SHORT))
+
+OBJ_UTEST_ADD = $(OBJ_XF_HOOK)
+
+include $(TESTDIR)/Unit.make
+

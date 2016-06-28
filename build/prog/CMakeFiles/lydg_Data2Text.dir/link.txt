@@ -1,0 +1,1 @@
+/usr/bin/cc   -g -pg -O2 -g -DNDEBUG    CMakeFiles/lydg_Data2Text.dir/xf_Data2Text.c.o CMakeFiles/lydg_Data2Text.dir/xf_Arg.c.o CMakeFiles/lydg_Data2Text.dir/__/src/xf_EqnSetHook.c.o  -o ../bin/lydg_Data2Text -rdynamic -ldl ../lib/libxfSerial.a -lm -lblas -llapack -lblas -llapack -Wl,-rpath,:::::::::::::::::::::::::::: 

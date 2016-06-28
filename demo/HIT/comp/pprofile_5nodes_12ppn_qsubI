@@ -1,0 +1,2831 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 19.79      6.41     6.41        1     6.41     6.43  xf_ComputeGenMassMatrix
+ 13.80     10.88     4.47 10831872     0.00     0.00  LYDG_PhysDiffModel3d
+ 13.01     15.10     4.22 97486848     0.00     0.00  xf_MxV_Add
+ 11.95     18.97     3.87   884736     0.00     0.00  xf_ColMult_Add
+  6.24     20.99     2.02   442368     0.00     0.00  xf_ColMult_Set
+  4.69     22.51     1.52   175104     0.00     0.00  xf_ElemJacobian
+  2.86     23.43     0.93  9627844     0.00     0.00  xf_BasisLegendre3D
+  2.66     24.29     0.86   373248     0.00     0.00  Yu_FlowFieldInit_from_datafile
+  2.25     25.02     0.73 10493587     0.00     0.00  xf_BasisLagrange3D
+  2.04     25.68     0.66 34789305     0.00     0.00  xf_BasisLagrange1D
+  1.98     26.32     0.64       51     0.01     0.03  Yu_ConductEntropyBounding
+  1.61     26.84     0.52 212275957     0.00     0.00  xf_ErrorReport
+  1.40     27.30     0.46 13918208     0.00     0.00  xf_MatDetInv
+  1.16     27.67     0.38 28883532     0.00     0.00  xf_Shape_LineLegendre
+  1.14     28.04     0.37   272896     0.00     0.00  LYDG_InteriorViscTerm
+  1.14     28.41     0.37        1     0.37     0.37  xf_QRFactorHouseholder
+  1.11     28.77     0.36    84992     0.00     0.00  xf_Ref2GlobElem
+  1.11     29.13     0.36    62976     0.00     0.00  LYDG_FaceViscTerm
+  1.05     29.47     0.34    62976     0.00     0.00  DissipationCorrect
+  0.90     29.76     0.29    20480     0.00     0.00  xf_cMxM_Add
+  0.77     30.01     0.25    20992     0.00     0.00  ConvFluxInterior
+  0.71     30.24     0.23 13980672     0.00     0.00  Yu_TransportProperty
+  0.65     30.45     0.21     1024     0.00     0.00  xf_SolvePLU_Matrix
+  0.57     30.64     0.19 28883532     0.00     0.00  xf_BasisLegendre1D
+  0.49     30.80     0.16   126465     0.00     0.00  xf_ColMult
+  0.45     30.94     0.15 10563658     0.00     0.00  xf_Grad_TensorLagrange
+  0.42     31.08     0.14 32495616     0.00     0.00  xf_MxV
+  0.36     31.19     0.12    62976     0.00     0.00  ConvFluxInteriorFace
+  0.32     31.30     0.11        1     0.11     0.11  init_data_read_from_file
+  0.31     31.40     0.10   282624     0.00     0.00  xf_RefFace2Elem
+  0.29     31.49     0.10 44761489     0.00     0.00  xf_Alloc
+  0.28     31.58     0.09 77719027     0.00     0.00  xf_Release
+  0.25     31.66     0.08   314880     0.00     0.00  xf_ColcMult_Add
+  0.22     31.73     0.07    69120     0.00     0.00  xf_ElemNormal
+  0.20     31.80     0.07      513     0.00     0.00  xf_ComputePLU
+  0.17     31.85     0.06  1654272     0.00     0.00  xf_BasisLagrange2D
+  0.15     31.90     0.05    62976     0.00     0.00  xf_CalculateResidualIFace
+  0.12     31.94     0.04  9593147     0.00     0.00  xf_Shape_TensorLegendre
+  0.12     31.98     0.04       60     0.00     0.00  xf_SetVector
+  0.12     32.02     0.04                             xf_VectorSetPODMass
+  0.09     32.05     0.03   147456     0.00     0.00  xf_EvalPhysicalGrad
+  0.09     32.08     0.03       70     0.00     0.00  xf_VectorMultSet
+  0.09     32.11     0.03        1     0.03     0.10  Yu_OutputPointValueInit
+  0.06     32.13     0.02   156672     0.00     0.00  xf_GetQuadOrderAcrossFace
+  0.06     32.15     0.02   112173     0.00     0.00  xf_EvalBasis
+  0.06     32.17     0.02   110592     0.00     0.00  Compute_Divergence_Mag
+  0.06     32.19     0.02    48130     0.00     0.00  xf_GetQuadOrderElem
+  0.05     32.21     0.02  1584201     0.00     0.00  xf_Shape_TensorLagrange
+  0.05     32.22     0.02   147029     0.00     0.00  xf_FindDataByTitle
+  0.05     32.24     0.02   125952     0.00     0.00  xf_EvalBasisOnFace
+  0.05     32.25     0.02                             xf_BlockMTxV
+  0.05     32.27     0.02                             xf_PowInt
+  0.03     32.28     0.01   566784     0.00     0.00  xf_MTxM_Sub
+  0.03     32.29     0.01   408576     0.00     0.00  xf_CheckHangFace
+  0.03     32.30     0.01   159744     0.00     0.00  xf_NeighborAcrossFace
+  0.03     32.31     0.01   153687     0.00     0.00  xf_GetGrads
+  0.03     32.32     0.01    20992     0.00     0.00  xf_CalculateResidualElem
+  0.03     32.33     0.01      512     0.00     0.00  xf_ProjectOnElemQR
+  0.03     32.34     0.01      168     0.00     0.00  xf_Release2
+  0.03     32.35     0.01       41     0.00     0.46  xf_CalculateResidualIFaces
+  0.03     32.36     0.01                             xf_CalculateResidualElems_DetailChem
+  0.02     32.36     0.01   125952     0.00     0.00  xf_EvalBasisOnFaceUsingTable
+  0.02     32.37     0.01       16     0.00     0.00  xf_CreateVector
+  0.02     32.37     0.01                             xf_BasisLegendre2D
+  0.02     32.38     0.01                             xf_Grad_TensorLagrangeGauss
+  0.02     32.38     0.01                             xf_Hess_TensorLagrange
+  0.02     32.39     0.01                             xf_LongAlloc
+  0.02     32.39     0.01                             xf_Shape_TetHierarch
+  0.00     32.39     0.00  1654272     0.00     0.00  xf_CrossProduct
+  0.00     32.39     0.00   824321     0.00     0.00  xf_Basis2Shape
+  0.00     32.39     0.00   641663     0.00     0.00  xf_MxM_Set
+  0.00     32.39     0.00   531773     0.00     0.00  xf_Order2nNode
+  0.00     32.39     0.00   356864     0.00     0.00  xf_InterpOrder
+  0.00     32.39     0.00   356397     0.00     0.00  xf_Basis2Dim
+  0.00     32.39     0.00   292461     0.00     0.00  xf_ReAlloc
+  0.00     32.39     0.00   288768     0.00     0.00  xf_Q1NodesOnFace
+  0.00     32.39     0.00   282624     0.00     0.00  xf_RefFace2Interpol
+  0.00     32.39     0.00   268290     0.00     0.00  xf_Q1BasisNotLinear
+  0.00     32.39     0.00   238125     0.00     0.00  xf_NeedBasisReCalc
+  0.00     32.39     0.00   225792     0.00     0.00  xf_FaceShape
+  0.00     32.39     0.00   225792     0.00     0.00  xf_QuadFace
+  0.00     32.39     0.00   220160     0.00     0.00  FaceQuadOrder
+  0.00     32.39     0.00   188928     0.00     0.00  xf_MTxM_Add
+  0.00     32.39     0.00   104091     0.00     0.00  xf_Grad_LineLegendre
+  0.00     32.39     0.00    69120     0.00     0.00  xf_NodesOnFace
+  0.00     32.39     0.00    66048     0.00     0.00  xf_IFaceNormal
+  0.00     32.39     0.00    62976     0.00     0.00  xf_ColcMult_Set
+  0.00     32.39     0.00    62976     0.00     0.00  xf_GetQuadOrderIFace
+  0.00     32.39     0.00    49664     0.00     0.00  xf_QuadElem
+  0.00     32.39     0.00    48130     0.00     0.00  ElemQuadOrder
+  0.00     32.39     0.00    34697     0.00     0.00  xf_Grad_TensorLegendre
+  0.00     32.39     0.00    27123     0.00     0.00  xf_Shape2nFace
+  0.00     32.39     0.00    20480     0.00     0.00  xf_ElemInvMassMatrix
+  0.00     32.39     0.00     6290     0.00     0.00  xf_DesiredToken
+  0.00     32.39     0.00     4992     0.00     0.00  xf_SortInt
+  0.00     32.39     0.00     3264     0.00     0.00  xf_AddFaceToHash
+  0.00     32.39     0.00     3114     0.00     0.00  xf_DestroyNormalData
+  0.00     32.39     0.00     3072     0.00     0.00  xf_DetermineFaceOrient
+  0.00     32.39     0.00     3072     0.00     0.00  xf_DetermineFaceOrient_Shape
+  0.00     32.39     0.00     3072     0.00     0.00  xf_WriteFaceDataBinary
+  0.00     32.39     0.00     1728     0.00     0.00  xf_DeleteFaceFromHash
+  0.00     32.39     0.00     1710     0.00     0.00  xf_LineFromFileOrStrings
+  0.00     32.39     0.00     1536     0.00     0.00  xf_AddInteriorFace
+  0.00     32.39     0.00     1299     0.00     0.00  xf_DestroyBasisData
+  0.00     32.39     0.00     1213     0.00     0.00  xf_CreateQuadData
+  0.00     32.39     0.00     1213     0.00     0.00  xf_DestroyGenericQuadData
+  0.00     32.39     0.00     1213     0.00     0.00  xf_DestroyQuadData
+  0.00     32.39     0.00     1213     0.00     0.00  xf_GetQuadPoints
+  0.00     32.39     0.00     1213     0.00     0.00  xf_QuadLine
+  0.00     32.39     0.00      729     0.00     0.00  xf_ScanReal
+  0.00     32.39     0.00      717     0.00     0.00  xf_WriteStringBinary
+  0.00     32.39     0.00      689     0.00     0.00  xf_DestroyJacobianData
+  0.00     32.39     0.00      630     0.00     0.00  xf_MPI_GetRank
+  0.00     32.39     0.00      608     0.00     0.00  xf_QuadHexahedron
+  0.00     32.39     0.00      605     0.00     0.00  xf_QuadQuadrilateral
+  0.00     32.39     0.00      512     0.00     0.00  InitializeDataInterpolation
+  0.00     32.39     0.00      512     0.00     0.00  xf_GetQuadOrderGeneralFace
+  0.00     32.39     0.00      512     0.00     0.00  xf_LongLineFromFileOrStrings
+  0.00     32.39     0.00      512     0.00     0.00  xf_MTxM_Set
+  0.00     32.39     0.00      512     0.00     0.00  xf_QuadElemAtLeast
+  0.00     32.39     0.00      512     0.00     0.00  xf_ScanInt
+  0.00     32.39     0.00      446     0.00     0.00  xf_GetKeyValue
+  0.00     32.39     0.00      378     0.00     0.00  xf_AddKeyValue
+  0.00     32.39     0.00      369     0.00     0.00  xf_MPI_Bcast
+  0.00     32.39     0.00      366     0.00     0.00  xf_TrimAndCheckBlank
+  0.00     32.39     0.00      195     0.00     0.00  xf_fwrite
+  0.00     32.39     0.00      160     0.00     0.00  xf_Value2Enum
+  0.00     32.39     0.00      140     0.00     0.00  xf_GetKeyValueBool
+  0.00     32.39     0.00      130     0.00     0.00  xf_CompatibleVectors
+  0.00     32.39     0.00      112     0.00     0.00  xf_Alloc2
+  0.00     32.39     0.00      100     0.00     0.00  xf_FindVector
+  0.00     32.39     0.00       89     0.00     0.00  xf_GetKeyValueReal
+  0.00     32.39     0.00       88     0.00     0.00  xf_MPI_Allreduce
+  0.00     32.39     0.00       85     0.00     0.00  xf_CompatibleLinkageVector
+  0.00     32.39     0.00       85     0.00     0.00  xf_CompatibleSizeVector
+  0.00     32.39     0.00       84     0.00     0.00  xf_ReadKey
+  0.00     32.39     0.00       83     0.00     0.00  xf_GetLocFaceMax
+  0.00     32.39     0.00       82     0.00     0.00  xf_Alloc3
+  0.00     32.39     0.00       82     0.00     0.00  xf_CreateBasisTable
+  0.00     32.39     0.00       82     0.00     0.00  xf_DestroyBasisTable
+  0.00     32.39     0.00       82     0.00     0.00  xf_ForceReCalcBasisTable
+  0.00     32.39     0.00       82     0.00     0.00  xf_HaloExchangeVectorBegin
+  0.00     32.39     0.00       82     0.00     0.00  xf_HaloExchangeVectorEnd
+  0.00     32.39     0.00       82     0.00     0.00  xf_Release3
+  0.00     32.39     0.00       81     0.00     0.00  xf_SetZeroVector
+  0.00     32.39     0.00       78     0.00     0.00  xf_ReAllocCopy2
+  0.00     32.39     0.00       65     0.00     0.00  xf_WriteStringBinaryParallel
+  0.00     32.39     0.00       61     0.00     0.00  xf_printf
+  0.00     32.39     0.00       53     0.00     0.00  xf_FindSimilarVector
+  0.00     32.39     0.00       51     0.00     0.03  Yu_Solution_Processing
+  0.00     32.39     0.00       50     0.00     0.00  xf_AllocString
+  0.00     32.39     0.00       50     0.00     0.00  xf_SetKeyValue
+  0.00     32.39     0.00       50     0.00     0.00  xf_SetKeyValueReal
+  0.00     32.39     0.00       41     0.00     0.00  LYDG_CreateDiffJumpData
+  0.00     32.39     0.00       41     0.00     0.00  LYDG_ReAllocDiffJumpData
+  0.00     32.39     0.00       41     0.00     0.00  xf_CalculateResidualBFaces
+  0.00     32.39     0.00       41     0.00     0.08  xf_CalculateResidualElems
+  0.00     32.39     0.00       41     0.00     0.00  xf_DestroyDiffJumpData
+  0.00     32.39     0.00       41     0.00     0.00  xf_DestroyStaticDataBFace
+  0.00     32.39     0.00       41     0.00     0.00  xf_DestroyStaticDataElem
+  0.00     32.39     0.00       41     0.00     0.00  xf_DestroyStaticDataIFace
+  0.00     32.39     0.00       41     0.00     0.00  xf_FindElemGeom
+  0.00     32.39     0.00       41     0.00     0.00  xf_FindMatrix
+  0.00     32.39     0.00       40     0.00     0.54  xf_CalculateResidual
+  0.00     32.39     0.00       40     0.00     0.00  xf_CalculateStabilization
+  0.00     32.39     0.00       40     0.00     0.16  xf_FindInvMassMatrixData
+  0.00     32.39     0.00       40     0.00     0.17  xf_MultInvMassMatrix
+  0.00     32.39     0.00       34     0.00     0.00  xf_fseek
+  0.00     32.39     0.00       34     0.00     0.00  xf_ftell
+  0.00     32.39     0.00       29     0.00     0.00  xf_CreateData
+  0.00     32.39     0.00       29     0.00     0.00  xf_DataSetAdd
+  0.00     32.39     0.00       29     0.00     0.00  xf_DestroyData
+  0.00     32.39     0.00       27     0.00     0.00  xf_DestroyVector
+  0.00     32.39     0.00       18     0.00     0.00  xf_AllocGenArray
+  0.00     32.39     0.00       18     0.00     0.00  xf_DestroyArrayParallelInfo
+  0.00     32.39     0.00       17     0.00     0.00  xf_WriteGenArrayBinary
+  0.00     32.39     0.00       17     0.00     0.00  xf_WriteVectorBinary
+  0.00     32.39     0.00       16     0.00     0.00  xf_AllocVectorGuts
+  0.00     32.39     0.00       16     0.00     0.00  xf_InitVector
+  0.00     32.39     0.00       16     0.00     0.00  xf_NotNull
+  0.00     32.39     0.00       16     0.00     0.00  xf_SetConstVector
+  0.00     32.39     0.00       13     0.00     0.00  xf_GetKeyValueEnum
+  0.00     32.39     0.00       12     0.00     0.00  xf_CreateDataSet
+  0.00     32.39     0.00       12     0.00     0.00  xf_DestroyDataSet
+  0.00     32.39     0.00       12     0.00     0.00  xf_WriteDataSetBinary
+  0.00     32.39     0.00       12     0.00     0.00  xf_fclose
+  0.00     32.39     0.00       12     0.00     0.00  xf_fopen
+  0.00     32.39     0.00       11     0.00     0.00  xf_DumpVectorBinary
+  0.00     32.39     0.00       10     0.00     0.00  Yu_EstimateTimeStep
+  0.00     32.39     0.00       10     0.00     0.00  xf_VectorNorm
+  0.00     32.39     0.00       10     0.00     0.00  xf_WriteLogEntry
+  0.00     32.39     0.00        9     0.00     0.00  xf_CheckUserHalt
+  0.00     32.39     0.00        7     0.00     0.00  xf_GetKeyValueInt
+  0.00     32.39     0.00        6     0.00     0.00  xf_DestroyKeyValue
+  0.00     32.39     0.00        5     0.00     0.00  TrueOrFalse
+  0.00     32.39     0.00        5     0.00     0.00  Yu_GammaVectorCreate
+  0.00     32.39     0.00        5     0.00     0.00  xf_Basis2UniformLagrange
+  0.00     32.39     0.00        4     0.00     0.00  xf_GetNumTokens
+  0.00     32.39     0.00        4     0.00     0.00  xf_InitKeyValue
+  0.00     32.39     0.00        3     0.00     0.00  xf_DestroyBCs
+  0.00     32.39     0.00        3     0.00     0.00  xf_DestroyICs
+  0.00     32.39     0.00        3     0.00     0.00  xf_DestroyOutputs
+  0.00     32.39     0.00        3     0.00     0.00  xf_DestroyResTerms
+  0.00     32.39     0.00        3     0.00     0.00  xf_ScanXStringAlloc
+  0.00     32.39     0.00        3     0.00     0.00  xf_WriteKeyValueBinary
+  0.00     32.39     0.00        2     0.00     0.00  xf_CreateEqnSet
+  0.00     32.39     0.00        2     0.00     0.00  xf_CreateMatrix
+  0.00     32.39     0.00        2     0.00     0.00  xf_CreateMesh
+  0.00     32.39     0.00        2     0.00     0.00  xf_DestroyEqnSet
+  0.00     32.39     0.00        2     0.00     0.00  xf_DestroyMatrix
+  0.00     32.39     0.00        2     0.00     0.00  xf_DestroyMesh
+  0.00     32.39     0.00        2     0.00     0.00  xf_FindPrimalState
+  0.00     32.39     0.00        2     0.00     0.00  xf_InitEqnSet
+  0.00     32.39     0.00        2     0.00     0.00  xf_MergeKeyValue
+  0.00     32.39     0.00        2     0.00     0.00  xf_ReAlloc2
+  0.00     32.39     0.00        1     0.00     0.00  DestroyEntropyBoundStruct
+  0.00     32.39     0.00        1     0.00     0.00  DestroyModel
+  0.00     32.39     0.00        1     0.00     0.00  PullinModel
+  0.00     32.39     0.00        1     0.00     0.00  Yu_InitOutput
+  0.00     32.39     0.00        1     0.00     0.03  Yu_MinFaceLengthScale
+  0.00     32.39     0.00        1     0.00     0.10  Yu_StatisticsOutput
+  0.00     32.39     0.00        1     0.00    30.79  xfYu_ApplyTimeScheme
+  0.00     32.39     0.00        1     0.00     0.54  xfYu_CalculateResidual
+  0.00     32.39     0.00        1     0.00     1.46  xfYu_FindOrCreatePrimalState
+  0.00     32.39     0.00        1     0.00     1.46  xfYu_InitAlterState
+  0.00     32.39     0.00        1     0.00     0.00  xf_AddKeyValueList
+  0.00     32.39     0.00        1     0.00     0.00  xf_AllocBCs
+  0.00     32.39     0.00        1     0.00     0.00  xf_AllocICs
+  0.00     32.39     0.00        1     0.00     0.00  xf_AllocOutputs
+  0.00     32.39     0.00        1     0.00     0.00  xf_AllocResTerms
+  0.00     32.39     0.00        1     0.00     0.00  xf_Basis2nFace
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateAll
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateBCs
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateGeom
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateICs
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateNodeHash
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateOutputs
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateParam
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateResTerms
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateSolverData
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateTimeHistData
+  0.00     32.39     0.00        1     0.00     0.00  xf_CreateUniformTimeHistData
+  0.00     32.39     0.00        1     0.00     0.00  xf_DataSetRemove
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroyAll
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroyCutPlaneIntersect
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroyElemGroup
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroyGeom
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroyMotionData
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroyOutput
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroyParam
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroyResTerm
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroySolverData
+  0.00     32.39     0.00        1     0.00     0.00  xf_DestroyTimeHistData
+  0.00     32.39     0.00        1     0.00     0.00  xf_FindLineConnectivity
+  0.00     32.39     0.00        1     0.00     6.43  xf_FindMassMatrixData
+  0.00     32.39     0.00        1     0.00     0.00  xf_GetTimeSchemeInfo
+  0.00     32.39     0.00        1     0.00     0.00  xf_InitOutput
+  0.00     32.39     0.00        1     0.00     0.00  xf_InitStabData
+  0.00     32.39     0.00        1     0.00     0.00  xf_MPI_Finalize
+  0.00     32.39     0.00        1     0.00     0.00  xf_MPI_Init
+  0.00     32.39     0.00        1     0.00     0.17  xf_MatrixInvert
+  0.00     32.39     0.00        1     0.00     0.00  xf_MergeEqnSet
+  0.00     32.39     0.00        1     0.00     0.00  xf_NewGREVector
+  0.00     32.39     0.00        1     0.00     0.00  xf_ParallelPrepVector
+  0.00     32.39     0.00        1     0.00     0.00  xf_ParallelizeEqnSet
+  0.00     32.39     0.00        1     0.00     0.00  xf_ParallelizeKeyValue
+  0.00     32.39     0.00        1     0.00     0.00  xf_ParallelizeMesh
+  0.00     32.39     0.00        1     0.00     0.00  xf_PreconditionerLineCheck
+  0.00     32.39     0.00        1     0.00     0.00  xf_ReadAllFromJobFile
+  0.00     32.39     0.00        1     0.00     0.00  xf_ReadAllInputFile
+  0.00     32.39     0.00        1     0.00     0.00  xf_ReadAsciiFile
+  0.00     32.39     0.00        1     0.00     0.00  xf_ReadEqnSetBCs
+  0.00     32.39     0.00        1     0.00     0.00  xf_ReadEqnSetFile
+  0.00     32.39     0.00        1     0.00     0.00  xf_ReadEqnSetFileSerial
+  0.00     32.39     0.00        1     0.00     0.00  xf_ReadGriFile
+  0.00     32.39     0.00        1     0.00     0.00  xf_ScanXIntReal
+  0.00     32.39     0.00        1     0.00     0.00  xf_ScanXReal
+  0.00     32.39     0.00        1     0.00     0.00  xf_ScanXRealAlloc
+  0.00     32.39     0.00        1     0.00     0.00  xf_UpdateFaceOrient
+  0.00     32.39     0.00        1     0.00     0.00  xf_VAlloc2
+  0.00     32.39     0.00        1     0.00     0.00  xf_WriteAllBinary
+  0.00     32.39     0.00        1     0.00     0.00  xf_WriteEqnSetBinary
+  0.00     32.39     0.00        1     0.00     0.00  xf_WriteEqnSetBinarySerial
+  0.00     32.39     0.00        1     0.00     0.00  xf_WriteGeomBinary
+  0.00     32.39     0.00        1     0.00     0.00  xf_WriteMeshBinary
+  0.00     32.39     0.00        1     0.00     0.00  xf_WriteMeshBinarySerial
+  0.00     32.39     0.00        1     0.00     0.00  xf_WriteParamBinary
+  0.00     32.39     0.00        1     0.00     0.00  xf_WriteResTermBinary
+  0.00     32.39     0.00        1     0.00    32.29  xf_main
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.03% of 32.39 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     99.7    0.00   32.29                 main [1]
+                0.00   32.29       1/1           xf_main [2]
+                0.00    0.00       3/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/1           xf_MPI_Init [286]
+                0.00    0.00       1/1           xf_MPI_Finalize [285]
+-----------------------------------------------
+                0.00   32.29       1/1           main [1]
+[2]     99.7    0.00   32.29       1         xf_main [2]
+                0.00   30.79       1/1           xfYu_ApplyTimeScheme [3]
+                0.00    1.46       1/1           xfYu_FindOrCreatePrimalState [29]
+                0.00    0.03       1/1           Yu_MinFaceLengthScale [70]
+                0.00    0.00       1/1           xf_ReadAllFromJobFile [90]
+                0.00    0.00       1/1           xf_DestroyAll [101]
+                0.00    0.00       1/2           xf_DestroyEqnSet [102]
+                0.00    0.00       1/1           xf_MergeEqnSet [111]
+                0.00    0.00       4/5           Yu_GammaVectorCreate [110]
+                0.00    0.00       1/1           xf_DestroyTimeHistData [113]
+                0.00    0.00       1/168         xf_Release2 [81]
+                0.00    0.00       1/1           xf_ReadEqnSetFile [124]
+                0.00    0.00       1/1           xf_WriteAllBinary [136]
+                0.00    0.00       1/1           PullinModel [181]
+                0.00    0.00      30/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/1           xf_CreateUniformTimeHistData [187]
+                0.00    0.00       5/140         xf_GetKeyValueBool [163]
+                0.00    0.00       1/1           DestroyModel [195]
+                0.00    0.00       1/2           xf_CreateEqnSet [192]
+                0.00    0.00       8/61          xf_printf [263]
+                0.00    0.00       3/7           xf_GetKeyValueInt [271]
+                0.00    0.00       2/446         xf_GetKeyValue [249]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+                0.00    0.00       1/89          xf_GetKeyValueReal [255]
+                0.00    0.00       1/16          xf_NotNull [269]
+-----------------------------------------------
+                0.00   30.79       1/1           xf_main [2]
+[3]     95.1    0.00   30.79       1         xfYu_ApplyTimeScheme [3]
+                0.00   21.46      40/40          xf_CalculateResidual [4]
+                0.00    6.89      40/40          xf_MultInvMassMatrix [10]
+                0.00    1.73      51/51          Yu_Solution_Processing [24]
+                0.00    0.54       1/1           xfYu_CalculateResidual [36]
+                0.00    0.10       1/1           Yu_StatisticsOutput [58]
+                0.04    0.00      60/60          xf_SetVector [66]
+                0.03    0.00      70/70          xf_VectorMultSet [68]
+                0.00    0.00      11/11          xf_DumpVectorBinary [96]
+                0.00    0.00      53/53          xf_FindSimilarVector [99]
+                0.00    0.00       1/1           xf_CreateSolverData [121]
+                0.00    0.00       1/5           Yu_GammaVectorCreate [110]
+                0.00    0.00      10/10          Yu_EstimateTimeStep [128]
+                0.00    0.00     438/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/147029      xf_FindDataByTitle [74]
+                0.00    0.00      10/10          xf_WriteLogEntry [172]
+                0.00    0.00       9/9           xf_CheckUserHalt [176]
+                0.00    0.00      10/10          xf_VectorNorm [178]
+                0.00    0.00      50/50          xf_SetKeyValueReal [179]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+                0.00    0.00       1/1           xf_DestroySolverData [213]
+                0.00    0.00       1/13          xf_GetKeyValueEnum [190]
+                0.00    0.00       1/77719027     xf_Release [62]
+                0.00    0.00      21/61          xf_printf [263]
+                0.00    0.00       3/7           xf_GetKeyValueInt [271]
+                0.00    0.00       2/89          xf_GetKeyValueReal [255]
+                0.00    0.00       1/2           xf_FindPrimalState [276]
+-----------------------------------------------
+                0.00   21.46      40/40          xfYu_ApplyTimeScheme [3]
+[4]     66.2    0.00   21.46      40         xf_CalculateResidual [4]
+                0.01   18.35      40/41          xf_CalculateResidualIFaces [5]
+                0.00    3.10      40/41          xf_CalculateResidualElems [18]
+                0.00    0.00      40/147029      xf_FindDataByTitle [74]
+                0.00    0.00     440/212275957     xf_ErrorReport [37]
+                0.00    0.00      80/82          xf_HaloExchangeVectorBegin [168]
+                0.00    0.00      80/82          xf_HaloExchangeVectorEnd [169]
+                0.00    0.00      40/140         xf_GetKeyValueBool [163]
+                0.00    0.00      40/41          xf_CalculateResidualBFaces [180]
+                0.00    0.00      80/81          xf_SetZeroVector [262]
+                0.00    0.00      40/40          xf_CalculateStabilization [266]
+-----------------------------------------------
+                0.00    0.46       1/41          xfYu_CalculateResidual [36]
+                0.01   18.35      40/41          xf_CalculateResidual [4]
+[5]     58.1    0.01   18.80      41         xf_CalculateResidualIFaces [5]
+                0.05   18.75   62976/62976       xf_CalculateResidualIFace [6]
+                0.00    0.00   63058/212275957     xf_ErrorReport [37]
+                0.00    0.00      41/41          xf_DestroyStaticDataIFace [134]
+                0.00    0.00      41/147029      xf_FindDataByTitle [74]
+                0.00    0.00      41/140         xf_GetKeyValueBool [163]
+-----------------------------------------------
+                0.05   18.75   62976/62976       xf_CalculateResidualIFaces [5]
+[6]     58.1    0.05   18.75   62976         xf_CalculateResidualIFace [6]
+                0.36    9.18   62976/62976       LYDG_FaceViscTerm [7]
+                0.03    5.03  125952/147456      xf_EvalPhysicalGrad [14]
+                1.09    1.38  125952/175104      xf_ElemJacobian [17]
+                0.27    0.85   62976/84992       xf_Ref2GlobElem [28]
+                0.00    0.30   62976/66048       xf_IFaceNormal [44]
+                0.12    0.00   62976/62976       ConvFluxInteriorFace [54]
+                0.01    0.09  125952/125952      xf_EvalBasisOnFaceUsingTable [61]
+                0.00    0.03      41/41          xf_FindElemGeom [69]
+                0.01    0.00  125952/147029      xf_FindDataByTitle [74]
+                0.01    0.00  440832/566784      xf_MTxM_Sub [77]
+                0.00    0.00  756614/212275957     xf_ErrorReport [37]
+                0.00    0.00   62976/225792      xf_QuadFace [100]
+                0.00    0.00   62976/62976       xf_GetQuadOrderIFace [114]
+                0.00    0.00      82/82          xf_CreateBasisTable [148]
+                0.00    0.00      41/41          LYDG_ReAllocDiffJumpData [149]
+                0.00    0.00      41/41          LYDG_CreateDiffJumpData [170]
+                0.00    0.00      41/44761489     xf_Alloc [60]
+                0.00    0.00     287/292461      xf_ReAlloc [126]
+                0.00    0.00  503808/641663      xf_MxM_Set [222]
+                0.00    0.00  125952/356864      xf_InterpOrder [224]
+                0.00    0.00   62976/188928      xf_MTxM_Add [231]
+                0.00    0.00      41/89          xf_GetKeyValueReal [255]
+-----------------------------------------------
+                0.36    9.18   62976/62976       xf_CalculateResidualIFace [6]
+[7]     29.5    0.36    9.18   62976         LYDG_FaceViscTerm [7]
+                0.34    8.36  251904/272896      LYDG_InteriorViscTerm [8]
+                0.34    0.00   62976/62976       DissipationCorrect [42]
+                0.08    0.00  314880/314880      xf_ColcMult_Add [64]
+                0.05    0.00 3148800/13980672     Yu_TransportProperty [48]
+                0.01    0.00 3652608/212275957     xf_ErrorReport [37]
+                0.00    0.00   62976/566784      xf_MTxM_Sub [77]
+                0.00    0.00   62976/62976       xf_ColcMult_Set [234]
+                0.00    0.00   62976/824321      xf_Basis2Shape [221]
+                0.00    0.00   62976/188928      xf_MTxM_Add [231]
+-----------------------------------------------
+                0.03    0.70   20992/272896      xf_CalculateResidualElem [19]
+                0.34    8.36  251904/272896      LYDG_FaceViscTerm [7]
+[8]     29.1    0.37    9.05  272896         LYDG_InteriorViscTerm [8]
+                4.47    4.55 10831872/10831872     LYDG_PhysDiffModel3d [9]
+                0.03    0.00 10831872/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                4.47    4.55 10831872/10831872     LYDG_InteriorViscTerm [8]
+[9]     27.9    4.47    4.55 10831872         LYDG_PhysDiffModel3d [9]
+                4.22    0.00 97486848/97486848     xf_MxV_Add [15]
+                0.18    0.00 10831872/13980672     Yu_TransportProperty [48]
+                0.14    0.00 32495616/32495616     xf_MxV [53]
+                0.03    0.00 10831872/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    6.89      40/40          xfYu_ApplyTimeScheme [3]
+[10]    21.3    0.00    6.89      40         xf_MultInvMassMatrix [10]
+                0.00    6.60      40/40          xf_FindInvMassMatrixData [11]
+                0.29    0.00   20480/20480       xf_cMxM_Add [45]
+                0.00    0.00   20640/212275957     xf_ErrorReport [37]
+                0.00    0.00      40/77719027     xf_Release [62]
+                0.00    0.00      40/292461      xf_ReAlloc [126]
+                0.00    0.00   20480/356864      xf_InterpOrder [224]
+                0.00    0.00   20480/20480       xf_ElemInvMassMatrix [237]
+                0.00    0.00      40/531773      xf_Order2nNode [223]
+-----------------------------------------------
+                0.00    6.60      40/40          xf_MultInvMassMatrix [10]
+[11]    20.4    0.00    6.60      40         xf_FindInvMassMatrixData [11]
+                0.00    6.43       1/1           xf_FindMassMatrixData [12]
+                0.00    0.17       1/1           xf_MatrixInvert [50]
+                0.00    0.00      82/212275957     xf_ErrorReport [37]
+                0.00    0.00      40/140         xf_GetKeyValueBool [163]
+                0.00    0.00      40/41          xf_FindMatrix [182]
+                0.00    0.00      40/531773      xf_Order2nNode [223]
+-----------------------------------------------
+                0.00    6.43       1/1           xf_FindInvMassMatrixData [11]
+[12]    19.8    0.00    6.43       1         xf_FindMassMatrixData [12]
+                6.41    0.02       1/1           xf_ComputeGenMassMatrix [13]
+                0.00    0.00       3/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/140         xf_GetKeyValueBool [163]
+                0.00    0.00       1/41          xf_FindMatrix [182]
+                0.00    0.00       1/531773      xf_Order2nNode [223]
+-----------------------------------------------
+                6.41    0.02       1/1           xf_FindMassMatrixData [12]
+[13]    19.8    6.41    0.02       1         xf_ComputeGenMassMatrix [13]
+                0.00    0.01     512/175104      xf_ElemJacobian [17]
+                0.00    0.01     512/112173      xf_EvalBasis [20]
+                0.00    0.00    1544/212275957     xf_ErrorReport [37]
+                0.00    0.00     512/49664       xf_QuadElem [115]
+                0.00    0.00       1/48130       xf_GetQuadOrderElem [72]
+                0.00    0.00       2/1299        xf_DestroyBasisData [141]
+                0.00    0.00       1/689         xf_DestroyJacobianData [146]
+                0.00    0.00       1/1213        xf_DestroyGenericQuadData [142]
+                0.00    0.00       1/77719027     xf_Release [62]
+                0.00    0.00       1/292461      xf_ReAlloc [126]
+-----------------------------------------------
+                0.00    0.02     512/147456      Yu_OutputPointValueInit [59]
+                0.00    0.84   20992/147456      xf_CalculateResidualElem [19]
+                0.03    5.03  125952/147456      xf_CalculateResidualIFace [6]
+[14]    18.3    0.03    5.89  147456         xf_EvalPhysicalGrad [14]
+                3.87    0.00  884736/884736      xf_ColMult_Add [16]
+                2.02    0.00  442368/442368      xf_ColMult_Set [21]
+-----------------------------------------------
+                4.22    0.00 97486848/97486848     LYDG_PhysDiffModel3d [9]
+[15]    13.0    4.22    0.00 97486848         xf_MxV_Add [15]
+-----------------------------------------------
+                3.87    0.00  884736/884736      xf_EvalPhysicalGrad [14]
+[16]    11.9    3.87    0.00  884736         xf_ColMult_Add [16]
+-----------------------------------------------
+                0.00    0.01     512/175104      xf_ComputeGenMassMatrix [13]
+                0.00    0.01     512/175104      xf_FindElemGeom [69]
+                0.00    0.01     512/175104      Yu_MinFaceLengthScale [70]
+                0.00    0.01     512/175104      Yu_OutputPointValueInit [59]
+                0.18    0.23   20992/175104      xf_CalculateResidualElem [19]
+                0.23    0.29   26112/175104      Yu_ConductEntropyBounding [23]
+                1.09    1.38  125952/175104      xf_CalculateResidualIFace [6]
+[17]    10.6    1.52    1.91  175104         xf_ElemJacobian [17]
+                0.01    1.41  152620/153687      xf_GetGrads [31]
+                0.46    0.00 13918208/13918208     xf_MatDetInv [39]
+                0.04    0.00 14578727/212275957     xf_ErrorReport [37]
+                0.00    0.00  154122/292461      xf_ReAlloc [126]
+                0.00    0.00     689/44761489     xf_Alloc [60]
+                0.00    0.00  175104/531773      xf_Order2nNode [223]
+                0.00    0.00  175104/356397      xf_Basis2Dim [225]
+-----------------------------------------------
+                0.00    0.08       1/41          xfYu_CalculateResidual [36]
+                0.00    3.10      40/41          xf_CalculateResidual [4]
+[18]     9.8    0.00    3.18      41         xf_CalculateResidualElems [18]
+                0.01    3.17   20992/20992       xf_CalculateResidualElem [19]
+                0.00    0.00   21033/212275957     xf_ErrorReport [37]
+                0.00    0.00      41/41          xf_DestroyStaticDataElem [151]
+-----------------------------------------------
+                0.01    3.17   20992/20992       xf_CalculateResidualElems [18]
+[19]     9.8    0.01    3.17   20992         xf_CalculateResidualElem [19]
+                0.00    0.84   20992/147456      xf_EvalPhysicalGrad [14]
+                0.03    0.70   20992/272896      LYDG_InteriorViscTerm [8]
+                0.18    0.23   20992/175104      xf_ElemJacobian [17]
+                0.00    0.38   20992/112173      xf_EvalBasis [20]
+                0.09    0.28   20992/84992       xf_Ref2GlobElem [28]
+                0.25    0.01   20992/20992       ConvFluxInterior [46]
+                0.16    0.00  125952/126465      xf_ColMult [51]
+                0.01    0.00   20992/48130       xf_GetQuadOrderElem [72]
+                0.00    0.00   20992/147029      xf_FindDataByTitle [74]
+                0.00    0.00   62976/566784      xf_MTxM_Sub [77]
+                0.00    0.00  168551/212275957     xf_ErrorReport [37]
+                0.00    0.00   20992/49664       xf_QuadElem [115]
+                0.00    0.00      41/44761489     xf_Alloc [60]
+                0.00    0.00     246/292461      xf_ReAlloc [126]
+                0.00    0.00   83968/641663      xf_MxM_Set [222]
+                0.00    0.00   62976/188928      xf_MTxM_Add [231]
+                0.00    0.00   20992/356864      xf_InterpOrder [224]
+                0.00    0.00      41/89          xf_GetKeyValueReal [255]
+-----------------------------------------------
+                0.00    0.00       1/112173      xf_ProjectOnElemQR [38]
+                0.00    0.01     512/112173      xf_ComputeGenMassMatrix [13]
+                0.00    0.01     512/112173      Yu_OutputPointValueInit [59]
+                0.00    0.02    1025/112173      xf_EvalBasisOnFace [63]
+                0.00    0.38   20992/112173      xf_CalculateResidualElem [19]
+                0.00    0.47   26112/112173      Yu_ConductEntropyBounding [23]
+                0.01    1.14   63019/112173      xf_Ref2GlobElem [28]
+[20]     6.3    0.02    2.03  112173         xf_EvalBasis [20]
+                0.04    1.70 9593147/9593147     xf_Shape_TensorLegendre [22]
+                0.02    0.24 1584201/1584201     xf_Shape_TensorLagrange [47]
+                0.02    0.00 10007716/212275957     xf_ErrorReport [37]
+                0.00    0.01    1067/153687      xf_GetGrads [31]
+                0.00    0.00    1163/44761489     xf_Alloc [60]
+                0.00    0.00    3215/292461      xf_ReAlloc [126]
+                0.00    0.00  202373/531773      xf_Order2nNode [223]
+                0.00    0.00  112173/238125      xf_NeedBasisReCalc [228]
+                0.00    0.00  112173/356397      xf_Basis2Dim [225]
+-----------------------------------------------
+                2.02    0.00  442368/442368      xf_EvalPhysicalGrad [14]
+[21]     6.2    2.02    0.00  442368         xf_ColMult_Set [21]
+-----------------------------------------------
+                0.04    1.70 9593147/9593147     xf_EvalBasis [20]
+[22]     5.4    0.04    1.70 9593147         xf_Shape_TensorLegendre [22]
+                0.92    0.78 9593147/9627844     xf_BasisLegendre3D [25]
+-----------------------------------------------
+                0.64    1.09      51/51          Yu_Solution_Processing [24]
+[23]     5.4    0.64    1.09      51         Yu_ConductEntropyBounding [23]
+                0.23    0.29   26112/175104      xf_ElemJacobian [17]
+                0.00    0.47   26112/112173      xf_EvalBasis [20]
+                0.00    0.06  156672/282624      xf_RefFace2Interpol [55]
+                0.02    0.00  156672/156672      xf_GetQuadOrderAcrossFace [71]
+                0.01    0.00   26112/48130       xf_GetQuadOrderElem [72]
+                0.01    0.00  156672/159744      xf_NeighborAcrossFace [79]
+                0.00    0.00  757911/212275957     xf_ErrorReport [37]
+                0.00    0.00  156672/225792      xf_QuadFace [100]
+                0.00    0.00   26112/49664       xf_QuadElem [115]
+                0.00    0.00     255/44761489     xf_Alloc [60]
+                0.00    0.00     102/1299        xf_DestroyBasisData [141]
+                0.00    0.00     102/1213        xf_DestroyGenericQuadData [142]
+                0.00    0.00     357/77719027     xf_Release [62]
+                0.00    0.00      51/689         xf_DestroyJacobianData [146]
+                0.00    0.00  182784/356864      xf_InterpOrder [224]
+                0.00    0.00   51712/641663      xf_MxM_Set [222]
+                0.00    0.00   26112/27123       xf_Shape2nFace [236]
+                0.00    0.00      51/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    1.73      51/51          xfYu_ApplyTimeScheme [3]
+[24]     5.4    0.00    1.73      51         Yu_Solution_Processing [24]
+                0.64    1.09      51/51          Yu_ConductEntropyBounding [23]
+-----------------------------------------------
+                0.00    0.00   34697/9627844     xf_Grad_TensorLegendre [82]
+                0.92    0.78 9593147/9627844     xf_Shape_TensorLegendre [22]
+[25]     5.3    0.93    0.78 9627844         xf_BasisLegendre3D [25]
+                0.19    0.45 28883532/28883532     xf_BasisLegendre1D [35]
+                0.09    0.00 38546073/212275957     xf_ErrorReport [37]
+                0.03    0.00 28883532/77719027     xf_Release [62]
+                0.02    0.00 9662541/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.02    0.24 1654272/10563658     xf_ElemNormal [43]
+                0.12    1.29 8909386/10563658     xf_GetGrads [31]
+[26]     5.2    0.15    1.53 10563658         xf_Grad_TensorLagrange [26]
+                0.62    0.68 8909386/10493587     xf_BasisLagrange3D [27]
+                0.06    0.09 1654272/1654272     xf_BasisLagrange2D [52]
+                0.05    0.00 21127316/212275957     xf_ErrorReport [37]
+                0.02    0.00 10563658/44761489     xf_Alloc [60]
+                0.01    0.00 10563658/77719027     xf_Release [62]
+-----------------------------------------------
+                0.11    0.12 1584201/10493587     xf_Shape_TensorLagrange [47]
+                0.62    0.68 8909386/10493587     xf_Grad_TensorLagrange [26]
+[27]     4.7    0.73    0.80 10493587         xf_BasisLagrange3D [27]
+                0.60    0.00 31480761/34789305     xf_BasisLagrange1D [34]
+                0.12    0.00 50883734/212275957     xf_ErrorReport [37]
+                0.04    0.00 19402973/44761489     xf_Alloc [60]
+                0.04    0.00 31480761/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.01     512/84992       xfYu_InitAlterState [30]
+                0.00    0.01     512/84992       Yu_OutputPointValueInit [59]
+                0.09    0.28   20992/84992       xf_CalculateResidualElem [19]
+                0.27    0.85   62976/84992       xf_CalculateResidualIFace [6]
+[28]     4.7    0.36    1.15   84992         xf_Ref2GlobElem [28]
+                0.01    1.14   63019/112173      xf_EvalBasis [20]
+                0.00    0.00   63019/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    1.46       1/1           xf_main [2]
+[29]     4.5    0.00    1.46       1         xfYu_FindOrCreatePrimalState [29]
+                0.00    1.46       1/1           xfYu_InitAlterState [30]
+                0.00    0.00       1/1           xf_NewGREVector [105]
+                0.00    0.00       1/29          xf_DataSetAdd [162]
+                0.00    0.00       5/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/446         xf_GetKeyValue [249]
+                0.00    0.00       1/16          xf_NotNull [269]
+                0.00    0.00       1/2           xf_FindPrimalState [276]
+                0.00    0.00       1/1           xf_DataSetRemove [279]
+-----------------------------------------------
+                0.00    1.46       1/1           xfYu_FindOrCreatePrimalState [29]
+[30]     4.5    0.00    1.46       1         xfYu_InitAlterState [30]
+                0.00    0.86     512/512         InitializeDataInterpolation [33]
+                0.01    0.48     512/512         xf_ProjectOnElemQR [38]
+                0.11    0.00       1/1           init_data_read_from_file [56]
+                0.00    0.01     512/84992       xf_Ref2GlobElem [28]
+                0.00    0.00    2061/212275957     xf_ErrorReport [37]
+                0.00    0.00     512/512         xf_QuadElemAtLeast [150]
+                0.00    0.00       1/48130       xf_GetQuadOrderElem [72]
+                0.00    0.00       1/147029      xf_FindDataByTitle [74]
+                0.00    0.00       2/1299        xf_DestroyBasisData [141]
+                0.00    0.00       7/77719027     xf_Release [62]
+                0.00    0.00       1/1213        xf_DestroyGenericQuadData [142]
+                0.00    0.00       1/140         xf_GetKeyValueBool [163]
+                0.00    0.00       2/292461      xf_ReAlloc [126]
+                0.00    0.00     512/356864      xf_InterpOrder [224]
+                0.00    0.00       1/2           xf_ReAlloc2 [277]
+                0.00    0.00       1/89          xf_GetKeyValueReal [255]
+                0.00    0.00       1/531773      xf_Order2nNode [223]
+-----------------------------------------------
+                0.00    0.01    1067/153687      xf_EvalBasis [20]
+                0.01    1.41  152620/153687      xf_ElemJacobian [17]
+[31]     4.4    0.01    1.42  153687         xf_GetGrads [31]
+                0.12    1.29 8909386/10563658     xf_Grad_TensorLagrange [26]
+                0.00    0.01   34697/34697       xf_Grad_TensorLegendre [82]
+                0.00    0.00  188384/212275957     xf_ErrorReport [37]
+                0.00    0.00  153687/531773      xf_Order2nNode [223]
+-----------------------------------------------
+                0.86    0.00  373248/373248      InitializeDataInterpolation [33]
+[32]     2.7    0.86    0.00  373248         Yu_FlowFieldInit_from_datafile [32]
+-----------------------------------------------
+                0.00    0.86     512/512         xfYu_InitAlterState [30]
+[33]     2.7    0.00    0.86     512         InitializeDataInterpolation [33]
+                0.86    0.00  373248/373248      Yu_FlowFieldInit_from_datafile [32]
+-----------------------------------------------
+                0.06    0.00 3308544/34789305     xf_BasisLagrange2D [52]
+                0.60    0.00 31480761/34789305     xf_BasisLagrange3D [27]
+[34]     2.0    0.66    0.00 34789305         xf_BasisLagrange1D [34]
+-----------------------------------------------
+                0.19    0.45 28883532/28883532     xf_BasisLegendre3D [25]
+[35]     1.9    0.19    0.45 28883532         xf_BasisLegendre1D [35]
+                0.38    0.00 28883532/28883532     xf_Shape_LineLegendre [40]
+                0.07    0.00 28987623/212275957     xf_ErrorReport [37]
+                0.00    0.00  104091/104091      xf_Grad_LineLegendre [232]
+-----------------------------------------------
+                0.00    0.54       1/1           xfYu_ApplyTimeScheme [3]
+[36]     1.7    0.00    0.54       1         xfYu_CalculateResidual [36]
+                0.00    0.46       1/41          xf_CalculateResidualIFaces [5]
+                0.00    0.08       1/41          xf_CalculateResidualElems [18]
+                0.00    0.00       1/147029      xf_FindDataByTitle [74]
+                0.00    0.00       8/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/82          xf_HaloExchangeVectorBegin [168]
+                0.00    0.00       2/82          xf_HaloExchangeVectorEnd [169]
+                0.00    0.00       1/41          xf_CalculateResidualBFaces [180]
+                0.00    0.00       1/81          xf_SetZeroVector [262]
+-----------------------------------------------
+                0.00    0.00       1/212275957     xf_CreateNodeHash [208]
+                0.00    0.00       1/212275957     xf_ParallelizeMesh [217]
+                0.00    0.00       1/212275957     xf_CreateGeom [206]
+                0.00    0.00       1/212275957     xf_ParallelPrepVector [214]
+                0.00    0.00       1/212275957     xf_ParallelizeKeyValue [216]
+                0.00    0.00       1/212275957     xf_CreateParam [210]
+                0.00    0.00       1/212275957     xf_DestroyParam [118]
+                0.00    0.00       1/212275957     xf_DestroyICs [194]
+                0.00    0.00       1/212275957     xf_CreateResTerms [211]
+                0.00    0.00       1/212275957     xf_CreateICs [207]
+                0.00    0.00       1/212275957     xf_CreateBCs [205]
+                0.00    0.00       1/212275957     xf_CreateOutputs [209]
+                0.00    0.00       1/212275957     xf_AllocICs [203]
+                0.00    0.00       1/212275957     xf_AllocBCs [202]
+                0.00    0.00       1/212275957     xf_AllocOutputs [204]
+                0.00    0.00       1/212275957     xf_DestroyOutput [109]
+                0.00    0.00       1/212275957     xf_DestroyOutputs [108]
+                0.00    0.00       1/212275957     xf_ParallelizeEqnSet [215]
+                0.00    0.00       1/212275957     xf_CreateTimeHistData [212]
+                0.00    0.00       1/212275957     Yu_StatisticsOutput [58]
+                0.00    0.00       2/212275957     xf_ReadAllInputFile [95]
+                0.00    0.00       2/212275957     init_data_read_from_file [56]
+                0.00    0.00       2/212275957     xf_CreateMesh [197]
+                0.00    0.00       2/212275957     xf_CreateMatrix [196]
+                0.00    0.00       2/212275957     xf_DestroyMatrix [104]
+                0.00    0.00       2/212275957     xf_AddKeyValueList [98]
+                0.00    0.00       2/212275957     xf_Basis2nFace [201]
+                0.00    0.00       2/212275957     xf_InitEqnSet [200]
+                0.00    0.00       2/212275957     xf_AllocResTerms [199]
+                0.00    0.00       2/212275957     xf_CreateEqnSet [192]
+                0.00    0.00       2/212275957     xf_WriteResTermBinary [166]
+                0.00    0.00       2/212275957     xf_DestroyResTerms [117]
+                0.00    0.00       2/212275957     xf_FindLineConnectivity [122]
+                0.00    0.00       3/212275957     main [1]
+                0.00    0.00       3/212275957     xf_WriteMeshBinary [138]
+                0.00    0.00       3/212275957     xf_WriteGeomBinary [198]
+                0.00    0.00       3/212275957     xf_FindMassMatrixData [12]
+                0.00    0.00       3/212275957     xf_WriteEqnSetBinary [160]
+                0.00    0.00       4/212275957     xf_DestroyMesh [107]
+                0.00    0.00       4/212275957     xf_WriteParamBinary [165]
+                0.00    0.00       4/212275957     xf_ScanXRealAlloc [193]
+                0.00    0.00       4/212275957     xf_ReadEqnSetFile [124]
+                0.00    0.00       5/212275957     xf_DestroyAll [101]
+                0.00    0.00       5/212275957     xf_NewGREVector [105]
+                0.00    0.00       5/212275957     xfYu_FindOrCreatePrimalState [29]
+                0.00    0.00       5/212275957     xf_CreateSolverData [121]
+                0.00    0.00       6/212275957     xf_ReadAsciiFile [106]
+                0.00    0.00       6/212275957     xf_DestroyBCs [183]
+                0.00    0.00       8/212275957     xf_CreateAll [188]
+                0.00    0.00       8/212275957     xf_FindMatrix [182]
+                0.00    0.00       8/212275957     xf_ScanXStringAlloc [191]
+                0.00    0.00       8/212275957     xfYu_CalculateResidual [36]
+                0.00    0.00      10/212275957     xf_VectorNorm [178]
+                0.00    0.00      10/212275957     xf_DestroyEqnSet [102]
+                0.00    0.00      12/212275957     xf_CreateDataSet [186]
+                0.00    0.00      13/212275957     xf_GetKeyValueEnum [190]
+                0.00    0.00      15/212275957     xf_CreateUniformTimeHistData [187]
+                0.00    0.00      16/212275957     xf_CreateVector [83]
+                0.00    0.00      18/212275957     xf_AllocGenArray [189]
+                0.00    0.00      18/212275957     xf_CheckUserHalt [176]
+                0.00    0.00      24/212275957     xf_fclose [184]
+                0.00    0.00      24/212275957     xf_fopen [185]
+                0.00    0.00      29/212275957     xf_CreateData [177]
+                0.00    0.00      29/212275957     xf_DestroyData [92]
+                0.00    0.00      29/212275957     xf_DestroyDataSet [91]
+                0.00    0.00      30/212275957     xf_main [2]
+                0.00    0.00      31/212275957     Yu_GammaVectorCreate [110]
+                0.00    0.00      32/212275957     xf_DestroyVector [97]
+                0.00    0.00      33/212275957     PullinModel [181]
+                0.00    0.00      39/212275957     xf_ReadEqnSetBCs [171]
+                0.00    0.00      41/212275957     LYDG_CreateDiffJumpData [170]
+                0.00    0.00      41/212275957     xf_CalculateResidualBFaces [180]
+                0.00    0.00      44/212275957     xf_DumpVectorBinary [96]
+                0.00    0.00      45/212275957     xf_WriteAllBinary [136]
+                0.00    0.00      45/212275957     xf_FindVector [89]
+                0.00    0.00      46/212275957     xf_ReadEqnSetFileSerial [125]
+                0.00    0.00      49/212275957     xf_ReadAllFromJobFile [90]
+                0.00    0.00      50/212275957     xf_SetKeyValueReal [179]
+                0.00    0.00      50/212275957     xf_AllocString [167]
+                0.00    0.00      50/212275957     xf_WriteLogEntry [172]
+                0.00    0.00      58/212275957     xf_DataSetAdd [162]
+                0.00    0.00      68/212275957     xf_WriteGenArrayBinary [175]
+                0.00    0.00      68/212275957     xf_ftell [174]
+                0.00    0.00      68/212275957     xf_fseek [173]
+                0.00    0.00      78/212275957     xf_AddKeyValue [93]
+                0.00    0.00      78/212275957     xf_ReAllocCopy2 [94]
+                0.00    0.00      82/212275957     xf_HaloExchangeVectorEnd [169]
+                0.00    0.00      82/212275957     xf_HaloExchangeVectorBegin [168]
+                0.00    0.00      82/212275957     xf_FindInvMassMatrixData [11]
+                0.00    0.00      83/212275957     xf_AllocVectorGuts [164]
+                0.00    0.00      83/212275957     xf_WriteEqnSetBinarySerial [161]
+                0.00    0.00     106/212275957     xf_FindSimilarVector [99]
+                0.00    0.00     130/212275957     xf_WriteStringBinaryParallel [156]
+                0.00    0.00     130/212275957     xf_QRFactorHouseholder [41]
+                0.00    0.00     140/212275957     xf_GetKeyValueBool [163]
+                0.00    0.00     205/212275957     xf_DestroyStaticDataElem [151]
+                0.00    0.00     264/212275957     xf_MPI_Allreduce [157]
+                0.00    0.00     298/212275957     xf_WriteVectorBinary [158]
+                0.00    0.00     342/212275957     xf_WriteKeyValueBinary [159]
+                0.00    0.00     343/212275957     xf_WriteDataSetBinary [147]
+                0.00    0.00     390/212275957     xf_fwrite [155]
+                0.00    0.00     410/212275957     xf_DestroyStaticDataIFace [134]
+                0.00    0.00     438/212275957     xfYu_ApplyTimeScheme [3]
+                0.00    0.00     440/212275957     xf_CalculateResidual [4]
+                0.00    0.00     498/212275957     xf_GetLocFaceMax [153]
+                0.00    0.00     512/212275957     xf_GetQuadOrderGeneralFace [152]
+                0.00    0.00     512/212275957     xf_QuadElemAtLeast [150]
+                0.00    0.00     820/212275957     xf_CreateBasisTable [148]
+                0.00    0.00     984/212275957     xf_DestroyBasisTable [137]
+                0.00    0.00    1024/212275957     xf_SolvePLU_Matrix [49]
+                0.00    0.00    1026/212275957     xf_MatrixInvert [50]
+                0.00    0.00    1213/212275957     xf_CreateQuadData [144]
+                0.00    0.00    1230/212275957     LYDG_ReAllocDiffJumpData [149]
+                0.00    0.00    1544/212275957     xf_ComputeGenMassMatrix [13]
+                0.00    0.00    2058/212275957     xf_ProjectOnElemQR [38]
+                0.00    0.00    2061/212275957     xfYu_InitAlterState [30]
+                0.00    0.00    2187/212275957     xf_ScanReal [145]
+                0.00    0.00    3025/212275957     xf_QuadQuadrilateral [132]
+                0.00    0.00    3040/212275957     xf_QuadHexahedron [131]
+                0.00    0.00    3074/212275957     xf_UpdateFaceOrient [127]
+                0.00    0.00    3079/212275957     xf_WriteMeshBinarySerial [139]
+                0.00    0.00    3456/212275957     xf_DeleteFaceFromHash [130]
+                0.00    0.00    4096/212275957     xf_ScanInt [135]
+                0.00    0.00    4852/212275957     xf_QuadLine [133]
+                0.00    0.00    7215/212275957     xf_FindElemGeom [69]
+                0.00    0.00    9216/212275957     xf_DetermineFaceOrient [129]
+                0.00    0.00    9984/212275957     xf_AddFaceToHash [123]
+                0.00    0.00   10260/212275957     Yu_EstimateTimeStep [128]
+                0.00    0.00   11352/212275957     xf_ReadGriFile [116]
+                0.00    0.00   17410/212275957     Yu_MinFaceLengthScale [70]
+                0.00    0.00   20640/212275957     xf_MultInvMassMatrix [10]
+                0.00    0.00   21033/212275957     xf_CalculateResidualElems [18]
+                0.00    0.00   48130/212275957     xf_GetQuadOrderElem [72]
+                0.00    0.00   50880/212275957     xf_QuadElem [115]
+                0.00    0.00   62976/212275957     xf_GetQuadOrderIFace [114]
+                0.00    0.00   63019/212275957     xf_Ref2GlobElem [28]
+                0.00    0.00   63058/212275957     xf_CalculateResidualIFaces [5]
+                0.00    0.00   66048/212275957     xf_IFaceNormal [44]
+                0.00    0.00  114195/212275957     Yu_OutputPointValueInit [59]
+                0.00    0.00  156672/212275957     xf_GetQuadOrderAcrossFace [71]
+                0.00    0.00  168551/212275957     xf_CalculateResidualElem [19]
+                0.00    0.00  188384/212275957     xf_GetGrads [31]
+                0.00    0.00  253011/212275957     xf_EvalBasisOnFace [63]
+                0.00    0.00  282624/212275957     xf_RefFace2Elem [57]
+                0.00    0.00  377938/212275957     xf_EvalBasisOnFaceUsingTable [61]
+                0.00    0.00  452794/212275957     xf_QuadFace [100]
+                0.00    0.00  496296/212275957     xf_ElemNormal [43]
+                0.00    0.00  756614/212275957     xf_CalculateResidualIFace [6]
+                0.00    0.00  757911/212275957     Yu_ConductEntropyBounding [23]
+                0.00    0.00  847872/212275957     xf_RefFace2Interpol [55]
+                0.00    0.00 1574400/212275957     DissipationCorrect [42]
+                0.00    0.00 1574400/212275957     ConvFluxInteriorFace [54]
+                0.01    0.00 3168402/212275957     xf_Shape_TensorLagrange [47]
+                0.01    0.00 3652608/212275957     LYDG_FaceViscTerm [7]
+                0.01    0.00 4534272/212275957     ConvFluxInterior [46]
+                0.02    0.00 6617088/212275957     xf_BasisLagrange2D [52]
+                0.02    0.00 10007716/212275957     xf_EvalBasis [20]
+                0.03    0.00 10831872/212275957     LYDG_PhysDiffModel3d [9]
+                0.03    0.00 10831872/212275957     LYDG_InteriorViscTerm [8]
+                0.04    0.00 14578727/212275957     xf_ElemJacobian [17]
+                0.05    0.00 21127316/212275957     xf_Grad_TensorLagrange [26]
+                0.07    0.00 28987623/212275957     xf_BasisLegendre1D [35]
+                0.09    0.00 38546073/212275957     xf_BasisLegendre3D [25]
+                0.12    0.00 50883734/212275957     xf_BasisLagrange3D [27]
+[37]     1.6    0.52    0.00 212275957         xf_ErrorReport [37]
+-----------------------------------------------
+                0.01    0.48     512/512         xfYu_InitAlterState [30]
+[38]     1.5    0.01    0.48     512         xf_ProjectOnElemQR [38]
+                0.37    0.00       1/1           xf_QRFactorHouseholder [41]
+                0.11    0.00     512/1024        xf_SolvePLU_Matrix [49]
+                0.00    0.00     513/126465      xf_ColMult [51]
+                0.00    0.00       1/513         xf_ComputePLU [65]
+                0.00    0.00       1/112173      xf_EvalBasis [20]
+                0.00    0.00    2058/212275957     xf_ErrorReport [37]
+                0.00    0.00    1024/44761489     xf_Alloc [60]
+                0.00    0.00    1024/77719027     xf_Release [62]
+                0.00    0.00       1/1299        xf_DestroyBasisData [141]
+                0.00    0.00       3/292461      xf_ReAlloc [126]
+                0.00    0.00     512/531773      xf_Order2nNode [223]
+                0.00    0.00     512/512         xf_MTxM_Set [248]
+-----------------------------------------------
+                0.46    0.00 13918208/13918208     xf_ElemJacobian [17]
+[39]     1.4    0.46    0.00 13918208         xf_MatDetInv [39]
+-----------------------------------------------
+                0.38    0.00 28883532/28883532     xf_BasisLegendre1D [35]
+[40]     1.2    0.38    0.00 28883532         xf_Shape_LineLegendre [40]
+-----------------------------------------------
+                0.37    0.00       1/1           xf_ProjectOnElemQR [38]
+[41]     1.1    0.37    0.00       1         xf_QRFactorHouseholder [41]
+                0.00    0.00     130/212275957     xf_ErrorReport [37]
+                0.00    0.00      66/44761489     xf_Alloc [60]
+                0.00    0.00      66/77719027     xf_Release [62]
+                0.00    0.00     127/641663      xf_MxM_Set [222]
+-----------------------------------------------
+                0.34    0.00   62976/62976       LYDG_FaceViscTerm [7]
+[42]     1.1    0.34    0.00   62976         DissipationCorrect [42]
+                0.00    0.00 1574400/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.01    3072/69120       Yu_MinFaceLengthScale [70]
+                0.07    0.25   66048/69120       xf_IFaceNormal [44]
+[43]     1.0    0.07    0.26   69120         xf_ElemNormal [43]
+                0.02    0.24 1654272/10563658     xf_Grad_TensorLagrange [26]
+                0.00    0.00  496296/212275957     xf_ErrorReport [37]
+                0.00    0.00  210474/44761489     xf_Alloc [60]
+                0.00    0.00  207360/77719027     xf_Release [62]
+                0.00    0.00    3114/292461      xf_ReAlloc [126]
+                0.00    0.00 1654272/1654272     xf_CrossProduct [220]
+                0.00    0.00   69120/356397      xf_Basis2Dim [225]
+                0.00    0.00   69120/824321      xf_Basis2Shape [221]
+                0.00    0.00   69120/69120       xf_NodesOnFace [233]
+-----------------------------------------------
+                0.00    0.01    3072/66048       xf_FindElemGeom [69]
+                0.00    0.30   62976/66048       xf_CalculateResidualIFace [6]
+[44]     1.0    0.00    0.32   66048         xf_IFaceNormal [44]
+                0.07    0.25   66048/69120       xf_ElemNormal [43]
+                0.00    0.00   66048/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.29    0.00   20480/20480       xf_MultInvMassMatrix [10]
+[45]     0.9    0.29    0.00   20480         xf_cMxM_Add [45]
+-----------------------------------------------
+                0.25    0.01   20992/20992       xf_CalculateResidualElem [19]
+[46]     0.8    0.25    0.01   20992         ConvFluxInterior [46]
+                0.01    0.00 4534272/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.02    0.24 1584201/1584201     xf_EvalBasis [20]
+[47]     0.8    0.02    0.24 1584201         xf_Shape_TensorLagrange [47]
+                0.11    0.12 1584201/10493587     xf_BasisLagrange3D [27]
+                0.01    0.00 3168402/212275957     xf_ErrorReport [37]
+                0.00    0.00 1584201/44761489     xf_Alloc [60]
+                0.00    0.00 1584201/77719027     xf_Release [62]
+-----------------------------------------------
+                0.05    0.00 3148800/13980672     LYDG_FaceViscTerm [7]
+                0.18    0.00 10831872/13980672     LYDG_PhysDiffModel3d [9]
+[48]     0.7    0.23    0.00 13980672         Yu_TransportProperty [48]
+-----------------------------------------------
+                0.11    0.00     512/1024        xf_MatrixInvert [50]
+                0.11    0.00     512/1024        xf_ProjectOnElemQR [38]
+[49]     0.6    0.21    0.00    1024         xf_SolvePLU_Matrix [49]
+                0.00    0.00    1024/212275957     xf_ErrorReport [37]
+                0.00    0.00    1024/44761489     xf_Alloc [60]
+                0.00    0.00    1024/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.17       1/1           xf_FindInvMassMatrixData [11]
+[50]     0.5    0.00    0.17       1         xf_MatrixInvert [50]
+                0.11    0.00     512/1024        xf_SolvePLU_Matrix [49]
+                0.06    0.00     512/513         xf_ComputePLU [65]
+                0.00    0.00    1026/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+                0.00    0.00       2/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00     513/126465      xf_ProjectOnElemQR [38]
+                0.16    0.00  125952/126465      xf_CalculateResidualElem [19]
+[51]     0.5    0.16    0.00  126465         xf_ColMult [51]
+-----------------------------------------------
+                0.06    0.09 1654272/1654272     xf_Grad_TensorLagrange [26]
+[52]     0.5    0.06    0.09 1654272         xf_BasisLagrange2D [52]
+                0.06    0.00 3308544/34789305     xf_BasisLagrange1D [34]
+                0.02    0.00 6617088/212275957     xf_ErrorReport [37]
+                0.01    0.00 3308544/44761489     xf_Alloc [60]
+                0.01    0.00 4962816/77719027     xf_Release [62]
+-----------------------------------------------
+                0.14    0.00 32495616/32495616     LYDG_PhysDiffModel3d [9]
+[53]     0.4    0.14    0.00 32495616         xf_MxV [53]
+-----------------------------------------------
+                0.12    0.00   62976/62976       xf_CalculateResidualIFace [6]
+[54]     0.4    0.12    0.00   62976         ConvFluxInteriorFace [54]
+                0.00    0.00 1574400/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.05  125952/282624      xf_EvalBasisOnFace [63]
+                0.00    0.06  156672/282624      Yu_ConductEntropyBounding [23]
+[55]     0.3    0.00    0.11  282624         xf_RefFace2Interpol [55]
+                0.10    0.00  282624/282624      xf_RefFace2Elem [57]
+                0.01    0.00  282624/408576      xf_CheckHangFace [78]
+                0.00    0.00  847872/212275957     xf_ErrorReport [37]
+                0.00    0.00  282624/824321      xf_Basis2Shape [221]
+-----------------------------------------------
+                0.11    0.00       1/1           xfYu_InitAlterState [30]
+[56]     0.3    0.11    0.00       1         init_data_read_from_file [56]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+                0.00    0.00       1/61          xf_printf [263]
+-----------------------------------------------
+                0.10    0.00  282624/282624      xf_RefFace2Interpol [55]
+[57]     0.3    0.10    0.00  282624         xf_RefFace2Elem [57]
+                0.00    0.00  282624/212275957     xf_ErrorReport [37]
+                0.00    0.00  282624/288768      xf_Q1NodesOnFace [226]
+-----------------------------------------------
+                0.00    0.10       1/1           xfYu_ApplyTimeScheme [3]
+[58]     0.3    0.00    0.10       1         Yu_StatisticsOutput [58]
+                0.03    0.07       1/1           Yu_OutputPointValueInit [59]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.03    0.07       1/1           Yu_StatisticsOutput [58]
+[59]     0.3    0.03    0.07       1         Yu_OutputPointValueInit [59]
+                0.00    0.02     512/147456      xf_EvalPhysicalGrad [14]
+                0.02    0.00  110592/110592      Compute_Divergence_Mag [73]
+                0.00    0.01     512/175104      xf_ElemJacobian [17]
+                0.00    0.01     512/112173      xf_EvalBasis [20]
+                0.00    0.01     512/84992       xf_Ref2GlobElem [28]
+                0.00    0.00  114195/212275957     xf_ErrorReport [37]
+                0.00    0.00     512/48130       xf_GetQuadOrderElem [72]
+                0.00    0.00     512/49664       xf_QuadElem [115]
+                0.00    0.00       3/1299        xf_DestroyBasisData [141]
+                0.00    0.00      10/77719027     xf_Release [62]
+                0.00    0.00       1/88          xf_MPI_Allreduce [157]
+                0.00    0.00       1/689         xf_DestroyJacobianData [146]
+                0.00    0.00       1/1213        xf_DestroyGenericQuadData [142]
+                0.00    0.00       5/292461      xf_ReAlloc [126]
+                0.00    0.00    2048/641663      xf_MxM_Set [222]
+                0.00    0.00     512/356864      xf_InterpOrder [224]
+                0.00    0.00       1/89          xf_GetKeyValueReal [255]
+                0.00    0.00       1/61          xf_printf [263]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+                0.00    0.00       1/1           xf_DestroyMotionData [281]
+-----------------------------------------------
+                0.00    0.00       1/44761489     xf_CreateAll [188]
+                0.00    0.00       1/44761489     xf_CreateNodeHash [208]
+                0.00    0.00       1/44761489     xf_CreateGeom [206]
+                0.00    0.00       1/44761489     xf_CreateParam [210]
+                0.00    0.00       1/44761489     xf_ScanXRealAlloc [193]
+                0.00    0.00       1/44761489     xf_UpdateFaceOrient [127]
+                0.00    0.00       1/44761489     xf_CreateResTerms [211]
+                0.00    0.00       1/44761489     xf_CreateICs [207]
+                0.00    0.00       1/44761489     xf_CreateBCs [205]
+                0.00    0.00       1/44761489     xf_CreateOutputs [209]
+                0.00    0.00       1/44761489     xf_AllocResTerms [199]
+                0.00    0.00       1/44761489     xf_AllocICs [203]
+                0.00    0.00       1/44761489     xf_AllocBCs [202]
+                0.00    0.00       1/44761489     xf_AllocOutputs [204]
+                0.00    0.00       1/44761489     xf_ReadEqnSetFileSerial [125]
+                0.00    0.00       1/44761489     xf_CreateTimeHistData [212]
+                0.00    0.00       1/44761489     xf_FindLineConnectivity [122]
+                0.00    0.00       2/44761489     PullinModel [181]
+                0.00    0.00       2/44761489     init_data_read_from_file [56]
+                0.00    0.00       2/44761489     xf_CreateMesh [197]
+                0.00    0.00       2/44761489     xf_CreateMatrix [196]
+                0.00    0.00       2/44761489     xf_NewGREVector [105]
+                0.00    0.00       2/44761489     xf_FindMatrix [182]
+                0.00    0.00       2/44761489     xf_MatrixInvert [50]
+                0.00    0.00       2/44761489     xf_CreateEqnSet [192]
+                0.00    0.00       2/44761489     xfYu_ApplyTimeScheme [3]
+                0.00    0.00       2/44761489     Yu_MinFaceLengthScale [70]
+                0.00    0.00       3/44761489     xf_CreateSolverData [121]
+                0.00    0.00      10/44761489     Yu_GammaVectorCreate [110]
+                0.00    0.00      10/44761489     xf_ReadGriFile [116]
+                0.00    0.00      12/44761489     xf_CreateDataSet [186]
+                0.00    0.00      16/44761489     xf_CreateVector [83]
+                0.00    0.00      29/44761489     xf_CreateData [177]
+                0.00    0.00      41/44761489     LYDG_CreateDiffJumpData [170]
+                0.00    0.00      41/44761489     xf_CalculateResidualElem [19]
+                0.00    0.00      41/44761489     xf_CalculateResidualIFace [6]
+                0.00    0.00      44/44761489     xf_AllocVectorGuts [164]
+                0.00    0.00      50/44761489     xf_AllocString [167]
+                0.00    0.00      53/44761489     xf_FindSimilarVector [99]
+                0.00    0.00      66/44761489     xf_QRFactorHouseholder [41]
+                0.00    0.00      82/44761489     xf_CreateBasisTable [148]
+                0.00    0.00      88/44761489     xf_MPI_Allreduce [157]
+                0.00    0.00     255/44761489     Yu_ConductEntropyBounding [23]
+                0.00    0.00     689/44761489     xf_ElemJacobian [17]
+                0.00    0.00    1024/44761489     xf_SolvePLU_Matrix [49]
+                0.00    0.00    1024/44761489     xf_ProjectOnElemQR [38]
+                0.00    0.00    1163/44761489     xf_EvalBasis [20]
+                0.00    0.00    1213/44761489     xf_CreateQuadData [144]
+                0.00    0.00    1728/44761489     xf_DeleteFaceFromHash [130]
+                0.00    0.00    6720/44761489     xf_AddFaceToHash [123]
+                0.00    0.00   14659/44761489     xf_ReAlloc [126]
+                0.00    0.00  210474/44761489     xf_ElemNormal [43]
+                0.00    0.00 1584201/44761489     xf_Shape_TensorLagrange [47]
+                0.01    0.00 3308544/44761489     xf_BasisLagrange2D [52]
+                0.02    0.00 9662541/44761489     xf_BasisLegendre3D [25]
+                0.02    0.00 10563658/44761489     xf_Grad_TensorLagrange [26]
+                0.04    0.00 19402973/44761489     xf_BasisLagrange3D [27]
+[60]     0.3    0.10    0.00 44761489         xf_Alloc [60]
+-----------------------------------------------
+                0.01    0.09  125952/125952      xf_CalculateResidualIFace [6]
+[61]     0.3    0.01    0.09  125952         xf_EvalBasisOnFaceUsingTable [61]
+                0.02    0.07  125952/125952      xf_EvalBasisOnFace [63]
+                0.00    0.00  125952/408576      xf_CheckHangFace [78]
+                0.00    0.00  377938/212275957     xf_ErrorReport [37]
+                0.00    0.00  125952/824321      xf_Basis2Shape [221]
+                0.00    0.00      82/82          xf_ForceReCalcBasisTable [260]
+-----------------------------------------------
+                0.00    0.00       1/77719027     xf_DestroyAll [101]
+                0.00    0.00       1/77719027     xf_DestroyElemGroup [119]
+                0.00    0.00       1/77719027     xf_DestroyParam [118]
+                0.00    0.00       1/77719027     xf_ComputeGenMassMatrix [13]
+                0.00    0.00       1/77719027     xf_UpdateFaceOrient [127]
+                0.00    0.00       1/77719027     xf_MergeEqnSet [111]
+                0.00    0.00       1/77719027     xf_FindLineConnectivity [122]
+                0.00    0.00       1/77719027     xfYu_ApplyTimeScheme [3]
+                0.00    0.00       2/77719027     xf_DestroyGeom [219]
+                0.00    0.00       2/77719027     xf_NewGREVector [105]
+                0.00    0.00       2/77719027     xf_MatrixInvert [50]
+                0.00    0.00       2/77719027     xf_DestroyOutputs [108]
+                0.00    0.00       2/77719027     xf_DestroyResTerms [117]
+                0.00    0.00       2/77719027     DestroyEntropyBoundStruct [218]
+                0.00    0.00       3/77719027     xf_DestroySolverData [213]
+                0.00    0.00       5/77719027     xf_DestroyTimeHistData [113]
+                0.00    0.00       6/77719027     xf_ReadGriFile [116]
+                0.00    0.00       6/77719027     xf_DestroyMatrix [104]
+                0.00    0.00       7/77719027     DestroyModel [195]
+                0.00    0.00       7/77719027     xfYu_InitAlterState [30]
+                0.00    0.00       8/77719027     xf_DestroyICs [194]
+                0.00    0.00       8/77719027     xf_DestroyEqnSet [102]
+                0.00    0.00      10/77719027     Yu_GammaVectorCreate [110]
+                0.00    0.00      10/77719027     Yu_OutputPointValueInit [59]
+                0.00    0.00      11/77719027     xf_DestroyOutput [109]
+                0.00    0.00      12/77719027     xf_DestroyDataSet [91]
+                0.00    0.00      13/77719027     xf_DestroyMesh [107]
+                0.00    0.00      40/77719027     xf_MultInvMassMatrix [10]
+                0.00    0.00      44/77719027     xf_DestroyBCs [183]
+                0.00    0.00      53/77719027     xf_FindSimilarVector [99]
+                0.00    0.00      58/77719027     xf_DestroyData [92]
+                0.00    0.00      66/77719027     xf_QRFactorHouseholder [41]
+                0.00    0.00      82/77719027     xf_DestroyBasisTable [137]
+                0.00    0.00      88/77719027     xf_MPI_Allreduce [157]
+                0.00    0.00     112/77719027     xf_DestroyVector [97]
+                0.00    0.00     328/77719027     xf_DestroyStaticDataElem [151]
+                0.00    0.00     357/77719027     Yu_ConductEntropyBounding [23]
+                0.00    0.00     451/77719027     xf_DestroyStaticDataIFace [134]
+                0.00    0.00     943/77719027     xf_DestroyDiffJumpData [154]
+                0.00    0.00    1024/77719027     xf_SolvePLU_Matrix [49]
+                0.00    0.00    1024/77719027     xf_ProjectOnElemQR [38]
+                0.00    0.00    1210/77719027     xf_QuadQuadrilateral [132]
+                0.00    0.00    1216/77719027     xf_QuadHexahedron [131]
+                0.00    0.00    3264/77719027     xf_AddFaceToHash [123]
+                0.00    0.00    4134/77719027     xf_DestroyJacobianData [146]
+                0.00    0.00    4852/77719027     xf_DestroyQuadData [143]
+                0.00    0.00    5184/77719027     xf_DeleteFaceFromHash [130]
+                0.00    0.00    5815/77719027     xf_DestroyBasisData [141]
+                0.00    0.00    6228/77719027     xf_DestroyNormalData [140]
+                0.00    0.00  207360/77719027     xf_ElemNormal [43]
+                0.00    0.00 1584201/77719027     xf_Shape_TensorLagrange [47]
+                0.01    0.00 4962816/77719027     xf_BasisLagrange2D [52]
+                0.01    0.00 10563658/77719027     xf_Grad_TensorLagrange [26]
+                0.03    0.00 28883532/77719027     xf_BasisLegendre3D [25]
+                0.04    0.00 31480761/77719027     xf_BasisLagrange3D [27]
+[62]     0.3    0.09    0.00 77719027         xf_Release [62]
+-----------------------------------------------
+                0.02    0.07  125952/125952      xf_EvalBasisOnFaceUsingTable [61]
+[63]     0.3    0.02    0.07  125952         xf_EvalBasisOnFace [63]
+                0.00    0.05  125952/282624      xf_RefFace2Interpol [55]
+                0.00    0.02    1025/112173      xf_EvalBasis [20]
+                0.00    0.00  253011/212275957     xf_ErrorReport [37]
+                0.00    0.00  125952/292461      xf_ReAlloc [126]
+                0.00    0.00  125952/238125      xf_NeedBasisReCalc [228]
+-----------------------------------------------
+                0.08    0.00  314880/314880      LYDG_FaceViscTerm [7]
+[64]     0.2    0.08    0.00  314880         xf_ColcMult_Add [64]
+-----------------------------------------------
+                0.00    0.00       1/513         xf_ProjectOnElemQR [38]
+                0.06    0.00     512/513         xf_MatrixInvert [50]
+[65]     0.2    0.07    0.00     513         xf_ComputePLU [65]
+-----------------------------------------------
+                0.04    0.00      60/60          xfYu_ApplyTimeScheme [3]
+[66]     0.1    0.04    0.00      60         xf_SetVector [66]
+                0.00    0.00      60/130         xf_CompatibleVectors [253]
+-----------------------------------------------
+                                                 <spontaneous>
+[67]     0.1    0.04    0.00                 xf_VectorSetPODMass [67]
+-----------------------------------------------
+                0.03    0.00      70/70          xfYu_ApplyTimeScheme [3]
+[68]     0.1    0.03    0.00      70         xf_VectorMultSet [68]
+                0.00    0.00      70/130         xf_CompatibleVectors [253]
+-----------------------------------------------
+                0.00    0.03      41/41          xf_CalculateResidualIFace [6]
+[69]     0.1    0.00    0.03      41         xf_FindElemGeom [69]
+                0.00    0.01    3072/66048       xf_IFaceNormal [44]
+                0.00    0.01     512/175104      xf_ElemJacobian [17]
+                0.00    0.00      41/100         xf_FindVector [89]
+                0.00    0.00    7215/212275957     xf_ErrorReport [37]
+                0.00    0.00    3072/225792      xf_QuadFace [100]
+                0.00    0.00     512/49664       xf_QuadElem [115]
+                0.00    0.00       2/1213        xf_DestroyGenericQuadData [142]
+                0.00    0.00       1/689         xf_DestroyJacobianData [146]
+                0.00    0.00       1/3114        xf_DestroyNormalData [140]
+-----------------------------------------------
+                0.00    0.03       1/1           xf_main [2]
+[70]     0.1    0.00    0.03       1         Yu_MinFaceLengthScale [70]
+                0.00    0.01    3072/69120       xf_ElemNormal [43]
+                0.00    0.01     512/175104      xf_ElemJacobian [17]
+                0.00    0.00     512/48130       xf_GetQuadOrderElem [72]
+                0.00    0.00    3072/159744      xf_NeighborAcrossFace [79]
+                0.00    0.00   17410/212275957     xf_ErrorReport [37]
+                0.00    0.00    3072/225792      xf_QuadFace [100]
+                0.00    0.00    3072/3114        xf_DestroyNormalData [140]
+                0.00    0.00    1024/1213        xf_DestroyGenericQuadData [142]
+                0.00    0.00     512/689         xf_DestroyJacobianData [146]
+                0.00    0.00     512/49664       xf_QuadElem [115]
+                0.00    0.00     512/512         xf_GetQuadOrderGeneralFace [152]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+                0.00    0.00     512/356864      xf_InterpOrder [224]
+                0.00    0.00     512/27123       xf_Shape2nFace [236]
+-----------------------------------------------
+                0.02    0.00  156672/156672      Yu_ConductEntropyBounding [23]
+[71]     0.1    0.02    0.00  156672         xf_GetQuadOrderAcrossFace [71]
+                0.00    0.00  156672/212275957     xf_ErrorReport [37]
+                0.00    0.00  156672/268290      xf_Q1BasisNotLinear [227]
+                0.00    0.00  156672/220160      FaceQuadOrder [230]
+-----------------------------------------------
+                0.00    0.00       1/48130       xf_ComputeGenMassMatrix [13]
+                0.00    0.00       1/48130       xfYu_InitAlterState [30]
+                0.00    0.00     512/48130       Yu_MinFaceLengthScale [70]
+                0.00    0.00     512/48130       Yu_OutputPointValueInit [59]
+                0.01    0.00   20992/48130       xf_CalculateResidualElem [19]
+                0.01    0.00   26112/48130       Yu_ConductEntropyBounding [23]
+[72]     0.1    0.02    0.00   48130         xf_GetQuadOrderElem [72]
+                0.00    0.00   48130/212275957     xf_ErrorReport [37]
+                0.00    0.00   48130/268290      xf_Q1BasisNotLinear [227]
+                0.00    0.00   48130/48130       ElemQuadOrder [235]
+-----------------------------------------------
+                0.02    0.00  110592/110592      Yu_OutputPointValueInit [59]
+[73]     0.1    0.02    0.00  110592         Compute_Divergence_Mag [73]
+-----------------------------------------------
+                0.00    0.00       1/147029      xfYu_InitAlterState [30]
+                0.00    0.00       1/147029      xfYu_CalculateResidual [36]
+                0.00    0.00       2/147029      xfYu_ApplyTimeScheme [3]
+                0.00    0.00      40/147029      xf_CalculateResidual [4]
+                0.00    0.00      41/147029      xf_CalculateResidualIFaces [5]
+                0.00    0.00   20992/147029      xf_CalculateResidualElem [19]
+                0.01    0.00  125952/147029      xf_CalculateResidualIFace [6]
+[74]     0.0    0.02    0.00  147029         xf_FindDataByTitle [74]
+-----------------------------------------------
+                                                 <spontaneous>
+[75]     0.0    0.02    0.00                 xf_BlockMTxV [75]
+-----------------------------------------------
+                                                 <spontaneous>
+[76]     0.0    0.02    0.00                 xf_PowInt [76]
+-----------------------------------------------
+                0.00    0.00   62976/566784      xf_CalculateResidualElem [19]
+                0.00    0.00   62976/566784      LYDG_FaceViscTerm [7]
+                0.01    0.00  440832/566784      xf_CalculateResidualIFace [6]
+[77]     0.0    0.01    0.00  566784         xf_MTxM_Sub [77]
+-----------------------------------------------
+                0.00    0.00  125952/408576      xf_EvalBasisOnFaceUsingTable [61]
+                0.01    0.00  282624/408576      xf_RefFace2Interpol [55]
+[78]     0.0    0.01    0.00  408576         xf_CheckHangFace [78]
+-----------------------------------------------
+                0.00    0.00    3072/159744      Yu_MinFaceLengthScale [70]
+                0.01    0.00  156672/159744      Yu_ConductEntropyBounding [23]
+[79]     0.0    0.01    0.00  159744         xf_NeighborAcrossFace [79]
+-----------------------------------------------
+                                                 <spontaneous>
+[80]     0.0    0.01    0.00                 xf_CalculateResidualElems_DetailChem [80]
+-----------------------------------------------
+                0.00    0.00       1/168         xf_main [2]
+                0.00    0.00       2/168         xf_DestroyElemGroup [119]
+                0.00    0.00       2/168         xf_DestroyMesh [107]
+                0.00    0.00       3/168         xf_DestroyTimeHistData [113]
+                0.00    0.00       4/168         xf_DestroyOutput [109]
+                0.00    0.00       6/168         xf_DestroyMatrix [104]
+                0.00    0.00       8/168         xf_DestroyEqnSet [102]
+                0.00    0.00      12/168         xf_DestroyKeyValue [103]
+                0.00    0.00      64/168         xf_DestroyVector [97]
+                0.00    0.00      66/168         xf_ReAllocCopy2 [94]
+[81]     0.0    0.01    0.00     168         xf_Release2 [81]
+-----------------------------------------------
+                0.00    0.01   34697/34697       xf_GetGrads [31]
+[82]     0.0    0.00    0.01   34697         xf_Grad_TensorLegendre [82]
+                0.00    0.00   34697/9627844     xf_BasisLegendre3D [25]
+-----------------------------------------------
+                0.00    0.00       1/16          xf_NewGREVector [105]
+                0.00    0.00      15/16          xf_FindVector [89]
+[83]     0.0    0.01    0.00      16         xf_CreateVector [83]
+                0.00    0.00      16/212275957     xf_ErrorReport [37]
+                0.00    0.00      16/44761489     xf_Alloc [60]
+                0.00    0.00      16/16          xf_InitVector [268]
+-----------------------------------------------
+                                                 <spontaneous>
+[84]     0.0    0.01    0.00                 xf_BasisLegendre2D [84]
+-----------------------------------------------
+                                                 <spontaneous>
+[85]     0.0    0.01    0.00                 xf_Grad_TensorLagrangeGauss [85]
+-----------------------------------------------
+                                                 <spontaneous>
+[86]     0.0    0.01    0.00                 xf_Hess_TensorLagrange [86]
+-----------------------------------------------
+                                                 <spontaneous>
+[87]     0.0    0.01    0.00                 xf_LongAlloc [87]
+-----------------------------------------------
+                                                 <spontaneous>
+[88]     0.0    0.01    0.00                 xf_Shape_TetHierarch [88]
+-----------------------------------------------
+                0.00    0.00       1/100         xf_FindLineConnectivity [122]
+                0.00    0.00       5/100         Yu_GammaVectorCreate [110]
+                0.00    0.00      41/100         xf_FindElemGeom [69]
+                0.00    0.00      53/100         xf_FindSimilarVector [99]
+[89]     0.0    0.00    0.00     100         xf_FindVector [89]
+                0.00    0.00      15/16          xf_CreateVector [83]
+                0.00    0.00      15/16          xf_AllocVectorGuts [164]
+                0.00    0.00      15/29          xf_DataSetAdd [162]
+                0.00    0.00      45/212275957     xf_ErrorReport [37]
+                0.00    0.00      85/85          xf_CompatibleLinkageVector [256]
+                0.00    0.00      85/85          xf_CompatibleSizeVector [257]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_main [2]
+[90]     0.0    0.00    0.00       1         xf_ReadAllFromJobFile [90]
+                0.00    0.00       1/1           xf_ReadAllInputFile [95]
+                0.00    0.00      19/378         xf_AddKeyValue [93]
+                0.00    0.00       1/6           xf_DestroyKeyValue [103]
+                0.00    0.00       1/2           xf_MergeKeyValue [112]
+                0.00    0.00      49/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/1           xf_ParallelizeKeyValue [216]
+                0.00    0.00       1/140         xf_GetKeyValueBool [163]
+                0.00    0.00      33/366         xf_TrimAndCheckBlank [251]
+                0.00    0.00      19/84          xf_ReadKey [258]
+                0.00    0.00       7/446         xf_GetKeyValue [249]
+                0.00    0.00       3/16          xf_NotNull [269]
+                0.00    0.00       2/630         xf_MPI_GetRank [246]
+                0.00    0.00       1/4           xf_InitKeyValue [275]
+                0.00    0.00       1/369         xf_MPI_Bcast [250]
+                0.00    0.00       1/61          xf_printf [263]
+-----------------------------------------------
+                0.00    0.00       1/12          xf_DestroyAll [101]
+                0.00    0.00      11/12          xf_DumpVectorBinary [96]
+[91]     0.0    0.00    0.00      12         xf_DestroyDataSet [91]
+                0.00    0.00      29/29          xf_DestroyData [92]
+                0.00    0.00      29/212275957     xf_ErrorReport [37]
+                0.00    0.00      12/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00      29/29          xf_DestroyDataSet [91]
+[92]     0.0    0.00    0.00      29         xf_DestroyData [92]
+                0.00    0.00      27/27          xf_DestroyVector [97]
+                0.00    0.00       2/2           xf_DestroyMatrix [104]
+                0.00    0.00      29/212275957     xf_ErrorReport [37]
+                0.00    0.00      58/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       4/378         xf_ReadEqnSetFileSerial [125]
+                0.00    0.00      19/378         xf_ReadAllFromJobFile [90]
+                0.00    0.00      21/378         xf_MergeKeyValue [112]
+                0.00    0.00     334/378         xf_AddKeyValueList [98]
+[93]     0.0    0.00    0.00     378         xf_AddKeyValue [93]
+                0.00    0.00      78/78          xf_ReAllocCopy2 [94]
+                0.00    0.00      78/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.00      78/78          xf_AddKeyValue [93]
+[94]     0.0    0.00    0.00      78         xf_ReAllocCopy2 [94]
+                0.00    0.00      66/168         xf_Release2 [81]
+                0.00    0.00      78/212275957     xf_ErrorReport [37]
+                0.00    0.00      78/112         xf_Alloc2 [254]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadAllFromJobFile [90]
+[95]     0.0    0.00    0.00       1         xf_ReadAllInputFile [95]
+                0.00    0.00       1/1           xf_AddKeyValueList [98]
+                0.00    0.00       1/1           xf_ReadAsciiFile [106]
+                0.00    0.00       1/1           xf_CreateAll [188]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.00      11/11          xfYu_ApplyTimeScheme [3]
+[96]     0.0    0.00    0.00      11         xf_DumpVectorBinary [96]
+                0.00    0.00      11/12          xf_DestroyDataSet [91]
+                0.00    0.00      11/12          xf_WriteDataSetBinary [147]
+                0.00    0.00      11/29          xf_DataSetAdd [162]
+                0.00    0.00      44/212275957     xf_ErrorReport [37]
+                0.00    0.00      11/12          xf_CreateDataSet [186]
+-----------------------------------------------
+                0.00    0.00      27/27          xf_DestroyData [92]
+[97]     0.0    0.00    0.00      27         xf_DestroyVector [97]
+                0.00    0.00      64/168         xf_Release2 [81]
+                0.00    0.00     112/77719027     xf_Release [62]
+                0.00    0.00      32/212275957     xf_ErrorReport [37]
+                0.00    0.00      16/18          xf_DestroyArrayParallelInfo [267]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadAllInputFile [95]
+[98]     0.0    0.00    0.00       1         xf_AddKeyValueList [98]
+                0.00    0.00     334/378         xf_AddKeyValue [93]
+                0.00    0.00       1/6           xf_DestroyKeyValue [103]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00     167/446         xf_GetKeyValue [249]
+-----------------------------------------------
+                0.00    0.00      53/53          xfYu_ApplyTimeScheme [3]
+[99]     0.0    0.00    0.00      53         xf_FindSimilarVector [99]
+                0.00    0.00      53/100         xf_FindVector [89]
+                0.00    0.00     106/212275957     xf_ErrorReport [37]
+                0.00    0.00      53/44761489     xf_Alloc [60]
+                0.00    0.00      53/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00    3072/225792      xf_FindElemGeom [69]
+                0.00    0.00    3072/225792      Yu_MinFaceLengthScale [70]
+                0.00    0.00   62976/225792      xf_CalculateResidualIFace [6]
+                0.00    0.00  156672/225792      Yu_ConductEntropyBounding [23]
+[100]    0.0    0.00    0.00  225792         xf_QuadFace [100]
+                0.00    0.00  452794/212275957     xf_ErrorReport [37]
+                0.00    0.00     605/605         xf_QuadQuadrilateral [132]
+                0.00    0.00     605/1213        xf_CreateQuadData [144]
+                0.00    0.00  225792/824321      xf_Basis2Shape [221]
+                0.00    0.00  225792/225792      xf_FaceShape [229]
+                0.00    0.00     605/1213        xf_GetQuadPoints [244]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_main [2]
+[101]    0.0    0.00    0.00       1         xf_DestroyAll [101]
+                0.00    0.00       1/2           xf_DestroyEqnSet [102]
+                0.00    0.00       1/12          xf_DestroyDataSet [91]
+                0.00    0.00       1/2           xf_DestroyMesh [107]
+                0.00    0.00       1/1           xf_DestroyParam [118]
+                0.00    0.00       5/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/1           xf_DestroyGeom [219]
+                0.00    0.00       1/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/2           xf_main [2]
+                0.00    0.00       1/2           xf_DestroyAll [101]
+[102]    0.0    0.00    0.00       2         xf_DestroyEqnSet [102]
+                0.00    0.00       8/168         xf_Release2 [81]
+                0.00    0.00       2/6           xf_DestroyKeyValue [103]
+                0.00    0.00       2/3           xf_DestroyOutputs [108]
+                0.00    0.00       2/3           xf_DestroyResTerms [117]
+                0.00    0.00       2/3           xf_DestroyBCs [183]
+                0.00    0.00      10/212275957     xf_ErrorReport [37]
+                0.00    0.00       8/77719027     xf_Release [62]
+                0.00    0.00       2/3           xf_DestroyICs [194]
+-----------------------------------------------
+                0.00    0.00       1/6           xf_ReadAllFromJobFile [90]
+                0.00    0.00       1/6           xf_AddKeyValueList [98]
+                0.00    0.00       1/6           xf_DestroyParam [118]
+                0.00    0.00       1/6           xf_DestroyResTerm [120]
+                0.00    0.00       2/6           xf_DestroyEqnSet [102]
+[103]    0.0    0.00    0.00       6         xf_DestroyKeyValue [103]
+                0.00    0.00      12/168         xf_Release2 [81]
+-----------------------------------------------
+                0.00    0.00       2/2           xf_DestroyData [92]
+[104]    0.0    0.00    0.00       2         xf_DestroyMatrix [104]
+                0.00    0.00       6/168         xf_Release2 [81]
+                0.00    0.00       6/77719027     xf_Release [62]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/18          xf_DestroyArrayParallelInfo [267]
+-----------------------------------------------
+                0.00    0.00       1/1           xfYu_FindOrCreatePrimalState [29]
+[105]    0.0    0.00    0.00       1         xf_NewGREVector [105]
+                0.00    0.00       1/16          xf_CreateVector [83]
+                0.00    0.00       1/16          xf_AllocVectorGuts [164]
+                0.00    0.00       5/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+                0.00    0.00       2/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadAllInputFile [95]
+[106]    0.0    0.00    0.00       1         xf_ReadAsciiFile [106]
+                0.00    0.00       1/1           xf_ReadGriFile [116]
+                0.00    0.00       1/2           xf_DestroyMesh [107]
+                0.00    0.00       6/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/2           xf_CreateMesh [197]
+                0.00    0.00       1/1           xf_ParallelizeMesh [217]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+                0.00    0.00       1/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       1/2           xf_ReadAsciiFile [106]
+                0.00    0.00       1/2           xf_DestroyAll [101]
+[107]    0.0    0.00    0.00       2         xf_DestroyMesh [107]
+                0.00    0.00       1/1           xf_DestroyElemGroup [119]
+                0.00    0.00       2/168         xf_Release2 [81]
+                0.00    0.00      13/77719027     xf_Release [62]
+                0.00    0.00       4/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.00       1/3           xf_MergeEqnSet [111]
+                0.00    0.00       2/3           xf_DestroyEqnSet [102]
+[108]    0.0    0.00    0.00       3         xf_DestroyOutputs [108]
+                0.00    0.00       1/1           xf_DestroyOutput [109]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_DestroyOutputs [108]
+[109]    0.0    0.00    0.00       1         xf_DestroyOutput [109]
+                0.00    0.00       4/168         xf_Release2 [81]
+                0.00    0.00      11/77719027     xf_Release [62]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/1           xf_DestroyCutPlaneIntersect [280]
+-----------------------------------------------
+                0.00    0.00       1/5           xfYu_ApplyTimeScheme [3]
+                0.00    0.00       4/5           xf_main [2]
+[110]    0.0    0.00    0.00       5         Yu_GammaVectorCreate [110]
+                0.00    0.00       5/100         xf_FindVector [89]
+                0.00    0.00      31/212275957     xf_ErrorReport [37]
+                0.00    0.00      10/44761489     xf_Alloc [60]
+                0.00    0.00      10/77719027     xf_Release [62]
+                0.00    0.00      11/61          xf_printf [263]
+                0.00    0.00       6/16          xf_SetConstVector [270]
+                0.00    0.00       5/630         xf_MPI_GetRank [246]
+                0.00    0.00       5/5           xf_Basis2UniformLagrange [273]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_main [2]
+[111]    0.0    0.00    0.00       1         xf_MergeEqnSet [111]
+                0.00    0.00       1/2           xf_MergeKeyValue [112]
+                0.00    0.00       1/3           xf_DestroyOutputs [108]
+                0.00    0.00       1/3           xf_DestroyResTerms [117]
+                0.00    0.00       1/3           xf_DestroyBCs [183]
+                0.00    0.00       1/3           xf_DestroyICs [194]
+                0.00    0.00       1/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/2           xf_ReadAllFromJobFile [90]
+                0.00    0.00       1/2           xf_MergeEqnSet [111]
+[112]    0.0    0.00    0.00       2         xf_MergeKeyValue [112]
+                0.00    0.00      21/378         xf_AddKeyValue [93]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_main [2]
+[113]    0.0    0.00    0.00       1         xf_DestroyTimeHistData [113]
+                0.00    0.00       3/168         xf_Release2 [81]
+                0.00    0.00       5/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00   62976/62976       xf_CalculateResidualIFace [6]
+[114]    0.0    0.00    0.00   62976         xf_GetQuadOrderIFace [114]
+                0.00    0.00   62976/212275957     xf_ErrorReport [37]
+                0.00    0.00   62976/268290      xf_Q1BasisNotLinear [227]
+                0.00    0.00   62976/220160      FaceQuadOrder [230]
+-----------------------------------------------
+                0.00    0.00     512/49664       xf_ComputeGenMassMatrix [13]
+                0.00    0.00     512/49664       xf_FindElemGeom [69]
+                0.00    0.00     512/49664       xf_QuadElemAtLeast [150]
+                0.00    0.00     512/49664       Yu_MinFaceLengthScale [70]
+                0.00    0.00     512/49664       Yu_OutputPointValueInit [59]
+                0.00    0.00   20992/49664       xf_CalculateResidualElem [19]
+                0.00    0.00   26112/49664       Yu_ConductEntropyBounding [23]
+[115]    0.0    0.00    0.00   49664         xf_QuadElem [115]
+                0.00    0.00   50880/212275957     xf_ErrorReport [37]
+                0.00    0.00     608/608         xf_QuadHexahedron [131]
+                0.00    0.00     608/1213        xf_CreateQuadData [144]
+                0.00    0.00   49664/824321      xf_Basis2Shape [221]
+                0.00    0.00     608/1213        xf_GetQuadPoints [244]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadAsciiFile [106]
+[116]    0.0    0.00    0.00       1         xf_ReadGriFile [116]
+                0.00    0.00    3264/3264        xf_AddFaceToHash [123]
+                0.00    0.00       1/1           xf_UpdateFaceOrient [127]
+                0.00    0.00   11352/212275957     xf_ErrorReport [37]
+                0.00    0.00    1728/1728        xf_DeleteFaceFromHash [130]
+                0.00    0.00     512/512         xf_ScanInt [135]
+                0.00    0.00     729/729         xf_ScanReal [145]
+                0.00    0.00      10/44761489     xf_Alloc [60]
+                0.00    0.00       1/83          xf_GetLocFaceMax [153]
+                0.00    0.00       6/77719027     xf_Release [62]
+                0.00    0.00       1/1           xf_Basis2nFace [201]
+                0.00    0.00       1/1           xf_CreateNodeHash [208]
+                0.00    0.00       4/292461      xf_ReAlloc [126]
+                0.00    0.00    3072/288768      xf_Q1NodesOnFace [226]
+                0.00    0.00    1536/1536        xf_AddInteriorFace [243]
+                0.00    0.00    1504/1710        xf_LineFromFileOrStrings [242]
+                0.00    0.00     512/512         xf_LongLineFromFileOrStrings [247]
+                0.00    0.00       4/160         xf_Value2Enum [252]
+                0.00    0.00       2/61          xf_printf [263]
+                0.00    0.00       2/112         xf_Alloc2 [254]
+                0.00    0.00       1/531773      xf_Order2nNode [223]
+                0.00    0.00       1/1           xf_VAlloc2 [290]
+-----------------------------------------------
+                0.00    0.00       1/3           xf_MergeEqnSet [111]
+                0.00    0.00       2/3           xf_DestroyEqnSet [102]
+[117]    0.0    0.00    0.00       3         xf_DestroyResTerms [117]
+                0.00    0.00       1/1           xf_DestroyResTerm [120]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_DestroyAll [101]
+[118]    0.0    0.00    0.00       1         xf_DestroyParam [118]
+                0.00    0.00       1/6           xf_DestroyKeyValue [103]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_DestroyMesh [107]
+[119]    0.0    0.00    0.00       1         xf_DestroyElemGroup [119]
+                0.00    0.00       2/168         xf_Release2 [81]
+                0.00    0.00       1/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_DestroyResTerms [117]
+[120]    0.0    0.00    0.00       1         xf_DestroyResTerm [120]
+                0.00    0.00       1/6           xf_DestroyKeyValue [103]
+-----------------------------------------------
+                0.00    0.00       1/1           xfYu_ApplyTimeScheme [3]
+[121]    0.0    0.00    0.00       1         xf_CreateSolverData [121]
+                0.00    0.00       1/1           xf_FindLineConnectivity [122]
+                0.00    0.00       5/212275957     xf_ErrorReport [37]
+                0.00    0.00       3/44761489     xf_Alloc [60]
+                0.00    0.00       1/13          xf_GetKeyValueEnum [190]
+                0.00    0.00       1/140         xf_GetKeyValueBool [163]
+                0.00    0.00       1/1           xf_PreconditionerLineCheck [287]
+                0.00    0.00       1/1           xf_InitStabData [284]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_CreateSolverData [121]
+[122]    0.0    0.00    0.00       1         xf_FindLineConnectivity [122]
+                0.00    0.00       1/100         xf_FindVector [89]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+                0.00    0.00       1/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00    3264/3264        xf_ReadGriFile [116]
+[123]    0.0    0.00    0.00    3264         xf_AddFaceToHash [123]
+                0.00    0.00    9984/212275957     xf_ErrorReport [37]
+                0.00    0.00    6720/44761489     xf_Alloc [60]
+                0.00    0.00    3264/77719027     xf_Release [62]
+                0.00    0.00    3264/4992        xf_SortInt [239]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_main [2]
+[124]    0.0    0.00    0.00       1         xf_ReadEqnSetFile [124]
+                0.00    0.00       1/1           xf_ReadEqnSetFileSerial [125]
+                0.00    0.00       4/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/1           xf_ParallelizeEqnSet [215]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+                0.00    0.00       1/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFile [124]
+[125]    0.0    0.00    0.00       1         xf_ReadEqnSetFileSerial [125]
+                0.00    0.00       4/378         xf_AddKeyValue [93]
+                0.00    0.00       1/1           xf_ReadEqnSetBCs [171]
+                0.00    0.00      46/212275957     xf_ErrorReport [37]
+                0.00    0.00       3/50          xf_AllocString [167]
+                0.00    0.00       2/3           xf_ScanXStringAlloc [191]
+                0.00    0.00       1/1           xf_ScanXRealAlloc [193]
+                0.00    0.00       1/1           xf_AllocResTerms [199]
+                0.00    0.00       1/1           xf_CreateResTerms [211]
+                0.00    0.00       1/1           xf_CreateICs [207]
+                0.00    0.00       1/1           xf_AllocICs [203]
+                0.00    0.00       1/1           xf_CreateOutputs [209]
+                0.00    0.00       1/1           xf_AllocOutputs [204]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+                0.00    0.00     178/1710        xf_LineFromFileOrStrings [242]
+                0.00    0.00     176/366         xf_TrimAndCheckBlank [251]
+                0.00    0.00      16/84          xf_ReadKey [258]
+                0.00    0.00       5/6290        xf_DesiredToken [238]
+                0.00    0.00       3/160         xf_Value2Enum [252]
+-----------------------------------------------
+                0.00    0.00       1/292461      xf_ComputeGenMassMatrix [13]
+                0.00    0.00       2/292461      xfYu_InitAlterState [30]
+                0.00    0.00       3/292461      xf_ProjectOnElemQR [38]
+                0.00    0.00       3/292461      xf_CreateUniformTimeHistData [187]
+                0.00    0.00       4/292461      xf_ReadGriFile [116]
+                0.00    0.00       5/292461      Yu_OutputPointValueInit [59]
+                0.00    0.00      40/292461      xf_MultInvMassMatrix [10]
+                0.00    0.00     246/292461      xf_CalculateResidualElem [19]
+                0.00    0.00     287/292461      xf_CalculateResidualIFace [6]
+                0.00    0.00     615/292461      LYDG_ReAllocDiffJumpData [149]
+                0.00    0.00    1210/292461      xf_QuadQuadrilateral [132]
+                0.00    0.00    1216/292461      xf_QuadHexahedron [131]
+                0.00    0.00    2426/292461      xf_QuadLine [133]
+                0.00    0.00    3114/292461      xf_ElemNormal [43]
+                0.00    0.00    3215/292461      xf_EvalBasis [20]
+                0.00    0.00  125952/292461      xf_EvalBasisOnFace [63]
+                0.00    0.00  154122/292461      xf_ElemJacobian [17]
+[126]    0.0    0.00    0.00  292461         xf_ReAlloc [126]
+                0.00    0.00   14659/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadGriFile [116]
+[127]    0.0    0.00    0.00       1         xf_UpdateFaceOrient [127]
+                0.00    0.00    3072/3072        xf_DetermineFaceOrient [129]
+                0.00    0.00    3074/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+                0.00    0.00       1/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00      10/10          xfYu_ApplyTimeScheme [3]
+[128]    0.0    0.00    0.00      10         Yu_EstimateTimeStep [128]
+                0.00    0.00   10260/212275957     xf_ErrorReport [37]
+                0.00    0.00      10/88          xf_MPI_Allreduce [157]
+                0.00    0.00    5120/356864      xf_InterpOrder [224]
+                0.00    0.00    5120/824321      xf_Basis2Shape [221]
+                0.00    0.00      10/16          xf_SetConstVector [270]
+-----------------------------------------------
+                0.00    0.00    3072/3072        xf_UpdateFaceOrient [127]
+[129]    0.0    0.00    0.00    3072         xf_DetermineFaceOrient [129]
+                0.00    0.00    9216/212275957     xf_ErrorReport [37]
+                0.00    0.00    3072/824321      xf_Basis2Shape [221]
+                0.00    0.00    3072/288768      xf_Q1NodesOnFace [226]
+                0.00    0.00    3072/3072        xf_DetermineFaceOrient_Shape [240]
+-----------------------------------------------
+                0.00    0.00    1728/1728        xf_ReadGriFile [116]
+[130]    0.0    0.00    0.00    1728         xf_DeleteFaceFromHash [130]
+                0.00    0.00    3456/212275957     xf_ErrorReport [37]
+                0.00    0.00    5184/77719027     xf_Release [62]
+                0.00    0.00    1728/44761489     xf_Alloc [60]
+                0.00    0.00    1728/4992        xf_SortInt [239]
+-----------------------------------------------
+                0.00    0.00     608/608         xf_QuadElem [115]
+[131]    0.0    0.00    0.00     608         xf_QuadHexahedron [131]
+                0.00    0.00    3040/212275957     xf_ErrorReport [37]
+                0.00    0.00     608/1213        xf_QuadLine [133]
+                0.00    0.00    1216/77719027     xf_Release [62]
+                0.00    0.00    1216/292461      xf_ReAlloc [126]
+-----------------------------------------------
+                0.00    0.00     605/605         xf_QuadFace [100]
+[132]    0.0    0.00    0.00     605         xf_QuadQuadrilateral [132]
+                0.00    0.00    3025/212275957     xf_ErrorReport [37]
+                0.00    0.00     605/1213        xf_QuadLine [133]
+                0.00    0.00    1210/77719027     xf_Release [62]
+                0.00    0.00    1210/292461      xf_ReAlloc [126]
+-----------------------------------------------
+                0.00    0.00     605/1213        xf_QuadQuadrilateral [132]
+                0.00    0.00     608/1213        xf_QuadHexahedron [131]
+[133]    0.0    0.00    0.00    1213         xf_QuadLine [133]
+                0.00    0.00    4852/212275957     xf_ErrorReport [37]
+                0.00    0.00    2426/292461      xf_ReAlloc [126]
+-----------------------------------------------
+                0.00    0.00      41/41          xf_CalculateResidualIFaces [5]
+[134]    0.0    0.00    0.00      41         xf_DestroyStaticDataIFace [134]
+                0.00    0.00      82/82          xf_DestroyBasisTable [137]
+                0.00    0.00      41/41          xf_DestroyDiffJumpData [154]
+                0.00    0.00     410/212275957     xf_ErrorReport [37]
+                0.00    0.00     123/1299        xf_DestroyBasisData [141]
+                0.00    0.00      82/689         xf_DestroyJacobianData [146]
+                0.00    0.00     451/77719027     xf_Release [62]
+                0.00    0.00      41/1213        xf_DestroyGenericQuadData [142]
+                0.00    0.00      41/3114        xf_DestroyNormalData [140]
+-----------------------------------------------
+                0.00    0.00     512/512         xf_ReadGriFile [116]
+[135]    0.0    0.00    0.00     512         xf_ScanInt [135]
+                0.00    0.00    4096/212275957     xf_ErrorReport [37]
+                0.00    0.00    4096/6290        xf_DesiredToken [238]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_main [2]
+[136]    0.0    0.00    0.00       1         xf_WriteAllBinary [136]
+                0.00    0.00       1/1           xf_WriteMeshBinary [138]
+                0.00    0.00       1/1           xf_WriteEqnSetBinary [160]
+                0.00    0.00       1/12          xf_WriteDataSetBinary [147]
+                0.00    0.00       1/1           xf_WriteParamBinary [165]
+                0.00    0.00      45/212275957     xf_ErrorReport [37]
+                0.00    0.00       7/65          xf_WriteStringBinaryParallel [156]
+                0.00    0.00      11/195         xf_fwrite [155]
+                0.00    0.00      10/34          xf_ftell [174]
+                0.00    0.00      10/34          xf_fseek [173]
+                0.00    0.00       1/1           xf_WriteGeomBinary [198]
+                0.00    0.00       1/12          xf_fopen [185]
+                0.00    0.00       1/12          xf_fclose [184]
+-----------------------------------------------
+                0.00    0.00      82/82          xf_DestroyStaticDataIFace [134]
+[137]    0.0    0.00    0.00      82         xf_DestroyBasisTable [137]
+                0.00    0.00     984/1299        xf_DestroyBasisData [141]
+                0.00    0.00     984/212275957     xf_ErrorReport [37]
+                0.00    0.00      82/77719027     xf_Release [62]
+                0.00    0.00      82/82          xf_Release3 [261]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_WriteAllBinary [136]
+[138]    0.0    0.00    0.00       1         xf_WriteMeshBinary [138]
+                0.00    0.00       1/1           xf_WriteMeshBinarySerial [139]
+                0.00    0.00       3/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+                0.00    0.00       1/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_WriteMeshBinary [138]
+[139]    0.0    0.00    0.00       1         xf_WriteMeshBinarySerial [139]
+                0.00    0.00    3079/212275957     xf_ErrorReport [37]
+                0.00    0.00    3072/3072        xf_WriteFaceDataBinary [241]
+                0.00    0.00       7/717         xf_WriteStringBinary [245]
+-----------------------------------------------
+                0.00    0.00       1/3114        xf_FindElemGeom [69]
+                0.00    0.00      41/3114        xf_DestroyStaticDataIFace [134]
+                0.00    0.00    3072/3114        Yu_MinFaceLengthScale [70]
+[140]    0.0    0.00    0.00    3114         xf_DestroyNormalData [140]
+                0.00    0.00    6228/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/1299        xf_ProjectOnElemQR [38]
+                0.00    0.00       2/1299        xf_ComputeGenMassMatrix [13]
+                0.00    0.00       2/1299        xfYu_InitAlterState [30]
+                0.00    0.00       3/1299        Yu_OutputPointValueInit [59]
+                0.00    0.00      82/1299        xf_DestroyStaticDataElem [151]
+                0.00    0.00     102/1299        Yu_ConductEntropyBounding [23]
+                0.00    0.00     123/1299        xf_DestroyStaticDataIFace [134]
+                0.00    0.00     984/1299        xf_DestroyBasisTable [137]
+[141]    0.0    0.00    0.00    1299         xf_DestroyBasisData [141]
+                0.00    0.00    5815/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/1213        xf_ComputeGenMassMatrix [13]
+                0.00    0.00       1/1213        xfYu_InitAlterState [30]
+                0.00    0.00       1/1213        Yu_OutputPointValueInit [59]
+                0.00    0.00       2/1213        xf_FindElemGeom [69]
+                0.00    0.00      41/1213        xf_DestroyStaticDataElem [151]
+                0.00    0.00      41/1213        xf_DestroyStaticDataIFace [134]
+                0.00    0.00     102/1213        Yu_ConductEntropyBounding [23]
+                0.00    0.00    1024/1213        Yu_MinFaceLengthScale [70]
+[142]    0.0    0.00    0.00    1213         xf_DestroyGenericQuadData [142]
+                0.00    0.00    1213/1213        xf_DestroyQuadData [143]
+-----------------------------------------------
+                0.00    0.00    1213/1213        xf_DestroyGenericQuadData [142]
+[143]    0.0    0.00    0.00    1213         xf_DestroyQuadData [143]
+                0.00    0.00    4852/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00     605/1213        xf_QuadFace [100]
+                0.00    0.00     608/1213        xf_QuadElem [115]
+[144]    0.0    0.00    0.00    1213         xf_CreateQuadData [144]
+                0.00    0.00    1213/212275957     xf_ErrorReport [37]
+                0.00    0.00    1213/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00     729/729         xf_ReadGriFile [116]
+[145]    0.0    0.00    0.00     729         xf_ScanReal [145]
+                0.00    0.00    2187/212275957     xf_ErrorReport [37]
+                0.00    0.00    2187/6290        xf_DesiredToken [238]
+-----------------------------------------------
+                0.00    0.00       1/689         xf_ComputeGenMassMatrix [13]
+                0.00    0.00       1/689         xf_FindElemGeom [69]
+                0.00    0.00       1/689         Yu_OutputPointValueInit [59]
+                0.00    0.00      41/689         xf_DestroyStaticDataElem [151]
+                0.00    0.00      51/689         Yu_ConductEntropyBounding [23]
+                0.00    0.00      82/689         xf_DestroyStaticDataIFace [134]
+                0.00    0.00     512/689         Yu_MinFaceLengthScale [70]
+[146]    0.0    0.00    0.00     689         xf_DestroyJacobianData [146]
+                0.00    0.00    4134/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/12          xf_WriteAllBinary [136]
+                0.00    0.00      11/12          xf_DumpVectorBinary [96]
+[147]    0.0    0.00    0.00      12         xf_WriteDataSetBinary [147]
+                0.00    0.00      17/17          xf_WriteVectorBinary [158]
+                0.00    0.00      58/65          xf_WriteStringBinaryParallel [156]
+                0.00    0.00     343/212275957     xf_ErrorReport [37]
+                0.00    0.00      58/88          xf_MPI_Allreduce [157]
+                0.00    0.00      53/195         xf_fwrite [155]
+                0.00    0.00      24/34          xf_ftell [174]
+                0.00    0.00      24/34          xf_fseek [173]
+                0.00    0.00      11/12          xf_fopen [185]
+                0.00    0.00      11/12          xf_fclose [184]
+                0.00    0.00      58/369         xf_MPI_Bcast [250]
+                0.00    0.00      12/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00      82/82          xf_CalculateResidualIFace [6]
+[148]    0.0    0.00    0.00      82         xf_CreateBasisTable [148]
+                0.00    0.00     820/212275957     xf_ErrorReport [37]
+                0.00    0.00      82/83          xf_GetLocFaceMax [153]
+                0.00    0.00      82/44761489     xf_Alloc [60]
+                0.00    0.00      82/82          xf_Alloc3 [259]
+-----------------------------------------------
+                0.00    0.00      41/41          xf_CalculateResidualIFace [6]
+[149]    0.0    0.00    0.00      41         LYDG_ReAllocDiffJumpData [149]
+                0.00    0.00    1230/212275957     xf_ErrorReport [37]
+                0.00    0.00     615/292461      xf_ReAlloc [126]
+-----------------------------------------------
+                0.00    0.00     512/512         xfYu_InitAlterState [30]
+[150]    0.0    0.00    0.00     512         xf_QuadElemAtLeast [150]
+                0.00    0.00     512/49664       xf_QuadElem [115]
+                0.00    0.00     512/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.00      41/41          xf_CalculateResidualElems [18]
+[151]    0.0    0.00    0.00      41         xf_DestroyStaticDataElem [151]
+                0.00    0.00     205/212275957     xf_ErrorReport [37]
+                0.00    0.00      82/1299        xf_DestroyBasisData [141]
+                0.00    0.00     328/77719027     xf_Release [62]
+                0.00    0.00      41/689         xf_DestroyJacobianData [146]
+                0.00    0.00      41/1213        xf_DestroyGenericQuadData [142]
+-----------------------------------------------
+                0.00    0.00     512/512         Yu_MinFaceLengthScale [70]
+[152]    0.0    0.00    0.00     512         xf_GetQuadOrderGeneralFace [152]
+                0.00    0.00     512/212275957     xf_ErrorReport [37]
+                0.00    0.00     512/268290      xf_Q1BasisNotLinear [227]
+                0.00    0.00     512/220160      FaceQuadOrder [230]
+-----------------------------------------------
+                0.00    0.00       1/83          xf_ReadGriFile [116]
+                0.00    0.00      82/83          xf_CreateBasisTable [148]
+[153]    0.0    0.00    0.00      83         xf_GetLocFaceMax [153]
+                0.00    0.00     498/212275957     xf_ErrorReport [37]
+                0.00    0.00     498/27123       xf_Shape2nFace [236]
+-----------------------------------------------
+                0.00    0.00      41/41          xf_DestroyStaticDataIFace [134]
+[154]    0.0    0.00    0.00      41         xf_DestroyDiffJumpData [154]
+                0.00    0.00     943/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/195         xf_WriteParamBinary [165]
+                0.00    0.00      11/195         xf_WriteAllBinary [136]
+                0.00    0.00      53/195         xf_WriteDataSetBinary [147]
+                0.00    0.00     130/195         xf_WriteStringBinaryParallel [156]
+[155]    0.0    0.00    0.00     195         xf_fwrite [155]
+                0.00    0.00     390/212275957     xf_ErrorReport [37]
+                0.00    0.00     195/630         xf_MPI_GetRank [246]
+                0.00    0.00     195/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       7/65          xf_WriteAllBinary [136]
+                0.00    0.00      58/65          xf_WriteDataSetBinary [147]
+[156]    0.0    0.00    0.00      65         xf_WriteStringBinaryParallel [156]
+                0.00    0.00     130/195         xf_fwrite [155]
+                0.00    0.00     130/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.00       1/88          Yu_OutputPointValueInit [59]
+                0.00    0.00       9/88          xf_CheckUserHalt [176]
+                0.00    0.00      10/88          Yu_EstimateTimeStep [128]
+                0.00    0.00      10/88          xf_VectorNorm [178]
+                0.00    0.00      58/88          xf_WriteDataSetBinary [147]
+[157]    0.0    0.00    0.00      88         xf_MPI_Allreduce [157]
+                0.00    0.00     264/212275957     xf_ErrorReport [37]
+                0.00    0.00      88/44761489     xf_Alloc [60]
+                0.00    0.00      88/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00      17/17          xf_WriteDataSetBinary [147]
+[158]    0.0    0.00    0.00      17         xf_WriteVectorBinary [158]
+                0.00    0.00     298/212275957     xf_ErrorReport [37]
+                0.00    0.00      17/17          xf_WriteGenArrayBinary [175]
+                0.00    0.00     230/717         xf_WriteStringBinary [245]
+                0.00    0.00      17/630         xf_MPI_GetRank [246]
+                0.00    0.00      17/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       1/3           xf_WriteParamBinary [165]
+                0.00    0.00       1/3           xf_WriteResTermBinary [166]
+                0.00    0.00       1/3           xf_WriteEqnSetBinarySerial [161]
+[159]    0.0    0.00    0.00       3         xf_WriteKeyValueBinary [159]
+                0.00    0.00     342/212275957     xf_ErrorReport [37]
+                0.00    0.00     342/717         xf_WriteStringBinary [245]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_WriteAllBinary [136]
+[160]    0.0    0.00    0.00       1         xf_WriteEqnSetBinary [160]
+                0.00    0.00       1/1           xf_WriteEqnSetBinarySerial [161]
+                0.00    0.00       3/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+                0.00    0.00       1/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_WriteEqnSetBinary [160]
+[161]    0.0    0.00    0.00       1         xf_WriteEqnSetBinarySerial [161]
+                0.00    0.00       1/1           xf_WriteResTermBinary [166]
+                0.00    0.00       1/3           xf_WriteKeyValueBinary [159]
+                0.00    0.00      83/212275957     xf_ErrorReport [37]
+                0.00    0.00      69/717         xf_WriteStringBinary [245]
+-----------------------------------------------
+                0.00    0.00       1/29          xfYu_FindOrCreatePrimalState [29]
+                0.00    0.00       2/29          xf_FindMatrix [182]
+                0.00    0.00      11/29          xf_DumpVectorBinary [96]
+                0.00    0.00      15/29          xf_FindVector [89]
+[162]    0.0    0.00    0.00      29         xf_DataSetAdd [162]
+                0.00    0.00      58/212275957     xf_ErrorReport [37]
+                0.00    0.00      29/29          xf_CreateData [177]
+                0.00    0.00      29/50          xf_AllocString [167]
+-----------------------------------------------
+                0.00    0.00       1/140         xf_ReadAllFromJobFile [90]
+                0.00    0.00       1/140         xf_FindMassMatrixData [12]
+                0.00    0.00       1/140         xfYu_InitAlterState [30]
+                0.00    0.00       1/140         xf_CreateSolverData [121]
+                0.00    0.00       5/140         xf_main [2]
+                0.00    0.00      10/140         xf_WriteLogEntry [172]
+                0.00    0.00      40/140         xf_FindInvMassMatrixData [11]
+                0.00    0.00      40/140         xf_CalculateResidual [4]
+                0.00    0.00      41/140         xf_CalculateResidualIFaces [5]
+[163]    0.0    0.00    0.00     140         xf_GetKeyValueBool [163]
+                0.00    0.00     140/212275957     xf_ErrorReport [37]
+                0.00    0.00     140/446         xf_GetKeyValue [249]
+                0.00    0.00     140/160         xf_Value2Enum [252]
+-----------------------------------------------
+                0.00    0.00       1/16          xf_NewGREVector [105]
+                0.00    0.00      15/16          xf_FindVector [89]
+[164]    0.0    0.00    0.00      16         xf_AllocVectorGuts [164]
+                0.00    0.00      83/212275957     xf_ErrorReport [37]
+                0.00    0.00      44/44761489     xf_Alloc [60]
+                0.00    0.00      16/18          xf_AllocGenArray [189]
+                0.00    0.00       1/1           xf_ParallelPrepVector [214]
+                0.00    0.00      14/531773      xf_Order2nNode [223]
+                0.00    0.00       9/112         xf_Alloc2 [254]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_WriteAllBinary [136]
+[165]    0.0    0.00    0.00       1         xf_WriteParamBinary [165]
+                0.00    0.00       1/3           xf_WriteKeyValueBinary [159]
+                0.00    0.00       4/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/195         xf_fwrite [155]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+                0.00    0.00       1/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_WriteEqnSetBinarySerial [161]
+[166]    0.0    0.00    0.00       1         xf_WriteResTermBinary [166]
+                0.00    0.00       1/3           xf_WriteKeyValueBinary [159]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/717         xf_WriteStringBinary [245]
+-----------------------------------------------
+                0.00    0.00       3/50          xf_ReadEqnSetFileSerial [125]
+                0.00    0.00      18/50          xf_ReadEqnSetBCs [171]
+                0.00    0.00      29/50          xf_DataSetAdd [162]
+[167]    0.0    0.00    0.00      50         xf_AllocString [167]
+                0.00    0.00      50/212275957     xf_ErrorReport [37]
+                0.00    0.00      50/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       2/82          xfYu_CalculateResidual [36]
+                0.00    0.00      80/82          xf_CalculateResidual [4]
+[168]    0.0    0.00    0.00      82         xf_HaloExchangeVectorBegin [168]
+                0.00    0.00      82/212275957     xf_ErrorReport [37]
+                0.00    0.00      82/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00       2/82          xfYu_CalculateResidual [36]
+                0.00    0.00      80/82          xf_CalculateResidual [4]
+[169]    0.0    0.00    0.00      82         xf_HaloExchangeVectorEnd [169]
+                0.00    0.00      82/212275957     xf_ErrorReport [37]
+                0.00    0.00      82/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00      41/41          xf_CalculateResidualIFace [6]
+[170]    0.0    0.00    0.00      41         LYDG_CreateDiffJumpData [170]
+                0.00    0.00      41/212275957     xf_ErrorReport [37]
+                0.00    0.00      41/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFileSerial [125]
+[171]    0.0    0.00    0.00       1         xf_ReadEqnSetBCs [171]
+                0.00    0.00      39/212275957     xf_ErrorReport [37]
+                0.00    0.00      18/50          xf_AllocString [167]
+                0.00    0.00       1/1           xf_CreateBCs [205]
+                0.00    0.00       1/1           xf_AllocBCs [202]
+                0.00    0.00      28/1710        xf_LineFromFileOrStrings [242]
+                0.00    0.00      28/366         xf_TrimAndCheckBlank [251]
+                0.00    0.00      19/84          xf_ReadKey [258]
+-----------------------------------------------
+                0.00    0.00      10/10          xfYu_ApplyTimeScheme [3]
+[172]    0.0    0.00    0.00      10         xf_WriteLogEntry [172]
+                0.00    0.00      50/212275957     xf_ErrorReport [37]
+                0.00    0.00      10/13          xf_GetKeyValueEnum [190]
+                0.00    0.00      10/140         xf_GetKeyValueBool [163]
+                0.00    0.00      20/446         xf_GetKeyValue [249]
+                0.00    0.00      10/630         xf_MPI_GetRank [246]
+                0.00    0.00      10/61          xf_printf [263]
+                0.00    0.00      10/16          xf_NotNull [269]
+-----------------------------------------------
+                0.00    0.00      10/34          xf_WriteAllBinary [136]
+                0.00    0.00      24/34          xf_WriteDataSetBinary [147]
+[173]    0.0    0.00    0.00      34         xf_fseek [173]
+                0.00    0.00      68/212275957     xf_ErrorReport [37]
+                0.00    0.00      34/630         xf_MPI_GetRank [246]
+                0.00    0.00      34/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00      10/34          xf_WriteAllBinary [136]
+                0.00    0.00      24/34          xf_WriteDataSetBinary [147]
+[174]    0.0    0.00    0.00      34         xf_ftell [174]
+                0.00    0.00      68/212275957     xf_ErrorReport [37]
+                0.00    0.00      34/630         xf_MPI_GetRank [246]
+                0.00    0.00      34/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00      17/17          xf_WriteVectorBinary [158]
+[175]    0.0    0.00    0.00      17         xf_WriteGenArrayBinary [175]
+                0.00    0.00      68/212275957     xf_ErrorReport [37]
+                0.00    0.00      68/717         xf_WriteStringBinary [245]
+-----------------------------------------------
+                0.00    0.00       9/9           xfYu_ApplyTimeScheme [3]
+[176]    0.0    0.00    0.00       9         xf_CheckUserHalt [176]
+                0.00    0.00       9/88          xf_MPI_Allreduce [157]
+                0.00    0.00      18/212275957     xf_ErrorReport [37]
+                0.00    0.00       9/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00      29/29          xf_DataSetAdd [162]
+[177]    0.0    0.00    0.00      29         xf_CreateData [177]
+                0.00    0.00      29/212275957     xf_ErrorReport [37]
+                0.00    0.00      29/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00      10/10          xfYu_ApplyTimeScheme [3]
+[178]    0.0    0.00    0.00      10         xf_VectorNorm [178]
+                0.00    0.00      10/88          xf_MPI_Allreduce [157]
+                0.00    0.00      10/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.00      50/50          xfYu_ApplyTimeScheme [3]
+[179]    0.0    0.00    0.00      50         xf_SetKeyValueReal [179]
+                0.00    0.00      50/212275957     xf_ErrorReport [37]
+                0.00    0.00      50/50          xf_SetKeyValue [264]
+-----------------------------------------------
+                0.00    0.00       1/41          xfYu_CalculateResidual [36]
+                0.00    0.00      40/41          xf_CalculateResidual [4]
+[180]    0.0    0.00    0.00      41         xf_CalculateResidualBFaces [180]
+                0.00    0.00      41/212275957     xf_ErrorReport [37]
+                0.00    0.00      41/41          xf_DestroyStaticDataBFace [265]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_main [2]
+[181]    0.0    0.00    0.00       1         PullinModel [181]
+                0.00    0.00      33/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+                0.00    0.00     129/366         xf_TrimAndCheckBlank [251]
+                0.00    0.00      30/84          xf_ReadKey [258]
+                0.00    0.00       6/61          xf_printf [263]
+                0.00    0.00       5/5           TrueOrFalse [272]
+                0.00    0.00       1/1           Yu_InitOutput [278]
+-----------------------------------------------
+                0.00    0.00       1/41          xf_FindMassMatrixData [12]
+                0.00    0.00      40/41          xf_FindInvMassMatrixData [11]
+[182]    0.0    0.00    0.00      41         xf_FindMatrix [182]
+                0.00    0.00       2/29          xf_DataSetAdd [162]
+                0.00    0.00       8/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/2           xf_CreateMatrix [196]
+                0.00    0.00       2/18          xf_AllocGenArray [189]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/3           xf_MergeEqnSet [111]
+                0.00    0.00       2/3           xf_DestroyEqnSet [102]
+[183]    0.0    0.00    0.00       3         xf_DestroyBCs [183]
+                0.00    0.00      44/77719027     xf_Release [62]
+                0.00    0.00       6/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.00       1/12          xf_WriteAllBinary [136]
+                0.00    0.00      11/12          xf_WriteDataSetBinary [147]
+[184]    0.0    0.00    0.00      12         xf_fclose [184]
+                0.00    0.00      24/212275957     xf_ErrorReport [37]
+                0.00    0.00      12/630         xf_MPI_GetRank [246]
+                0.00    0.00      12/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       1/12          xf_WriteAllBinary [136]
+                0.00    0.00      11/12          xf_WriteDataSetBinary [147]
+[185]    0.0    0.00    0.00      12         xf_fopen [185]
+                0.00    0.00      24/212275957     xf_ErrorReport [37]
+                0.00    0.00      12/630         xf_MPI_GetRank [246]
+                0.00    0.00      12/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       1/12          xf_CreateAll [188]
+                0.00    0.00      11/12          xf_DumpVectorBinary [96]
+[186]    0.0    0.00    0.00      12         xf_CreateDataSet [186]
+                0.00    0.00      12/212275957     xf_ErrorReport [37]
+                0.00    0.00      12/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_main [2]
+[187]    0.0    0.00    0.00       1         xf_CreateUniformTimeHistData [187]
+                0.00    0.00      15/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/3           xf_ScanXStringAlloc [191]
+                0.00    0.00       1/1           xf_CreateTimeHistData [212]
+                0.00    0.00       1/13          xf_GetKeyValueEnum [190]
+                0.00    0.00       3/292461      xf_ReAlloc [126]
+                0.00    0.00       2/89          xf_GetKeyValueReal [255]
+                0.00    0.00       1/7           xf_GetKeyValueInt [271]
+                0.00    0.00       1/1           xf_GetTimeSchemeInfo [282]
+                0.00    0.00       1/16          xf_NotNull [269]
+                0.00    0.00       1/2           xf_ReAlloc2 [277]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadAllInputFile [95]
+[188]    0.0    0.00    0.00       1         xf_CreateAll [188]
+                0.00    0.00       8/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/2           xf_CreateEqnSet [192]
+                0.00    0.00       1/2           xf_CreateMesh [197]
+                0.00    0.00       1/1           xf_CreateGeom [206]
+                0.00    0.00       1/1           xf_CreateParam [210]
+                0.00    0.00       1/12          xf_CreateDataSet [186]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       2/18          xf_FindMatrix [182]
+                0.00    0.00      16/18          xf_AllocVectorGuts [164]
+[189]    0.0    0.00    0.00      18         xf_AllocGenArray [189]
+                0.00    0.00      18/212275957     xf_ErrorReport [37]
+                0.00    0.00      18/112         xf_Alloc2 [254]
+-----------------------------------------------
+                0.00    0.00       1/13          xf_CreateUniformTimeHistData [187]
+                0.00    0.00       1/13          xf_CreateSolverData [121]
+                0.00    0.00       1/13          xfYu_ApplyTimeScheme [3]
+                0.00    0.00      10/13          xf_WriteLogEntry [172]
+[190]    0.0    0.00    0.00      13         xf_GetKeyValueEnum [190]
+                0.00    0.00      13/212275957     xf_ErrorReport [37]
+                0.00    0.00      13/446         xf_GetKeyValue [249]
+                0.00    0.00      13/160         xf_Value2Enum [252]
+-----------------------------------------------
+                0.00    0.00       1/3           xf_CreateUniformTimeHistData [187]
+                0.00    0.00       2/3           xf_ReadEqnSetFileSerial [125]
+[191]    0.0    0.00    0.00       3         xf_ScanXStringAlloc [191]
+                0.00    0.00       8/212275957     xf_ErrorReport [37]
+                0.00    0.00       3/4           xf_GetNumTokens [274]
+                0.00    0.00       3/112         xf_Alloc2 [254]
+                0.00    0.00       2/6290        xf_DesiredToken [238]
+-----------------------------------------------
+                0.00    0.00       1/2           xf_main [2]
+                0.00    0.00       1/2           xf_CreateAll [188]
+[192]    0.0    0.00    0.00       2         xf_CreateEqnSet [192]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/2           xf_InitEqnSet [200]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFileSerial [125]
+[193]    0.0    0.00    0.00       1         xf_ScanXRealAlloc [193]
+                0.00    0.00       4/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+                0.00    0.00       1/4           xf_GetNumTokens [274]
+                0.00    0.00       1/1           xf_ScanXReal [289]
+-----------------------------------------------
+                0.00    0.00       1/3           xf_MergeEqnSet [111]
+                0.00    0.00       2/3           xf_DestroyEqnSet [102]
+[194]    0.0    0.00    0.00       3         xf_DestroyICs [194]
+                0.00    0.00       8/77719027     xf_Release [62]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_main [2]
+[195]    0.0    0.00    0.00       1         DestroyModel [195]
+                0.00    0.00       7/77719027     xf_Release [62]
+                0.00    0.00       1/1           DestroyEntropyBoundStruct [218]
+-----------------------------------------------
+                0.00    0.00       2/2           xf_FindMatrix [182]
+[196]    0.0    0.00    0.00       2         xf_CreateMatrix [196]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/2           xf_ReadAsciiFile [106]
+                0.00    0.00       1/2           xf_CreateAll [188]
+[197]    0.0    0.00    0.00       2         xf_CreateMesh [197]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_WriteAllBinary [136]
+[198]    0.0    0.00    0.00       1         xf_WriteGeomBinary [198]
+                0.00    0.00       3/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+                0.00    0.00       1/369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFileSerial [125]
+[199]    0.0    0.00    0.00       1         xf_AllocResTerms [199]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+                0.00    0.00       1/4           xf_InitKeyValue [275]
+-----------------------------------------------
+                0.00    0.00       2/2           xf_CreateEqnSet [192]
+[200]    0.0    0.00    0.00       2         xf_InitEqnSet [200]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       2/4           xf_InitKeyValue [275]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadGriFile [116]
+[201]    0.0    0.00    0.00       1         xf_Basis2nFace [201]
+                0.00    0.00       2/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/824321      xf_Basis2Shape [221]
+                0.00    0.00       1/27123       xf_Shape2nFace [236]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetBCs [171]
+[202]    0.0    0.00    0.00       1         xf_AllocBCs [202]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFileSerial [125]
+[203]    0.0    0.00    0.00       1         xf_AllocICs [203]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFileSerial [125]
+[204]    0.0    0.00    0.00       1         xf_AllocOutputs [204]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+                0.00    0.00       1/1           xf_InitOutput [283]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetBCs [171]
+[205]    0.0    0.00    0.00       1         xf_CreateBCs [205]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_CreateAll [188]
+[206]    0.0    0.00    0.00       1         xf_CreateGeom [206]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFileSerial [125]
+[207]    0.0    0.00    0.00       1         xf_CreateICs [207]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadGriFile [116]
+[208]    0.0    0.00    0.00       1         xf_CreateNodeHash [208]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFileSerial [125]
+[209]    0.0    0.00    0.00       1         xf_CreateOutputs [209]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_CreateAll [188]
+[210]    0.0    0.00    0.00       1         xf_CreateParam [210]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFileSerial [125]
+[211]    0.0    0.00    0.00       1         xf_CreateResTerms [211]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_CreateUniformTimeHistData [187]
+[212]    0.0    0.00    0.00       1         xf_CreateTimeHistData [212]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/44761489     xf_Alloc [60]
+-----------------------------------------------
+                0.00    0.00       1/1           xfYu_ApplyTimeScheme [3]
+[213]    0.0    0.00    0.00       1         xf_DestroySolverData [213]
+                0.00    0.00       3/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_AllocVectorGuts [164]
+[214]    0.0    0.00    0.00       1         xf_ParallelPrepVector [214]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadEqnSetFile [124]
+[215]    0.0    0.00    0.00       1         xf_ParallelizeEqnSet [215]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadAllFromJobFile [90]
+[216]    0.0    0.00    0.00       1         xf_ParallelizeKeyValue [216]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadAsciiFile [106]
+[217]    0.0    0.00    0.00       1         xf_ParallelizeMesh [217]
+                0.00    0.00       1/212275957     xf_ErrorReport [37]
+                0.00    0.00       1/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00       1/1           DestroyModel [195]
+[218]    0.0    0.00    0.00       1         DestroyEntropyBoundStruct [218]
+                0.00    0.00       2/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_DestroyAll [101]
+[219]    0.0    0.00    0.00       1         xf_DestroyGeom [219]
+                0.00    0.00       2/77719027     xf_Release [62]
+-----------------------------------------------
+                0.00    0.00 1654272/1654272     xf_ElemNormal [43]
+[220]    0.0    0.00    0.00 1654272         xf_CrossProduct [220]
+-----------------------------------------------
+                0.00    0.00       1/824321      xf_Basis2nFace [201]
+                0.00    0.00    3072/824321      xf_DetermineFaceOrient [129]
+                0.00    0.00    5120/824321      Yu_EstimateTimeStep [128]
+                0.00    0.00   49664/824321      xf_QuadElem [115]
+                0.00    0.00   62976/824321      LYDG_FaceViscTerm [7]
+                0.00    0.00   69120/824321      xf_ElemNormal [43]
+                0.00    0.00  125952/824321      xf_EvalBasisOnFaceUsingTable [61]
+                0.00    0.00  225792/824321      xf_QuadFace [100]
+                0.00    0.00  282624/824321      xf_RefFace2Interpol [55]
+[221]    0.0    0.00    0.00  824321         xf_Basis2Shape [221]
+-----------------------------------------------
+                0.00    0.00     127/641663      xf_QRFactorHouseholder [41]
+                0.00    0.00    2048/641663      Yu_OutputPointValueInit [59]
+                0.00    0.00   51712/641663      Yu_ConductEntropyBounding [23]
+                0.00    0.00   83968/641663      xf_CalculateResidualElem [19]
+                0.00    0.00  503808/641663      xf_CalculateResidualIFace [6]
+[222]    0.0    0.00    0.00  641663         xf_MxM_Set [222]
+-----------------------------------------------
+                0.00    0.00       1/531773      xf_ReadGriFile [116]
+                0.00    0.00       1/531773      xf_FindMassMatrixData [12]
+                0.00    0.00       1/531773      xfYu_InitAlterState [30]
+                0.00    0.00      14/531773      xf_AllocVectorGuts [164]
+                0.00    0.00      40/531773      xf_FindInvMassMatrixData [11]
+                0.00    0.00      40/531773      xf_MultInvMassMatrix [10]
+                0.00    0.00     512/531773      xf_ProjectOnElemQR [38]
+                0.00    0.00  153687/531773      xf_GetGrads [31]
+                0.00    0.00  175104/531773      xf_ElemJacobian [17]
+                0.00    0.00  202373/531773      xf_EvalBasis [20]
+[223]    0.0    0.00    0.00  531773         xf_Order2nNode [223]
+-----------------------------------------------
+                0.00    0.00     512/356864      xfYu_InitAlterState [30]
+                0.00    0.00     512/356864      Yu_MinFaceLengthScale [70]
+                0.00    0.00     512/356864      Yu_OutputPointValueInit [59]
+                0.00    0.00    5120/356864      Yu_EstimateTimeStep [128]
+                0.00    0.00   20480/356864      xf_MultInvMassMatrix [10]
+                0.00    0.00   20992/356864      xf_CalculateResidualElem [19]
+                0.00    0.00  125952/356864      xf_CalculateResidualIFace [6]
+                0.00    0.00  182784/356864      Yu_ConductEntropyBounding [23]
+[224]    0.0    0.00    0.00  356864         xf_InterpOrder [224]
+-----------------------------------------------
+                0.00    0.00   69120/356397      xf_ElemNormal [43]
+                0.00    0.00  112173/356397      xf_EvalBasis [20]
+                0.00    0.00  175104/356397      xf_ElemJacobian [17]
+[225]    0.0    0.00    0.00  356397         xf_Basis2Dim [225]
+-----------------------------------------------
+                0.00    0.00    3072/288768      xf_ReadGriFile [116]
+                0.00    0.00    3072/288768      xf_DetermineFaceOrient [129]
+                0.00    0.00  282624/288768      xf_RefFace2Elem [57]
+[226]    0.0    0.00    0.00  288768         xf_Q1NodesOnFace [226]
+-----------------------------------------------
+                0.00    0.00     512/268290      xf_GetQuadOrderGeneralFace [152]
+                0.00    0.00   48130/268290      xf_GetQuadOrderElem [72]
+                0.00    0.00   62976/268290      xf_GetQuadOrderIFace [114]
+                0.00    0.00  156672/268290      xf_GetQuadOrderAcrossFace [71]
+[227]    0.0    0.00    0.00  268290         xf_Q1BasisNotLinear [227]
+-----------------------------------------------
+                0.00    0.00  112173/238125      xf_EvalBasis [20]
+                0.00    0.00  125952/238125      xf_EvalBasisOnFace [63]
+[228]    0.0    0.00    0.00  238125         xf_NeedBasisReCalc [228]
+-----------------------------------------------
+                0.00    0.00  225792/225792      xf_QuadFace [100]
+[229]    0.0    0.00    0.00  225792         xf_FaceShape [229]
+-----------------------------------------------
+                0.00    0.00     512/220160      xf_GetQuadOrderGeneralFace [152]
+                0.00    0.00   62976/220160      xf_GetQuadOrderIFace [114]
+                0.00    0.00  156672/220160      xf_GetQuadOrderAcrossFace [71]
+[230]    0.0    0.00    0.00  220160         FaceQuadOrder [230]
+-----------------------------------------------
+                0.00    0.00   62976/188928      xf_CalculateResidualElem [19]
+                0.00    0.00   62976/188928      LYDG_FaceViscTerm [7]
+                0.00    0.00   62976/188928      xf_CalculateResidualIFace [6]
+[231]    0.0    0.00    0.00  188928         xf_MTxM_Add [231]
+-----------------------------------------------
+                0.00    0.00  104091/104091      xf_BasisLegendre1D [35]
+[232]    0.0    0.00    0.00  104091         xf_Grad_LineLegendre [232]
+-----------------------------------------------
+                0.00    0.00   69120/69120       xf_ElemNormal [43]
+[233]    0.0    0.00    0.00   69120         xf_NodesOnFace [233]
+-----------------------------------------------
+                0.00    0.00   62976/62976       LYDG_FaceViscTerm [7]
+[234]    0.0    0.00    0.00   62976         xf_ColcMult_Set [234]
+-----------------------------------------------
+                0.00    0.00   48130/48130       xf_GetQuadOrderElem [72]
+[235]    0.0    0.00    0.00   48130         ElemQuadOrder [235]
+-----------------------------------------------
+                0.00    0.00       1/27123       xf_Basis2nFace [201]
+                0.00    0.00     498/27123       xf_GetLocFaceMax [153]
+                0.00    0.00     512/27123       Yu_MinFaceLengthScale [70]
+                0.00    0.00   26112/27123       Yu_ConductEntropyBounding [23]
+[236]    0.0    0.00    0.00   27123         xf_Shape2nFace [236]
+-----------------------------------------------
+                0.00    0.00   20480/20480       xf_MultInvMassMatrix [10]
+[237]    0.0    0.00    0.00   20480         xf_ElemInvMassMatrix [237]
+-----------------------------------------------
+                0.00    0.00       2/6290        xf_ScanXStringAlloc [191]
+                0.00    0.00       5/6290        xf_ReadEqnSetFileSerial [125]
+                0.00    0.00    2187/6290        xf_ScanReal [145]
+                0.00    0.00    4096/6290        xf_ScanInt [135]
+[238]    0.0    0.00    0.00    6290         xf_DesiredToken [238]
+-----------------------------------------------
+                0.00    0.00    1728/4992        xf_DeleteFaceFromHash [130]
+                0.00    0.00    3264/4992        xf_AddFaceToHash [123]
+[239]    0.0    0.00    0.00    4992         xf_SortInt [239]
+-----------------------------------------------
+                0.00    0.00    3072/3072        xf_DetermineFaceOrient [129]
+[240]    0.0    0.00    0.00    3072         xf_DetermineFaceOrient_Shape [240]
+-----------------------------------------------
+                0.00    0.00    3072/3072        xf_WriteMeshBinarySerial [139]
+[241]    0.0    0.00    0.00    3072         xf_WriteFaceDataBinary [241]
+-----------------------------------------------
+                0.00    0.00      28/1710        xf_ReadEqnSetBCs [171]
+                0.00    0.00     178/1710        xf_ReadEqnSetFileSerial [125]
+                0.00    0.00    1504/1710        xf_ReadGriFile [116]
+[242]    0.0    0.00    0.00    1710         xf_LineFromFileOrStrings [242]
+-----------------------------------------------
+                0.00    0.00    1536/1536        xf_ReadGriFile [116]
+[243]    0.0    0.00    0.00    1536         xf_AddInteriorFace [243]
+-----------------------------------------------
+                0.00    0.00     605/1213        xf_QuadFace [100]
+                0.00    0.00     608/1213        xf_QuadElem [115]
+[244]    0.0    0.00    0.00    1213         xf_GetQuadPoints [244]
+-----------------------------------------------
+                0.00    0.00       1/717         xf_WriteResTermBinary [166]
+                0.00    0.00       7/717         xf_WriteMeshBinarySerial [139]
+                0.00    0.00      68/717         xf_WriteGenArrayBinary [175]
+                0.00    0.00      69/717         xf_WriteEqnSetBinarySerial [161]
+                0.00    0.00     230/717         xf_WriteVectorBinary [158]
+                0.00    0.00     342/717         xf_WriteKeyValueBinary [159]
+[245]    0.0    0.00    0.00     717         xf_WriteStringBinary [245]
+-----------------------------------------------
+                0.00    0.00       1/630         xf_main [2]
+                0.00    0.00       1/630         xf_ReadAsciiFile [106]
+                0.00    0.00       1/630         xf_ParallelizeMesh [217]
+                0.00    0.00       1/630         xf_WriteMeshBinary [138]
+                0.00    0.00       1/630         xf_WriteGeomBinary [198]
+                0.00    0.00       1/630         xf_ParallelPrepVector [214]
+                0.00    0.00       1/630         xf_ParallelizeKeyValue [216]
+                0.00    0.00       1/630         xf_WriteParamBinary [165]
+                0.00    0.00       1/630         xf_WriteEqnSetBinary [160]
+                0.00    0.00       1/630         xf_ParallelizeEqnSet [215]
+                0.00    0.00       1/630         xf_ReadEqnSetFile [124]
+                0.00    0.00       1/630         Yu_OutputPointValueInit [59]
+                0.00    0.00       2/630         xf_ReadAllFromJobFile [90]
+                0.00    0.00       5/630         Yu_GammaVectorCreate [110]
+                0.00    0.00       9/630         xf_CheckUserHalt [176]
+                0.00    0.00      10/630         xf_WriteLogEntry [172]
+                0.00    0.00      12/630         xf_WriteDataSetBinary [147]
+                0.00    0.00      12/630         xf_fclose [184]
+                0.00    0.00      12/630         xf_fopen [185]
+                0.00    0.00      17/630         xf_WriteVectorBinary [158]
+                0.00    0.00      34/630         xf_ftell [174]
+                0.00    0.00      34/630         xf_fseek [173]
+                0.00    0.00      51/630         Yu_ConductEntropyBounding [23]
+                0.00    0.00      61/630         xf_printf [263]
+                0.00    0.00      82/630         xf_HaloExchangeVectorEnd [169]
+                0.00    0.00      82/630         xf_HaloExchangeVectorBegin [168]
+                0.00    0.00     195/630         xf_fwrite [155]
+[246]    0.0    0.00    0.00     630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00     512/512         xf_ReadGriFile [116]
+[247]    0.0    0.00    0.00     512         xf_LongLineFromFileOrStrings [247]
+-----------------------------------------------
+                0.00    0.00     512/512         xf_ProjectOnElemQR [38]
+[248]    0.0    0.00    0.00     512         xf_MTxM_Set [248]
+-----------------------------------------------
+                0.00    0.00       1/446         xfYu_FindOrCreatePrimalState [29]
+                0.00    0.00       2/446         xf_main [2]
+                0.00    0.00       7/446         xf_ReadAllFromJobFile [90]
+                0.00    0.00       7/446         xf_GetKeyValueInt [271]
+                0.00    0.00      13/446         xf_GetKeyValueEnum [190]
+                0.00    0.00      20/446         xf_WriteLogEntry [172]
+                0.00    0.00      89/446         xf_GetKeyValueReal [255]
+                0.00    0.00     140/446         xf_GetKeyValueBool [163]
+                0.00    0.00     167/446         xf_AddKeyValueList [98]
+[249]    0.0    0.00    0.00     446         xf_GetKeyValue [249]
+-----------------------------------------------
+                0.00    0.00       1/369         xf_ReadAsciiFile [106]
+                0.00    0.00       1/369         xf_ReadAllFromJobFile [90]
+                0.00    0.00       1/369         xf_WriteMeshBinary [138]
+                0.00    0.00       1/369         xf_WriteGeomBinary [198]
+                0.00    0.00       1/369         xf_WriteParamBinary [165]
+                0.00    0.00       1/369         xf_WriteEqnSetBinary [160]
+                0.00    0.00       1/369         xf_ReadEqnSetFile [124]
+                0.00    0.00      12/369         xf_fclose [184]
+                0.00    0.00      12/369         xf_fopen [185]
+                0.00    0.00      17/369         xf_WriteVectorBinary [158]
+                0.00    0.00      34/369         xf_ftell [174]
+                0.00    0.00      34/369         xf_fseek [173]
+                0.00    0.00      58/369         xf_WriteDataSetBinary [147]
+                0.00    0.00     195/369         xf_fwrite [155]
+[250]    0.0    0.00    0.00     369         xf_MPI_Bcast [250]
+-----------------------------------------------
+                0.00    0.00      28/366         xf_ReadEqnSetBCs [171]
+                0.00    0.00      33/366         xf_ReadAllFromJobFile [90]
+                0.00    0.00     129/366         PullinModel [181]
+                0.00    0.00     176/366         xf_ReadEqnSetFileSerial [125]
+[251]    0.0    0.00    0.00     366         xf_TrimAndCheckBlank [251]
+-----------------------------------------------
+                0.00    0.00       3/160         xf_ReadEqnSetFileSerial [125]
+                0.00    0.00       4/160         xf_ReadGriFile [116]
+                0.00    0.00      13/160         xf_GetKeyValueEnum [190]
+                0.00    0.00     140/160         xf_GetKeyValueBool [163]
+[252]    0.0    0.00    0.00     160         xf_Value2Enum [252]
+-----------------------------------------------
+                0.00    0.00      60/130         xf_SetVector [66]
+                0.00    0.00      70/130         xf_VectorMultSet [68]
+[253]    0.0    0.00    0.00     130         xf_CompatibleVectors [253]
+-----------------------------------------------
+                0.00    0.00       2/112         xf_ReadGriFile [116]
+                0.00    0.00       2/112         xf_ReAlloc2 [277]
+                0.00    0.00       3/112         xf_ScanXStringAlloc [191]
+                0.00    0.00       9/112         xf_AllocVectorGuts [164]
+                0.00    0.00      18/112         xf_AllocGenArray [189]
+                0.00    0.00      78/112         xf_ReAllocCopy2 [94]
+[254]    0.0    0.00    0.00     112         xf_Alloc2 [254]
+-----------------------------------------------
+                0.00    0.00       1/89          xf_main [2]
+                0.00    0.00       1/89          xfYu_InitAlterState [30]
+                0.00    0.00       1/89          Yu_OutputPointValueInit [59]
+                0.00    0.00       2/89          xf_CreateUniformTimeHistData [187]
+                0.00    0.00       2/89          xfYu_ApplyTimeScheme [3]
+                0.00    0.00      41/89          xf_CalculateResidualElem [19]
+                0.00    0.00      41/89          xf_CalculateResidualIFace [6]
+[255]    0.0    0.00    0.00      89         xf_GetKeyValueReal [255]
+                0.00    0.00      89/446         xf_GetKeyValue [249]
+-----------------------------------------------
+                0.00    0.00      85/85          xf_FindVector [89]
+[256]    0.0    0.00    0.00      85         xf_CompatibleLinkageVector [256]
+-----------------------------------------------
+                0.00    0.00      85/85          xf_FindVector [89]
+[257]    0.0    0.00    0.00      85         xf_CompatibleSizeVector [257]
+-----------------------------------------------
+                0.00    0.00      16/84          xf_ReadEqnSetFileSerial [125]
+                0.00    0.00      19/84          xf_ReadAllFromJobFile [90]
+                0.00    0.00      19/84          xf_ReadEqnSetBCs [171]
+                0.00    0.00      30/84          PullinModel [181]
+[258]    0.0    0.00    0.00      84         xf_ReadKey [258]
+-----------------------------------------------
+                0.00    0.00      82/82          xf_CreateBasisTable [148]
+[259]    0.0    0.00    0.00      82         xf_Alloc3 [259]
+-----------------------------------------------
+                0.00    0.00      82/82          xf_EvalBasisOnFaceUsingTable [61]
+[260]    0.0    0.00    0.00      82         xf_ForceReCalcBasisTable [260]
+-----------------------------------------------
+                0.00    0.00      82/82          xf_DestroyBasisTable [137]
+[261]    0.0    0.00    0.00      82         xf_Release3 [261]
+-----------------------------------------------
+                0.00    0.00       1/81          xfYu_CalculateResidual [36]
+                0.00    0.00      80/81          xf_CalculateResidual [4]
+[262]    0.0    0.00    0.00      81         xf_SetZeroVector [262]
+-----------------------------------------------
+                0.00    0.00       1/61          xf_ReadAllFromJobFile [90]
+                0.00    0.00       1/61          init_data_read_from_file [56]
+                0.00    0.00       1/61          Yu_OutputPointValueInit [59]
+                0.00    0.00       2/61          xf_ReadGriFile [116]
+                0.00    0.00       6/61          PullinModel [181]
+                0.00    0.00       8/61          xf_main [2]
+                0.00    0.00      10/61          xf_WriteLogEntry [172]
+                0.00    0.00      11/61          Yu_GammaVectorCreate [110]
+                0.00    0.00      21/61          xfYu_ApplyTimeScheme [3]
+[263]    0.0    0.00    0.00      61         xf_printf [263]
+                0.00    0.00      61/630         xf_MPI_GetRank [246]
+-----------------------------------------------
+                0.00    0.00      50/50          xf_SetKeyValueReal [179]
+[264]    0.0    0.00    0.00      50         xf_SetKeyValue [264]
+-----------------------------------------------
+                0.00    0.00      41/41          xf_CalculateResidualBFaces [180]
+[265]    0.0    0.00    0.00      41         xf_DestroyStaticDataBFace [265]
+-----------------------------------------------
+                0.00    0.00      40/40          xf_CalculateResidual [4]
+[266]    0.0    0.00    0.00      40         xf_CalculateStabilization [266]
+-----------------------------------------------
+                0.00    0.00       2/18          xf_DestroyMatrix [104]
+                0.00    0.00      16/18          xf_DestroyVector [97]
+[267]    0.0    0.00    0.00      18         xf_DestroyArrayParallelInfo [267]
+-----------------------------------------------
+                0.00    0.00      16/16          xf_CreateVector [83]
+[268]    0.0    0.00    0.00      16         xf_InitVector [268]
+-----------------------------------------------
+                0.00    0.00       1/16          xf_main [2]
+                0.00    0.00       1/16          xfYu_FindOrCreatePrimalState [29]
+                0.00    0.00       1/16          xf_CreateUniformTimeHistData [187]
+                0.00    0.00       3/16          xf_ReadAllFromJobFile [90]
+                0.00    0.00      10/16          xf_WriteLogEntry [172]
+[269]    0.0    0.00    0.00      16         xf_NotNull [269]
+-----------------------------------------------
+                0.00    0.00       6/16          Yu_GammaVectorCreate [110]
+                0.00    0.00      10/16          Yu_EstimateTimeStep [128]
+[270]    0.0    0.00    0.00      16         xf_SetConstVector [270]
+-----------------------------------------------
+                0.00    0.00       1/7           xf_CreateUniformTimeHistData [187]
+                0.00    0.00       3/7           xf_main [2]
+                0.00    0.00       3/7           xfYu_ApplyTimeScheme [3]
+[271]    0.0    0.00    0.00       7         xf_GetKeyValueInt [271]
+                0.00    0.00       7/446         xf_GetKeyValue [249]
+-----------------------------------------------
+                0.00    0.00       5/5           PullinModel [181]
+[272]    0.0    0.00    0.00       5         TrueOrFalse [272]
+-----------------------------------------------
+                0.00    0.00       5/5           Yu_GammaVectorCreate [110]
+[273]    0.0    0.00    0.00       5         xf_Basis2UniformLagrange [273]
+-----------------------------------------------
+                0.00    0.00       1/4           xf_ScanXRealAlloc [193]
+                0.00    0.00       3/4           xf_ScanXStringAlloc [191]
+[274]    0.0    0.00    0.00       4         xf_GetNumTokens [274]
+-----------------------------------------------
+                0.00    0.00       1/4           xf_ReadAllFromJobFile [90]
+                0.00    0.00       1/4           xf_AllocResTerms [199]
+                0.00    0.00       2/4           xf_InitEqnSet [200]
+[275]    0.0    0.00    0.00       4         xf_InitKeyValue [275]
+-----------------------------------------------
+                0.00    0.00       1/2           xfYu_FindOrCreatePrimalState [29]
+                0.00    0.00       1/2           xfYu_ApplyTimeScheme [3]
+[276]    0.0    0.00    0.00       2         xf_FindPrimalState [276]
+-----------------------------------------------
+                0.00    0.00       1/2           xfYu_InitAlterState [30]
+                0.00    0.00       1/2           xf_CreateUniformTimeHistData [187]
+[277]    0.0    0.00    0.00       2         xf_ReAlloc2 [277]
+                0.00    0.00       2/112         xf_Alloc2 [254]
+-----------------------------------------------
+                0.00    0.00       1/1           PullinModel [181]
+[278]    0.0    0.00    0.00       1         Yu_InitOutput [278]
+-----------------------------------------------
+                0.00    0.00       1/1           xfYu_FindOrCreatePrimalState [29]
+[279]    0.0    0.00    0.00       1         xf_DataSetRemove [279]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_DestroyOutput [109]
+[280]    0.0    0.00    0.00       1         xf_DestroyCutPlaneIntersect [280]
+-----------------------------------------------
+                0.00    0.00       1/1           Yu_OutputPointValueInit [59]
+[281]    0.0    0.00    0.00       1         xf_DestroyMotionData [281]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_CreateUniformTimeHistData [187]
+[282]    0.0    0.00    0.00       1         xf_GetTimeSchemeInfo [282]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_AllocOutputs [204]
+[283]    0.0    0.00    0.00       1         xf_InitOutput [283]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_CreateSolverData [121]
+[284]    0.0    0.00    0.00       1         xf_InitStabData [284]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[285]    0.0    0.00    0.00       1         xf_MPI_Finalize [285]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[286]    0.0    0.00    0.00       1         xf_MPI_Init [286]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_CreateSolverData [121]
+[287]    0.0    0.00    0.00       1         xf_PreconditionerLineCheck [287]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ScanXReal [289]
+[288]    0.0    0.00    0.00       1         xf_ScanXIntReal [288]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ScanXRealAlloc [193]
+[289]    0.0    0.00    0.00       1         xf_ScanXReal [289]
+                0.00    0.00       1/1           xf_ScanXIntReal [288]
+-----------------------------------------------
+                0.00    0.00       1/1           xf_ReadGriFile [116]
+[290]    0.0    0.00    0.00       1         xf_VAlloc2 [290]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+
+Index by function name
+
+  [73] Compute_Divergence_Mag (xfYu_Statistics.c) [279] xf_DataSetRemove [50] xf_MatrixInvert
+  [46] ConvFluxInterior      [130] xf_DeleteFaceFromHash (xf_Mesh.c) [111] xf_MergeEqnSet
+  [54] ConvFluxInteriorFace  [238] xf_DesiredToken       [112] xf_MergeKeyValue
+ [218] DestroyEntropyBoundStruct [101] xf_DestroyAll      [10] xf_MultInvMassMatrix
+ [195] DestroyModel          [267] xf_DestroyArrayParallelInfo (xf_Data.c) [222] xf_MxM_Set
+  [42] DissipationCorrect    [183] xf_DestroyBCs (xf_EqnSet.c) [53] xf_MxV
+ [235] ElemQuadOrder         [141] xf_DestroyBasisData    [15] xf_MxV_Add
+ [230] FaceQuadOrder         [137] xf_DestroyBasisTable  [228] xf_NeedBasisReCalc (xfYu_Basis.c)
+  [33] InitializeDataInterpolation [280] xf_DestroyCutPlaneIntersect [79] xf_NeighborAcrossFace
+ [170] LYDG_CreateDiffJumpData [92] xf_DestroyData (xf_Data.c) [105] xf_NewGREVector
+   [7] LYDG_FaceViscTerm      [91] xf_DestroyDataSet     [233] xf_NodesOnFace
+   [8] LYDG_InteriorViscTerm [154] xf_DestroyDiffJumpData [269] xf_NotNull
+   [9] LYDG_PhysDiffModel3d (Yu_DiffusDiscret.c) [119] xf_DestroyElemGroup (xf_Mesh.c) [223] xf_Order2nNode
+ [149] LYDG_ReAllocDiffJumpData [102] xf_DestroyEqnSet   [214] xf_ParallelPrepVector (xf_Data.c)
+ [181] PullinModel           [142] xf_DestroyGenericQuadData [215] xf_ParallelizeEqnSet (xf_EqnSet.c)
+ [272] TrueOrFalse (xfYu_Model.c) [219] xf_DestroyGeom   [216] xf_ParallelizeKeyValue
+  [23] Yu_ConductEntropyBounding [194] xf_DestroyICs (xf_EqnSet.c) [217] xf_ParallelizeMesh
+ [128] Yu_EstimateTimeStep   [146] xf_DestroyJacobianData [76] xf_PowInt
+  [32] Yu_FlowFieldInit_from_datafile (xfYu_Initialization.c) [103] xf_DestroyKeyValue [287] xf_PreconditionerLineCheck
+ [110] Yu_GammaVectorCreate  [104] xf_DestroyMatrix       [38] xf_ProjectOnElemQR
+ [278] Yu_InitOutput         [107] xf_DestroyMesh        [227] xf_Q1BasisNotLinear
+  [70] Yu_MinFaceLengthScale [281] xf_DestroyMotionData  [226] xf_Q1NodesOnFace
+  [59] Yu_OutputPointValueInit [140] xf_DestroyNormalData [41] xf_QRFactorHouseholder
+  [24] Yu_Solution_Processing (xfYu_Solver.c) [109] xf_DestroyOutput (xf_EqnSet.c) [115] xf_QuadElem
+  [58] Yu_StatisticsOutput   [108] xf_DestroyOutputs (xf_EqnSet.c) [150] xf_QuadElemAtLeast
+  [48] Yu_TransportProperty (Yu_DiffusDiscret.c) [118] xf_DestroyParam [100] xf_QuadFace
+  [56] init_data_read_from_file [143] xf_DestroyQuadData [131] xf_QuadHexahedron
+   [3] xfYu_ApplyTimeScheme  [120] xf_DestroyResTerm     [133] xf_QuadLine
+  [36] xfYu_CalculateResidual [117] xf_DestroyResTerms   [132] xf_QuadQuadrilateral
+  [29] xfYu_FindOrCreatePrimalState [213] xf_DestroySolverData [126] xf_ReAlloc
+  [30] xfYu_InitAlterState   [265] xf_DestroyStaticDataBFace (xf_Residual.c) [277] xf_ReAlloc2
+ [123] xf_AddFaceToHash (xf_Mesh.c) [151] xf_DestroyStaticDataElem (xf_Residual.c) [94] xf_ReAllocCopy2
+ [243] xf_AddInteriorFace    [134] xf_DestroyStaticDataIFace (xf_Residual.c) [90] xf_ReadAllFromJobFile
+  [93] xf_AddKeyValue        [113] xf_DestroyTimeHistData [95] xf_ReadAllInputFile
+  [98] xf_AddKeyValueList     [97] xf_DestroyVector      [106] xf_ReadAsciiFile (xf_All.c)
+  [60] xf_Alloc              [129] xf_DetermineFaceOrient [171] xf_ReadEqnSetBCs (xf_EqnSet.c)
+ [254] xf_Alloc2             [240] xf_DetermineFaceOrient_Shape (xf_MeshTools.c) [124] xf_ReadEqnSetFile
+ [259] xf_Alloc3              [96] xf_DumpVectorBinary   [125] xf_ReadEqnSetFileSerial (xf_EqnSet.c)
+ [202] xf_AllocBCs (xf_EqnSet.c) [237] xf_ElemInvMassMatrix [116] xf_ReadGriFile
+ [189] xf_AllocGenArray       [17] xf_ElemJacobian       [258] xf_ReadKey
+ [203] xf_AllocICs (xf_EqnSet.c) [43] xf_ElemNormal       [28] xf_Ref2GlobElem
+ [204] xf_AllocOutputs (xf_EqnSet.c) [37] xf_ErrorReport  [57] xf_RefFace2Elem (xf_MeshTools.c)
+ [199] xf_AllocResTerms (xf_EqnSet.c) [20] xf_EvalBasis   [55] xf_RefFace2Interpol
+ [167] xf_AllocString         [63] xf_EvalBasisOnFace (xfYu_Basis.c) [62] xf_Release
+ [164] xf_AllocVectorGuts (xf_Data.c) [61] xf_EvalBasisOnFaceUsingTable [81] xf_Release2
+ [225] xf_Basis2Dim           [14] xf_EvalPhysicalGrad   [261] xf_Release3
+ [221] xf_Basis2Shape        [229] xf_FaceShape          [135] xf_ScanInt
+ [273] xf_Basis2UniformLagrange [74] xf_FindDataByTitle  [145] xf_ScanReal
+ [201] xf_Basis2nFace         [69] xf_FindElemGeom       [288] xf_ScanXIntReal (xf_String.c)
+  [34] xf_BasisLagrange1D     [11] xf_FindInvMassMatrixData [289] xf_ScanXReal
+  [52] xf_BasisLagrange2D (xfYu_Basis.c) [122] xf_FindLineConnectivity [193] xf_ScanXRealAlloc
+  [27] xf_BasisLagrange3D (xfYu_Basis.c) [12] xf_FindMassMatrixData [191] xf_ScanXStringAlloc
+  [35] xf_BasisLegendre1D    [182] xf_FindMatrix         [270] xf_SetConstVector
+  [84] xf_BasisLegendre2D (xfYu_Basis.c) [276] xf_FindPrimalState [264] xf_SetKeyValue
+  [25] xf_BasisLegendre3D (xfYu_Basis.c) [99] xf_FindSimilarVector [179] xf_SetKeyValueReal
+  [75] xf_BlockMTxV           [89] xf_FindVector          [66] xf_SetVector
+   [4] xf_CalculateResidual  [260] xf_ForceReCalcBasisTable [262] xf_SetZeroVector
+ [180] xf_CalculateResidualBFaces [31] xf_GetGrads       [236] xf_Shape2nFace
+  [19] xf_CalculateResidualElem (xf_Residual.c) [249] xf_GetKeyValue [40] xf_Shape_LineLegendre
+  [18] xf_CalculateResidualElems (xf_Residual.c) [163] xf_GetKeyValueBool [47] xf_Shape_TensorLagrange (xfYu_Basis.c)
+  [80] xf_CalculateResidualElems_DetailChem [190] xf_GetKeyValueEnum [22] xf_Shape_TensorLegendre (xfYu_Basis.c)
+   [6] xf_CalculateResidualIFace (xf_Residual.c) [271] xf_GetKeyValueInt [88] xf_Shape_TetHierarch
+   [5] xf_CalculateResidualIFaces (xf_Residual.c) [255] xf_GetKeyValueReal [49] xf_SolvePLU_Matrix
+ [266] xf_CalculateStabilization [153] xf_GetLocFaceMax  [239] xf_SortInt
+  [78] xf_CheckHangFace      [274] xf_GetNumTokens (xf_String.c) [251] xf_TrimAndCheckBlank
+ [176] xf_CheckUserHalt       [71] xf_GetQuadOrderAcrossFace [127] xf_UpdateFaceOrient
+  [51] xf_ColMult             [72] xf_GetQuadOrderElem   [290] xf_VAlloc2
+  [16] xf_ColMult_Add        [152] xf_GetQuadOrderGeneralFace [252] xf_Value2Enum
+  [21] xf_ColMult_Set        [114] xf_GetQuadOrderIFace   [68] xf_VectorMultSet
+  [64] xf_ColcMult_Add       [244] xf_GetQuadPoints      [178] xf_VectorNorm
+ [234] xf_ColcMult_Set       [282] xf_GetTimeSchemeInfo   [67] xf_VectorSetPODMass
+ [256] xf_CompatibleLinkageVector (xf_Data.c) [232] xf_Grad_LineLegendre [136] xf_WriteAllBinary
+ [257] xf_CompatibleSizeVector (xf_Data.c) [26] xf_Grad_TensorLagrange [147] xf_WriteDataSetBinary
+ [253] xf_CompatibleVectors   [85] xf_Grad_TensorLagrangeGauss (xfYu_Basis.c) [160] xf_WriteEqnSetBinary
+  [13] xf_ComputeGenMassMatrix (xfYu_Basis.c) [82] xf_Grad_TensorLegendre [161] xf_WriteEqnSetBinarySerial
+  [65] xf_ComputePLU         [168] xf_HaloExchangeVectorBegin [241] xf_WriteFaceDataBinary (xf_Mesh.c)
+ [188] xf_CreateAll          [169] xf_HaloExchangeVectorEnd [175] xf_WriteGenArrayBinary (xf_Data.c)
+ [205] xf_CreateBCs (xf_EqnSet.c) [86] xf_Hess_TensorLagrange (xfYu_Basis.c) [198] xf_WriteGeomBinary
+ [148] xf_CreateBasisTable    [44] xf_IFaceNormal        [159] xf_WriteKeyValueBinary
+ [177] xf_CreateData (xf_Data.c) [200] xf_InitEqnSet (xf_EqnSet.c) [172] xf_WriteLogEntry
+ [186] xf_CreateDataSet      [275] xf_InitKeyValue       [138] xf_WriteMeshBinary
+ [192] xf_CreateEqnSet       [283] xf_InitOutput (xf_EqnSet.c) [139] xf_WriteMeshBinarySerial (xf_Mesh.c)
+ [206] xf_CreateGeom         [284] xf_InitStabData       [165] xf_WriteParamBinary
+ [207] xf_CreateICs (xf_EqnSet.c) [268] xf_InitVector    [166] xf_WriteResTermBinary
+ [196] xf_CreateMatrix       [224] xf_InterpOrder        [245] xf_WriteStringBinary
+ [197] xf_CreateMesh         [242] xf_LineFromFileOrStrings [156] xf_WriteStringBinaryParallel
+ [208] xf_CreateNodeHash (xf_Mesh.c) [87] xf_LongAlloc   [158] xf_WriteVectorBinary (xf_Data.c)
+ [209] xf_CreateOutputs (xf_EqnSet.c) [247] xf_LongLineFromFileOrStrings [45] xf_cMxM_Add
+ [210] xf_CreateParam        [157] xf_MPI_Allreduce      [184] xf_fclose
+ [144] xf_CreateQuadData     [250] xf_MPI_Bcast          [185] xf_fopen
+ [211] xf_CreateResTerms (xf_EqnSet.c) [285] xf_MPI_Finalize [173] xf_fseek
+ [121] xf_CreateSolverData   [246] xf_MPI_GetRank        [174] xf_ftell
+ [212] xf_CreateTimeHistData [286] xf_MPI_Init           [155] xf_fwrite
+ [187] xf_CreateUniformTimeHistData [231] xf_MTxM_Add      [2] xf_main
+  [83] xf_CreateVector       [248] xf_MTxM_Set           [263] xf_printf
+ [220] xf_CrossProduct        [77] xf_MTxM_Sub
+ [162] xf_DataSetAdd          [39] xf_MatDetInv

@@ -1,0 +1,123 @@
+#---------------------------------------------------------------------
+# src/Makefile.in
+#
+# This file contains the XFlow serial and parallel library targets.
+# It should be included by any Makefiles that have targets that
+# use/depend on these libraries.  The libraries are built as simple
+# archives of objects.  Some useful objects lists are also defined;
+# specifically OBJ_XF_HOOK, which contains all the entry-point objects
+# through which dynamic libraries can enter.
+#---------------------------------------------------------------------
+
+# Names of serial and parallel libraries
+XF_SERIAL   = xfSerial
+XF_PARALLEL = xfParallel
+
+
+# Parallel and serial xflow library definitions
+LIB_XF_SERIAL   = $(LIBDIR)/lib$(XF_SERIAL).a
+LIB_XF_PARALLEL = $(LIBDIR)/lib$(XF_PARALLEL).a
+
+#------------------------------------#
+# Object list for base xflow library #
+#------------------------------------#
+OBJ_XF_SHORT = \
+	xf_All.o \
+	xf_Mesh.o \
+	xf_Geom.o \
+	xf_GeomIO.o \
+	xf_GeomAnalytical.o \
+	xf_GeomSpline.o \
+	xf_GeomPanel.o \
+	xf_Data.o \
+	xf_Param.o \
+	xf_Memory.o \
+	xf_String.o \
+	xf_Math.o \
+	xf_DataMath.o \
+	xf_Heap.o \
+	xf_Error.o \
+	xf_Basis.o \
+	xf_BasisFcn.o \
+	xf_MeshTools.o \
+	xf_MeshDistance.o \
+	xf_MeshMotion.o \
+	xf_MeshMotionGCL.o \
+	xf_MeshMotionIO.o \
+	xf_MeshMotionAnalytical.o \
+	xf_EqnSet.o \
+	xf_IO.o \
+	xf_Dynamic.o \
+	xf_Log.o \
+	xf_Solver.o \
+	xf_SolverTools.o \
+	xf_Line.o \
+	xf_LinearSolver.o \
+	xf_EigSolver.o \
+	xf_Residual.o \
+	xf_ResidualDiff.o \
+	xf_ResidualStab.o \
+	xf_LinQueue.o \
+	xf_Quad.o \
+	xf_QuadRule.o \
+	xf_Output.o \
+	xf_Adapt.o \
+	xf_AdaptHang.o \
+	xf_ErrEst.o \
+	xf_LeanSolver.o \
+	xf_AllPull.o \
+	xf_Penalty.o
+
+# add BLAS or placeholder object
+ifdef BLASDIR
+OBJ_XF_SHORT += xf_MathBlas.o
+else
+OBJ_XF_SHORT += xf_MathNoBlas.o
+endif
+
+# add Lapack or placeholder object
+ifdef LAPACKDIR
+OBJ_XF_SHORT += xf_MathLapack.o
+else
+OBJ_XF_SHORT += xf_MathNoLapack.o
+endif
+
+# add source and build prefixes
+OBJ_XF_BASE = $(addprefix $(BUILDDIR)/$(SRC)/,$(OBJ_XF_SHORT))
+
+-include  $(OBJ_XF_BASE:.o=.d)
+
+#---------------------------------------#
+# Object list for dynamic-library hooks #
+#---------------------------------------#
+OBJ_XF_HOOK = \
+	$(BUILDDIR)/$(SRC)/xf_EqnSetHook.o
+
+-include $(OBJ_XF_HOOK:.o=.d)
+
+
+#----------------#
+# Serial library #
+#----------------#
+OBJ_XF_SERIAL = \
+	$(BUILDDIR)/$(SRC)/xf_Serial.o
+
+$(LIB_XF_SERIAL): $(OBJ_XF_SERIAL) $(OBJ_XF_BASE)
+	@set -e; echo -e '\nArchiving $(XF_SERIAL) library:'
+	-rm -f $@
+	ar rs $@ $^
+-include $(OBJ_XF_SERIAL:.o=.d)
+
+#------------------#
+# Parallel Library #
+#------------------#
+OBJ_XF_PARALLEL = \
+	$(BUILDDIR)/$(SRC)/xf_MPI.o \
+	$(BUILDDIR)/$(SRC)/xf_Partition.o
+
+$(LIB_XF_PARALLEL): $(OBJ_XF_PARALLEL) $(OBJ_XF_BASE)
+	@set -e; echo -e '\nArchiving $(XF_PARALLEL) library:'
+	-rm -f $@
+	ar rs $@ $^
+-include $(OBJ_XF_PARALLEL:.o=.d)
+

@@ -1,0 +1,306 @@
+#ifndef _xf_DataStruct_h
+#define _xf_DataStruct_h 1
+
+/*
+  FILE:  xf_DataStruct.h
+
+  This file contains the xflow Data structures
+
+*/
+
+
+#include "xf.h"
+
+
+/* Data representation type */
+enum xfe_DataType{
+
+  xfe_Vector,
+  /* Vector data with linkage, possibly interpolated.  Solution,
+     residual, and adjoint vectors are stored as this type.  Other
+     mesh-linked data (e.g. node flags, face values) can also be
+     stored as this type. */
+
+  xfe_Matrix,    
+  /* Matrix data with linkage.  Element-specific matrices (e.g. Mass
+     Matrix) can be stored as this type. */
+
+  xfe_JacobianMatrix,
+  /* The element-based Jacobian Matrix is stored as its own data type
+     that spans all the element groups.  A compact (nearest-neighbor)
+     stencil is required.
+   */
+  xfe_DataOther,          /* Other data type */
+  xfe_DataLast
+};
+
+/* corresponding names */
+static char *xfe_DataName[xfe_DataLast] = {
+  "Vector",
+  "Matrix",
+  "JacobianMatrix",
+  "DataOther"
+};
+
+
+ 
+/* Linkage Type for DataWithLinkage */
+enum xfe_LinkageType{
+  xfe_LinkageNode,
+  xfe_LinkageElem,
+  xfe_LinkageFace,
+  xfe_LinkageIFace,
+  xfe_LinkageBFace,
+  xfe_LinkageGlobElem,
+  xfe_LinkageElemGroup,
+  xfe_LinkageBFaceGroup,
+  xfe_LinkageNone,
+  xfe_LinkageLast
+};
+
+/* corresponding names */
+static char *xfe_LinkageName[xfe_LinkageLast] = {
+  "Node",
+  "Elem",
+  "Face",
+  "IFace",
+  "BFace",
+  "GlobElem",
+  "ElemGroup",
+  "BFaceGroup",
+  "None"
+};
+
+
+/* Solver Role Type */
+enum xfe_SolverRoleType{
+  xfe_SolverRolePrimalState,
+  xfe_SolverRolePrimalRes,
+  xfe_SolverRoleAdjointState,
+  xfe_SolverRoleAdjointRes,
+  xfe_SolverRoleOther,
+  xfe_SolverRoleNone,
+  xfe_SolverRoleLast
+};
+
+/* corresponding names */
+static char *xfe_SolverRoleType[xfe_SolverRoleLast] = {
+  "PrimalState",
+  "PrimalRes",
+  "AdjointState",
+  "AdjointRes",
+  "Other",
+  "None",
+};
+
+
+
+/* /\* GenArray stores general array data in unrolled form. Multiple */
+/*    dimensions are supported.  Nonuniform row/column sizes are */
+/*    allowed. *\/ */
+/* typedef struct */
+/* { */
+/*   enum xfe_SizeType Size; */
+/*   /\* int, real, long, bool *\/ */
+
+/*   int nLevel; */
+/*   /\* Number of levels, or dimensions, in this array.  Level 0 */
+/*      corresponds to the outermost dimension, while level nlevel-1 */
+/*      corresponds to the innermost dimension. *\/ */
+
+/*   int *Count; */
+/*   int **Vec; */
+/*   /\* count[0..nlevel-1] should be >1 for nonuniform arrays.  The */
+/*      values indicate the number of entries with nonuniform data at */
+/*      each level.   */
+
+/*      vec[0..nlevel-1] stores the "row sizes" at each level.  For */
+/*      uniform data, only one value is stored.  For non-uniform data, */
+/*      vec[ilevel] is a vector of size count[ilevel]. */
+     
+/*      Example 1: */
+     
+/*      To store r values at each nNode different nodes, the following */
+/*      GenArray representation would be appropriate: */
+
+/*      nlevel = 2 */
+/*      count = [1 1] */
+/*      vec[0] = [nNode] */
+/*      vec[1] = [r] */
+
+
+/*      Example 2: */
+
+/*      For a global array over element groups and elements, with r */
+/*      entries per element, the GenArray representation would be: */
+     
+/*      nlevel = 3 */
+/*      count = [1, negrp, 1] */
+/*      vec[0] = negrp */
+/*      vec[1] = [nelem_0, nelem_1, ..., nelem_(negrp-1)] */
+/*      vec[2] = [r] */
+
+/*   *\/ */
+
+/*   void *Data; */
+/*   /\* The actual data, stored in unrolled format *\/ */
+/* } */
+/* xf_GenArray; */
+
+
+
+/* GenArray stores integer or real data as a 2d array */
+typedef struct
+{
+  enum xfe_SizeType Size;
+  /* int or real */
+
+  int n;
+  /* first dimension */
+  
+  int r;
+  /* second dimension */
+
+  void **Value;
+  /* array values: Value[j][k]
+         j = [0 .. n-1]
+         k = [0 .. r-1]
+  */
+}
+xf_GenArray;
+
+
+
+typedef struct
+{
+  enum xfe_LinkageType Linkage;
+  /* type of Mesh structure to which the data is associated */
+  
+  enum xfe_SolverRoleType SolverRole;
+  /* primal state, adjoint state, residual, other, SolverRoleNone */
+
+  int StateRank;
+  /* Number of state variables */
+
+  char **StateName;
+  /* Names of state variables (if any) */
+
+  int TimeIndex;
+  /* For unsteady runs: e.g. 0 is current time level  */
+
+  int MGIndex;
+  /* For multigrid runs: e.g. 0 is fine MG level */
+
+
+  int nArray;
+  /* number of arrays of storage (e.g. 1 or nElemGroup) */
+  
+
+  enum xfe_BasisType *Basis;
+  /* Interpolation basis type vector [nArray]; NULL if data is not interpolated */
+
+  int *Order;
+  /* Interpolation order vector [nArray]: if NULL, if data is not interpolated */
+
+  xf_GenArray *GenArray;
+  /* Arrays of values [nArray] */
+}
+xf_Vector;
+
+
+
+typedef struct
+{
+  enum xfe_LinkageType Linkage;
+  /* type of other structure to which the data is associated */
+
+  int Order1, Order2;
+  /* Interpolation orders associated with matrix (for a Mass matrix
+     these would be the same, but for an inter-order transfer matrix,
+     these would be different).*/
+
+  enum xfe_BasisType Basis1, Basis2;
+  /* Interpolation basis type; valid only if data is interpolated
+     (i.e. if InterpOrder >= 0) */
+
+  xf_GenArray *GenArray;
+  /* Array of values [1] */
+}
+xf_Matrix;
+
+
+
+/* DataJacobianMatrix stores a real-precision, element-based Jacobian
+   matrix that includes, for each element, blocks corresponding to
+   self and to neighbors across all faces.  Note, a Jacobian matrix is
+   inherently linked with a mesh.*/
+typedef struct
+{
+
+  int *r;
+  /* Rank for each element group.  The self block for each element in
+     group egrp is of size rvec[egrp] x rvec[egrp]. The off-diagonal
+     blocks could be rectangular, rvec[egrp1] x rvec[egrp2], if
+     different interpolation orders/bases are used for different
+     element groups*/
+
+  int ****ElemAcrossFace;
+  /* For Jacobian ease of use, this array stores the adjacent elements
+     for each element:
+         ElemAcrossFace[egrp][elem][face][0] = adjacent egrp
+	 ElemAcrossFace[egrp][elem][face][1] = adjacent elem
+  */
+
+  real ****Value;  
+  /* array of pointers to values
+     value[egrp][elem][1+face][k]:
+
+     egrp = [ 0..nElemGroup-1]
+     elem = [ 0..nElem(egrp)-1]
+     face = [-1..nFace(elem)-1]
+            -1 corresponds to self-block
+     k    = [ 0..rvec[egrp]*rvec[egR]]
+            egR = group of element neighbor across face
+  */
+}
+xf_DataJacobianMatrix;
+
+
+
+/*------------- Data structure definition  --------------*/
+struct xf_Data
+{
+  
+  char *Title;
+  /* Null-terminated string, not necessarily unique */
+
+  enum xfe_DataType Type;
+  /* Type of data */
+
+  enum xfe_Bool ReadWrite;
+  /* If true, data should be read/written */
+
+  void *Data;
+  /* Pointer to structure that stores the data */
+
+  struct xf_Data *Prev, *Next;
+  /* Pointer to previous and next data structures */
+  
+};
+typedef struct xf_Data xf_Data;
+
+
+/*------------- DataSet structure definition  --------------*/
+struct xf_DataSet
+{
+
+  xf_Data *Head;
+  xf_Data *Tail;
+  /* Pointer to head and tail of linked list */
+  
+};
+typedef struct xf_DataSet xf_DataSet;
+
+
+
+#endif // end ifndef _xf_DataStruct_h

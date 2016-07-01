@@ -25,7 +25,7 @@ CFLIncreaseFactor = 2
 TimeScheme = RK4
 Time = 0.0
 EndTime = 0.0005
-nTimeStep = 20
+nTimeStep = 10
 UnsteadyWriteInterval = 20
 
 ###### Outputs ######

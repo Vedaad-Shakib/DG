@@ -1,0 +1,120 @@
+Warning: Permanently added 'compute-112-3' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-114-2' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-119-3' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-112-4' (RSA) to the list of known hosts.
+
++-----------------------------------+
+| xflow: A DG Finite Element Solver |
++-----------------------------------+
+Parallel run on 60 processors
+
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Reading model.yu!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Basis HexLegendre used!
+Time stepping scheme is 1
+Boundary condition read!
+Entropy bound:0.080000
+Chemistry is disabled!
+Output specified!
+Reading .gri file.
+** In ReadGri: NOT CHECKING VALIDITY OF Q>1 VOLUMES **
+Calling PartitionMesh ...  done.
+
+** NOT CHECKING ALL **
+
+Calculating HeatCapacityRatio ... done.
+start loading data for initialization...
+Calculating MaxPressure ... Entropy Bounding DG is activiated; low bound is intialized!done.
+Calculating ElemMaxCharSpeed ... done.
+Calculating ElemMinFaceLen ... done.
+Starting timer
+Calculating RiemannIndicator ... done.
+168.937625
+Warning; not computing surface areas for elems in halo group = 1.
+Current Time 0.000000e+00, Estimated Time Step 6.418143e-03 Actual Taken Time Step 5.000000e-05
+      1   5.00000000E-05   5.00000000E-05   1.83995193E+03 0
+Current Time 5.000000e-05, Estimated Time Step 6.418143e-03 Actual Taken Time Step 5.000000e-05
+      2   1.00000000E-04   5.00000000E-05   1.83979781E+03 0
+Current Time 1.000000e-04, Estimated Time Step 6.418551e-03 Actual Taken Time Step 5.000000e-05
+      3   1.50000000E-04   5.00000000E-05   1.83964406E+03 0
+Current Time 1.500000e-04, Estimated Time Step 6.418959e-03 Actual Taken Time Step 5.000000e-05
+      4   2.00000000E-04   5.00000000E-05   1.83949051E+03 0
+Current Time 2.000000e-04, Estimated Time Step 6.419367e-03 Actual Taken Time Step 5.000000e-05
+      5   2.50000000E-04   5.00000000E-05   1.83933709E+03 0
+Current Time 2.500000e-04, Estimated Time Step 6.419774e-03 Actual Taken Time Step 5.000000e-05
+      6   3.00000000E-04   5.00000000E-05   1.83918389E+03 0
+Current Time 3.000000e-04, Estimated Time Step 6.420181e-03 Actual Taken Time Step 5.000000e-05
+      7   3.50000000E-04   5.00000000E-05   1.83903094E+03 0
+Current Time 3.500000e-04, Estimated Time Step 6.420588e-03 Actual Taken Time Step 5.000000e-05
+      8   4.00000000E-04   5.00000000E-05   1.83887817E+03 0
+Current Time 4.000000e-04, Estimated Time Step 6.420995e-03 Actual Taken Time Step 5.000000e-05
+      9   4.50000000E-04   5.00000000E-05   1.83872576E+03 0
+Current Time 4.500000e-04, Estimated Time Step 6.421402e-03 Actual Taken Time Step 5.000000e-05
+     10   5.00000000E-04   5.00000000E-05   1.83857360E+03 0
+Time = 0.0005 >= EndTime = 0.0005.  Stopping unsteady simulation.
+Elapsed time = 2.571477
+CPU time = 2.240000
+finished by YU!~
+[36] Failed to dealloc pd (Device or resource busy)
+[12] Failed to dealloc pd (Device or resource busy)
+[24] Failed to dealloc pd (Device or resource busy)
+[48] Failed to dealloc pd (Device or resource busy)
+[0] Failed to dealloc pd (Device or resource busy)

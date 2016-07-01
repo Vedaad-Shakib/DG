@@ -1,0 +1,300 @@
+Warning: Permanently added 'compute-128-1' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-65-3' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-106-4' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-125-1' (RSA) to the list of known hosts.
+
++-----------------------------------+
+| xflow: A DG Finite Element Solver |
++-----------------------------------+
+Parallel run on 60 processors
+
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Reading model.yu!
+Basis HexLegendre used!
+Time stepping scheme is 1
+Boundary condition read!
+Entropy bound:0.080000
+Time stepping scheme is 1
+Chemistry is disabled!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Output specified!
+Reading .gri file.
+** In ReadGri: NOT CHECKING VALIDITY OF Q>1 VOLUMES **
+Calling PartitionMesh ...  done.
+
+** NOT CHECKING ALL **
+
+Calculating HeatCapacityRatio ... done.
+start loading data for initialization...
+Calculating MaxPressure ... Entropy Bounding DG is activiated; low bound is intialized!done.
+Calculating ElemMaxCharSpeed ... done.
+Calculating ElemMinFaceLen ... done.
+Starting timer
+Calculating RiemannIndicator ... done.
+158.806800
+Warning; not computing surface areas for elems in halo group = 1.
+Current Time 0.000000e+00, Estimated Time Step 3.253945e-06 Actual Taken Time Step 3.253945e-06
+      1   3.25394535E-06   3.25394535E-06   1.09097087E+03 0
+Current Time 3.253945e-06, Estimated Time Step 3.253945e-06 Actual Taken Time Step 3.253945e-06
+      2   6.50789069E-06   3.25394535E-06   1.09081972E+03 0
+Current Time 6.507891e-06, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      3   9.76183626E-06   3.25394557E-06   1.09066899E+03 0
+Current Time 9.761836e-06, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      4   1.30157821E-05   3.25394579E-06   1.09051869E+03 0
+Current Time 1.301578e-05, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      5   1.62697281E-05   3.25394601E-06   1.09036880E+03 0
+Current Time 1.626973e-05, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      6   1.95236743E-05   3.25394624E-06   1.09021932E+03 0
+Current Time 1.952367e-05, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      7   2.27776208E-05   3.25394646E-06   1.09007027E+03 0
+Current Time 2.277762e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 2.222379e-06
+      8   2.50000000E-05   2.22237924E-06   1.08992162E+03 0
+Current Time 2.500000e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+      9   2.82539469E-05   3.25394690E-06   1.08982033E+03 0
+Current Time 2.825395e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+     10   3.15078940E-05   3.25394705E-06   1.08967238E+03 0
+Current Time 3.150789e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+     11   3.47618412E-05   3.25394727E-06   1.08952483E+03 0
+Current Time 3.476184e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+     12   3.80157887E-05   3.25394750E-06   1.08937769E+03 0
+Current Time 3.801579e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     13   4.12697364E-05   3.25394772E-06   1.08923095E+03 0
+Current Time 4.126974e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     14   4.45236844E-05   3.25394794E-06   1.08908463E+03 0
+Current Time 4.452368e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     15   4.77776325E-05   3.25394816E-06   1.08893871E+03 0
+Current Time 4.777763e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 2.222367e-06
+     16   5.00000000E-05   2.22236746E-06   1.08879319E+03 0
+Current Time 5.000000e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     17   5.32539486E-05   3.25394860E-06   1.08869403E+03 0
+Current Time 5.325395e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     18   5.65078973E-05   3.25394875E-06   1.08854919E+03 0
+Current Time 5.650790e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     19   5.97618463E-05   3.25394897E-06   1.08840475E+03 0
+Current Time 5.976185e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     20   6.30157955E-05   3.25394919E-06   1.08826071E+03 0
+Current Time 6.301580e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     21   6.62697449E-05   3.25394941E-06   1.08811707E+03 0
+Current Time 6.626974e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     22   6.95236945E-05   3.25394963E-06   1.08797383E+03 0
+Current Time 6.952369e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     23   7.27776444E-05   3.25394985E-06   1.08783099E+03 0
+Current Time 7.277764e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 2.222356e-06
+     24   7.50000000E-05   2.22235562E-06   1.08768854E+03 0
+Current Time 7.500000e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     25   7.82539503E-05   3.25395028E-06   1.08759147E+03 0
+Current Time 7.825395e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     26   8.15079007E-05   3.25395043E-06   1.08744968E+03 0
+Current Time 8.150790e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     27   8.47618514E-05   3.25395065E-06   1.08730828E+03 0
+Current Time 8.476185e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     28   8.80158022E-05   3.25395087E-06   1.08716727E+03 0
+Current Time 8.801580e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     29   9.12697533E-05   3.25395109E-06   1.08702665E+03 0
+Current Time 9.126975e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     30   9.45237046E-05   3.25395130E-06   1.08688641E+03 0
+Current Time 9.452370e-05, Estimated Time Step 3.253952e-06 Actual Taken Time Step 3.253952e-06
+     31   9.77776561E-05   3.25395152E-06   1.08674657E+03 0
+Current Time 9.777766e-05, Estimated Time Step 3.253952e-06 Actual Taken Time Step 2.222344e-06
+     32   1.00000000E-04   2.22234385E-06   1.08660710E+03 0
+Current Time 1.000000e-04, Estimated Time Step 3.253952e-06 Actual Taken Time Step 3.253952e-06
+     33   1.03253952E-04   3.25395196E-06   1.08651208E+03 0
+Current Time 1.032540e-04, Estimated Time Step 3.253952e-06 Actual Taken Time Step 3.253952e-06
+     34   1.06507904E-04   3.25395210E-06   1.08637326E+03 0
+Current Time 1.065079e-04, Estimated Time Step 3.253952e-06 Actual Taken Time Step 3.253952e-06
+     35   1.09761856E-04   3.25395232E-06   1.08623483E+03 0
+Current Time 1.097619e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 3.253953e-06
+     36   1.13015809E-04   3.25395254E-06   1.08609678E+03 0
+Current Time 1.130158e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 3.253953e-06
+     37   1.16269762E-04   3.25395275E-06   1.08595911E+03 0
+Current Time 1.162698e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 3.253953e-06
+     38   1.19523715E-04   3.25395297E-06   1.08582182E+03 0
+Current Time 1.195237e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 3.253953e-06
+     39   1.22777668E-04   3.25395319E-06   1.08568491E+03 0
+Current Time 1.227777e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 2.222332e-06
+     40   1.25000000E-04   2.22233217E-06   1.08554838E+03 0
+Current Time 1.250000e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     41   1.28253954E-04   3.25395362E-06   1.08545535E+03 0
+Current Time 1.282540e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     42   1.31507907E-04   3.25395376E-06   1.08531944E+03 0
+Current Time 1.315079e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     43   1.34761861E-04   3.25395398E-06   1.08518392E+03 0
+Current Time 1.347619e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     44   1.38015816E-04   3.25395420E-06   1.08504876E+03 0
+Current Time 1.380158e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     45   1.41269770E-04   3.25395441E-06   1.08491398E+03 0
+Current Time 1.412698e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 3.253955e-06
+     46   1.44523725E-04   3.25395462E-06   1.08477957E+03 0
+Current Time 1.445237e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 3.253955e-06
+     47   1.47777679E-04   3.25395484E-06   1.08464552E+03 0
+Current Time 1.477777e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 2.222321e-06
+     48   1.50000000E-04   2.22232057E-06   1.08451184E+03 0
+Current Time 1.500000e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 3.253955e-06
+     49   1.53253955E-04   3.25395527E-06   1.08442076E+03 0
+Current Time 1.532540e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 3.253955e-06
+     50   1.56507911E-04   3.25395541E-06   1.08428770E+03 0
+Current Time 1.565079e-04, Estimated Time Step 3.253956e-06 Actual Taken Time Step 3.253956e-06
+     51   1.59761866E-04   3.25395563E-06   1.08415500E+03 0
+Current Time 1.597619e-04, Estimated Time Step 3.253956e-06 Actual Taken Time Step 3.253956e-06
+     52   1.63015822E-04   3.25395584E-06   1.08402267E+03 0
+Current Time 1.630158e-04, Estimated Time Step 3.253956e-06 Actual Taken Time Step 3.253956e-06
+     53   1.66269778E-04   3.25395605E-06   1.08389070E+03 0
+Current Time 1.662698e-04, Estimated Time Step 3.253956e-06 Actual Taken Time Step 3.253956e-06
+     54   1.69523734E-04   3.25395627E-06   1.08375909E+03 0
+Current Time 1.695237e-04, Estimated Time Step 3.253956e-06 Actual Taken Time Step 3.253956e-06
+     55   1.72777691E-04   3.25395648E-06   1.08362785E+03 0
+Current Time 1.727777e-04, Estimated Time Step 3.253957e-06 Actual Taken Time Step 2.222309e-06
+     56   1.75000000E-04   2.22230904E-06   1.08349696E+03 0
+Current Time 1.750000e-04, Estimated Time Step 3.253957e-06 Actual Taken Time Step 3.253957e-06
+     57   1.78253957E-04   3.25395691E-06   1.08340778E+03 0
+Current Time 1.782540e-04, Estimated Time Step 3.253957e-06 Actual Taken Time Step 3.253957e-06
+     58   1.81507914E-04   3.25395705E-06   1.08327750E+03 0
+Current Time 1.815079e-04, Estimated Time Step 3.253957e-06 Actual Taken Time Step 3.253957e-06
+     59   1.84761871E-04   3.25395726E-06   1.08314757E+03 0
+Current Time 1.847619e-04, Estimated Time Step 3.253957e-06 Actual Taken Time Step 3.253957e-06
+     60   1.88015829E-04   3.25395748E-06   1.08301801E+03 0
+Current Time 1.880158e-04, Estimated Time Step 3.253958e-06 Actual Taken Time Step 3.253958e-06
+     61   1.91269786E-04   3.25395769E-06   1.08288880E+03 0
+Current Time 1.912698e-04, Estimated Time Step 3.253958e-06 Actual Taken Time Step 3.253958e-06
+     62   1.94523744E-04   3.25395790E-06   1.08275995E+03 0
+Current Time 1.945237e-04, Estimated Time Step 3.253958e-06 Actual Taken Time Step 3.253958e-06
+     63   1.97777702E-04   3.25395811E-06   1.08263145E+03 0
+Current Time 1.977777e-04, Estimated Time Step 3.253958e-06 Actual Taken Time Step 2.222298e-06
+     64   2.00000000E-04   2.22229760E-06   1.08250330E+03 0
+Current Time 2.000000e-04, Estimated Time Step 3.253959e-06 Actual Taken Time Step 3.253959e-06
+     65   2.03253959E-04   3.25395854E-06   1.08241599E+03 0
+Current Time 2.032540e-04, Estimated Time Step 3.253959e-06 Actual Taken Time Step 3.253959e-06
+     66   2.06507917E-04   3.25395868E-06   1.08228843E+03 0
+Current Time 2.065079e-04, Estimated Time Step 3.253959e-06 Actual Taken Time Step 3.253959e-06
+     67   2.09761876E-04   3.25395889E-06   1.08216123E+03 0
+Current Time 2.097619e-04, Estimated Time Step 3.253959e-06 Actual Taken Time Step 3.253959e-06
+     68   2.13015835E-04   3.25395910E-06   1.08203437E+03 0
+Current Time 2.130158e-04, Estimated Time Step 3.253959e-06 Actual Taken Time Step 3.253959e-06
+     69   2.16269795E-04   3.25395931E-06   1.08190786E+03 0
+Current Time 2.162698e-04, Estimated Time Step 3.253960e-06 Actual Taken Time Step 3.253960e-06
+     70   2.19523754E-04   3.25395952E-06   1.08178170E+03 0
+Current Time 2.195238e-04, Estimated Time Step 3.253960e-06 Actual Taken Time Step 3.253960e-06
+     71   2.22777714E-04   3.25395973E-06   1.08165588E+03 0
+Current Time 2.227777e-04, Estimated Time Step 3.253960e-06 Actual Taken Time Step 2.222286e-06
+     72   2.25000000E-04   2.22228623E-06   1.08153041E+03 0
+Current Time 2.250000e-04, Estimated Time Step 3.253960e-06 Actual Taken Time Step 3.253960e-06
+     73   2.28253960E-04   3.25396015E-06   1.08144492E+03 0
+Current Time 2.282540e-04, Estimated Time Step 3.253960e-06 Actual Taken Time Step 3.253960e-06
+     74   2.31507920E-04   3.25396030E-06   1.08132002E+03 0
+Current Time 2.315079e-04, Estimated Time Step 3.253961e-06 Actual Taken Time Step 3.253961e-06
+     75   2.34761881E-04   3.25396051E-06   1.08119547E+03 0
+Current Time 2.347619e-04, Estimated Time Step 3.253961e-06 Actual Taken Time Step 3.253961e-06
+     76   2.38015842E-04   3.25396071E-06   1.08107125E+03 0
+Current Time 2.380158e-04, Estimated Time Step 3.253961e-06 Actual Taken Time Step 3.253961e-06
+     77   2.41269803E-04   3.25396092E-06   1.08094738E+03 0
+Current Time 2.412698e-04, Estimated Time Step 3.253961e-06 Actual Taken Time Step 3.253961e-06
+     78   2.44523764E-04   3.25396113E-06   1.08082385E+03 0
+Current Time 2.445238e-04, Estimated Time Step 3.253961e-06 Actual Taken Time Step 3.253961e-06
+     79   2.47777725E-04   3.25396134E-06   1.08070066E+03 0
+Current Time 2.477777e-04, Estimated Time Step 3.253962e-06 Actual Taken Time Step 2.222275e-06
+     80   2.50000000E-04   2.22227493E-06   1.08057780E+03 0
+Current Time 2.500000e-04, Estimated Time Step 3.253962e-06 Actual Taken Time Step 3.253962e-06
+     81   2.53253962E-04   3.25396176E-06   1.08049409E+03 0
+Current Time 2.532540e-04, Estimated Time Step 3.253962e-06 Actual Taken Time Step 3.253962e-06
+     82   2.56507924E-04   3.25396190E-06   1.08037180E+03 0
+Current Time 2.565079e-04, Estimated Time Step 3.253962e-06 Actual Taken Time Step 3.253962e-06
+     83   2.59761886E-04   3.25396211E-06   1.08024984E+03 0
+Current Time 2.597619e-04, Estimated Time Step 3.253962e-06 Actual Taken Time Step 3.253962e-06
+     84   2.63015848E-04   3.25396232E-06   1.08012822E+03 0
+Current Time 2.630158e-04, Estimated Time Step 3.253963e-06 Actual Taken Time Step 3.253963e-06
+     85   2.66269811E-04   3.25396253E-06   1.08000693E+03 0
+Current Time 2.662698e-04, Estimated Time Step 3.253963e-06 Actual Taken Time Step 3.253963e-06
+     86   2.69523773E-04   3.25396273E-06   1.07988597E+03 0
+Current Time 2.695238e-04, Estimated Time Step 3.253963e-06 Actual Taken Time Step 3.253963e-06
+     87   2.72777736E-04   3.25396294E-06   1.07976534E+03 0
+Current Time 2.727777e-04, Estimated Time Step 3.253963e-06 Actual Taken Time Step 2.222264e-06
+     88   2.75000000E-04   2.22226371E-06   1.07964505E+03 0
+Current Time 2.750000e-04, Estimated Time Step 3.253963e-06 Actual Taken Time Step 3.253963e-06
+     89   2.78253963E-04   3.25396336E-06   1.07956308E+03 0
+Current Time 2.782540e-04, Estimated Time Step 3.253963e-06 Actual Taken Time Step 3.253963e-06
+     90   2.81507927E-04   3.25396350E-06   1.07944333E+03 0
+Current Time 2.815079e-04, Estimated Time Step 3.253964e-06 Actual Taken Time Step 3.253964e-06
+     91   2.84761891E-04   3.25396370E-06   1.07932392E+03 0
+Current Time 2.847619e-04, Estimated Time Step 3.253964e-06 Actual Taken Time Step 3.253964e-06
+     92   2.88015854E-04   3.25396391E-06   1.07920483E+03 0
+Current Time 2.880159e-04, Estimated Time Step 3.253964e-06 Actual Taken Time Step 3.253964e-06
+     93   2.91269819E-04   3.25396412E-06   1.07908606E+03 0
+Current Time 2.912698e-04, Estimated Time Step 3.253964e-06 Actual Taken Time Step 3.253964e-06
+     94   2.94523783E-04   3.25396432E-06   1.07896762E+03 0
+Current Time 2.945238e-04, Estimated Time Step 3.253965e-06 Actual Taken Time Step 3.253965e-06
+     95   2.97777747E-04   3.25396453E-06   1.07884950E+03 0
+Current Time 2.977777e-04, Estimated Time Step 3.253965e-06 Actual Taken Time Step 2.222253e-06
+     96   3.00000000E-04   2.22225256E-06   1.07873170E+03 0
+Current Time 3.000000e-04, Estimated Time Step 3.253965e-06 Actual Taken Time Step 3.253965e-06
+     97   3.03253965E-04   3.25396494E-06   1.07865144E+03 0
+Current Time 3.032540e-04, Estimated Time Step 3.253965e-06 Actual Taken Time Step 3.253965e-06
+     98   3.06507930E-04   3.25396508E-06   1.07853418E+03 0
+Current Time 3.065079e-04, Estimated Time Step 3.253965e-06 Actual Taken Time Step 3.253965e-06
+     99   3.09761895E-04   3.25396529E-06   1.07841724E+03 0
+Current Time 3.097619e-04, Estimated Time Step 3.253965e-06 Actual Taken Time Step 3.253965e-06
+    100   3.13015861E-04   3.25396549E-06   1.07830062E+03 0
+Current Time 3.130159e-04, Estimated Time Step 3.253966e-06 Actual Taken Time Step 3.253966e-06
+    101   3.16269827E-04   3.25396570E-06   1.07818432E+03 0
+Current Time 3.162698e-04, Estimated Time Step 3.253966e-06 Actual Taken Time Step 3.253966e-06
+    102   3.19523792E-04   3.25396590E-06   1.07806834E+03 0
+Current Time 3.195238e-04, Estimated Time Step 3.253966e-06 Actual Taken Time Step 3.253966e-06
+    103   3.22777759E-04   3.25396611E-06   1.07795267E+03 0
+Current Time 3.227778e-04, Estimated Time Step 3.253966e-06 Actual Taken Time Step 2.222241e-06
+    104   3.25000000E-04   2.22224149E-06   1.07783733E+03 0
+Current Time 3.250000e-04, Estimated Time Step 3.253967e-06 

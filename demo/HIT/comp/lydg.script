@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#PBS -N ffs
-#PBS -e ffs.err
-#PBS -o ffs.out
+#PBS -N $PBS_JOBID
+#PBS -e stderr/$PBS_JOBID
+#PBS -o stdout/$PBS_JOBID
 #PBS -l nodes=5:ppn=24
-#PBS -l walltime=10:00:00
+#PBS -l walltime=8:00:00
 #PBS -V
 
 
@@ -22,8 +22,7 @@ echo This job runs on the following nodes:
 echo `cat $PBS_NODEFILE`
 
 cd $PBS_O_WORKDIR
-#cmd="mpiexec -np 60 -ppn 12 ../../../bin/plydg bump.job"
-cmd="mpiexec -np 60 -ppn 12 cat /proc/cpuinfo"
+cmd="mpiexec -np 60 -ppn 12 ../../../build/bin/plydg bump.job"
 
 echo "Running MPIEXEC with command: $cmd"
 $cmd >& $PBS_O_WORKDIR/logs/$PBS_JOBID

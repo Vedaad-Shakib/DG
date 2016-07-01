@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#PBS -N ffs
-#PBS -e ffs.err
-#PBS -o ffs.out
+#PBS -N $PBS_JOBID
+#PBS -e stderr/$PBS_JOBID
+#PBS -o stdout/$PBS_JOBID
 #PBS -l nodes=N_NODES:ppn=24
-#PBS -l walltime=10:00:00
+#PBS -l walltime=8:00:00
 #PBS -V
 
 
@@ -23,7 +23,10 @@ echo `cat $PBS_NODEFILE`
 
 cd $PBS_O_WORKDIR
 
-cmd="mpiexec -np TOT_PROCESSORS -ppn N_PROCESSORS ../../../bin/plydg bump_run.job"
+cmd="mpiexec -np TOT_PROCESSORS -ppn N_PROCESSORS ../../../build/bin/plydg bump_run.job"
 
 echo "Running MPIEXEC with: $cmd in directory "`pwd`
 $cmd >& $PBS_O_WORKDIR/logs/$PBS_JOBID
+
+echo "Processing job"
+python ProcessTests.py -j $PBS_JOBID -o OPTIMIZATION -c COMPILER -n N_NODES -p N_PROCESSORS -g GRID_SIZE -m MV2_SETTING t N_TIMESTEPS

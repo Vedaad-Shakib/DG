@@ -11,6 +11,7 @@
 PBS_O_WORKDIR='/home/vshakib/LYDG/demo/HIT/comp'
 export PBS_O_WORKDIR
 
+export MV2_ENABLE_AFFINITY=1
 ### ---------------------------------------
 ### BEGINNING OF EXECUTION
 ### ---------------------------------------
@@ -20,7 +21,10 @@ echo The working directory is `echo $PBS_O_WORKDIR`
 echo This job runs on the following nodes:
 echo `cat $PBS_NODEFILE`
 
-cd $PBS_O_WORKDIR 
-cmd="mpiexec -np 60 -ppn 12 ../../../bin/plydg bump.job"
-echo "Running MPIEXEC with: $cmd in directory "`pwd`
+cd $PBS_O_WORKDIR
+#cmd="mpiexec -np 60 -ppn 12 ../../../bin/plydg bump.job"
+cmd="mpiexec -np 60 -ppn 12 cat /proc/cpuinfo"
+
+echo "Running MPIEXEC with command: $cmd"
 $cmd >& $PBS_O_WORKDIR/logs/$PBS_JOBID
+

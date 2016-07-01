@@ -1,0 +1,136 @@
+
++-----------------------------------+
+| xflow: A DG Finite Element Solver |
++-----------------------------------+
+Parallel run on 60 processors
+
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Reading model.yu!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Basis HexLegendre used!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Boundary condition read!
+Entropy bound:0.080000
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Chemistry is disabled!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Output specified!
+Time stepping scheme is 1
+Reading .gri file.
+** In ReadGri: NOT CHECKING VALIDITY OF Q>1 VOLUMES **
+Calling PartitionMesh ...  done.
+
+** NOT CHECKING ALL **
+
+Calculating HeatCapacityRatio ... done.
+start loading data for initialization...
+Calculating MaxPressure ... Entropy Bounding DG is activiated; low bound is intialized!done.
+Calculating ElemMaxCharSpeed ... done.
+Calculating ElemMinFaceLen ... done.
+Starting timer
+Calculating RiemannIndicator ... done.
+168.937625
+Warning; not computing surface areas for elems in halo group = 1.
+Current Time 0.000000e+00, Estimated Time Step 6.418143e-03 Actual Taken Time Step 2.500000e-05
+      1   2.50000000E-05   2.50000000E-05   1.83995193E+03 0
+Current Time 2.500000e-05, Estimated Time Step 6.418143e-03 Actual Taken Time Step 2.500000e-05
+      2   5.00000000E-05   2.50000000E-05   1.83987482E+03 0
+Current Time 5.000000e-05, Estimated Time Step 6.418347e-03 Actual Taken Time Step 2.500000e-05
+      3   7.50000000E-05   2.50000000E-05   1.83979781E+03 0
+Current Time 7.500000e-05, Estimated Time Step 6.418551e-03 Actual Taken Time Step 2.500000e-05
+      4   1.00000000E-04   2.50000000E-05   1.83972088E+03 0
+Current Time 1.000000e-04, Estimated Time Step 6.418755e-03 Actual Taken Time Step 2.500000e-05
+      5   1.25000000E-04   2.50000000E-05   1.83964406E+03 0
+Current Time 1.250000e-04, Estimated Time Step 6.418959e-03 Actual Taken Time Step 2.500000e-05
+      6   1.50000000E-04   2.50000000E-05   1.83956727E+03 0
+Current Time 1.500000e-04, Estimated Time Step 6.419163e-03 Actual Taken Time Step 2.500000e-05
+      7   1.75000000E-04   2.50000000E-05   1.83949051E+03 0
+Current Time 1.750000e-04, Estimated Time Step 6.419367e-03 Actual Taken Time Step 2.500000e-05
+      8   2.00000000E-04   2.50000000E-05   1.83941377E+03 0
+Current Time 2.000000e-04, Estimated Time Step 6.419570e-03 Actual Taken Time Step 2.500000e-05
+      9   2.25000000E-04   2.50000000E-05   1.83933709E+03 0
+Current Time 2.250000e-04, Estimated Time Step 6.419774e-03 Actual Taken Time Step 2.500000e-05
+     10   2.50000000E-04   2.50000000E-05   1.83926045E+03 0
+Current Time 2.500000e-04, Estimated Time Step 6.419978e-03 Actual Taken Time Step 2.500000e-05
+     11   2.75000000E-04   2.50000000E-05   1.83918389E+03 0
+Current Time 2.750000e-04, Estimated Time Step 6.420181e-03 Actual Taken Time Step 2.500000e-05
+     12   3.00000000E-04   2.50000000E-05   1.83910738E+03 0
+Current Time 3.000000e-04, Estimated Time Step 6.420385e-03 Actual Taken Time Step 2.500000e-05
+     13   3.25000000E-04   2.50000000E-05   1.83903094E+03 0
+Current Time 3.250000e-04, Estimated Time Step 6.420588e-03 Actual Taken Time Step 2.500000e-05
+     14   3.50000000E-04   2.50000000E-05   1.83895449E+03 0
+Current Time 3.500000e-04, Estimated Time Step 6.420792e-03 Actual Taken Time Step 2.500000e-05
+     15   3.75000000E-04   2.50000000E-05   1.83887817E+03 0
+Current Time 3.750000e-04, Estimated Time Step 6.420995e-03 Actual Taken Time Step 2.500000e-05
+     16   4.00000000E-04   2.50000000E-05   1.83880192E+03 0
+Current Time 4.000000e-04, Estimated Time Step 6.421199e-03 Actual Taken Time Step 2.500000e-05
+     17   4.25000000E-04   2.50000000E-05   1.83872576E+03 0
+Current Time 4.250000e-04, Estimated Time Step 6.421402e-03 Actual Taken Time Step 2.500000e-05
+     18   4.50000000E-04   2.50000000E-05   1.83864962E+03 0
+Current Time 4.500000e-04, Estimated Time Step 6.421605e-03 Actual Taken Time Step 2.500000e-05
+     19   4.75000000E-04   2.50000000E-05   1.83857360E+03 0
+Current Time 4.750000e-04, Estimated Time Step 6.421808e-03 Actual Taken Time Step 2.500000e-05
+     20   5.00000000E-04   2.50000000E-05   1.83849765E+03 0
+Time = 0.0005 >= EndTime = 0.0005.  Stopping unsteady simulation.
+Processing time (time class) = 5.000000
+Processing time (clock class) = 4.590000
+finished by YU!~
+[24] Failed to dealloc pd (Device or resource busy)
+[12] Failed to dealloc pd (Device or resource busy)
+[48] Failed to dealloc pd (Device or resource busy)
+[36] Failed to dealloc pd (Device or resource busy)
+[0] Failed to dealloc pd (Device or resource busy)

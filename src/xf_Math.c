@@ -405,7 +405,8 @@ xf_cMxM_Add(real c, real *A, real *B, int rA, int n, int cB, real *C)
       
       for (col=0; col<n; col++){
         temp = A[ik2+col];
-        ik = col*cB+i;
+        ik = cB*col;
+	ik += i;
         t0 += temp*B[ik+0];
         t1 += temp*B[ik+1];
         t2 += temp*B[ik+2];
@@ -459,7 +460,7 @@ xf_MTxwM_Set(const real *A, const real *w, const real *B, int cA, int n, int cB,
     for (i=0; i<cB; i++){
       t0 = 0;
       for (col=0; col<n; col++){
-	t0 += A[col*cA+k]*B[col*cB+i]*w[col];
+	t0 += w[col]*A[col*cA+k]*B[col*cB+i];
       }
       C[cB*k+i] = t0;
     }

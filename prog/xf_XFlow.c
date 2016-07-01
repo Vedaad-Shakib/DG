@@ -53,6 +53,7 @@
 #include "xfYu_EntropyBounding.h"
 #include "xfYu_AdaptSolver.h"
 #include <time.h>  // for timing execution
+#include <sys/time.h> // for timing execution
 
 /******************************************************************/
 //   FUNCTION Definition: xf_SanityCheck
@@ -192,9 +193,8 @@ xf_main(int argc, char *argv[])
   Yu_Limiter **Limiter;
   FILE *fid;
   
-  clock_t clock_Start, clock_End;
-  
-  
+  clock_t clock_Start, clock_End; // for cpu time
+  struct timeval t0, t1; // for elapsed time
   
   /* Determine myRank*/
   ierr = xf_Error(xf_MPI_GetRank(&myRank, &nProc));
@@ -417,7 +417,9 @@ xf_main(int argc, char *argv[])
     ierr = xf_Error(xf_CreateUniformTimeHistData(All, LogOutput, &TimeHistData));
     if (ierr != xf_OK) return ierr;
    
-    clock_Start = clock(); // start timer
+    gettimeofday(&t0, 0); 
+    clock_Start = clock();
+    
     xf_printf("Starting timer\n");
 
     if(Model.Dyn_p_Adapt)
@@ -434,10 +436,12 @@ xf_main(int argc, char *argv[])
        //ierr = xf_Error(xf_ApplyTimeScheme(All, SavePrefix, xfe_False, &State, TimeHistData));
        if (ierr != xf_OK) return ierr;
     }
+
+    gettimeofday(&t1, 0);
+    double elapsed = (t1.tv_sec-t0.tv_sec) + ((real) (t1.tv_usec-t0.tv_usec))/1000000;   
     
-    clock_End = clock(); // end timer
-    
-    xf_printf("Forward CPU time = %.10E\n", ((real) (clock_End-clock_Start)) / CLOCKS_PER_SEC);
+    xf_printf("Elapsed time = %f\n", elapsed);
+    xf_printf("CPU time = %f\n", ((real)(clock()-clock_Start)) / CLOCKS_PER_SEC);
  
     /*----------------------*/
     /* Destroy Time history */

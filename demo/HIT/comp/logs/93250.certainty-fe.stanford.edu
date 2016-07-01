@@ -1,0 +1,3238 @@
+Warning: Permanently added 'compute-56-2' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-56-4' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-57-1' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-57-2' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-56-3' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-55-4' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-55-3' (RSA) to the list of known hosts.
+Warning: Permanently added 'compute-56-1' (RSA) to the list of known hosts.
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+
++-----------------------------------+
+| xflow: A DG Finite Element Solver |
++-----------------------------------+
+Parallel run on 144 processors
+
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Reading model.yu!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Basis HexLegendre used!
+Time stepping scheme is 1
+Boundary condition read!
+Entropy bound:0.080000
+Time stepping scheme is 1
+Chemistry is disabled!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Output specified!
+Reading .gri file.
+** In ReadGri: NOT CHECKING VALIDITY OF Q>1 VOLUMES **
+Calling PartitionMesh ...  done.
+Error, one or more procs has zero elements following partitioning.
+Reduce number of processors.
+[myRank = 0] Error 7 has occured [myRank = 0].
+[myRank = 0]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 0] Error 7 has occured [myRank = 0].
+[myRank = 0]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 0] Error 7 has occured [myRank = 0].
+[myRank = 0]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 0] Error 7 has occured [myRank = 0].
+[myRank = 1] Error 7 has occured [myRank = 1].
+[myRank = 1]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 1] Error 7 has occured [myRank = 1].
+[myRank = 1]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 1] Error 7 has occured [myRank = 1].
+[myRank = 1]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 1] Error 7 has occured [myRank = 1].
+[myRank = 1]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 1] Error 7 has occured [myRank = 1].
+[myRank = 1]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 1] Error 7 has occured [myRank = 1].
+[myRank = 1]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 1] Error 7 has occured [myRank = 1].
+[myRank = 1]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 24] Error 7 has occured [myRank = 24].
+[myRank = 24]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 24] Error 7 has occured [myRank = 24].
+[myRank = 24]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 24] Error 7 has occured [myRank = 24].
+[myRank = 24]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 24] Error 7 has occured [myRank = 24].
+[myRank = 24]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 24] Error 7 has occured [myRank = 24].
+[myRank = 24]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 12] Error 7 has occured [myRank = 12].
+[myRank = 12]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 12] Error 7 has occured [myRank = 12].
+[myRank = 132] Error 7 has occured [myRank = 132].
+[myRank = 132]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 132] Error 7 has occured [myRank = 132].
+[myRank = 132]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 84] Error 7 has occured [myRank = 84].
+[myRank = 84]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 84] Error 7 has occured [myRank = 84].
+[myRank = 60] Error 7 has occured [myRank = 60].
+[myRank = 60]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 60] Error 7 has occured [myRank = 60].
+[myRank = 48] Error 7 has occured [myRank = 48].
+[myRank = 48]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 48] Error 7 has occured [myRank = 48].
+[myRank = 108] Error 7 has occured [myRank = 108].
+[myRank = 108]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 108] Error 7 has occured [myRank = 108].
+[myRank = 108]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 108] Error 7 has occured [myRank = 108].
+[myRank = 108]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 108] Error 7 has occured [myRank = 108].
+[myRank = 108]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 108] Error 7 has occured [myRank = 108].
+[myRank = 108]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 108] Error 7 has occured [myRank = 108].
+[myRank = 108]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 36] Error 7 has occured [myRank = 36].
+[myRank = 36]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 36] Error 7 has occured [myRank = 36].
+[myRank = 36]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 36] Error 7 has occured [myRank = 36].
+[myRank = 72] Error 7 has occured [myRank = 72].
+[myRank = 72]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 72] Error 7 has occured [myRank = 72].
+[myRank = 96] Error 7 has occured [myRank = 96].
+[myRank = 96]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 96] Error 7 has occured [myRank = 96].
+[myRank = 96]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 96] Error 7 has occured [myRank = 96].
+[myRank = 96]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 96] Error 7 has occured [myRank = 96].
+[myRank = 96]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 96] Error 7 has occured [myRank = 96].
+[myRank = 96]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 96] Error 7 has occured [myRank = 96].
+[myRank = 96]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 96] Error 7 has occured [myRank = 96].
+[myRank = 96]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 120] Error 7 has occured [myRank = 120].
+[myRank = 120]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 120] Error 7 has occured [myRank = 120].
+[myRank = 2] Error 7 has occured [myRank = 2].
+[myRank = 2]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 2] Error 7 has occured [myRank = 2].
+[myRank = 2]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 2] Error 7 has occured [myRank = 2].
+[myRank = 2]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 2] Error 7 has occured [myRank = 2].
+[myRank = 2]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 2] Error 7 has occured [myRank = 2].
+[myRank = 2]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 2] Error 7 has occured [myRank = 2].
+[myRank = 2]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 2] Error 7 has occured [myRank = 2].
+[myRank = 2]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 25] Error 7 has occured [myRank = 25].
+[myRank = 25]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 25] Error 7 has occured [myRank = 25].
+[myRank = 25]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 25] Error 7 has occured [myRank = 25].
+[myRank = 25]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 25] Error 7 has occured [myRank = 25].
+[myRank = 25]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 25] Error 7 has occured [myRank = 25].
+[myRank = 25]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 25] Error 7 has occured [myRank = 25].
+[myRank = 25]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 25] Error 7 has occured [myRank = 25].
+[myRank = 25]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 14] Error 7 has occured [myRank = 14].
+[myRank = 14]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 14] Error 7 has occured [myRank = 14].
+[myRank = 14]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 14] Error 7 has occured [myRank = 14].
+[myRank = 14]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 14] Error 7 has occured [myRank = 14].
+[myRank = 14]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 14] Error 7 has occured [myRank = 14].
+[myRank = 14]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 14] Error 7 has occured [myRank = 14].
+[myRank = 14]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 14] Error 7 has occured [myRank = 14].
+[myRank = 14]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 133] Error 7 has occured [myRank = 133].
+[myRank = 133]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 133] Error 7 has occured [myRank = 133].
+[myRank = 133]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 133] Error 7 has occured [myRank = 133].
+[myRank = 133]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 133] Error 7 has occured [myRank = 133].
+[myRank = 133]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 133] Error 7 has occured [myRank = 133].
+[myRank = 133]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 133] Error 7 has occured [myRank = 133].
+[myRank = 133]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 133] Error 7 has occured [myRank = 133].
+[myRank = 133]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 85] Error 7 has occured [myRank = 85].
+[myRank = 85]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 85] Error 7 has occured [myRank = 85].
+[myRank = 85]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 85] Error 7 has occured [myRank = 85].
+[myRank = 85]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 85] Error 7 has occured [myRank = 85].
+[myRank = 85]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 85] Error 7 has occured [myRank = 85].
+[myRank = 85]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 85] Error 7 has occured [myRank = 85].
+[myRank = 85]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 85] Error 7 has occured [myRank = 85].
+[myRank = 85]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 61] Error 7 has occured [myRank = 61].
+[myRank = 61]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 61] Error 7 has occured [myRank = 61].
+[myRank = 61]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 61] Error 7 has occured [myRank = 61].
+[myRank = 61]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 61] Error 7 has occured [myRank = 61].
+[myRank = 61]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 61] Error 7 has occured [myRank = 61].
+[myRank = 61]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 61] Error 7 has occured [myRank = 61].
+[myRank = 61]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 61] Error 7 has occured [myRank = 61].
+[myRank = 61]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 49] Error 7 has occured [myRank = 49].
+[myRank = 49]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 49] Error 7 has occured [myRank = 49].
+[myRank = 49]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 49] Error 7 has occured [myRank = 49].
+[myRank = 49]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 49] Error 7 has occured [myRank = 49].
+[myRank = 49]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 49] Error 7 has occured [myRank = 49].
+[myRank = 49]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 49] Error 7 has occured [myRank = 49].
+[myRank = 49]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 49] Error 7 has occured [myRank = 49].
+[myRank = 49]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 109] Error 7 has occured [myRank = 109].
+[myRank = 109]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 109] Error 7 has occured [myRank = 109].
+[myRank = 109]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 109] Error 7 has occured [myRank = 109].
+[myRank = 109]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 109] Error 7 has occured [myRank = 109].
+[myRank = 109]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 109] Error 7 has occured [myRank = 109].
+[myRank = 109]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 109] Error 7 has occured [myRank = 109].
+[myRank = 109]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 109] Error 7 has occured [myRank = 109].
+[myRank = 109]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 37] Error 7 has occured [myRank = 37].
+[myRank = 37]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 37] Error 7 has occured [myRank = 37].
+[myRank = 37]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 37] Error 7 has occured [myRank = 37].
+[myRank = 37]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 37] Error 7 has occured [myRank = 37].
+[myRank = 37]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 37] Error 7 has occured [myRank = 37].
+[myRank = 37]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 37] Error 7 has occured [myRank = 37].
+[myRank = 37]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 37] Error 7 has occured [myRank = 37].
+[myRank = 37]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 73] Error 7 has occured [myRank = 73].
+[myRank = 73]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 73] Error 7 has occured [myRank = 73].
+[myRank = 73]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 73] Error 7 has occured [myRank = 73].
+[myRank = 73]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 73] Error 7 has occured [myRank = 73].
+[myRank = 73]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 73] Error 7 has occured [myRank = 73].
+[myRank = 73]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 73] Error 7 has occured [myRank = 73].
+[myRank = 73]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 73] Error 7 has occured [myRank = 73].
+[myRank = 73]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 97] Error 7 has occured [myRank = 97].
+[myRank = 97]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 97] Error 7 has occured [myRank = 97].
+[myRank = 97]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 97] Error 7 has occured [myRank = 97].
+[myRank = 97]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 97] Error 7 has occured [myRank = 97].
+[myRank = 97]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 97] Error 7 has occured [myRank = 97].
+[myRank = 97]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 97] Error 7 has occured [myRank = 97].
+[myRank = 97]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 97] Error 7 has occured [myRank = 97].
+[myRank = 97]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 121] Error 7 has occured [myRank = 121].
+[myRank = 121]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 121] Error 7 has occured [myRank = 121].
+[myRank = 121]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 121] Error 7 has occured [myRank = 121].
+[myRank = 121]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 121] Error 7 has occured [myRank = 121].
+[myRank = 121]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 121] Error 7 has occured [myRank = 121].
+[myRank = 121]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 121] Error 7 has occured [myRank = 121].
+[myRank = 121]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 121] Error 7 has occured [myRank = 121].
+[myRank = 121]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 3] Error 7 has occured [myRank = 3].
+[myRank = 3]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 3] Error 7 has occured [myRank = 3].
+[myRank = 3]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 3] Error 7 has occured [myRank = 3].
+[myRank = 3]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 3] Error 7 has occured [myRank = 3].
+[myRank = 3]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 3] Error 7 has occured [myRank = 3].
+[myRank = 3]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 3] Error 7 has occured [myRank = 3].
+[myRank = 3]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 3] Error 7 has occured [myRank = 3].
+[myRank = 3]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 26] Error 7 has occured [myRank = 26].
+[myRank = 26]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 26] Error 7 has occured [myRank = 26].
+[myRank = 26]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 26] Error 7 has occured [myRank = 26].
+[myRank = 26]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 26] Error 7 has occured [myRank = 26].
+[myRank = 26]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 26] Error 7 has occured [myRank = 26].
+[myRank = 26]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 26] Error 7 has occured [myRank = 26].
+[myRank = 26]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 26] Error 7 has occured [myRank = 26].
+[myRank = 26]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 15] Error 7 has occured [myRank = 15].
+[myRank = 15]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 15] Error 7 has occured [myRank = 15].
+[myRank = 15]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 15] Error 7 has occured [myRank = 15].
+[myRank = 15]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 15] Error 7 has occured [myRank = 15].
+[myRank = 15]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 15] Error 7 has occured [myRank = 15].
+[myRank = 15]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 15] Error 7 has occured [myRank = 15].
+[myRank = 15]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 15] Error 7 has occured [myRank = 15].
+[myRank = 15]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 134] Error 7 has occured [myRank = 134].
+[myRank = 134]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 134] Error 7 has occured [myRank = 134].
+[myRank = 134]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 134] Error 7 has occured [myRank = 134].
+[myRank = 134]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 134] Error 7 has occured [myRank = 134].
+[myRank = 134]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 134] Error 7 has occured [myRank = 134].
+[myRank = 134]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 134] Error 7 has occured [myRank = 134].
+[myRank = 134]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 134] Error 7 has occured [myRank = 134].
+[myRank = 134]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 86] Error 7 has occured [myRank = 86].
+[myRank = 86]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 86] Error 7 has occured [myRank = 86].
+[myRank = 86]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 86] Error 7 has occured [myRank = 86].
+[myRank = 86]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 86] Error 7 has occured [myRank = 86].
+[myRank = 86]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 86] Error 7 has occured [myRank = 86].
+[myRank = 86]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 86] Error 7 has occured [myRank = 86].
+[myRank = 86]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 86] Error 7 has occured [myRank = 86].
+[myRank = 86]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 62] Error 7 has occured [myRank = 62].
+[myRank = 62]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 62] Error 7 has occured [myRank = 62].
+[myRank = 62]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 62] Error 7 has occured [myRank = 62].
+[myRank = 62]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 62] Error 7 has occured [myRank = 62].
+[myRank = 62]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 62] Error 7 has occured [myRank = 62].
+[myRank = 62]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 62] Error 7 has occured [myRank = 62].
+[myRank = 62]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 62] Error 7 has occured [myRank = 62].
+[myRank = 62]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 50] Error 7 has occured [myRank = 50].
+[myRank = 50]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 50] Error 7 has occured [myRank = 50].
+[myRank = 50]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 50] Error 7 has occured [myRank = 50].
+[myRank = 50]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 50] Error 7 has occured [myRank = 50].
+[myRank = 50]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 50] Error 7 has occured [myRank = 50].
+[myRank = 50]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 50] Error 7 has occured [myRank = 50].
+[myRank = 50]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 50] Error 7 has occured [myRank = 50].
+[myRank = 50]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 110] Error 7 has occured [myRank = 110].
+[myRank = 110]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 110] Error 7 has occured [myRank = 110].
+[myRank = 110]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 110] Error 7 has occured [myRank = 110].
+[myRank = 110]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 110] Error 7 has occured [myRank = 110].
+[myRank = 110]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 110] Error 7 has occured [myRank = 110].
+[myRank = 110]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 110] Error 7 has occured [myRank = 110].
+[myRank = 110]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 110] Error 7 has occured [myRank = 110].
+[myRank = 110]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 38] Error 7 has occured [myRank = 38].
+[myRank = 38]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 38] Error 7 has occured [myRank = 38].
+[myRank = 38]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 38] Error 7 has occured [myRank = 38].
+[myRank = 38]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 38] Error 7 has occured [myRank = 38].
+[myRank = 38]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 38] Error 7 has occured [myRank = 38].
+[myRank = 38]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 38] Error 7 has occured [myRank = 38].
+[myRank = 38]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 38] Error 7 has occured [myRank = 38].
+[myRank = 38]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 74] Error 7 has occured [myRank = 74].
+[myRank = 74]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 74] Error 7 has occured [myRank = 74].
+[myRank = 74]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 74] Error 7 has occured [myRank = 74].
+[myRank = 74]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 74] Error 7 has occured [myRank = 74].
+[myRank = 74]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 74] Error 7 has occured [myRank = 74].
+[myRank = 74]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 74] Error 7 has occured [myRank = 74].
+[myRank = 74]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 74] Error 7 has occured [myRank = 74].
+[myRank = 74]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 98] Error 7 has occured [myRank = 98].
+[myRank = 98]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 98] Error 7 has occured [myRank = 98].
+[myRank = 98]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 98] Error 7 has occured [myRank = 98].
+[myRank = 98]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 98] Error 7 has occured [myRank = 98].
+[myRank = 98]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 98] Error 7 has occured [myRank = 98].
+[myRank = 98]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 98] Error 7 has occured [myRank = 98].
+[myRank = 98]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 98] Error 7 has occured [myRank = 98].
+[myRank = 98]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 122] Error 7 has occured [myRank = 122].
+[myRank = 122]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 122] Error 7 has occured [myRank = 122].
+[myRank = 122]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 122] Error 7 has occured [myRank = 122].
+[myRank = 122]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 122] Error 7 has occured [myRank = 122].
+[myRank = 122]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 122] Error 7 has occured [myRank = 122].
+[myRank = 122]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 122] Error 7 has occured [myRank = 122].
+[myRank = 122]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 122] Error 7 has occured [myRank = 122].
+[myRank = 122]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 4] Error 7 has occured [myRank = 4].
+[myRank = 4]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 4] Error 7 has occured [myRank = 4].
+[myRank = 4]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 4] Error 7 has occured [myRank = 4].
+[myRank = 4]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 4] Error 7 has occured [myRank = 4].
+[myRank = 4]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 4] Error 7 has occured [myRank = 4].
+[myRank = 4]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 4] Error 7 has occured [myRank = 4].
+[myRank = 4]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 4] Error 7 has occured [myRank = 4].
+[myRank = 4]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 27] Error 7 has occured [myRank = 27].
+[myRank = 27]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 27] Error 7 has occured [myRank = 27].
+[myRank = 27]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 27] Error 7 has occured [myRank = 27].
+[myRank = 27]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 27] Error 7 has occured [myRank = 27].
+[myRank = 27]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 27] Error 7 has occured [myRank = 27].
+[myRank = 27]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 27] Error 7 has occured [myRank = 27].
+[myRank = 27]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 27] Error 7 has occured [myRank = 27].
+[myRank = 27]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 16] Error 7 has occured [myRank = 16].
+[myRank = 16]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 16] Error 7 has occured [myRank = 16].
+[myRank = 16]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 16] Error 7 has occured [myRank = 16].
+[myRank = 16]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 16] Error 7 has occured [myRank = 16].
+[myRank = 16]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 16] Error 7 has occured [myRank = 16].
+[myRank = 16]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 16] Error 7 has occured [myRank = 16].
+[myRank = 16]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 16] Error 7 has occured [myRank = 16].
+[myRank = 16]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 135] Error 7 has occured [myRank = 135].
+[myRank = 135]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 135] Error 7 has occured [myRank = 135].
+[myRank = 135]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 135] Error 7 has occured [myRank = 135].
+[myRank = 135]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 135] Error 7 has occured [myRank = 135].
+[myRank = 135]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 135] Error 7 has occured [myRank = 135].
+[myRank = 135]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 135] Error 7 has occured [myRank = 135].
+[myRank = 135]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 135] Error 7 has occured [myRank = 135].
+[myRank = 135]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 87] Error 7 has occured [myRank = 87].
+[myRank = 87]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 87] Error 7 has occured [myRank = 87].
+[myRank = 87]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 87] Error 7 has occured [myRank = 87].
+[myRank = 87]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 87] Error 7 has occured [myRank = 87].
+[myRank = 87]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 87] Error 7 has occured [myRank = 87].
+[myRank = 87]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 87] Error 7 has occured [myRank = 87].
+[myRank = 87]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 87] Error 7 has occured [myRank = 87].
+[myRank = 87]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 63] Error 7 has occured [myRank = 63].
+[myRank = 63]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 63] Error 7 has occured [myRank = 63].
+[myRank = 63]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 63] Error 7 has occured [myRank = 63].
+[myRank = 63]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 63] Error 7 has occured [myRank = 63].
+[myRank = 63]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 63] Error 7 has occured [myRank = 63].
+[myRank = 63]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 63] Error 7 has occured [myRank = 63].
+[myRank = 63]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 63] Error 7 has occured [myRank = 63].
+[myRank = 63]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 51] Error 7 has occured [myRank = 51].
+[myRank = 51]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 51] Error 7 has occured [myRank = 51].
+[myRank = 51]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 51] Error 7 has occured [myRank = 51].
+[myRank = 51]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 51] Error 7 has occured [myRank = 51].
+[myRank = 51]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 51] Error 7 has occured [myRank = 51].
+[myRank = 51]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 51] Error 7 has occured [myRank = 51].
+[myRank = 51]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 51] Error 7 has occured [myRank = 51].
+[myRank = 51]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 111] Error 7 has occured [myRank = 111].
+[myRank = 111]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 111] Error 7 has occured [myRank = 111].
+[myRank = 111]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 111] Error 7 has occured [myRank = 111].
+[myRank = 111]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 111] Error 7 has occured [myRank = 111].
+[myRank = 111]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 111] Error 7 has occured [myRank = 111].
+[myRank = 111]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 111] Error 7 has occured [myRank = 111].
+[myRank = 111]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 111] Error 7 has occured [myRank = 111].
+[myRank = 111]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 39] Error 7 has occured [myRank = 39].
+[myRank = 39]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 39] Error 7 has occured [myRank = 39].
+[myRank = 39]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 39] Error 7 has occured [myRank = 39].
+[myRank = 39]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 39] Error 7 has occured [myRank = 39].
+[myRank = 39]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 39] Error 7 has occured [myRank = 39].
+[myRank = 39]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 39] Error 7 has occured [myRank = 39].
+[myRank = 39]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 39] Error 7 has occured [myRank = 39].
+[myRank = 39]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 75] Error 7 has occured [myRank = 75].
+[myRank = 75]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 75] Error 7 has occured [myRank = 75].
+[myRank = 75]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 75] Error 7 has occured [myRank = 75].
+[myRank = 75]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 75] Error 7 has occured [myRank = 75].
+[myRank = 75]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 75] Error 7 has occured [myRank = 75].
+[myRank = 75]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 75] Error 7 has occured [myRank = 75].
+[myRank = 75]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 75] Error 7 has occured [myRank = 75].
+[myRank = 75]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 99] Error 7 has occured [myRank = 99].
+[myRank = 99]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 99] Error 7 has occured [myRank = 99].
+[myRank = 99]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 99] Error 7 has occured [myRank = 99].
+[myRank = 99]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 99] Error 7 has occured [myRank = 99].
+[myRank = 99]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 99] Error 7 has occured [myRank = 99].
+[myRank = 99]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 99] Error 7 has occured [myRank = 99].
+[myRank = 99]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 99] Error 7 has occured [myRank = 99].
+[myRank = 99]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 123] Error 7 has occured [myRank = 123].
+[myRank = 123]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 123] Error 7 has occured [myRank = 123].
+[myRank = 123]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 123] Error 7 has occured [myRank = 123].
+[myRank = 123]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 123] Error 7 has occured [myRank = 123].
+[myRank = 123]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 123] Error 7 has occured [myRank = 123].
+[myRank = 123]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 123] Error 7 has occured [myRank = 123].
+[myRank = 123]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 123] Error 7 has occured [myRank = 123].
+[myRank = 123]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 5] Error 7 has occured [myRank = 5].
+[myRank = 5]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 5] Error 7 has occured [myRank = 5].
+[myRank = 5]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 5] Error 7 has occured [myRank = 5].
+[myRank = 5]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 5] Error 7 has occured [myRank = 5].
+[myRank = 5]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 5] Error 7 has occured [myRank = 5].
+[myRank = 5]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 5] Error 7 has occured [myRank = 5].
+[myRank = 5]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 5] Error 7 has occured [myRank = 5].
+[myRank = 5]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 28] Error 7 has occured [myRank = 28].
+[myRank = 28]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 28] Error 7 has occured [myRank = 28].
+[myRank = 28]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 28] Error 7 has occured [myRank = 28].
+[myRank = 28]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 28] Error 7 has occured [myRank = 28].
+[myRank = 28]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 28] Error 7 has occured [myRank = 28].
+[myRank = 28]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 28] Error 7 has occured [myRank = 28].
+[myRank = 28]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 28] Error 7 has occured [myRank = 28].
+[myRank = 28]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 17] Error 7 has occured [myRank = 17].
+[myRank = 17]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 17] Error 7 has occured [myRank = 17].
+[myRank = 17]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 17] Error 7 has occured [myRank = 17].
+[myRank = 17]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 17] Error 7 has occured [myRank = 17].
+[myRank = 17]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 17] Error 7 has occured [myRank = 17].
+[myRank = 17]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 17] Error 7 has occured [myRank = 17].
+[myRank = 17]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 17] Error 7 has occured [myRank = 17].
+[myRank = 17]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 136] Error 7 has occured [myRank = 136].
+[myRank = 136]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 136] Error 7 has occured [myRank = 136].
+[myRank = 136]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 136] Error 7 has occured [myRank = 136].
+[myRank = 136]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 136] Error 7 has occured [myRank = 136].
+[myRank = 136]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 136] Error 7 has occured [myRank = 136].
+[myRank = 136]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 136] Error 7 has occured [myRank = 136].
+[myRank = 136]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 136] Error 7 has occured [myRank = 136].
+[myRank = 136]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 88] Error 7 has occured [myRank = 88].
+[myRank = 88]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 88] Error 7 has occured [myRank = 88].
+[myRank = 88]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 88] Error 7 has occured [myRank = 88].
+[myRank = 88]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 88] Error 7 has occured [myRank = 88].
+[myRank = 88]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 88] Error 7 has occured [myRank = 88].
+[myRank = 88]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 88] Error 7 has occured [myRank = 88].
+[myRank = 88]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 88] Error 7 has occured [myRank = 88].
+[myRank = 88]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 64] Error 7 has occured [myRank = 64].
+[myRank = 64]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 64] Error 7 has occured [myRank = 64].
+[myRank = 64]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 64] Error 7 has occured [myRank = 64].
+[myRank = 64]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 64] Error 7 has occured [myRank = 64].
+[myRank = 64]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 64] Error 7 has occured [myRank = 64].
+[myRank = 64]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 64] Error 7 has occured [myRank = 64].
+[myRank = 64]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 64] Error 7 has occured [myRank = 64].
+[myRank = 64]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 52] Error 7 has occured [myRank = 52].
+[myRank = 52]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 52] Error 7 has occured [myRank = 52].
+[myRank = 52]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 52] Error 7 has occured [myRank = 52].
+[myRank = 52]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 52] Error 7 has occured [myRank = 52].
+[myRank = 52]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 52] Error 7 has occured [myRank = 52].
+[myRank = 52]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 52] Error 7 has occured [myRank = 52].
+[myRank = 52]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 52] Error 7 has occured [myRank = 52].
+[myRank = 52]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 112] Error 7 has occured [myRank = 112].
+[myRank = 112]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 112] Error 7 has occured [myRank = 112].
+[myRank = 112]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 112] Error 7 has occured [myRank = 112].
+[myRank = 112]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 112] Error 7 has occured [myRank = 112].
+[myRank = 112]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 112] Error 7 has occured [myRank = 112].
+[myRank = 112]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 112] Error 7 has occured [myRank = 112].
+[myRank = 112]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 112] Error 7 has occured [myRank = 112].
+[myRank = 112]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 40] Error 7 has occured [myRank = 40].
+[myRank = 40]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 40] Error 7 has occured [myRank = 40].
+[myRank = 40]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 40] Error 7 has occured [myRank = 40].
+[myRank = 40]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 40] Error 7 has occured [myRank = 40].
+[myRank = 40]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 40] Error 7 has occured [myRank = 40].
+[myRank = 40]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 40] Error 7 has occured [myRank = 40].
+[myRank = 40]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 40] Error 7 has occured [myRank = 40].
+[myRank = 40]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 76] Error 7 has occured [myRank = 76].
+[myRank = 76]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 76] Error 7 has occured [myRank = 76].
+[myRank = 76]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 76] Error 7 has occured [myRank = 76].
+[myRank = 76]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 76] Error 7 has occured [myRank = 76].
+[myRank = 76]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 76] Error 7 has occured [myRank = 76].
+[myRank = 76]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 76] Error 7 has occured [myRank = 76].
+[myRank = 76]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 76] Error 7 has occured [myRank = 76].
+[myRank = 76]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 100] Error 7 has occured [myRank = 100].
+[myRank = 100]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 100] Error 7 has occured [myRank = 100].
+[myRank = 100]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 100] Error 7 has occured [myRank = 100].
+[myRank = 100]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 100] Error 7 has occured [myRank = 100].
+[myRank = 100]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 100] Error 7 has occured [myRank = 100].
+[myRank = 100]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 100] Error 7 has occured [myRank = 100].
+[myRank = 100]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 100] Error 7 has occured [myRank = 100].
+[myRank = 100]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 124] Error 7 has occured [myRank = 124].
+[myRank = 124]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 124] Error 7 has occured [myRank = 124].
+[myRank = 124]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 124] Error 7 has occured [myRank = 124].
+[myRank = 124]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 124] Error 7 has occured [myRank = 124].
+[myRank = 124]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 124] Error 7 has occured [myRank = 124].
+[myRank = 124]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 124] Error 7 has occured [myRank = 124].
+[myRank = 124]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 124] Error 7 has occured [myRank = 124].
+[myRank = 124]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 8] Error 7 has occured [myRank = 8].
+[myRank = 8]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 8] Error 7 has occured [myRank = 8].
+[myRank = 8]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 8] Error 7 has occured [myRank = 8].
+[myRank = 8]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 8] Error 7 has occured [myRank = 8].
+[myRank = 8]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 8] Error 7 has occured [myRank = 8].
+[myRank = 8]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 8] Error 7 has occured [myRank = 8].
+[myRank = 8]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 8] Error 7 has occured [myRank = 8].
+[myRank = 8]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 29] Error 7 has occured [myRank = 29].
+[myRank = 29]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 29] Error 7 has occured [myRank = 29].
+[myRank = 29]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 29] Error 7 has occured [myRank = 29].
+[myRank = 29]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 29] Error 7 has occured [myRank = 29].
+[myRank = 29]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 29] Error 7 has occured [myRank = 29].
+[myRank = 29]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 29] Error 7 has occured [myRank = 29].
+[myRank = 29]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 29] Error 7 has occured [myRank = 29].
+[myRank = 29]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 18] Error 7 has occured [myRank = 18].
+[myRank = 18]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 18] Error 7 has occured [myRank = 18].
+[myRank = 18]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 18] Error 7 has occured [myRank = 18].
+[myRank = 18]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 18] Error 7 has occured [myRank = 18].
+[myRank = 18]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 18] Error 7 has occured [myRank = 18].
+[myRank = 18]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 18] Error 7 has occured [myRank = 18].
+[myRank = 18]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 18] Error 7 has occured [myRank = 18].
+[myRank = 18]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 137] Error 7 has occured [myRank = 137].
+[myRank = 137]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 137] Error 7 has occured [myRank = 137].
+[myRank = 137]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 137] Error 7 has occured [myRank = 137].
+[myRank = 137]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 137] Error 7 has occured [myRank = 137].
+[myRank = 137]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 137] Error 7 has occured [myRank = 137].
+[myRank = 137]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 137] Error 7 has occured [myRank = 137].
+[myRank = 137]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 137] Error 7 has occured [myRank = 137].
+[myRank = 137]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 89] Error 7 has occured [myRank = 89].
+[myRank = 89]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 89] Error 7 has occured [myRank = 89].
+[myRank = 89]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 89] Error 7 has occured [myRank = 89].
+[myRank = 89]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 89] Error 7 has occured [myRank = 89].
+[myRank = 89]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 89] Error 7 has occured [myRank = 89].
+[myRank = 89]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 89] Error 7 has occured [myRank = 89].
+[myRank = 89]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 89] Error 7 has occured [myRank = 89].
+[myRank = 89]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 65] Error 7 has occured [myRank = 65].
+[myRank = 65]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 65] Error 7 has occured [myRank = 65].
+[myRank = 65]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 65] Error 7 has occured [myRank = 65].
+[myRank = 65]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 65] Error 7 has occured [myRank = 65].
+[myRank = 65]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 65] Error 7 has occured [myRank = 65].
+[myRank = 65]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 65] Error 7 has occured [myRank = 65].
+[myRank = 65]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 65] Error 7 has occured [myRank = 65].
+[myRank = 65]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 53] Error 7 has occured [myRank = 53].
+[myRank = 53]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 53] Error 7 has occured [myRank = 53].
+[myRank = 53]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 53] Error 7 has occured [myRank = 53].
+[myRank = 53]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 53] Error 7 has occured [myRank = 53].
+[myRank = 53]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 53] Error 7 has occured [myRank = 53].
+[myRank = 53]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 53] Error 7 has occured [myRank = 53].
+[myRank = 53]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 53] Error 7 has occured [myRank = 53].
+[myRank = 53]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 113] Error 7 has occured [myRank = 113].
+[myRank = 113]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 113] Error 7 has occured [myRank = 113].
+[myRank = 113]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 113] Error 7 has occured [myRank = 113].
+[myRank = 113]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 113] Error 7 has occured [myRank = 113].
+[myRank = 113]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 113] Error 7 has occured [myRank = 113].
+[myRank = 113]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 113] Error 7 has occured [myRank = 113].
+[myRank = 113]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 113] Error 7 has occured [myRank = 113].
+[myRank = 113]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 41] Error 7 has occured [myRank = 41].
+[myRank = 41]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 41] Error 7 has occured [myRank = 41].
+[myRank = 41]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 41] Error 7 has occured [myRank = 41].
+[myRank = 41]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 41] Error 7 has occured [myRank = 41].
+[myRank = 41]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 41] Error 7 has occured [myRank = 41].
+[myRank = 41]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 41] Error 7 has occured [myRank = 41].
+[myRank = 41]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 41] Error 7 has occured [myRank = 41].
+[myRank = 41]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 77] Error 7 has occured [myRank = 77].
+[myRank = 77]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 77] Error 7 has occured [myRank = 77].
+[myRank = 77]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 77] Error 7 has occured [myRank = 77].
+[myRank = 77]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 77] Error 7 has occured [myRank = 77].
+[myRank = 77]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 77] Error 7 has occured [myRank = 77].
+[myRank = 77]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 77] Error 7 has occured [myRank = 77].
+[myRank = 77]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 77] Error 7 has occured [myRank = 77].
+[myRank = 77]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 101] Error 7 has occured [myRank = 101].
+[myRank = 101]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 101] Error 7 has occured [myRank = 101].
+[myRank = 101]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 101] Error 7 has occured [myRank = 101].
+[myRank = 101]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 101] Error 7 has occured [myRank = 101].
+[myRank = 101]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 101] Error 7 has occured [myRank = 101].
+[myRank = 101]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 101] Error 7 has occured [myRank = 101].
+[myRank = 101]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 101] Error 7 has occured [myRank = 101].
+[myRank = 101]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 125] Error 7 has occured [myRank = 125].
+[myRank = 125]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 125] Error 7 has occured [myRank = 125].
+[myRank = 125]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 125] Error 7 has occured [myRank = 125].
+[myRank = 125]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 125] Error 7 has occured [myRank = 125].
+[myRank = 125]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 125] Error 7 has occured [myRank = 125].
+[myRank = 125]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 125] Error 7 has occured [myRank = 125].
+[myRank = 125]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 125] Error 7 has occured [myRank = 125].
+[myRank = 125]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 9] Error 7 has occured [myRank = 9].
+[myRank = 9]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 9] Error 7 has occured [myRank = 9].
+[myRank = 9]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 9] Error 7 has occured [myRank = 9].
+[myRank = 9]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 9] Error 7 has occured [myRank = 9].
+[myRank = 9]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 9] Error 7 has occured [myRank = 9].
+[myRank = 9]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 9] Error 7 has occured [myRank = 9].
+[myRank = 9]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 9] Error 7 has occured [myRank = 9].
+[myRank = 9]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 30] Error 7 has occured [myRank = 30].
+[myRank = 30]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 30] Error 7 has occured [myRank = 30].
+[myRank = 30]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 30] Error 7 has occured [myRank = 30].
+[myRank = 30]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 30] Error 7 has occured [myRank = 30].
+[myRank = 30]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 30] Error 7 has occured [myRank = 30].
+[myRank = 30]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 30] Error 7 has occured [myRank = 30].
+[myRank = 30]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 30] Error 7 has occured [myRank = 30].
+[myRank = 30]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 19] Error 7 has occured [myRank = 19].
+[myRank = 19]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 19] Error 7 has occured [myRank = 19].
+[myRank = 19]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 19] Error 7 has occured [myRank = 19].
+[myRank = 19]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 19] Error 7 has occured [myRank = 19].
+[myRank = 19]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 19] Error 7 has occured [myRank = 19].
+[myRank = 19]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 19] Error 7 has occured [myRank = 19].
+[myRank = 19]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 19] Error 7 has occured [myRank = 19].
+[myRank = 19]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 138] Error 7 has occured [myRank = 138].
+[myRank = 138]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 138] Error 7 has occured [myRank = 138].
+[myRank = 138]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 138] Error 7 has occured [myRank = 138].
+[myRank = 138]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 138] Error 7 has occured [myRank = 138].
+[myRank = 138]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 138] Error 7 has occured [myRank = 138].
+[myRank = 138]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 138] Error 7 has occured [myRank = 138].
+[myRank = 138]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 138] Error 7 has occured [myRank = 138].
+[myRank = 138]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 90] Error 7 has occured [myRank = 90].
+[myRank = 90]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 90] Error 7 has occured [myRank = 90].
+[myRank = 90]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 90] Error 7 has occured [myRank = 90].
+[myRank = 90]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 90] Error 7 has occured [myRank = 90].
+[myRank = 90]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 90] Error 7 has occured [myRank = 90].
+[myRank = 90]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 90] Error 7 has occured [myRank = 90].
+[myRank = 90]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 90] Error 7 has occured [myRank = 90].
+[myRank = 90]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 66] Error 7 has occured [myRank = 66].
+[myRank = 66]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 66] Error 7 has occured [myRank = 66].
+[myRank = 66]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 66] Error 7 has occured [myRank = 66].
+[myRank = 66]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 66] Error 7 has occured [myRank = 66].
+[myRank = 66]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 66] Error 7 has occured [myRank = 66].
+[myRank = 66]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 66] Error 7 has occured [myRank = 66].
+[myRank = 66]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 66] Error 7 has occured [myRank = 66].
+[myRank = 66]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 54] Error 7 has occured [myRank = 54].
+[myRank = 54]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 54] Error 7 has occured [myRank = 54].
+[myRank = 54]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 54] Error 7 has occured [myRank = 54].
+[myRank = 54]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 54] Error 7 has occured [myRank = 54].
+[myRank = 54]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 54] Error 7 has occured [myRank = 54].
+[myRank = 54]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 54] Error 7 has occured [myRank = 54].
+[myRank = 54]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 54] Error 7 has occured [myRank = 54].
+[myRank = 54]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 114] Error 7 has occured [myRank = 114].
+[myRank = 114]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 114] Error 7 has occured [myRank = 114].
+[myRank = 114]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 114] Error 7 has occured [myRank = 114].
+[myRank = 114]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 114] Error 7 has occured [myRank = 114].
+[myRank = 114]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 114] Error 7 has occured [myRank = 114].
+[myRank = 114]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 114] Error 7 has occured [myRank = 114].
+[myRank = 114]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 114] Error 7 has occured [myRank = 114].
+[myRank = 114]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 42] Error 7 has occured [myRank = 42].
+[myRank = 42]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 42] Error 7 has occured [myRank = 42].
+[myRank = 42]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 42] Error 7 has occured [myRank = 42].
+[myRank = 42]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 42] Error 7 has occured [myRank = 42].
+[myRank = 42]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 42] Error 7 has occured [myRank = 42].
+[myRank = 42]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 42] Error 7 has occured [myRank = 42].
+[myRank = 42]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 42] Error 7 has occured [myRank = 42].
+[myRank = 42]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 78] Error 7 has occured [myRank = 78].
+[myRank = 78]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 78] Error 7 has occured [myRank = 78].
+[myRank = 78]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 78] Error 7 has occured [myRank = 78].
+[myRank = 78]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 78] Error 7 has occured [myRank = 78].
+[myRank = 78]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 78] Error 7 has occured [myRank = 78].
+[myRank = 78]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 78] Error 7 has occured [myRank = 78].
+[myRank = 78]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 78] Error 7 has occured [myRank = 78].
+[myRank = 78]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 102] Error 7 has occured [myRank = 102].
+[myRank = 102]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 102] Error 7 has occured [myRank = 102].
+[myRank = 102]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 102] Error 7 has occured [myRank = 102].
+[myRank = 102]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 102] Error 7 has occured [myRank = 102].
+[myRank = 102]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 102] Error 7 has occured [myRank = 102].
+[myRank = 102]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 102] Error 7 has occured [myRank = 102].
+[myRank = 102]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 102] Error 7 has occured [myRank = 102].
+[myRank = 102]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 126] Error 7 has occured [myRank = 126].
+[myRank = 126]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 126] Error 7 has occured [myRank = 126].
+[myRank = 126]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 126] Error 7 has occured [myRank = 126].
+[myRank = 126]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 126] Error 7 has occured [myRank = 126].
+[myRank = 126]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 126] Error 7 has occured [myRank = 126].
+[myRank = 126]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 126] Error 7 has occured [myRank = 126].
+[myRank = 126]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 126] Error 7 has occured [myRank = 126].
+[myRank = 126]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 10] Error 7 has occured [myRank = 10].
+[myRank = 10]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 10] Error 7 has occured [myRank = 10].
+[myRank = 10]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 10] Error 7 has occured [myRank = 10].
+[myRank = 10]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 10] Error 7 has occured [myRank = 10].
+[myRank = 10]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 10] Error 7 has occured [myRank = 10].
+[myRank = 10]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 10] Error 7 has occured [myRank = 10].
+[myRank = 10]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 10] Error 7 has occured [myRank = 10].
+[myRank = 10]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 31] Error 7 has occured [myRank = 31].
+[myRank = 31]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 31] Error 7 has occured [myRank = 31].
+[myRank = 31]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 31] Error 7 has occured [myRank = 31].
+[myRank = 31]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 31] Error 7 has occured [myRank = 31].
+[myRank = 31]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 31] Error 7 has occured [myRank = 31].
+[myRank = 31]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 31] Error 7 has occured [myRank = 31].
+[myRank = 31]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 31] Error 7 has occured [myRank = 31].
+[myRank = 31]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 20] Error 7 has occured [myRank = 20].
+[myRank = 20]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 20] Error 7 has occured [myRank = 20].
+[myRank = 20]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 20] Error 7 has occured [myRank = 20].
+[myRank = 20]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 20] Error 7 has occured [myRank = 20].
+[myRank = 20]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 20] Error 7 has occured [myRank = 20].
+[myRank = 20]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 20] Error 7 has occured [myRank = 20].
+[myRank = 20]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 20] Error 7 has occured [myRank = 20].
+[myRank = 20]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 139] Error 7 has occured [myRank = 139].
+[myRank = 139]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 139] Error 7 has occured [myRank = 139].
+[myRank = 139]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 139] Error 7 has occured [myRank = 139].
+[myRank = 139]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 139] Error 7 has occured [myRank = 139].
+[myRank = 139]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 139] Error 7 has occured [myRank = 139].
+[myRank = 139]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 139] Error 7 has occured [myRank = 139].
+[myRank = 139]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 139] Error 7 has occured [myRank = 139].
+[myRank = 139]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 91] Error 7 has occured [myRank = 91].
+[myRank = 91]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 91] Error 7 has occured [myRank = 91].
+[myRank = 91]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 91] Error 7 has occured [myRank = 91].
+[myRank = 91]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 91] Error 7 has occured [myRank = 91].
+[myRank = 91]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 91] Error 7 has occured [myRank = 91].
+[myRank = 91]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 91] Error 7 has occured [myRank = 91].
+[myRank = 91]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 91] Error 7 has occured [myRank = 91].
+[myRank = 91]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 67] Error 7 has occured [myRank = 67].
+[myRank = 67]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 67] Error 7 has occured [myRank = 67].
+[myRank = 67]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 67] Error 7 has occured [myRank = 67].
+[myRank = 67]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 67] Error 7 has occured [myRank = 67].
+[myRank = 67]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 67] Error 7 has occured [myRank = 67].
+[myRank = 67]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 67] Error 7 has occured [myRank = 67].
+[myRank = 67]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 67] Error 7 has occured [myRank = 67].
+[myRank = 67]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 55] Error 7 has occured [myRank = 55].
+[myRank = 55]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 55] Error 7 has occured [myRank = 55].
+[myRank = 55]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 55] Error 7 has occured [myRank = 55].
+[myRank = 55]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 55] Error 7 has occured [myRank = 55].
+[myRank = 55]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 55] Error 7 has occured [myRank = 55].
+[myRank = 55]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 55] Error 7 has occured [myRank = 55].
+[myRank = 55]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 55] Error 7 has occured [myRank = 55].
+[myRank = 55]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 115] Error 7 has occured [myRank = 115].
+[myRank = 115]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 115] Error 7 has occured [myRank = 115].
+[myRank = 115]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 115] Error 7 has occured [myRank = 115].
+[myRank = 115]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 115] Error 7 has occured [myRank = 115].
+[myRank = 115]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 115] Error 7 has occured [myRank = 115].
+[myRank = 115]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 115] Error 7 has occured [myRank = 115].
+[myRank = 115]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 115] Error 7 has occured [myRank = 115].
+[myRank = 115]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 43] Error 7 has occured [myRank = 43].
+[myRank = 43]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 43] Error 7 has occured [myRank = 43].
+[myRank = 43]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 43] Error 7 has occured [myRank = 43].
+[myRank = 43]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 43] Error 7 has occured [myRank = 43].
+[myRank = 43]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 43] Error 7 has occured [myRank = 43].
+[myRank = 43]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 43] Error 7 has occured [myRank = 43].
+[myRank = 43]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 43] Error 7 has occured [myRank = 43].
+[myRank = 43]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 79] Error 7 has occured [myRank = 79].
+[myRank = 79]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 79] Error 7 has occured [myRank = 79].
+[myRank = 79]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 79] Error 7 has occured [myRank = 79].
+[myRank = 79]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 79] Error 7 has occured [myRank = 79].
+[myRank = 79]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 79] Error 7 has occured [myRank = 79].
+[myRank = 79]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 79] Error 7 has occured [myRank = 79].
+[myRank = 79]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 79] Error 7 has occured [myRank = 79].
+[myRank = 79]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 103] Error 7 has occured [myRank = 103].
+[myRank = 103]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 103] Error 7 has occured [myRank = 103].
+[myRank = 103]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 103] Error 7 has occured [myRank = 103].
+[myRank = 103]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 103] Error 7 has occured [myRank = 103].
+[myRank = 103]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 103] Error 7 has occured [myRank = 103].
+[myRank = 103]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 103] Error 7 has occured [myRank = 103].
+[myRank = 103]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 103] Error 7 has occured [myRank = 103].
+[myRank = 103]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 127] Error 7 has occured [myRank = 127].
+[myRank = 127]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 127] Error 7 has occured [myRank = 127].
+[myRank = 127]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 127] Error 7 has occured [myRank = 127].
+[myRank = 127]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 127] Error 7 has occured [myRank = 127].
+[myRank = 127]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 127] Error 7 has occured [myRank = 127].
+[myRank = 127]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 127] Error 7 has occured [myRank = 127].
+[myRank = 127]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 127] Error 7 has occured [myRank = 127].
+[myRank = 127]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 11] Error 7 has occured [myRank = 11].
+[myRank = 11]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 11] Error 7 has occured [myRank = 11].
+[myRank = 11]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 11] Error 7 has occured [myRank = 11].
+[myRank = 11]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 11] Error 7 has occured [myRank = 11].
+[myRank = 11]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 11] Error 7 has occured [myRank = 11].
+[myRank = 11]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 11] Error 7 has occured [myRank = 11].
+[myRank = 11]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 11] Error 7 has occured [myRank = 11].
+[myRank = 11]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 32] Error 7 has occured [myRank = 32].
+[myRank = 32]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 32] Error 7 has occured [myRank = 32].
+[myRank = 32]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 32] Error 7 has occured [myRank = 32].
+[myRank = 32]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 32] Error 7 has occured [myRank = 32].
+[myRank = 32]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 32] Error 7 has occured [myRank = 32].
+[myRank = 32]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 32] Error 7 has occured [myRank = 32].
+[myRank = 32]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 32] Error 7 has occured [myRank = 32].
+[myRank = 32]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 21] Error 7 has occured [myRank = 21].
+[myRank = 21]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 21] Error 7 has occured [myRank = 21].
+[myRank = 21]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 21] Error 7 has occured [myRank = 21].
+[myRank = 21]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 21] Error 7 has occured [myRank = 21].
+[myRank = 21]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 21] Error 7 has occured [myRank = 21].
+[myRank = 21]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 21] Error 7 has occured [myRank = 21].
+[myRank = 21]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 21] Error 7 has occured [myRank = 21].
+[myRank = 21]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 140] Error 7 has occured [myRank = 140].
+[myRank = 140]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 140] Error 7 has occured [myRank = 140].
+[myRank = 140]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 140] Error 7 has occured [myRank = 140].
+[myRank = 140]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 140] Error 7 has occured [myRank = 140].
+[myRank = 140]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 140] Error 7 has occured [myRank = 140].
+[myRank = 140]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 140] Error 7 has occured [myRank = 140].
+[myRank = 140]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 140] Error 7 has occured [myRank = 140].
+[myRank = 140]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 92] Error 7 has occured [myRank = 92].
+[myRank = 92]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 92] Error 7 has occured [myRank = 92].
+[myRank = 92]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 92] Error 7 has occured [myRank = 92].
+[myRank = 92]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 92] Error 7 has occured [myRank = 92].
+[myRank = 92]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 92] Error 7 has occured [myRank = 92].
+[myRank = 92]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 92] Error 7 has occured [myRank = 92].
+[myRank = 92]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 92] Error 7 has occured [myRank = 92].
+[myRank = 92]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 68] Error 7 has occured [myRank = 68].
+[myRank = 68]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 68] Error 7 has occured [myRank = 68].
+[myRank = 68]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 68] Error 7 has occured [myRank = 68].
+[myRank = 68]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 68] Error 7 has occured [myRank = 68].
+[myRank = 68]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 68] Error 7 has occured [myRank = 68].
+[myRank = 68]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 68] Error 7 has occured [myRank = 68].
+[myRank = 68]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 68] Error 7 has occured [myRank = 68].
+[myRank = 68]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 56] Error 7 has occured [myRank = 56].
+[myRank = 56]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 56] Error 7 has occured [myRank = 56].
+[myRank = 56]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 56] Error 7 has occured [myRank = 56].
+[myRank = 56]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 56] Error 7 has occured [myRank = 56].
+[myRank = 56]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 56] Error 7 has occured [myRank = 56].
+[myRank = 56]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 56] Error 7 has occured [myRank = 56].
+[myRank = 56]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 56] Error 7 has occured [myRank = 56].
+[myRank = 56]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 116] Error 7 has occured [myRank = 116].
+[myRank = 116]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 116] Error 7 has occured [myRank = 116].
+[myRank = 116]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 116] Error 7 has occured [myRank = 116].
+[myRank = 116]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 116] Error 7 has occured [myRank = 116].
+[myRank = 116]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 116] Error 7 has occured [myRank = 116].
+[myRank = 116]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 116] Error 7 has occured [myRank = 116].
+[myRank = 116]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 116] Error 7 has occured [myRank = 116].
+[myRank = 116]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 44] Error 7 has occured [myRank = 44].
+[myRank = 44]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 44] Error 7 has occured [myRank = 44].
+[myRank = 44]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 44] Error 7 has occured [myRank = 44].
+[myRank = 44]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 44] Error 7 has occured [myRank = 44].
+[myRank = 44]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 44] Error 7 has occured [myRank = 44].
+[myRank = 44]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 44] Error 7 has occured [myRank = 44].
+[myRank = 44]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 44] Error 7 has occured [myRank = 44].
+[myRank = 44]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 80] Error 7 has occured [myRank = 80].
+[myRank = 80]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 80] Error 7 has occured [myRank = 80].
+[myRank = 80]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 80] Error 7 has occured [myRank = 80].
+[myRank = 80]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 80] Error 7 has occured [myRank = 80].
+[myRank = 80]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 80] Error 7 has occured [myRank = 80].
+[myRank = 80]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 80] Error 7 has occured [myRank = 80].
+[myRank = 80]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 80] Error 7 has occured [myRank = 80].
+[myRank = 80]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 104] Error 7 has occured [myRank = 104].
+[myRank = 104]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 104] Error 7 has occured [myRank = 104].
+[myRank = 104]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 104] Error 7 has occured [myRank = 104].
+[myRank = 104]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 104] Error 7 has occured [myRank = 104].
+[myRank = 104]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 104] Error 7 has occured [myRank = 104].
+[myRank = 104]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 104] Error 7 has occured [myRank = 104].
+[myRank = 104]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 104] Error 7 has occured [myRank = 104].
+[myRank = 104]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 128] Error 7 has occured [myRank = 128].
+[myRank = 128]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 128] Error 7 has occured [myRank = 128].
+[myRank = 128]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 128] Error 7 has occured [myRank = 128].
+[myRank = 128]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 128] Error 7 has occured [myRank = 128].
+[myRank = 128]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 128] Error 7 has occured [myRank = 128].
+[myRank = 128]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 128] Error 7 has occured [myRank = 128].
+[myRank = 128]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 128] Error 7 has occured [myRank = 128].
+[myRank = 128]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 0]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 0] Error 7 has occured [myRank = 0].
+[myRank = 0]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 0] Error 7 has occured [myRank = 0].
+[myRank = 0]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 0] Error 7 has occured [myRank = 0].
+[myRank = 0]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 33] Error 7 has occured [myRank = 33].
+[myRank = 33]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 33] Error 7 has occured [myRank = 33].
+[myRank = 33]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 33] Error 7 has occured [myRank = 33].
+[myRank = 33]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 33] Error 7 has occured [myRank = 33].
+[myRank = 33]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 33] Error 7 has occured [myRank = 33].
+[myRank = 33]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 33] Error 7 has occured [myRank = 33].
+[myRank = 33]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 33] Error 7 has occured [myRank = 33].
+[myRank = 33]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 22] Error 7 has occured [myRank = 22].
+[myRank = 22]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 22] Error 7 has occured [myRank = 22].
+[myRank = 22]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 22] Error 7 has occured [myRank = 22].
+[myRank = 22]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 22] Error 7 has occured [myRank = 22].
+[myRank = 22]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 22] Error 7 has occured [myRank = 22].
+[myRank = 22]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 22] Error 7 has occured [myRank = 22].
+[myRank = 22]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 22] Error 7 has occured [myRank = 22].
+[myRank = 22]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 141] Error 7 has occured [myRank = 141].
+[myRank = 141]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 141] Error 7 has occured [myRank = 141].
+[myRank = 141]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 141] Error 7 has occured [myRank = 141].
+[myRank = 141]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 141] Error 7 has occured [myRank = 141].
+[myRank = 141]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 141] Error 7 has occured [myRank = 141].
+[myRank = 141]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 141] Error 7 has occured [myRank = 141].
+[myRank = 141]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 141] Error 7 has occured [myRank = 141].
+[myRank = 141]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 93] Error 7 has occured [myRank = 93].
+[myRank = 93]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 93] Error 7 has occured [myRank = 93].
+[myRank = 93]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 93] Error 7 has occured [myRank = 93].
+[myRank = 93]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 93] Error 7 has occured [myRank = 93].
+[myRank = 93]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 93] Error 7 has occured [myRank = 93].
+[myRank = 93]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 93] Error 7 has occured [myRank = 93].
+[myRank = 93]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 93] Error 7 has occured [myRank = 93].
+[myRank = 93]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 69] Error 7 has occured [myRank = 69].
+[myRank = 69]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 69] Error 7 has occured [myRank = 69].
+[myRank = 69]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 69] Error 7 has occured [myRank = 69].
+[myRank = 69]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 69] Error 7 has occured [myRank = 69].
+[myRank = 69]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 69] Error 7 has occured [myRank = 69].
+[myRank = 69]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 69] Error 7 has occured [myRank = 69].
+[myRank = 69]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 69] Error 7 has occured [myRank = 69].
+[myRank = 69]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 57] Error 7 has occured [myRank = 57].
+[myRank = 57]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 57] Error 7 has occured [myRank = 57].
+[myRank = 57]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 57] Error 7 has occured [myRank = 57].
+[myRank = 57]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 57] Error 7 has occured [myRank = 57].
+[myRank = 57]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 57] Error 7 has occured [myRank = 57].
+[myRank = 57]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 57] Error 7 has occured [myRank = 57].
+[myRank = 57]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 57] Error 7 has occured [myRank = 57].
+[myRank = 57]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 117] Error 7 has occured [myRank = 117].
+[myRank = 117]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 117] Error 7 has occured [myRank = 117].
+[myRank = 117]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 117] Error 7 has occured [myRank = 117].
+[myRank = 117]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 117] Error 7 has occured [myRank = 117].
+[myRank = 117]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 117] Error 7 has occured [myRank = 117].
+[myRank = 117]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 117] Error 7 has occured [myRank = 117].
+[myRank = 117]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 117] Error 7 has occured [myRank = 117].
+[myRank = 117]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 45] Error 7 has occured [myRank = 45].
+[myRank = 45]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 45] Error 7 has occured [myRank = 45].
+[myRank = 45]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 45] Error 7 has occured [myRank = 45].
+[myRank = 45]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 45] Error 7 has occured [myRank = 45].
+[myRank = 45]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 45] Error 7 has occured [myRank = 45].
+[myRank = 45]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 45] Error 7 has occured [myRank = 45].
+[myRank = 45]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 45] Error 7 has occured [myRank = 45].
+[myRank = 45]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 81] Error 7 has occured [myRank = 81].
+[myRank = 81]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 81] Error 7 has occured [myRank = 81].
+[myRank = 81]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 81] Error 7 has occured [myRank = 81].
+[myRank = 81]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 81] Error 7 has occured [myRank = 81].
+[myRank = 81]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 81] Error 7 has occured [myRank = 81].
+[myRank = 81]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 81] Error 7 has occured [myRank = 81].
+[myRank = 81]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 81] Error 7 has occured [myRank = 81].
+[myRank = 81]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 105] Error 7 has occured [myRank = 105].
+[myRank = 105]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 105] Error 7 has occured [myRank = 105].
+[myRank = 105]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 105] Error 7 has occured [myRank = 105].
+[myRank = 105]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 105] Error 7 has occured [myRank = 105].
+[myRank = 105]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 105] Error 7 has occured [myRank = 105].
+[myRank = 105]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 105] Error 7 has occured [myRank = 105].
+[myRank = 105]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 105] Error 7 has occured [myRank = 105].
+[myRank = 105]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 129] Error 7 has occured [myRank = 129].
+[myRank = 129]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 129] Error 7 has occured [myRank = 129].
+[myRank = 129]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 129] Error 7 has occured [myRank = 129].
+[myRank = 129]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 129] Error 7 has occured [myRank = 129].
+[myRank = 129]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 129] Error 7 has occured [myRank = 129].
+[myRank = 129]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 129] Error 7 has occured [myRank = 129].
+[myRank = 129]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 129] Error 7 has occured [myRank = 129].
+[myRank = 129]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 6] Error 7 has occured [myRank = 6].
+[myRank = 6]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 6] Error 7 has occured [myRank = 6].
+[myRank = 6]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 6] Error 7 has occured [myRank = 6].
+[myRank = 6]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 6] Error 7 has occured [myRank = 6].
+[myRank = 6]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 6] Error 7 has occured [myRank = 6].
+[myRank = 6]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 6] Error 7 has occured [myRank = 6].
+[myRank = 6]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 6] Error 7 has occured [myRank = 6].
+[myRank = 6]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 34] Error 7 has occured [myRank = 34].
+[myRank = 34]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 34] Error 7 has occured [myRank = 34].
+[myRank = 34]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 34] Error 7 has occured [myRank = 34].
+[myRank = 34]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 34] Error 7 has occured [myRank = 34].
+[myRank = 34]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 34] Error 7 has occured [myRank = 34].
+[myRank = 34]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 34] Error 7 has occured [myRank = 34].
+[myRank = 34]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 34] Error 7 has occured [myRank = 34].
+[myRank = 34]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 23] Error 7 has occured [myRank = 23].
+[myRank = 23]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 23] Error 7 has occured [myRank = 23].
+[myRank = 23]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 23] Error 7 has occured [myRank = 23].
+[myRank = 23]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 23] Error 7 has occured [myRank = 23].
+[myRank = 23]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 23] Error 7 has occured [myRank = 23].
+[myRank = 23]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 23] Error 7 has occured [myRank = 23].
+[myRank = 23]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 23] Error 7 has occured [myRank = 23].
+[myRank = 23]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 142] Error 7 has occured [myRank = 142].
+[myRank = 142]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 142] Error 7 has occured [myRank = 142].
+[myRank = 142]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 142] Error 7 has occured [myRank = 142].
+[myRank = 142]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 142] Error 7 has occured [myRank = 142].
+[myRank = 142]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 142] Error 7 has occured [myRank = 142].
+[myRank = 142]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 142] Error 7 has occured [myRank = 142].
+[myRank = 142]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 142] Error 7 has occured [myRank = 142].
+[myRank = 142]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 94] Error 7 has occured [myRank = 94].
+[myRank = 94]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 94] Error 7 has occured [myRank = 94].
+[myRank = 94]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 94] Error 7 has occured [myRank = 94].
+[myRank = 94]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 94] Error 7 has occured [myRank = 94].
+[myRank = 94]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 94] Error 7 has occured [myRank = 94].
+[myRank = 94]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 94] Error 7 has occured [myRank = 94].
+[myRank = 94]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 94] Error 7 has occured [myRank = 94].
+[myRank = 94]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 70] Error 7 has occured [myRank = 70].
+[myRank = 70]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 70] Error 7 has occured [myRank = 70].
+[myRank = 70]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 70] Error 7 has occured [myRank = 70].
+[myRank = 70]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 70] Error 7 has occured [myRank = 70].
+[myRank = 70]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 70] Error 7 has occured [myRank = 70].
+[myRank = 70]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 70] Error 7 has occured [myRank = 70].
+[myRank = 70]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 70] Error 7 has occured [myRank = 70].
+[myRank = 70]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 58] Error 7 has occured [myRank = 58].
+[myRank = 58]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 58] Error 7 has occured [myRank = 58].
+[myRank = 58]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 58] Error 7 has occured [myRank = 58].
+[myRank = 58]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 58] Error 7 has occured [myRank = 58].
+[myRank = 58]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 58] Error 7 has occured [myRank = 58].
+[myRank = 58]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 58] Error 7 has occured [myRank = 58].
+[myRank = 58]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 58] Error 7 has occured [myRank = 58].
+[myRank = 58]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 118] Error 7 has occured [myRank = 118].
+[myRank = 118]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 118] Error 7 has occured [myRank = 118].
+[myRank = 118]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 118] Error 7 has occured [myRank = 118].
+[myRank = 118]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 118] Error 7 has occured [myRank = 118].
+[myRank = 118]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 118] Error 7 has occured [myRank = 118].
+[myRank = 118]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 118] Error 7 has occured [myRank = 118].
+[myRank = 118]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 118] Error 7 has occured [myRank = 118].
+[myRank = 118]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 46] Error 7 has occured [myRank = 46].
+[myRank = 46]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 46] Error 7 has occured [myRank = 46].
+[myRank = 46]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 46] Error 7 has occured [myRank = 46].
+[myRank = 46]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 46] Error 7 has occured [myRank = 46].
+[myRank = 46]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 46] Error 7 has occured [myRank = 46].
+[myRank = 46]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 46] Error 7 has occured [myRank = 46].
+[myRank = 46]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 46] Error 7 has occured [myRank = 46].
+[myRank = 46]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 82] Error 7 has occured [myRank = 82].
+[myRank = 82]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 82] Error 7 has occured [myRank = 82].
+[myRank = 82]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 82] Error 7 has occured [myRank = 82].
+[myRank = 82]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 82] Error 7 has occured [myRank = 82].
+[myRank = 82]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 82] Error 7 has occured [myRank = 82].
+[myRank = 82]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 82] Error 7 has occured [myRank = 82].
+[myRank = 82]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 82] Error 7 has occured [myRank = 82].
+[myRank = 82]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 106] Error 7 has occured [myRank = 106].
+[myRank = 106]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 106] Error 7 has occured [myRank = 106].
+[myRank = 106]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 106] Error 7 has occured [myRank = 106].
+[myRank = 106]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 106] Error 7 has occured [myRank = 106].
+[myRank = 106]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 106] Error 7 has occured [myRank = 106].
+[myRank = 106]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 106] Error 7 has occured [myRank = 106].
+[myRank = 106]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 106] Error 7 has occured [myRank = 106].
+[myRank = 106]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 130] Error 7 has occured [myRank = 130].
+[myRank = 130]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 130] Error 7 has occured [myRank = 130].
+[myRank = 130]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 130] Error 7 has occured [myRank = 130].
+[myRank = 130]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 130] Error 7 has occured [myRank = 130].
+[myRank = 130]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 130] Error 7 has occured [myRank = 130].
+[myRank = 130]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 130] Error 7 has occured [myRank = 130].
+[myRank = 130]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 130] Error 7 has occured [myRank = 130].
+[myRank = 130]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 7] Error 7 has occured [myRank = 7].
+[myRank = 7]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 7] Error 7 has occured [myRank = 7].
+[myRank = 7]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 7] Error 7 has occured [myRank = 7].
+[myRank = 7]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 7] Error 7 has occured [myRank = 7].
+[myRank = 7]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 7] Error 7 has occured [myRank = 7].
+[myRank = 7]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 7] Error 7 has occured [myRank = 7].
+[myRank = 7]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 7] Error 7 has occured [myRank = 7].
+[myRank = 7]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 35] Error 7 has occured [myRank = 35].
+[myRank = 35]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 35] Error 7 has occured [myRank = 35].
+[myRank = 35]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 35] Error 7 has occured [myRank = 35].
+[myRank = 35]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 35] Error 7 has occured [myRank = 35].
+[myRank = 35]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 35] Error 7 has occured [myRank = 35].
+[myRank = 35]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 35] Error 7 has occured [myRank = 35].
+[myRank = 35]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 35] Error 7 has occured [myRank = 35].
+[myRank = 35]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 12]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 12] Error 7 has occured [myRank = 12].
+[myRank = 12]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 12] Error 7 has occured [myRank = 12].
+[myRank = 12]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 12] Error 7 has occured [myRank = 12].
+[myRank = 12]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 12] Error 7 has occured [myRank = 12].
+[myRank = 12]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 12] Error 7 has occured [myRank = 12].
+[myRank = 12]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 143] Error 7 has occured [myRank = 143].
+[myRank = 143]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 143] Error 7 has occured [myRank = 143].
+[myRank = 143]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 143] Error 7 has occured [myRank = 143].
+[myRank = 143]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 143] Error 7 has occured [myRank = 143].
+[myRank = 143]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 143] Error 7 has occured [myRank = 143].
+[myRank = 143]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 143] Error 7 has occured [myRank = 143].
+[myRank = 143]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 143] Error 7 has occured [myRank = 143].
+[myRank = 143]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 95] Error 7 has occured [myRank = 95].
+[myRank = 95]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 95] Error 7 has occured [myRank = 95].
+[myRank = 95]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 95] Error 7 has occured [myRank = 95].
+[myRank = 95]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 95] Error 7 has occured [myRank = 95].
+[myRank = 95]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 95] Error 7 has occured [myRank = 95].
+[myRank = 95]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 95] Error 7 has occured [myRank = 95].
+[myRank = 95]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 95] Error 7 has occured [myRank = 95].
+[myRank = 95]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 71] Error 7 has occured [myRank = 71].
+[myRank = 71]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 71] Error 7 has occured [myRank = 71].
+[myRank = 71]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 71] Error 7 has occured [myRank = 71].
+[myRank = 71]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 71] Error 7 has occured [myRank = 71].
+[myRank = 71]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 71] Error 7 has occured [myRank = 71].
+[myRank = 71]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 71] Error 7 has occured [myRank = 71].
+[myRank = 71]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 71] Error 7 has occured [myRank = 71].
+[myRank = 71]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 59] Error 7 has occured [myRank = 59].
+[myRank = 59]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 59] Error 7 has occured [myRank = 59].
+[myRank = 59]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 59] Error 7 has occured [myRank = 59].
+[myRank = 59]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 59] Error 7 has occured [myRank = 59].
+[myRank = 59]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 59] Error 7 has occured [myRank = 59].
+[myRank = 59]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 59] Error 7 has occured [myRank = 59].
+[myRank = 59]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 59] Error 7 has occured [myRank = 59].
+[myRank = 59]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 119] Error 7 has occured [myRank = 119].
+[myRank = 119]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 119] Error 7 has occured [myRank = 119].
+[myRank = 119]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 119] Error 7 has occured [myRank = 119].
+[myRank = 119]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 119] Error 7 has occured [myRank = 119].
+[myRank = 119]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 119] Error 7 has occured [myRank = 119].
+[myRank = 119]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 119] Error 7 has occured [myRank = 119].
+[myRank = 119]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 119] Error 7 has occured [myRank = 119].
+[myRank = 119]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 47] Error 7 has occured [myRank = 47].
+[myRank = 47]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 47] Error 7 has occured [myRank = 47].
+[myRank = 47]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 47] Error 7 has occured [myRank = 47].
+[myRank = 47]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 47] Error 7 has occured [myRank = 47].
+[myRank = 47]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 47] Error 7 has occured [myRank = 47].
+[myRank = 47]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 47] Error 7 has occured [myRank = 47].
+[myRank = 47]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 47] Error 7 has occured [myRank = 47].
+[myRank = 47]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 83] Error 7 has occured [myRank = 83].
+[myRank = 83]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 83] Error 7 has occured [myRank = 83].
+[myRank = 83]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 83] Error 7 has occured [myRank = 83].
+[myRank = 83]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 83] Error 7 has occured [myRank = 83].
+[myRank = 83]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 83] Error 7 has occured [myRank = 83].
+[myRank = 83]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 83] Error 7 has occured [myRank = 83].
+[myRank = 83]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 83] Error 7 has occured [myRank = 83].
+[myRank = 83]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 107] Error 7 has occured [myRank = 107].
+[myRank = 107]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 107] Error 7 has occured [myRank = 107].
+[myRank = 107]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 107] Error 7 has occured [myRank = 107].
+[myRank = 107]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 107] Error 7 has occured [myRank = 107].
+[myRank = 107]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 107] Error 7 has occured [myRank = 107].
+[myRank = 107]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 107] Error 7 has occured [myRank = 107].
+[myRank = 107]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 107] Error 7 has occured [myRank = 107].
+[myRank = 107]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 131] Error 7 has occured [myRank = 131].
+[myRank = 131]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 131] Error 7 has occured [myRank = 131].
+[myRank = 131]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 131] Error 7 has occured [myRank = 131].
+[myRank = 131]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 131] Error 7 has occured [myRank = 131].
+[myRank = 131]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 131] Error 7 has occured [myRank = 131].
+[myRank = 131]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 131] Error 7 has occured [myRank = 131].
+[myRank = 131]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 131] Error 7 has occured [myRank = 131].
+[myRank = 131]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 24] Error 7 has occured [myRank = 24].
+[myRank = 24]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 24] Error 7 has occured [myRank = 24].
+[myRank = 24]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 13] Error 7 has occured [myRank = 13].
+[myRank = 13]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 413
+   Call : xf_PARALLEL_ERROR
+[myRank = 13] Error 7 has occured [myRank = 13].
+[myRank = 132] Error 7 has occured [myRank = 132].
+[myRank = 132]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 132] Error 7 has occured [myRank = 132].
+[myRank = 132]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 132] Error 7 has occured [myRank = 132].
+[myRank = 132]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 132] Error 7 has occured [myRank = 132].
+[myRank = 132]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 132] Error 7 has occured [myRank = 132].
+[myRank = 132]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 84]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 84] Error 7 has occured [myRank = 84].
+[myRank = 84]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 84] Error 7 has occured [myRank = 84].
+[myRank = 84]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 84] Error 7 has occured [myRank = 84].
+[myRank = 84]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 84] Error 7 has occured [myRank = 84].
+[myRank = 84]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 84] Error 7 has occured [myRank = 84].
+[myRank = 84]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 60]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 60] Error 7 has occured [myRank = 60].
+[myRank = 60]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 60] Error 7 has occured [myRank = 60].
+[myRank = 60]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 60] Error 7 has occured [myRank = 60].
+[myRank = 60]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 60] Error 7 has occured [myRank = 60].
+[myRank = 60]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 60] Error 7 has occured [myRank = 60].
+[myRank = 60]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 48]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 48] Error 7 has occured [myRank = 48].
+[myRank = 48]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 48] Error 7 has occured [myRank = 48].
+[myRank = 48]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 48] Error 7 has occured [myRank = 48].
+[myRank = 48]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 48] Error 7 has occured [myRank = 48].
+[myRank = 48]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 48] Error 7 has occured [myRank = 48].
+[myRank = 48]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 108] Error 7 has occured [myRank = 108].
+[myRank = 108]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 36]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 36] Error 7 has occured [myRank = 36].
+[myRank = 36]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 36] Error 7 has occured [myRank = 36].
+[myRank = 36]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 36] Error 7 has occured [myRank = 36].
+[myRank = 36]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 36] Error 7 has occured [myRank = 36].
+[myRank = 36]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 72]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 72] Error 7 has occured [myRank = 72].
+[myRank = 72]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 72] Error 7 has occured [myRank = 72].
+[myRank = 72]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 72] Error 7 has occured [myRank = 72].
+[myRank = 72]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 72] Error 7 has occured [myRank = 72].
+[myRank = 72]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 72] Error 7 has occured [myRank = 72].
+[myRank = 72]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 120]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 120] Error 7 has occured [myRank = 120].
+[myRank = 120]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 120] Error 7 has occured [myRank = 120].
+[myRank = 120]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 120] Error 7 has occured [myRank = 120].
+[myRank = 120]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 120] Error 7 has occured [myRank = 120].
+[myRank = 120]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 120] Error 7 has occured [myRank = 120].
+[myRank = 120]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+[myRank = 13]    File : /home/vshakib/LYDG/src/xf_MeshParallel.c   Line : 969
+   Call : xf_ParallelizeElems(Elem2Proc, Mesh_Glob, Mesh)
+[myRank = 13] Error 7 has occured [myRank = 13].
+[myRank = 13]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 389
+   Call : xf_ParallelizeMesh(Mesh_Glob, Mesh, NULL, NULL)
+[myRank = 13] Error 7 has occured [myRank = 13].
+[myRank = 13]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 471
+   Call : xf_ReadAsciiFile(InputFile, KeyValue, All->Mesh)
+[myRank = 13] Error 7 has occured [myRank = 13].
+[myRank = 13]    File : /home/vshakib/LYDG/src/xf_All.c   Line : 715
+   Call : xf_ReadAllInputFile(InputFile, &KeyValueLoc, DefaultFlag, pAll)
+[myRank = 13] Error 7 has occured [myRank = 13].
+[myRank = 13]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 241
+   Call : xf_ReadAllFromJobFile(jobFile, xfe_False, &All)
+[myRank = 13] Error 7 has occured [myRank = 13].
+[myRank = 13]    File : /home/vshakib/LYDG/prog/xf_XFlow.c   Line : 868
+   Call : xf_main(argc, argv)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 9084 RUNNING AT compute-55-3
+=   EXIT CODE: 7
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@compute-74-1.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:0@compute-74-1.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@compute-74-1.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@compute-56-4.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:5@compute-56-4.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@compute-56-4.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@compute-62-1.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:2@compute-62-1.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@compute-62-1.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:3@compute-57-2.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:3@compute-57-2.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@compute-57-2.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@compute-57-1.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:4@compute-57-1.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@compute-57-1.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@compute-56-1.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:8@compute-56-1.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@compute-56-1.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@compute-55-4.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:9@compute-55-4.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@compute-55-4.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@compute-56-2.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:7@compute-56-2.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@compute-56-2.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@compute-55-2.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:11@compute-55-2.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@compute-55-2.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:6@compute-56-3.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:6@compute-56-3.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@compute-56-3.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@compute-73-4.local] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:1@compute-73-4.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@compute-73-4.local] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@compute-74-1.local] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@compute-74-1.local] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@compute-74-1.local] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@compute-74-1.local] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion

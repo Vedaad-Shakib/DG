@@ -24,9 +24,9 @@ CFL = 1
 CFLIncreaseFactor = 2
 TimeScheme = RK4
 Time = 0.0
-EndTime = 0.20
-nTimeStep = 300
-UnsteadyWriteInterval =35
+EndTime = 0.002
+nTimeStep = 35
+UnsteadyWriteInterval = 10
 
 ###### Outputs ######
 #LogOutput = Drag

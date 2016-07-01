@@ -275,7 +275,7 @@ MPIEXEC_POSTFLAGS:STRING=
 // run by MPIEXEC.
 MPIEXEC_PREFLAGS:STRING=
 
-//Path to a program.
+//Cleared
 MPI_CXX_COMPILER:FILEPATH=/share/apps/mvapich2/2.1rc1-intel-15/bin/mpicxx
 
 //MPI CXX compilation flags
@@ -290,7 +290,7 @@ MPI_CXX_LIBRARIES:STRING=/share/apps/mvapich2/2.1rc1-intel-15/lib/libmpicxx.so;/
 //MPI CXX linking flags
 MPI_CXX_LINK_FLAGS:STRING= -Wl,-rpath  -Wl,/share/apps/mvapich2/2.1rc1-intel-15/lib  -Wl,--enable-new-dtags
 
-//Path to a program.
+//Cleared
 MPI_C_COMPILER:FILEPATH=/share/apps/mvapich2/2.1rc1-intel-15/bin/mpicc
 
 //MPI C compilation flags
@@ -305,7 +305,7 @@ MPI_C_LIBRARIES:STRING=/share/apps/mvapich2/2.1rc1-intel-15/lib/libmpi.so
 //MPI C linking flags
 MPI_C_LINK_FLAGS:STRING= -Wl,-rpath  -Wl,/share/apps/mvapich2/2.1rc1-intel-15/lib  -Wl,--enable-new-dtags
 
-//Path to a program.
+//Cleared
 MPI_Fortran_COMPILER:FILEPATH=/share/apps/mvapich2/2.1rc1-intel-15/bin/mpif90
 
 //MPI Fortran compilation flags
@@ -526,6 +526,9 @@ XFlow_BINARY_DIR:STATIC=/home/vshakib/LYDG/build
 
 //Value Computed by CMake
 XFlow_SOURCE_DIR:STATIC=/home/vshakib/LYDG
+
+//Path to a program.
+file_cmd:FILEPATH=/usr/bin/file
 
 //Dependencies for target
 xfParallel_LIB_DEPENDS:STATIC=
@@ -935,4 +938,6 @@ X11_dpms_INCLUDE_PATH-ADVANCED:INTERNAL=1
 X11_xf86misc_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_xf86vmode_INCLUDE_PATH
 X11_xf86vmode_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: file_cmd
+file_cmd-ADVANCED:INTERNAL=1
 

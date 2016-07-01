@@ -15,3 +15,8 @@ if ( CMAKE_C_COMPILER MATCHES "pgcc" )
 endif ( CMAKE_C_COMPILER MATCHES "pgcc" )
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -pg")
+#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
+
+
+
+

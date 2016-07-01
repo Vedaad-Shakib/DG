@@ -116,12 +116,6 @@ xf_LineStruct.h
 xf_LinearSolverStruct.h
 ../include/xf_LinearSolverStruct.h
 
-../include/xf_Dynamic.h
-xf_DynamicStruct.h
-../include/xf_DynamicStruct.h
-
-../include/xf_DynamicStruct.h
-
 ../include/xf_EqnSet.h
 
 ../include/xf_EqnSetHook.h
@@ -329,14 +323,6 @@ xfYu_AdaptSolver.h
 /home/vshakib/LYDG/prog/xfYu_AdaptSolver.h
 time.h
 -
-
-/home/vshakib/LYDG/src/xf_EqnSetHook.c
-xf_AllStruct.h
-/home/vshakib/LYDG/src/xf_AllStruct.h
-xf_Memory.h
-/home/vshakib/LYDG/src/xf_Memory.h
-xf_IO.h
-/home/vshakib/LYDG/src/xf_IO.h
-xf_Dynamic.h
-/home/vshakib/LYDG/src/xf_Dynamic.h
+sys/time.h
+-
 

@@ -20,16 +20,16 @@ import datetime
 
 CMAKE_DIRECTORY = "/home/vshakib/LYDG"
 BUILD_DIRECTORY = "/home/vshakib/LYDG/build"
+BUMP_DIRECTORY = "/home/vshakib/LYDG/demo/HIT/comp/bump"
+SCRIPT_DIRECTORY = "/home/vshakib/LYDG/demo/HIT/comp/lydg"
 
 def main(argv):
     script_template=open("lydg_template.script", "r").read()
-    script_run=open("lydg_run.script", "w")
 
-    bump_template=open("bump_template.job", "r").read()
-    bump_run=open("bump_run.job", "w")
-    
     opts, args = getopt.getopt(argv, "o:c:n:p:g:m:r:t:")
-
+    
+    bump_template=open("bump_template.job", "r").read()
+    
     job_numbers = []
     job_status = []
 
@@ -39,12 +39,13 @@ def main(argv):
 
     rebuild = False # whether to rebuild the code or not
 
-    print "initialized script"
 
     if len(opts) < 8:
         print "all 8 parameters are required"
         print "usage: python RunTests.py -o O2 -c gcc -n 5 -p 12 -g 8 -m 1 -r 1 -t 10"
         sys.exit(2)
+
+    print "initialized script"
         
     for opt, arg in opts:
         if arg == "":
@@ -117,24 +118,29 @@ def main(argv):
             print "%s flag not recognized" % (arg)
 
     script_template = script_template.replace("TOT_PROCESSORS", str(n_processors*n_nodes))
-    
-    script_run.write(script_template+"\n")
-    script_run.close()
 
+    tmp_id = str(hash(str(opts))) # generate unique identifier for each set of options; will be renamed once job id is assigned
+    bump_run=open("%s/bump.%s.job" % (BUMP_DIRECTORY, tmp_id), "w")
     bump_run.write(bump_template)
     bump_run.close()
 
+    script_template = script_template.replace("BUMP_FILE", "%s/bump.%s.job" % (BUMP_DIRECTORY, tmp_id))
+    script_template = script_template.replace("TMP_ID", tmp_id)
+    script_run=open("%s/lydg.%s.script" % (SCRIPT_DIRECTORY, tmp_id), "w")
+    script_run.write(script_template+"\n")
+    script_run.close()
+
     print "customized job file"
-    
+
     # run jobs
     for i in range(n_runs):
-        job = subprocess.check_output("qsub lydg_run.script", shell=True)
+        job = subprocess.check_output("qsub %s/lydg.%s.script" % (SCRIPT_DIRECTORY, tmp_id), shell=True)
         job_numbers.append(str(re.findall("^\d*", str(job))[0]))
         job_status.append(-1)
         print "running job %s" % (str(job_numbers[i]))
 
     print "job numbers: %s" % (", ".join(job_numbers))
-    
+
     print "all jobs have been submitted "                
 
 # returns the first element in array "arr" that starts with "start"

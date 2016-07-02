@@ -1,0 +1,8 @@
+parmetis/4.0.3-mvapich2-2.1rc1-intel-15(13):ERROR:150: Module 'parmetis/4.0.3-mvapich2-2.1rc1-intel-15' conflicts with the currently loaded module(s) 'openmpi/1.8.6-intel-15'
+parmetis/4.0.3-mvapich2-2.1rc1-intel-15(13):ERROR:102: Tcl command execution failed: conflict parmetis openmpi
+
+openmpi/1.8.6-intel-15(6):ERROR:150: Module 'openmpi/1.8.6-intel-15' conflicts with the currently loaded module(s) 'mvapich2/2.1rc1-intel-15'
+openmpi/1.8.6-intel-15(6):ERROR:102: Tcl command execution failed: conflict openmpi mvapich mvapich2
+
+mv: cannot stat `/home/vshakib/LYDG/demo/HIT/comp/stderr/93585.certainty-fe.stanford.edu': No such file or directory
+mv: cannot stat `/home/vshakib/LYDG/demo/HIT/comp/stdout/93585.certainty-fe.stanford.edu': No such file or directory

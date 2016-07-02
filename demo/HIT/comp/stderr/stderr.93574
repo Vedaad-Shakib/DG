@@ -1,0 +1,20 @@
+parmetis/4.0.3-mvapich2-2.1rc1-intel-15(13):ERROR:150: Module 'parmetis/4.0.3-mvapich2-2.1rc1-intel-15' conflicts with the currently loaded module(s) 'openmpi/1.8.6-intel-15'
+parmetis/4.0.3-mvapich2-2.1rc1-intel-15(13):ERROR:102: Tcl command execution failed: conflict parmetis openmpi
+
+openmpi/1.8.6-intel-15(6):ERROR:150: Module 'openmpi/1.8.6-intel-15' conflicts with the currently loaded module(s) 'mvapich2/2.1rc1-intel-15'
+openmpi/1.8.6-intel-15(6):ERROR:102: Tcl command execution failed: conflict openmpi mvapich mvapich2
+
+Traceback (most recent call last):
+  File "ProcessTests.py", line 103, in <module>
+    main(sys.argv[1:])
+  File "ProcessTests.py", line 58, in main
+    write_profile(job_number)
+  File "ProcessTests.py", line 71, in write_profile
+    subprocess.call("cd %s; gprof %s/plydg gmon.out > %s/profile.%s" % (TEST_DIRECTORY, BIN_DIRECTORY, PROFILE_DIRECTORY, job_number))
+  File "/share/apps/python/2.7.8/lib/python2.7/subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/share/apps/python/2.7.8/lib/python2.7/subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "/share/apps/python/2.7.8/lib/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory

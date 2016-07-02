@@ -23,10 +23,10 @@ echo `cat $PBS_NODEFILE`
 
 cd $PBS_O_WORKDIR
 
-cmd="mpiexec -np 60 -ppn 12 ../../../build/bin/plydg bump_run.job"
+cmd="mpiexec -np 60 -ppn 12 ../../../build/bin/plydg /home/vshakib/LYDG/demo/HIT/comp/bump/bump.1575200084150555586.job"
 
 echo "Running MPIEXEC with: $cmd in directory "`pwd`
 $cmd >& $PBS_O_WORKDIR/logs/$PBS_JOBID
 
 echo "Processing job"
-python ProcessTests.py -j $PBS_JOBID -o O2 -c gcc -n 5 -p 12 -g 64 -m 1 t 10
+python ProcessTests.py -j $PBS_JOBID -o O2 -c gcc -n 5 -p 12 -g 32 -m 1 -t 10 -i 1575200084150555586

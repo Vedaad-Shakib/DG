@@ -1,0 +1,202 @@
+Warning: Permanently added 'compute-81-1' (RSA) to the list of known hosts.
+
++-----------------------------------+
+| xflow: A DG Finite Element Solver |
++-----------------------------------+
+Parallel run on 60 processors
+
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Reading model.yu!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Time stepping scheme is 1
+Basis HexLegendre used!
+Time stepping scheme is 1
+Boundary condition read!
+Entropy bound:0.080000
+Chemistry is disabled!
+Time stepping scheme is 1
+Time stepping scheme is 1
+Output specified!
+Reading .gri file.
+** In ReadGri: NOT CHECKING VALIDITY OF Q>1 VOLUMES **
+Calling PartitionMesh ...  done.
+
+** NOT CHECKING ALL **
+
+Calculating HeatCapacityRatio ... done.
+start loading data for initialization...
+Calculating MaxPressure ... Entropy Bounding DG is activiated; low bound is intialized!done.
+Calculating ElemMaxCharSpeed ... done.
+Calculating ElemMinFaceLen ... done.
+Starting timer
+Calculating RiemannIndicator ... done.
+158.806800
+Warning; not computing surface areas for elems in halo group = 1.
+Current Time 0.000000e+00, Estimated Time Step 3.253945e-06 Actual Taken Time Step 3.253945e-06
+      1   3.25394535E-06   3.25394535E-06   1.09097087E+03 0
+Current Time 3.253945e-06, Estimated Time Step 3.253945e-06 Actual Taken Time Step 3.253945e-06
+      2   6.50789069E-06   3.25394535E-06   1.09081972E+03 0
+Current Time 6.507891e-06, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      3   9.76183626E-06   3.25394557E-06   1.09066899E+03 0
+Current Time 9.761836e-06, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      4   1.30157821E-05   3.25394579E-06   1.09051869E+03 0
+Current Time 1.301578e-05, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      5   1.62697281E-05   3.25394601E-06   1.09036880E+03 0
+Current Time 1.626973e-05, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      6   1.95236743E-05   3.25394624E-06   1.09021932E+03 0
+Current Time 1.952367e-05, Estimated Time Step 3.253946e-06 Actual Taken Time Step 3.253946e-06
+      7   2.27776208E-05   3.25394646E-06   1.09007027E+03 0
+Current Time 2.277762e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+      8   2.60315674E-05   3.25394668E-06   1.08992162E+03 0
+Current Time 2.603157e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+      9   2.92855143E-05   3.25394690E-06   1.08977338E+03 0
+Current Time 2.928551e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+     10   3.25394615E-05   3.25394712E-06   1.08962556E+03 0
+Current Time 3.253946e-05, Estimated Time Step 3.253947e-06 Actual Taken Time Step 3.253947e-06
+     11   3.57934088E-05   3.25394734E-06   1.08947814E+03 0
+Current Time 3.579341e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     12   3.90473564E-05   3.25394757E-06   1.08933113E+03 0
+Current Time 3.904736e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     13   4.23013042E-05   3.25394779E-06   1.08918452E+03 0
+Current Time 4.230130e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     14   4.55552522E-05   3.25394801E-06   1.08903832E+03 0
+Current Time 4.555525e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 3.253948e-06
+     15   4.88092004E-05   3.25394823E-06   1.08889253E+03 0
+Current Time 4.880920e-05, Estimated Time Step 3.253948e-06 Actual Taken Time Step 1.190800e-06
+     16   5.00000000E-05   1.19079960E-06   1.08874714E+03 0
+Current Time 5.000000e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     17   5.32539487E-05   3.25394867E-06   1.08869403E+03 0
+Current Time 5.325395e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     18   5.65078974E-05   3.25394875E-06   1.08854919E+03 0
+Current Time 5.650790e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     19   5.97618464E-05   3.25394897E-06   1.08840475E+03 0
+Current Time 5.976185e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     20   6.30157956E-05   3.25394919E-06   1.08826071E+03 0
+Current Time 6.301580e-05, Estimated Time Step 3.253949e-06 Actual Taken Time Step 3.253949e-06
+     21   6.62697450E-05   3.25394941E-06   1.08811707E+03 0
+Current Time 6.626974e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     22   6.95236946E-05   3.25394963E-06   1.08797383E+03 0
+Current Time 6.952369e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     23   7.27776445E-05   3.25394985E-06   1.08783099E+03 0
+Current Time 7.277764e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     24   7.60315945E-05   3.25395006E-06   1.08768854E+03 0
+Current Time 7.603159e-05, Estimated Time Step 3.253950e-06 Actual Taken Time Step 3.253950e-06
+     25   7.92855448E-05   3.25395028E-06   1.08754648E+03 0
+Current Time 7.928554e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     26   8.25394953E-05   3.25395050E-06   1.08740481E+03 0
+Current Time 8.253950e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     27   8.57934460E-05   3.25395072E-06   1.08726354E+03 0
+Current Time 8.579345e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     28   8.90473970E-05   3.25395094E-06   1.08712265E+03 0
+Current Time 8.904740e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     29   9.23013481E-05   3.25395116E-06   1.08698215E+03 0
+Current Time 9.230135e-05, Estimated Time Step 3.253951e-06 Actual Taken Time Step 3.253951e-06
+     30   9.55552995E-05   3.25395137E-06   1.08684204E+03 0
+Current Time 9.555530e-05, Estimated Time Step 3.253952e-06 Actual Taken Time Step 3.253952e-06
+     31   9.88092511E-05   3.25395159E-06   1.08670231E+03 0
+Current Time 9.880925e-05, Estimated Time Step 3.253952e-06 Actual Taken Time Step 1.190749e-06
+     32   1.00000000E-04   1.19074892E-06   1.08656297E+03 0
+Current Time 1.000000e-04, Estimated Time Step 3.253952e-06 Actual Taken Time Step 3.253952e-06
+     33   1.03253952E-04   3.25395202E-06   1.08651208E+03 0
+Current Time 1.032540e-04, Estimated Time Step 3.253952e-06 Actual Taken Time Step 3.253952e-06
+     34   1.06507904E-04   3.25395210E-06   1.08637326E+03 0
+Current Time 1.065079e-04, Estimated Time Step 3.253952e-06 Actual Taken Time Step 3.253952e-06
+     35   1.09761856E-04   3.25395232E-06   1.08623483E+03 0
+Current Time 1.097619e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 3.253953e-06
+     36   1.13015809E-04   3.25395254E-06   1.08609678E+03 0
+Current Time 1.130158e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 3.253953e-06
+     37   1.16269762E-04   3.25395275E-06   1.08595911E+03 0
+Current Time 1.162698e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 3.253953e-06
+     38   1.19523715E-04   3.25395297E-06   1.08582182E+03 0
+Current Time 1.195237e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 3.253953e-06
+     39   1.22777668E-04   3.25395319E-06   1.08568491E+03 0
+Current Time 1.227777e-04, Estimated Time Step 3.253953e-06 Actual Taken Time Step 3.253953e-06
+     40   1.26031621E-04   3.25395340E-06   1.08554838E+03 0
+Current Time 1.260316e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     41   1.29285575E-04   3.25395362E-06   1.08541222E+03 0
+Current Time 1.292856e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     42   1.32539529E-04   3.25395383E-06   1.08527644E+03 0
+Current Time 1.325395e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     43   1.35793483E-04   3.25395405E-06   1.08514103E+03 0
+Current Time 1.357935e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     44   1.39047437E-04   3.25395426E-06   1.08500599E+03 0
+Current Time 1.390474e-04, Estimated Time Step 3.253954e-06 Actual Taken Time Step 3.253954e-06
+     45   1.42301392E-04   3.25395448E-06   1.08487132E+03 0
+Current Time 1.423014e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 3.253955e-06
+     46   1.45555346E-04   3.25395469E-06   1.08473703E+03 0
+Current Time 1.455553e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 3.253955e-06
+     47   1.48809301E-04   3.25395491E-06   1.08460310E+03 0
+Current Time 1.488093e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 1.190699e-06
+     48   1.50000000E-04   1.19069886E-06   1.08446954E+03 0
+Current Time 1.500000e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 3.253955e-06
+     49   1.53253955E-04   3.25395534E-06   1.08442076E+03 0
+Current Time 1.532540e-04, Estimated Time Step 3.253955e-06 Actual Taken Time Step 3.253955e-06
+     50   1.56507911E-04   3.25395541E-06   1.08428770E+03 0
+Current Time 1.565079e-04, Estimated Time Step 3.253956e-06 Actual Taken Time Step 3.253956e-06
+     51   1.59761866E-04   3.25395563E-06   1.08415500E+03 0
+Current Time 1.597619e-04, Estimated Time Step 3.253956e-06 Actual Taken Time Step 3.253956e-06
+     52   1.63015822E-04   3.25395584E-06   1.08402267E+03 0
+Current Time 1.630158e-04, Estimated Time Step 3.253956e-06 Actual Taken Time Step 3.253956e-06
+     53   1.66269778E-04   3.25395605E-06   1.08389070E+03 0
+Current Time 1.662698e-04, Estimated Time Step 3.253956e-06 Actual Taken Time Step 3.253956e-06
+     54   1.69523735E-04   3.25395627E-06   1.08375909E+03 0
+Current Time 1.695237e-04, Estimated Time Step 3.253956e-06 [mpiexec@compute-83-2.local] HYDU_sock_write (utils/sock/sock.c:286): write error (Bad file descriptor)
+[mpiexec@compute-83-2.local] HYD_pmcd_pmiserv_send_signal (pm/pmiserv/pmiserv_cb.c:169): unable to write data to proxy
+[mpiexec@compute-83-2.local] ui_cmd_cb (pm/pmiserv/pmiserv_pmci.c:79): unable to send signal downstream
+[mpiexec@compute-83-2.local] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[mpiexec@compute-83-2.local] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:198): error waiting for event
+[mpiexec@compute-83-2.local] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion

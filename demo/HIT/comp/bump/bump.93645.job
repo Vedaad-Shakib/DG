@@ -5,7 +5,7 @@
 #DataMerge = ./bump_U200.data
 #InputFile = ./uniform_lv1.gri
 Restart = False
-InputFile = ./box8elem.gri
+InputFile = ./box64elem.gri
 SavePrefix = bump
 EqnSetFile = bump.eqn
 InterpBasis = TriHierarch
@@ -25,7 +25,7 @@ CFLIncreaseFactor = 2
 TimeScheme = RK4
 Time = 0.0
 EndTime = 0.0005
-nTimeStep = 5
+nTimeStep = 10
 UnsteadyWriteInterval = 10
 
 ###### Outputs ######

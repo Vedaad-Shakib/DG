@@ -25,10 +25,11 @@ SCRIPT_DIRECTORY = "/home/vshakib/LYDG/demo/HIT/comp/lydg"
 
 def main(argv):
     script_template=open("lydg_template.script", "r").read()
+    bump_template=open("bump_template.job", "r").read()
+    cmake_template=open("%s/CMakeLists_template.txt" % (CMAKE_DIRECTORY), "r").read()
+    prev_settings=open("%s/PrevSettings.txt" % (CMAKE_DIRECTORY), "r").read().split("\n")
 
     opts, args = getopt.getopt(argv, "o:c:n:p:g:m:r:t:")
-    
-    bump_template=open("bump_template.job", "r").read()
     
     job_numbers = []
     job_status = []
@@ -42,7 +43,7 @@ def main(argv):
 
     if len(opts) < 8:
         print "all 8 parameters are required"
-        print "usage: python RunTests.py -o O2 -c gcc -n 5 -p 12 -g 8 -m 1 -r 1 -t 10"
+        print "usage: python RunTests.py -o O2 -c icc -n 10 -p 12 -g 32 -m 1 -r 2 -t 10"
         sys.exit(2)
 
     print "initialized script"
@@ -53,35 +54,24 @@ def main(argv):
             sys.exit(2)
         elif opt=="-o":
             print "optimization: %s" % (arg)
-            
-            if arg=="O3":
-                if not filecmp.cmp('%s/CMakeLists_Release.txt' % (CMAKE_DIRECTORY),
-                                   '%s/CMakeLists.txt' % (CMAKE_DIRECTORY)):
-                    subprocess.call("cp %s/CMakeLists_Release.txt %s/CMakeLists.txt" %
-                                    (CMAKE_DIRECTORY, CMAKE_DIRECTORY), shell=True)
-                    rebuild = True
-            elif arg=="O2":
-                if not filecmp.cmp('%s/CMakeLists_RelWithDebInfo.txt' % (CMAKE_DIRECTORY),
-                                   '%s/CMakeLists.txt' % (CMAKE_DIRECTORY)):
-                    subprocess.call("cp %s/CMakeLists_RelWithDebInfo.txt %s/CMakeLists.txt" %
-                                    (CMAKE_DIRECTORY, CMAKE_DIRECTORY), shell=True)
-                    rebuild = True
-            else:
-                print "invalid argument %s for option %s" % (arg, opt)
-                
-            if rebuild:
-                print "rebuilding with adjusted optimization settings"
-                subprocess.call("cd %s; rm -rf *; cmake ../; make install" % (BUILD_DIRECTORY), shell=True)
 
+            opt_dict = {"O2": "RelWithDebInfo", "O3": "Release"}
+            if prev_settings[0] != arg:
+                rebuild = True
+                cmake_template = cmake_template.replace("OPTIMIZATION_LEVEL", opt_dict[arg])
+                
             script_template = script_template.replace("OPTIMIZATION", arg)
             optimization = arg
         elif opt=="-c":
-            # not functional
             print "compiler: %s" % (arg)
-
+            
+            if prev_settings[1] != arg:
+                rebuild = True
+                subprocess.call("export CC=$(which %s)" % (arg), shell=True)
+                subprocess.call("Export CXX=$(which %s)" % (arg), shell=True)
+            
             script_template = script_template.replace("COMPILER", arg)
             compiler = arg
-            pass
         elif opt=="-n":
             print "# nodes: %s" % (arg)
             
@@ -130,18 +120,36 @@ def main(argv):
     script_run.write(script_template+"\n")
     script_run.close()
 
+    cmake_run=open("%s/CMakeLists.txt" % (CMAKE_DIRECTORY), "w")
+    cmake_run.write(cmake_template)
+    cmake_run.close()
+
+    curr_settings=open("%s/PrevSettings.txt" % (CMAKE_DIRECTORY), "w")
+    curr_settings.write(optimization+"\n")
+    curr_settings.write(compiler)
+    curr_settings.close()
+
     print "customized job file"
 
+    #if rebuild:
+        #make_project()
+
+    '''
     # run jobs
     for i in range(n_runs):
         job = subprocess.check_output("qsub %s/lydg.%s.script" % (SCRIPT_DIRECTORY, tmp_id), shell=True)
         job_numbers.append(str(re.findall("^\d*", str(job))[0]))
         job_status.append(-1)
         print "running job %s" % (str(job_numbers[i]))
+    '''
 
     print "job numbers: %s" % (", ".join(job_numbers))
 
     print "all jobs have been submitted "                
+
+def make_project():    
+    print "rebuilding with adjusted optimization settings"
+    subprocess.call("cd %s; rm -rf *; cmake ../; make install" % (BUILD_DIRECTORY), shell=True)
 
 # returns the first element in array "arr" that starts with "start"
 def find_start(arr, start):

@@ -3,7 +3,7 @@
 #PBS -N $PBS_JOBID
 #PBS -e stderr/stderr.$PBS_JOBID
 #PBS -o stdout/stdout.$PBS_JOBID
-#PBS -l nodes=N_NODES:ppn=24
+#PBS -l nodes=10:ppn=24
 #PBS -l walltime=4:00:00
 #PBS -V
 
@@ -11,7 +11,7 @@
 PBS_O_WORKDIR='/home/vshakib/LYDG/demo/HIT/comp'
 export PBS_O_WORKDIR
 
-export MV2_ENABLE_AFFINITY=MV2_SETTING
+export MV2_ENABLE_AFFINITY=1
 ### ---------------------------------------
 ### BEGINNING OF EXECUTION
 ### ---------------------------------------
@@ -23,10 +23,10 @@ echo `cat $PBS_NODEFILE`
 
 cd $PBS_O_WORKDIR
 
-cmd="mpiexec -np TOT_PROCESSORS -ppn N_PROCESSORS ../../../build/bin/plydg BUMP_FILE"
+cmd="mpiexec -np 120 -ppn 12 ../../../build/bin/plydg /home/vshakib/LYDG/demo/HIT/comp/bump/bump.6345591346507080523.job"
 
 echo "Running MPIEXEC with: $cmd in directory "`pwd`
 $cmd >& $PBS_O_WORKDIR/logs/$PBS_JOBID
 
 echo "Processing job"
-python ProcessTests.py -j $PBS_JOBID -o OPTIMIZATION -c COMPILER -n N_NODES -p N_PROCESSORS -g GRID_SIZE -m MV2_SETTING -t N_TIMESTEPS -i TMP_ID
+python ProcessTests.py -j $PBS_JOBID -o O3 -c gcc -n 10 -p 12 -g 32 -m 1 -t 10 -i 6345591346507080523

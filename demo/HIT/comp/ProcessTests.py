@@ -56,8 +56,8 @@ def main(argv):
     print "cpu time: %s" % (cpu)
 
     today = datetime.datetime.today().strftime("%m/%d")
-    write_csv(job_number, "HIT", today, str(n_nodes), str(n_processors), str(n_timesteps), str(grid_size),
-              str(compiler), str(optimization), str(mv2_enable_affinity), elapsed, cpu, str(n_timesteps))
+    write_csv(job_number, today, "HIT", str(grid_size), "%sx%s" % (n_nodes, n_processors), str(n_timesteps), 
+              str(compiler), str(optimization), str(mv2_enable_affinity), elapsed, cpu)
     #write_profile(job_number)
 
     rename_tmp_files(job_number, tmp_id)

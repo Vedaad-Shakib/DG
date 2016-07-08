@@ -132,7 +132,8 @@ xf_Distance(real *x0, real *x1, int dim)
 void 
 xf_MxV_Add(const real *A, const real *u, int rA, int cA, real *v)
 {
-  int k, ik, j;
+    cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, 1.e0, A, cA, u, 1, 1.e0, v, 1);
+    /*int k, ik, j;
   real t;
 
   ik = 0;
@@ -142,7 +143,7 @@ xf_MxV_Add(const real *A, const real *u, int rA, int cA, real *v)
       t += A[ik+j]*u[j];
     v[k] += t;
     ik += cA;
-  }
+    }*/
 }
 
 
@@ -151,6 +152,8 @@ xf_MxV_Add(const real *A, const real *u, int rA, int cA, real *v)
 void 
 xf_MxV_Sub(const real *A, const real *u, int rA, int cA, real *v)
 {
+    cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, -1.e0, A, cA, u, 1, 1.e0, v, 1);
+    /*
   int k, ik, j;
   real t;
 
@@ -162,6 +165,7 @@ xf_MxV_Sub(const real *A, const real *u, int rA, int cA, real *v)
     v[k] -= t;
     ik += cA;
   }
+    */
 }
 
 
@@ -170,7 +174,8 @@ xf_MxV_Sub(const real *A, const real *u, int rA, int cA, real *v)
 void 
 xf_MxV_Set(const real *A, const real *u, int rA, int cA, real *v)
 {
-  int k, ik, j;
+    cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, 1.e0, A, cA, u, 1, 0, v, 1);
+    /*int k, ik, j;
   real t;
 
   ik = 0;
@@ -180,7 +185,7 @@ xf_MxV_Set(const real *A, const real *u, int rA, int cA, real *v)
       t += A[ik+j]*u[j];
     v[k] = t;
     ik += cA;
-  }
+    }*/
 }
 
 
@@ -189,7 +194,8 @@ xf_MxV_Set(const real *A, const real *u, int rA, int cA, real *v)
 void 
 xf_MxV_Neg(const real *A, const real *u, int rA, int cA, real *v)
 {
-  int k, ik, j;
+    cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, -1.e0, A, cA, u, 1, 0, v, 1);
+    /*int k, ik, j;
   real t;
 
   ik = 0;
@@ -199,7 +205,7 @@ xf_MxV_Neg(const real *A, const real *u, int rA, int cA, real *v)
       t -= A[ik+j]*u[j];
     v[k] = t;
     ik += cA;
-  }
+    }*/
 }
 
 

@@ -19,12 +19,23 @@
 /* Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.        */
 /*------------------------------------------------------------------*/
 
-
+#include <limits.h>
+extern "C" {
 #include "xf_Unit.h"
 #include "xf_All.h"
 #include "xf_Basis.h"
 #include "xf_Data.h"
+#include "xf_Math.h"
+}
+#include "gtest/gtest.h"
 
+
+
+TEST(MxV_Add_Test, All) {
+    EXPECT_EQ(1, 1);
+}
+
+/*
 TEST_xf_PowInt()
 {
   real y;
@@ -842,9 +853,6 @@ TEST_xf_SVDGolubReinsch()
   xf_AssertEqual(ierr, 0);
   xf_AssertRealVectorWithin(W, W_true, 5, UTOL1);
   
-  /* for (i=0; i<25; i++) xf_printf("U[%d] = %.15E\n", i, B[i]);  */
-  /* for (i=0; i<25; i++) xf_printf("V[%d] = %.15E\n", i, V[i]); */ 
-
   for (i=0; i<25; i++) B[i] *= W[i%5]; // B = B*diag(W)
   xf_MxMT_Set(B, V, 5, 5, 5, C); // C = B*V^T
   xf_AssertRealVectorWithin(C, B_true, 25, UTOL1);
@@ -897,13 +905,6 @@ TEST_xf_QRBulgeChase2()
   np = 1;  nk = 7;
   ierr = xf_Error(xf_QRBulgeChase(shift, nk, np, alpha, beta, Q));
   xf_AssertEqual(ierr, xf_OK);
-
-  /*   xf_printf("Q = ["); */
-  /*   for (k=0; k<64; k++){ */
-  /*     if (k%8 == 0) xf_printf("\n"); */
-  /*     xf_printf("%.10E ", Q[k]); */
-  /*   } */
-  /*   xf_printf("\n]\n"); */
 
   return xf_OK;
 }
@@ -1028,3 +1029,4 @@ TEST_xf_RealNorm()
   return xf_OK;  
 }
 
+*/

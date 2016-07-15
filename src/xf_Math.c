@@ -246,7 +246,7 @@ xf_cMxV_Add(real c, real *A, real *u, int rA, int cA, real *v)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_MTxV_Set
-static void 
+void 
 xf_MTxV_Set(const real *A, const real *u, int cA, int rA, real *v)
 {
   int k, j;
@@ -262,7 +262,7 @@ xf_MTxV_Set(const real *A, const real *u, int cA, int rA, real *v)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_MTxV_Add
-static void 
+void 
 xf_MTxV_Add(const real *A, const real *u, int cA, int rA, real *v)
 {
   int k, j;
@@ -279,7 +279,7 @@ xf_MTxV_Add(const real *A, const real *u, int cA, int rA, real *v)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_MTxV_Sub
-static void 
+void 
 xf_MTxV_Sub(const real *A, const real *u, int cA, int rA, real *v)
 {
   int k, j;
@@ -348,7 +348,7 @@ xf_ndMTxVic(int n, const real *A, const real *f, int d, real *u)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_MxM
-static void
+void
 xf_MxM(const real *A, const real *B, int rA, int n, int cB, 
        enum xfe_AddType AddFlag, real *C)
 {
@@ -1038,7 +1038,7 @@ xf_SolvePLU(real * RSTRCT A, int * RSTRCT P, real * RSTRCT b, int r,
 
 /******************************************************************/
 //   FUNCTION Definition: xf_SolvePLUT
-static int 
+int 
 xf_SolvePLUT(real *A, int *P, real *b, int r, real *u, real *yin)
 {
   // yin is optional
@@ -1127,7 +1127,7 @@ xf_SolvePLU_Matrix(real *LU, int *P, int r, int cB, real *B)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_SolvePLU_MatrixR
-static int
+int
 xf_SolvePLU_MatrixR(real *LU, int *P, int r, int rB, real *B)
 {
   // B = B*A^{-1}, B is rB x r, A is r x r and PLU factored
@@ -1378,7 +1378,7 @@ xf_SolveBlockPLU_Matrix(real *A, int n, int s, int *P, real *B,
 
 /******************************************************************/
 //   FUNCTION Definition: xf_PLUMxV_Set
-static int 
+int 
 xf_PLUMxV_Set(real *A, int *P, real *u, int r, real *b, real *yin)
 {
   int ierr;
@@ -1425,7 +1425,7 @@ xf_PLUMxV_Set(real *A, int *P, real *u, int r, real *b, real *yin)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_PLUMTxV_Set
-static int 
+int 
 xf_PLUMTxV_Set(real *A, int *P, real *u, int r, real *b, real *yin)
 {
   int ierr;
@@ -1776,7 +1776,7 @@ xf_BlockIdentity(int n, int s, real * RSTRCT A)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_OutProd_Add
-static void
+void
 xf_OutProd_Add(const real *u, const real *v, int n, int m, real *A)
 {
   int in, im, inm;
@@ -1789,7 +1789,7 @@ xf_OutProd_Add(const real *u, const real *v, int n, int m, real *A)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_OutProd_Sub
-static void
+void
 xf_OutProd_Sub(const real *u, const real *v, int n, int m, real *A)
 {
   int in, im, inm;
@@ -1839,7 +1839,7 @@ xf_BlockOutProd_Sub(const real *u, const real *v, int n, int s,
 
 /******************************************************************/
 //   FUNCTION Definition: xf_CalculateHouseholder
-static int 
+int 
 xf_CalculateHouseholder(real *R, int rA, int cA, int ir, real *H)
 {
   int ierr, i, j, len;
@@ -2253,7 +2253,7 @@ xf_SVDGolubReinsch(real *U, int m, int n, enum xfe_Bool NeedU, real *W, real *V)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_GivensRotation
-static void 
+void 
 xf_GivensRotation(real f, real g, real *c, real *s, real *r)
 {
   real rr;
@@ -2469,7 +2469,7 @@ xf_SortIntPos(int *u, int n, int *pos, enum xfe_Bool InverseFlag)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_SortReal
-static int 
+int 
 xf_SortReal(real *u, int n, int *pos, enum xfe_Bool InverseFlag)
 {
   /* 
@@ -2552,7 +2552,7 @@ xf_SortReal(real *u, int n, int *pos, enum xfe_Bool InverseFlag)
 
 /******************************************************************/
 //   FUNCTION Definition: xf_MergeSort
-static int 
+int 
 xf_MergeSort(int nlist, real **uList, int *N, int **iList)
 {
   /* 

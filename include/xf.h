@@ -31,6 +31,7 @@
 
 /* include files */
 #include <stddef.h>
+#include "mkl.h" // intel math kernel library
 #include "xf_Error.h"
 
 typedef double real;

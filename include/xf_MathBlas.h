@@ -95,5 +95,8 @@ RETURN:
   None
 */
 
+extern void
+xfc_MxM_Set(const real *A, const real *B, int rA, int n, int cB, real *C);
+
 
 #endif // end ifndef _xf_MathBlas_h

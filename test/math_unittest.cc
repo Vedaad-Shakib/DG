@@ -5,23 +5,43 @@
  **                                                                                                          
  *******************************************************************************/
 
-#include <limits.h>
 #include <math.h>
 #include "gtest/gtest.h"
 #include "UnitTest.h"
+#include <limits.h>
 
 extern "C" {
-#include "xf.h"
-#include "xf_Memory.h"
-#include "xf_AllStruct.h"
-#include "xf_All.h"
-#include "xf_Basis.h"
-#include "xf_Data.h"
+#include "xf.h"    
 #include "xf_Math.h"
+#include "xf_Memory.h"
 }
 
 using namespace std;
+/*
+TEST(xf_V_Add, All)
+{
+    int n = 3;
+    
+    real u[3] = {1, 2, 3};
+    real v[3] = {4, 5, 6};
+    real v0[3] = {5, 7, 9};
+    real v1[3] = {4, 5, 6};
+    real v2[3] = {1, 2, 3};
+    real v3[3] = {-1, -2, -3};
 
+    xf_V_Add(u, n, xfe_Add, v);
+    EXPECT_TRUE(AssertRealVectorWithin(v, v0, 3, UTOL0));
+
+    xf_V_Add(u, n, xfe_Sub, v);
+    EXPECT_TRUE(AssertRealVectorWithin(v, v1, 3, UTOL0));
+
+    xf_V_Add(u, n, xfe_Set, v);
+    EXPECT_TRUE(AssertRealVectorWithin(v, v2, 3, UTOL0));
+
+    xf_V_Add(u, n, xfe_Neg, v);
+    EXPECT_TRUE(AssertRealVectorWithin(v, v3, 3, UTOL0));
+}
+*/
 TEST(xf_PowInt, All)
 {
   real y;
@@ -1010,4 +1030,3 @@ TEST(xf_RealNorm, All)
 
   EXPECT_TRUE(AssertWithin(xf_RealNorm(A, 3), 1.3, UTOL0));
 }
-

@@ -1,0 +1,502 @@
+/******************************************************************/
+//   FUNCTION Definition: xf_ComputeGenMassMatrix
+static int 
+xf_ComputeGenMassMatrix(xf_Mesh *Mesh, int egrp, enum xfe_BasisType Basis1,
+			int Order1, enum xfe_BasisType Basis2, int Order2,
+			xf_Matrix *M){
+  int ierr, nMatrix, i, j, iq, nn1, nn2;
+  int pnq, nq, elem, QuadOrder;
+  enum xfe_Bool GenericFlag, SameFlag, QuadChanged;
+  real *MM, *xq, *wq, t, *phi1, *phi2;
+  xf_QuadData *QuadData;
+  xf_BasisData *PhiData1;
+  xf_BasisData *PhiData2;
+  xf_JacobianData *JData;
+
+  ierr = xf_Error(xf_GetQuadOrderElem(Mesh, NULL, egrp, Order1+Order2, &QuadOrder));
+  if (ierr != xf_OK) return ierr;
+
+  GenericFlag = (M->Linkage == xfe_LinkageElemGroup);
+  SameFlag = ((Basis1 == Basis2) && (Order1 == Order2));
+
+  QuadData = NULL;
+  PhiData1 = NULL;
+  PhiData2 = NULL;
+
+  if (GenericFlag){
+    MM = M->GenArray->rValue[0];  
+
+    QuadData = NULL;
+    ierr = xf_Error(xf_QuadElem(Mesh, egrp, 0, QuadOrder, &QuadData, &QuadChanged));
+    if (ierr != xf_OK) return ierr;
+    
+    if (QuadData->Type != xfe_QuadDataGeneric) return xf_Error(xf_CODE_LOGIC_ERROR);
+ 
+    nq = QuadData->nquad;
+    xq = QuadData->xquad;
+    wq = QuadData->wquad;
+
+    // compute basis functions
+    ierr = xf_Error(xf_EvalBasis(Basis1, Order1, QuadChanged, nq, xq, xfb_Phi, &PhiData1));
+    if (ierr != xf_OK) return ierr;
+    if (!SameFlag){
+      ierr = xf_Error(xf_EvalBasis(Basis2, Order2, QuadChanged, nq, xq, xfb_Phi, &PhiData2));
+      if (ierr != xf_OK) return ierr;
+    }
+    
+    phi1 = phi2 = PhiData1->Phi;
+    nn1  = nn2  = PhiData1->nn;
+    if (!SameFlag){
+      phi2 = PhiData2->Phi;
+      nn2  = PhiData2->nn;
+    }
+
+    // form mass matrix
+    for (i=0; i<nn1; i++)
+      for (j=0; j<nn2; j++){
+	t = 0.0;
+	for (iq=0; iq<nq; iq++)
+	  t += phi1[iq*nn1+i]*phi2[iq*nn2+j]*wq[iq];
+	MM[i*nn2+j] = t;
+      }
+  }
+  else{
+
+    JData    = NULL;
+    wq       = NULL;
+    pnq = -1;
+    for (elem=0; elem<Mesh->ElemGroup[egrp].nElem; elem++){
+      MM = M->GenArray->rValue[elem];
+      /* Pull off quad points for the element; will not recalculate if
+	 Basis/Order have not changed. */
+      ierr = xf_Error(xf_QuadElem(Mesh, egrp, elem, QuadOrder, &QuadData, &QuadChanged));
+      if (ierr != xf_OK) return ierr;
+      
+      nq = QuadData->nquad;
+      xq = QuadData->xquad;
+      
+      // compute basis functions
+      ierr = xf_Error(xf_EvalBasis(Basis1, Order1, QuadChanged, nq, xq, xfb_Phi, &PhiData1));
+      if (ierr != xf_OK) return ierr;
+      if (!SameFlag){
+	ierr = xf_Error(xf_EvalBasis(Basis2, Order2, QuadChanged, nq, xq, xfb_Phi, &PhiData2));
+	if (ierr != xf_OK) return ierr;
+      }
+
+      /* Compute geometry Jacobian; if not constant, compute at quad
+	 points.  Note if jacobian is constant, only one Jacobian will
+	 be computed/returned. */
+      ierr = xf_Error(xf_ElemJacobian(Mesh, egrp, elem, nq, xq, xfb_detJ, QuadChanged, &JData));
+      if (ierr != xf_OK) return ierr;
+      
+      if (nq > pnq){
+	ierr = xf_Error(xf_ReAlloc( (void **) &wq, nq, sizeof(real)));
+	if (ierr != xf_OK) return ierr;
+      }
+      
+      // form detJ-multiplied quad weight vector, wq
+      for (iq=0; iq<nq; iq++) 
+	wq[iq] = QuadData->wquad[iq]*JData->detJ[iq*(JData->nq!=1)];
+      
+      phi1 = phi2 = PhiData1->Phi;
+      nn1  = nn2  = PhiData1->nn;
+      if (!SameFlag){
+	phi2 = PhiData2->Phi;
+	nn2  = PhiData2->nn;
+      }
+
+      // form mass matrix
+      for (i=0; i<nn1; i++)
+	for (j=0; j<nn2; j++){
+	  t = 0.0;
+	  for (iq=0; iq<nq; iq++)
+	    t += phi1[iq*nn1+i]*phi2[iq*nn2+j]*wq[iq];
+	  MM[i*nn2+j] = t;
+	}
+      
+      pnq = nq;
+    } // elem
+      
+    /* Destroy geometry Jacobian Data */
+    ierr = xf_Error(xf_DestroyJacobianData(JData));
+    if (ierr != xf_OK) return ierr;
+
+    xf_Release((void *) wq);
+  }
+
+  // Only destroy QuadData if points are generic
+  ierr = xf_Error(xf_DestroyGenericQuadData(QuadData));
+  if (ierr != xf_OK) return ierr;
+  
+  /* Destroy Basis Data */
+  ierr = xf_Error(xf_DestroyBasisData(PhiData1, xfe_True));
+  if (ierr != xf_OK) return ierr;
+  ierr = xf_Error(xf_DestroyBasisData(PhiData2, xfe_True));
+  if (ierr != xf_OK) return ierr;
+    
+  
+  return xf_OK;
+}
+
+/******************************************************************/
+//Diffusion discretization three dimensional version
+static int
+LYDG_PhysDiffModel3d(const int sr, const int dim, const int off,
+                     const int off2, const real *U_i, const real *gU_i,
+                     const real *W_i, real *Aw_i, real *A_i, const real gamma,
+                     Yu_Model *Model)
+{
+   int ierr, sr2, i, j, k, Nspe, speoff;
+   real mu, kappa, nu, moleWn, moleWi;
+   real rho, rhou, rhov, rhow, rhoY[50], rhoE, u, v, w, p;
+   real Y[50], X[50], Diff[50], meanW, R;
+   real T, T_U[MAXSR+50], tmp;
+   real A0[MAXSR*MAXSR];
+   real *A00, *A01, *A02;
+   real *A10, *A11, *A12;
+   real *A20, *A21, *A22;
+   real V2, c1, c2, eps;
+   const real *W0, *W1, *W2;
+   
+   sr2  = sr*sr;
+   Nspe = sr - 2 - dim;
+   eps  = 1.0-14;  //avoid zero denominator
+   
+   //pull in variables
+   //may have problem; double check
+   rho  = U_i[0];
+   rhou = U_i[1];
+   rhov = U_i[2];
+   rhow = U_i[3];
+   rhoE = U_i[4];
+   for(i=2+dim; i<sr; i++)
+      rhoY[i-2-dim] = U_i[i];
+   
+   //back out primitive variables
+   u = rhou/rho;
+   v = rhov/rho;
+   w = rhow/rho;
+   p = (gamma-1.)*(rhoE - 0.5*rho*(u*u + v*v + w*w));
+   tmp   = 0.;
+   meanW = 0.;
+   for(i=0; i<Nspe; i++)
+   {
+      Y[i]   = rhoY[i]/rho;
+      tmp   += Y[i];
+      meanW += Y[i]/(Model->moleW[i]);
+   }
+   Y[Nspe] = 1.0 - tmp;
+   meanW  += Y[Nspe]/(Model->moleW[Nspe]);
+   meanW   = 1./meanW;
+   
+   //mole fraction
+   for(i=0; i<=Nspe; i++)
+      X[i] = meanW*Y[i]/(Model->moleW[i]);
+   
+   //pull in thermal transport parameters
+   ierr = xf_Error(Yu_TransportProperty(Model, p, rho, meanW, X, gamma,
+                                        &T, &mu, &kappa, Diff));
+   if (ierr != xf_OK) return ierr;
+
+   //set pointer from A
+   if (A_i != NULL){
+      A00 = A_i       ;  A01 = A_i+  off2; A02 = A_i+2*off2;
+      A10 = A_i+3*off2;  A11 = A_i+4*off2; A12 = A_i+5*off2;
+      A20 = A_i+6*off2;  A21 = A_i+7*off2; A22 = A_i+8*off2;
+   }
+   else{
+      A00 = A01 = A02 = A10 = A11 = A12 = A20 = A21 = A22 = A0;
+   }
+   
+   if (W_i != NULL){
+      W0 = W_i;
+      W1 = W_i +  off;
+      W2 = W_i + 2*off;
+   }
+   
+   //provide linearization for T
+   R = (Model->Ru)/meanW;
+   V2 = u*u + v*v + w*w;
+   moleWn =  Model->moleW[Nspe];
+   //rho
+   T_U[0] = 0.5*(gamma-1.)/rho/R*V2 - T/rho/R*Model->Ru/moleWn;
+   //rhou
+   T_U[1] = (gamma-1.)/rho/R*(-u);
+   //rhov
+   T_U[2] = (gamma-1.)/rho/R*(-v);
+   //rhow
+   T_U[3] = (gamma-1.)/rho/R*(-w);
+   //rhoE
+   T_U[4] = (gamma-1.)/rho/R;
+   //rhoY
+   for(i=0; i<Nspe; i++) {
+      moleWi = Model->moleW[i];
+      T_U[2+dim+i] = -T/rho/R*Model->Ru*(1./moleWi - 1./moleWn);
+   }
+   
+   //constants for use below
+   c1 = 4./3.;
+   c2 = 2./3.;
+   speoff = 2+dim;
+   nu = mu/rho;
+   
+   /* A00 */
+   for(k=0; k<sr2; k++) A0[k] = 0.;
+   A0[sr*1 + 0]   =    -c1*nu*u;
+   A0[sr*1 + 1]   =     c1*nu;
+   A0[sr*2 + 0]   =    -nu*v;
+   A0[sr*2 + 2]   =     nu;
+   A0[sr*3 + 0]   =    -nu*w;
+   A0[sr*3 + 3]   =     nu;
+   A0[sr*4 + 0]   =    -nu*(c1*u*u + v*v + w*w) + kappa*T_U[0];
+   A0[sr*4 + 1]   =     c1*nu*u + kappa*T_U[1];
+   A0[sr*4 + 2]   =     nu*v + kappa*T_U[2];
+   A0[sr*4 + 3]   =     nu*w + kappa*T_U[3];
+   A0[sr*4 + 4]   =     kappa*T_U[4];
+   //for conduction in energy
+   for(i=speoff; i<sr; i++)
+      A0[sr*4 + i] = kappa*T_U[i];
+   //use the simplest model for species diffusion
+   for(i=speoff; i<sr; i++) {
+      A0[sr*i + 0]  =  -Diff[i-speoff]*Y[i-speoff];
+      A0[sr*i + i]  = Diff[i-speoff];
+   }
+   if(A_i != NULL)
+      xf_V_Add(A0, sr2, xfe_Add, A00);
+   if(Aw_i != NULL)
+      xf_MxV(A0, W0, sr, sr, xfe_Add, Aw_i+0*off);
+   
+   /* A01 */
+   for(k=0; k<sr2; k++) A0[k] = 0.;
+   A0[sr*1 + 0]  =    c2*nu*v;
+   A0[sr*1 + 2]  =   -c2*nu;
+   A0[sr*2 + 0]  =   -nu*u;
+   A0[sr*2 + 1]  =    nu;
+   A0[sr*4 + 0]  =   (c2-1.)*nu*u*v;
+   A0[sr*4 + 1]  =    nu*v;
+   A0[sr*4 + 2]  =   -c2*nu*u;
+   //no cross-differentiation term for conduction and diffusion
+   if(A_i != NULL)
+      xf_V_Add(A0, sr2, xfe_Add, A01);
+   if(Aw_i != NULL)
+      xf_MxV_Add(A0, W1, sr, sr, Aw_i+0*off);
+   
+   /* A02 */
+   for (k=0; k<sr2; k++) A0[k] = 0.;
+   A0[sr*1 + 0] =  c2*nu*w;
+   A0[sr*1 + 3] = -c2*nu;
+   A0[sr*3 + 0] = -nu*u;
+   A0[sr*3 + 1] =  nu;
+   A0[sr*4 + 0] = (c2-1.)*nu*u*w;
+   A0[sr*4 + 1] =  nu*w;
+   A0[sr*4 + 3] = -c2*nu*u;
+   if (A_i != NULL)
+      xf_V_Add(A0, sr2, xfe_Add, A02);
+   if (Aw_i != NULL)
+      xf_MxV_Add(A0, W2, sr, sr, Aw_i+0*off);
+   
+   /* A10*/
+   for(k=0; k<sr2; k++) A0[k] = 0.;
+   A0[sr*1 + 0]   =  -nu*v;
+   A0[sr*1 + 2]   =   nu;
+   A0[sr*2 + 0]   =   c2*nu*u;
+   A0[sr*2 + 1]   =  -c2*nu;
+   A0[sr*4 + 0]   =  (c2-1.)*nu*u*v;
+   A0[sr*4 + 1]   =  -c2*nu*v;
+   A0[sr*4 + 2]   =   nu*u;
+   //no cross-differentiation term for conduction and diffusion
+   if(A_i != NULL)
+      xf_V_Add(A0, sr2, xfe_Add, A10);
+   if(Aw_i != NULL)
+      xf_MxV(A0, W0, sr, sr, xfe_Add, Aw_i+1*off);
+   
+   /* A11 */
+   for(k=0; k<sr2; k++) A0[k] = 0.;
+   A0[sr*1 + 0]  =  -nu*u;
+   A0[sr*1 + 1]  =   nu;
+   A0[sr*2 + 0]  =  -c1*nu*v;
+   A0[sr*2 + 2]  =   c1*nu;
+   A0[sr*3 + 0]  =  -nu*w;
+   A0[sr*3 + 3]  =   nu;
+   A0[sr*4 + 0]  = -nu*(u*u + c1*v*v + w*w) + kappa*T_U[0];
+   A0[sr*4 + 1]  =  nu*u + kappa*T_U[1];
+   A0[sr*4 + 2]  =  c1*nu*v + kappa*T_U[2];
+   A0[sr*4 + 3]  =  nu*w + kappa*T_U[3];
+   A0[sr*4 + 4]  =  kappa*T_U[4];
+   //for conduction in energy
+   for(i=speoff; i<sr; i++)
+      A0[sr*4 + i] = kappa*T_U[i];
+   //use the simple model for species diffusion
+   for(i=speoff; i<sr; i++) {
+      A0[sr*i + 0]  =  -Diff[i-speoff]*Y[i-speoff];
+      A0[sr*i + i]  =   Diff[i-speoff];
+   }
+   if(A_i != NULL)
+      xf_V_Add(A0, sr2, xfe_Add, A11);
+   if(Aw_i != NULL)
+      xf_MxV_Add(A0, W1, sr, sr, Aw_i+1*off);
+   
+   /* A12 */
+   for (k=0; k<sr2; k++) A0[k] = 0.;
+   A0[sr*2 + 0] =  c2*nu*w;
+   A0[sr*2 + 3] = -c2*nu;
+   A0[sr*3 + 0] = -nu*v;
+   A0[sr*3 + 2] =  nu;
+   A0[sr*4 + 0] = (c2-1.)*nu*v*w;
+   A0[sr*4 + 2] =  nu*w;
+   A0[sr*4 + 3] = -c2*nu*v;
+   if (A_i != NULL)
+      xf_V_Add(A0, sr2, xfe_Add, A12);
+   if (Aw_i != NULL)
+      xf_MxV_Add(A0, W2, sr, sr, Aw_i+1*off);
+   
+   /* A20 */
+   for (k=0; k<sr2; k++) A0[k] = 0.;
+   A0[sr*1 + 0] = -nu*w;
+   A0[sr*1 + 3] =  nu;
+   A0[sr*3 + 0] =  c2*nu*u;
+   A0[sr*3 + 1] = -c2*nu;
+   A0[sr*4 + 0] = (c2-1.)*nu*u*w;
+   A0[sr*4 + 1] = -c2*nu*w;
+   A0[sr*4 + 3] =  nu*u;
+   if (A_i != NULL)
+      xf_V_Add(A0, sr2, xfe_Add, A20);
+   if (Aw_i != NULL)
+      xf_MxV(A0, W0, sr, sr, xfe_Add, Aw_i+2*off);
+   
+   /* A21 */
+   for (k=0; k<sr2; k++) A0[k] = 0.;
+   A0[sr*2 + 0] = -nu*w;
+   A0[sr*2 + 3] =  nu;
+   A0[sr*3 + 0] =  c2*nu*v;
+   A0[sr*3 + 2] = -c2*nu;
+   A0[sr*4 + 0] = (c2-1.)*nu*v*w;
+   A0[sr*4 + 2] = -c2*nu*w;
+   A0[sr*4 + 3] =  nu*v;
+   if (A_i != NULL)
+      xf_V_Add(A0, sr2, xfe_Add, A21);
+   if (Aw_i != NULL)
+      xf_MxV_Add(A0, W1, sr, sr, Aw_i+2*off);
+   
+   /* A22 */
+   for (k=0; k<sr2; k++) A0[k] = 0.;
+   A0[sr*1 + 0] = -nu*u;
+   A0[sr*1 + 1] =  nu;
+   A0[sr*2 + 0] = -nu*v;
+   A0[sr*2 + 2] =  nu;
+   A0[sr*3 + 0] = -c1*nu*w;
+   A0[sr*3 + 3] =  c1*nu;
+   A0[sr*4 + 0] = -nu*(u*u + v*v + c1*w*w) + kappa*T_U[0];
+   A0[sr*4 + 1] =  nu*u + kappa*T_U[1];
+   A0[sr*4 + 2] =  nu*v + kappa*T_U[2];
+   A0[sr*4 + 3] =  c1*nu*w + kappa*T_U[3];
+   A0[sr*4 + 4] =  kappa*T_U[4];
+   //for conduction in energy
+   for(i=speoff; i<sr; i++)
+      A0[sr*4 + i] = kappa*T_U[i];
+   //use the simple model for species diffusion
+   for(i=speoff; i<sr; i++) {
+      A0[sr*i + 0]  =  -Diff[i-speoff]*Y[i-speoff];
+      A0[sr*i + i]  =   Diff[i-speoff];
+   }
+   if (A_i != NULL)
+      xf_V_Add(A0, sr2, xfe_Add, A22);
+   if (Aw_i != NULL)
+      xf_MxV_Add(A0, W2, sr, sr, Aw_i+2*off);
+   
+   return xf_OK;
+}
+
+/*
+  PURPOSE: 
+
+  Computes matrix-vector product v @= A*u
+  where @= is +=, -=, or = (AddFlag)
+
+  INPUTS:
+
+  A : rA x cA  matrix
+  u : cA x 1 vector
+  rA, cA : dimensions of A
+
+  OUTPUTS:
+
+  v : rA x 1 output vector
+
+  RETURN:
+
+  None
+*/
+
+/******************************************************************/
+//   FUNCTION Definition: xf_MxV_Add
+void 
+xf_MxV_Add(const real *A, const real *u, int rA, int cA, real *v)
+{
+  int k, ik, j;
+  real t;
+
+  ik = 0;
+  for (k=0; k<rA; k++){
+    t = 0;
+    for (j=0; j<cA; j++)
+      t += A[ik+j]*u[j];
+    v[k] += t;
+    ik += cA;
+  }
+}
+
+/*
+  PURPOSE: 
+
+  Multiplies columns of A entry-wise by column vector v.  In Matlab
+  notation,
+
+  B @= A.*repmat(v,1,cA)
+  
+  where @= is {=, =-, +=, -=} for {Set, Neg, Add, Sub}
+  ColMult without a B input just sets A = A.*repmat(v,1,cA)
+
+  To allow for the case when v is part of a matrix, an offset dv is
+  specified, so that the column vector equals:
+
+  column vector = [v, v+dv, v+2*dv, ..., v+rA*dv]^T
+
+  ColcMult also multiplies A by a constant, f
+
+  ColDiv divides instead of multiplying
+
+  INPUTS:
+
+  A :  rA x cA  matrix 
+  v :  column vector with rA entries offset by dv in memory
+  rA, cA : dimensions of A
+  dv : offset for v storage (see above)
+  f  : additional constant that multiplies A
+
+  OUTPUTS:
+
+  B :  stores resulting matrix
+
+  RETURN:
+
+  None
+*/
+
+/******************************************************************/
+//   FUNCTION Definition: xf_ColMult_Add
+void
+xf_ColMult_Add(const real *A, const real *v, int rA, int cA, int dv, 
+	       real *B)
+{
+  int r, c, k;
+  real t;
+
+  for (r=0; r<rA; r++){
+    k = r*cA;
+    t = v[r*dv];
+    for (c=0; c<cA; c++){
+      B[k+c] += A[k+c]*t;
+    } // c
+  } // r
+}

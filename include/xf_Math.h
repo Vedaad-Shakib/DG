@@ -1650,4 +1650,44 @@ extern int xf_Add2OrderedSet(const int entry, int *set_size, int **set,
  RETURN: error code 
  */
 
+extern int
+xf_SolvePLUT(real *A, int *P, real *b, int r, real *u, real *yin);
+
+extern void
+xf_MxM(const real *A, const real *B, int rA, int n, int cB, 
+       enum xfe_AddType AddFlag, real *C);
+    
+extern void 
+xf_MTxV_Set(const real *A, const real *u, int cA, int rA, real *v);
+
+extern void 
+xf_MTxV_Add(const real *A, const real *u, int cA, int rA, real *v);
+
+extern void 
+xf_MTxV_Sub(const real *A, const real *u, int cA, int rA, real *v);
+
+extern int
+xf_SolvePLU_MatrixR(real *LU, int *P, int r, int rB, real *B);
+
+extern int 
+xf_PLUMxV_Set(real *A, int *P, real *u, int r, real *b, real *yin);
+
+extern void
+xf_OutProd_Add(const real *u, const real *v, int n, int m, real *A);
+
+extern void
+xf_OutProd_Sub(const real *u, const real *v, int n, int m, real *A);
+
+extern int 
+xf_SortReal(real *u, int n, int *pos, enum xfe_Bool InverseFlag);
+
+extern int 
+xf_MergeSort(int nlist, real **uList, int *N, int **iList);
+
+extern int 
+xf_PLUMxV_Set(real *A, int *P, real *u, int r, real *b, real *yin);
+
+extern int 
+xf_PLUMTxV_Set(real *A, int *P, real *u, int r, real *b, real *yin);
+
 #endif // end ifndef _xf_Math_h

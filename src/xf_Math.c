@@ -26,13 +26,14 @@
 
 */
 
+#include <math.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stddef.h>
 #include "xf.h"
 #include "xf_Memory.h"
 #include "xf_MPI.h"
 #include "xf_IO.h"
-#include <math.h>
-#include <string.h>
-#include <stdlib.h>
 #include "xf_Dynamic.h"
 #include "xf_MathBlas.h"
 
@@ -71,10 +72,10 @@ xf_V_Add(const real *u, int n, enum xfe_AddType AddFlag, real *v)
   int k;
 
   switch(AddFlag){
-  case xfe_Set: for (k=0; k<n; k++) v[k]  =  u[k]; break;
-  case xfe_Neg: for (k=0; k<n; k++) v[k]  = -u[k]; break;
-  case xfe_Add: for (k=0; k<n; k++) v[k] +=  u[k]; break;
-  case xfe_Sub: for (k=0; k<n; k++) v[k] -=  u[k]; break;
+  case xfe_Set: cblas_dcopy(n, u, 1, v, 1); break;
+  case xfe_Neg: cblas_dscal(n, -1, u, 1); cblas_dcopy(n, u, 1, v, 1); break;
+  case xfe_Add: vdAdd(n, v, u, v); break;
+  case xfe_Sub: vdSub(n, v, u, v); break;
   default: xf_Error(xf_INPUT_ERROR); break;
   }
 }

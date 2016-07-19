@@ -24,7 +24,7 @@ CFL = 1
 CFLIncreaseFactor = 2
 TimeScheme = RK4
 Time = 0.0
-EndTime = 0.0005
+EndTime = 0.001
 nTimeStep = N_TIMESTEPS
 UnsteadyWriteInterval = N_TIMESTEPS
 

@@ -4,7 +4,7 @@
 #PBS -e stderr/stderr.$PBS_JOBID
 #PBS -o stdout/stdout.$PBS_JOBID
 #PBS -l nodes=N_NODES:ppn=24
-#PBS -l walltime=4:00:00
+#PBS -l walltime=0:59:00
 #PBS -V
 
 

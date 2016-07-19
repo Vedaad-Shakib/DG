@@ -107,7 +107,7 @@ OutputName = rhoRMS
 OutputType = DomainIntegral
 nOutQuantities = 4
 rho_bar rho_rms kinenergy enstrophy
-OutputSampleInterval = 0.05
+OutputSampleInterval = 0.0003
 EndOutputDefine = EndOutputDefine
 
 

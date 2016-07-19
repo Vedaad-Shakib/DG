@@ -23,7 +23,7 @@ BUILD_DIRECTORY = "/home/vshakib/LYDG/build"
 BUMP_DIRECTORY = "/home/vshakib/LYDG/demo/HIT/comp/bump"
 SCRIPT_DIRECTORY = "/home/vshakib/LYDG/demo/HIT/comp/lydg"
 
-def main(argv):
+def run_tests(argv):
     script_template=open("lydg_template.script", "r").read()
     bump_template=open("bump_template.job", "r").read()
     cmake_template=open("%s/CMakeLists_template.txt" % (CMAKE_DIRECTORY), "r").read()
@@ -43,7 +43,7 @@ def main(argv):
 
     if len(opts) < 8:
         print "all 8 parameters are required"
-        print "usage: python RunTests.py -o O2 -c icc -n 10 -p 12 -g 32 -m 1 -r 2 -t 10"
+        print "usage: python RunTests.py -o O2 -c icc -n 10 -p 12 -g 32 -m 1 -r 1 -t 10"
         sys.exit(2)
 
     print "initialized script"
@@ -56,19 +56,20 @@ def main(argv):
             print "optimization: %s" % (arg)
 
             opt_dict = {"O2": "RelWithDebInfo", "O3": "Release"}
-            if prev_settings[0] != arg:
-                rebuild = True
-                cmake_template = cmake_template.replace("OPTIMIZATION_LEVEL", opt_dict[arg])
-                
+            rebuild = (prev_settings[0] != arg)
+            
+            cmake_template = cmake_template.replace("OPTIMIZATION_LEVEL", opt_dict[str(arg)])
             script_template = script_template.replace("OPTIMIZATION", arg)
             optimization = arg
         elif opt=="-c":
             print "compiler: %s" % (arg)
             
-            if prev_settings[1] != arg:
+            if prev_settings[1] != str(arg):
                 rebuild = True
+                if arg=="gcc": arg="cc"
                 subprocess.call("export CC=$(which %s)" % (arg), shell=True)
-                subprocess.call("Export CXX=$(which %s)" % (arg), shell=True)
+                subprocess.call("export CXX=$(which %s)" % (arg), shell=True)
+                if arg=="cc": arg="gcc"
             
             script_template = script_template.replace("COMPILER", arg)
             compiler = arg
@@ -131,17 +132,16 @@ def main(argv):
 
     print "customized job file"
 
-    #if rebuild:
-        #make_project()
+    if rebuild:
+        make_project()
 
-    '''
+    
     # run jobs
     for i in range(n_runs):
         job = subprocess.check_output("qsub %s/lydg.%s.script" % (SCRIPT_DIRECTORY, tmp_id), shell=True)
         job_numbers.append(str(re.findall("^\d*", str(job))[0]))
         job_status.append(-1)
         print "running job %s" % (str(job_numbers[i]))
-    '''
 
     print "job numbers: %s" % (", ".join(job_numbers))
 
@@ -159,5 +159,5 @@ def find_start(arr, start):
     return None
 
 if __name__ == "__main__":
-   main(sys.argv[1:])
+   run_tests(sys.argv[1:])
 

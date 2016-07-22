@@ -32,8 +32,8 @@ using namespace std;
     return ::testing::AssertionSuccess();
 }
 
-::testing::AssertionResult AssertWithin(double expected,
-					double actual,
+::testing::AssertionResult AssertWithin(double actual,
+					double expected,
 					double UTOL) {
     if (fabs(expected-actual) > UTOL) {
 	return ::testing::AssertionFailure() << "expected value: " << expected
@@ -43,8 +43,8 @@ using namespace std;
     return ::testing::AssertionSuccess();
 }
 
-::testing::AssertionResult AssertIntVectorEqual(int *expected,
-						int *actual,
+::testing::AssertionResult AssertIntVectorEqual(int *actual,
+						int *expected,
                                                 int size) {
     for (int i = 0; i < size; i++){
 	if (expected[i] != actual[i]) {
@@ -57,8 +57,8 @@ using namespace std;
     return ::testing::AssertionSuccess();
 }
 
-::testing::AssertionResult AssertRealVectorWithin(double *expected,
-						  double *actual,
+::testing::AssertionResult AssertRealVectorWithin(double *actual,
+						  double *expected,
 						  int size,
 						  double UTOL) {
     for (int i = 0; i < size; i++){

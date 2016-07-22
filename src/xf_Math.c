@@ -26,6 +26,8 @@
 
 */
 
+#define xf_USEMKL 1000
+
 #include <math.h>
 #include <string.h>
 #include <stdlib.h>
@@ -73,7 +75,7 @@ xf_V_Add(const real *u, int n, enum xfe_AddType AddFlag, real *v)
 
   switch(AddFlag){
   case xfe_Set: cblas_dcopy(n, u, 1, v, 1); break;
-  case xfe_Neg: cblas_dscal(n, -1, u, 1); cblas_dcopy(n, u, 1, v, 1); break;
+  case xfe_Neg: for (k = 0; k < n; k++) v[k]=-u[k]; break;
   case xfe_Add: vdAdd(n, v, u, v); break;
   case xfe_Sub: vdSub(n, v, u, v); break;
   default: xf_Error(xf_INPUT_ERROR); break;
@@ -88,10 +90,10 @@ xf_cV_Add(const real *u, real c, int n, enum xfe_AddType AddFlag, real *v)
   int k;
 
   switch(AddFlag){
-  case xfe_Set: for (k=0; k<n; k++) v[k]  =  c*u[k]; break;
-  case xfe_Neg: for (k=0; k<n; k++) v[k]  = -c*u[k]; break;
-  case xfe_Add: for (k=0; k<n; k++) v[k] +=  c*u[k]; break;
-  case xfe_Sub: for (k=0; k<n; k++) v[k] -=  c*u[k]; break;
+  case xfe_Set: for (k = 0; k < n; k++) v[k]=c*u[k]; break;
+  case xfe_Neg: for (k = 0; k < n; k++) v[k]=-c*u[k]; break;
+  case xfe_Add: cblas_daxpy(n, c, u, 1, v, 1); break;
+  case xfe_Sub: cblas_daxpy(n, -c, u, 1, v, 1); break;
   default: xf_Error(xf_INPUT_ERROR); break;
   }
 }
@@ -133,18 +135,21 @@ xf_Distance(real *x0, real *x1, int dim)
 void 
 xf_MxV_Add(const real *A, const real *u, int rA, int cA, real *v)
 {
-    cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, 1.e0, A, cA, u, 1, 1.e0, v, 1);
-    /*int k, ik, j;
-  real t;
+    if (rA*cA > xf_USEMKL) 
+	cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, 1.e0, A, cA, u, 1, 1.e0, v, 1);
+    else {
+	int k, ik, j;
+	real t;
 
-  ik = 0;
-  for (k=0; k<rA; k++){
-    t = 0;
-    for (j=0; j<cA; j++)
-      t += A[ik+j]*u[j];
-    v[k] += t;
-    ik += cA;
-    }*/
+	ik = 0;
+	for (k=0; k<rA; k++){
+	    t = 0;
+	    for (j=0; j<cA; j++)
+		t += A[ik+j]*u[j];
+	    v[k] += t;
+	    ik += cA;
+	}
+    }
 }
 
 
@@ -153,20 +158,21 @@ xf_MxV_Add(const real *A, const real *u, int rA, int cA, real *v)
 void 
 xf_MxV_Sub(const real *A, const real *u, int rA, int cA, real *v)
 {
-    cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, -1.e0, A, cA, u, 1, 1.e0, v, 1);
-    /*
-  int k, ik, j;
-  real t;
-
-  ik = 0;
-  for (k=0; k<rA; k++){
-    t = 0;
-    for (j=0; j<cA; j++)
-      t += A[ik+j]*u[j];
-    v[k] -= t;
-    ik += cA;
-  }
-    */
+    if (rA*cA > xf_USEMKL)
+	cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, -1.e0, A, cA, u, 1, 1.e0, v, 1);
+    else {
+	int k, ik, j;
+	real t;
+	
+	ik = 0;
+	for (k=0; k<rA; k++){
+	    t = 0;
+	    for (j=0; j<cA; j++)
+		t += A[ik+j]*u[j];
+	    v[k] -= t;
+	    ik += cA;
+	}
+    }
 }
 
 
@@ -175,18 +181,21 @@ xf_MxV_Sub(const real *A, const real *u, int rA, int cA, real *v)
 void 
 xf_MxV_Set(const real *A, const real *u, int rA, int cA, real *v)
 {
-    cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, 1.e0, A, cA, u, 1, 0, v, 1);
-    /*int k, ik, j;
-  real t;
-
-  ik = 0;
-  for (k=0; k<rA; k++){
-    t = 0;
-    for (j=0; j<cA; j++)
-      t += A[ik+j]*u[j];
-    v[k] = t;
-    ik += cA;
-    }*/
+    if (rA*cA > xf_USEMKL)
+	cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, 1.e0, A, cA, u, 1, 0, v, 1);
+    else {
+	int k, ik, j;
+	real t;
+	
+	ik = 0;
+	for (k=0; k<rA; k++){
+	    t = 0;
+	    for (j=0; j<cA; j++)
+		t += A[ik+j]*u[j];
+	    v[k] = t;
+	    ik += cA;
+	}
+    }
 }
 
 
@@ -195,18 +204,21 @@ xf_MxV_Set(const real *A, const real *u, int rA, int cA, real *v)
 void 
 xf_MxV_Neg(const real *A, const real *u, int rA, int cA, real *v)
 {
-    cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, -1.e0, A, cA, u, 1, 0, v, 1);
-    /*int k, ik, j;
-  real t;
-
-  ik = 0;
-  for (k=0; k<rA; k++){
-    t = 0;
-    for (j=0; j<cA; j++)
-      t -= A[ik+j]*u[j];
-    v[k] = t;
-    ik += cA;
-    }*/
+    if (rA*cA > xf_USEMKL)
+	cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, -1.e0, A, cA, u, 1, 0, v, 1);
+    else {
+	int k, ik, j;
+	real t;
+	
+	ik = 0;
+	for (k=0; k<rA; k++){
+	    t = 0;
+	    for (j=0; j<cA; j++)
+		t -= A[ik+j]*u[j];
+	    v[k] = t;
+	    ik += cA;
+	}
+    }
 }
 
 
@@ -231,34 +243,41 @@ xf_MxV(const real *A, const real *u, int rA, int cA,
 void 
 xf_cMxV_Add(real c, real *A, real *u, int rA, int cA, real *v)
 {
-  int k, ik, j;
-  real t;
-
-  ik = 0;
-  for (k=0; k<rA; k++){
-    t = 0;
-    for (j=0; j<cA; j++)
-      t += A[ik+j]*u[j];
-    v[k] += c*t;
-    ik += cA;
-  }
+    if (rA*cA > xf_USEMKL)
+	cblas_dgemv(CblasRowMajor, CblasNoTrans, rA, cA, c, A, cA, u, 1, 1.e0, v, 1);
+    else {
+	int k, ik, j;
+	real t;
+	
+	ik = 0;
+	for (k=0; k<rA; k++){
+	    t = 0;
+	    for (j=0; j<cA; j++)
+		t += A[ik+j]*u[j];
+	    v[k] += c*t;
+	    ik += cA;
+	}
+    }
 }
-
 
 /******************************************************************/
 //   FUNCTION Definition: xf_MTxV_Set
 void 
 xf_MTxV_Set(const real *A, const real *u, int cA, int rA, real *v)
 {
-  int k, j;
-  real t;
-
-  for (k=0; k<cA; k++){
-    t = 0;
-    for (j=0; j<rA; j++)
-      t += A[j*cA+k]*u[j];
-    v[k] = t;
-  }
+    if (rA*cA > xf_USEMKL)
+	cblas_dgemv(CblasRowMajor, CblasTrans, rA, cA, 1.e0, A, cA, u, 1, 0, v, 1);
+    else {
+	int k, j;
+	real t;
+	
+	for (k=0; k<cA; k++){
+	    t = 0;
+	    for (j=0; j<rA; j++)
+		t += A[j*cA+k]*u[j];
+	    v[k] = t;
+	}
+    }
 }
 
 /******************************************************************/
@@ -266,15 +285,19 @@ xf_MTxV_Set(const real *A, const real *u, int cA, int rA, real *v)
 void 
 xf_MTxV_Add(const real *A, const real *u, int cA, int rA, real *v)
 {
-  int k, j;
-  real t;
+    if (rA*cA > xf_USEMKL)
+	cblas_dgemv(CblasRowMajor, CblasTrans, rA, cA, 1.e0, A, cA, u, 1, 1.e0, v, 1);
+    else {
+	int k, j;
+	real t;
 
-  for (k=0; k<cA; k++){
-    t = 0;
-    for (j=0; j<rA; j++)
-      t += A[j*cA+k]*u[j];
-    v[k] += t;
-  }
+	for (k=0; k<cA; k++){
+	    t = 0;
+	    for (j=0; j<rA; j++)
+		t += A[j*cA+k]*u[j];
+	    v[k] += t;
+	}
+    }
 }
 
 
@@ -283,15 +306,19 @@ xf_MTxV_Add(const real *A, const real *u, int cA, int rA, real *v)
 void 
 xf_MTxV_Sub(const real *A, const real *u, int cA, int rA, real *v)
 {
-  int k, j;
-  real t;
+    if (rA*cA > xf_USEMKL)
+	cblas_dgemv(CblasRowMajor, CblasTrans, rA, cA, -1.e0, A, cA, u, 1, 1.e0, v, 1);
+    else {
+	int k, j;
+	real t;
 
-  for (k=0; k<cA; k++){
-    t = 0;
-    for (j=0; j<rA; j++)
-      t += A[j*cA+k]*u[j];
-    v[k] -= t;
-  }
+	for (k=0; k<cA; k++){
+	    t = 0;
+	    for (j=0; j<rA; j++)
+		t += A[j*cA+k]*u[j];
+	    v[k] -= t;
+	}
+    }
 }
 
 
@@ -398,42 +425,45 @@ xf_nMxM_Add(int n, const real *A, const real *B, int rA, int cA,
 void
 xf_cMxM_Add(real c, real *A, real *B, int rA, int n, int cB, real *C)
 {
-  
-  int k, i, col;
-  int ik2, ik3, ik;
-  real temp, t0, t1, t2, t3;
-
-  for(k=0; k<rA; k++){
-    ik3 = cB*k;
-    ik2 = n*k;
-    i = 0;
-    while ((i+3)<cB){
-      t0 = 0; t1 = 0; t2 = 0; t3 = 0;
-      
-      for (col=0; col<n; col++){
-        temp = A[ik2+col];
-        ik = cB*col;
-	ik += i;
-        t0 += temp*B[ik+0];
-        t1 += temp*B[ik+1];
-        t2 += temp*B[ik+2];
-        t3 += temp*B[ik+3];
-      }
-      C[ik3+i+0] += c*t0;
-      C[ik3+i+1] += c*t1;
-      C[ik3+i+2] += c*t2;
-      C[ik3+i+3] += c*t3;
-      i += 4;
+    if (rA*cB > xf_USEMKL)
+	cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, rA, cB, n, c, A, n, B, cB, 1.e0, C, cB);
+    else {
+	int k, i, col;
+	int ik2, ik3, ik;
+	real temp, t0, t1, t2, t3;
+	
+	for(k=0; k<rA; k++){
+	    ik3 = cB*k;
+	    ik2 = n*k;
+	    i = 0;
+	    while ((i+3)<cB){
+		t0 = 0; t1 = 0; t2 = 0; t3 = 0;
+		
+		for (col=0; col<n; col++){
+		    temp = A[ik2+col];
+		    ik = cB*col;
+		    ik += i;
+		    t0 += temp*B[ik+0];
+		    t1 += temp*B[ik+1];
+		    t2 += temp*B[ik+2];
+		    t3 += temp*B[ik+3];
+		}
+		C[ik3+i+0] += c*t0;
+		C[ik3+i+1] += c*t1;
+		C[ik3+i+2] += c*t2;
+		C[ik3+i+3] += c*t3;
+		i += 4;
+	    }
+	    while (i<cB){
+		t0 = 0;
+		for (col=0; col<n; col++)
+		    t0 += A[ik2+col]*B[col*cB+i];
+		
+		C[ik3+i] += c*t0;
+		i += 1;
+	    }
+	}
     }
-    while (i<cB){
-      t0 = 0;
-      for (col=0; col<n; col++)
-	t0 += A[ik2+col]*B[col*cB+i];
-      
-      C[ik3+i] += c*t0;
-      i += 1;
-    }
-  }
 }
 
 
@@ -503,20 +533,24 @@ xf_MTxwM_Add(const real *A, const real *w, const real *B, int cA, int n, int cB,
 void
 xf_MxMT_Set(const real *A, const real *B, int rA, int n, int rB, real *C)
 {
-  int k, i, col, kn, in;
-  real t0;
-
-  for(k=0; k<rA; k++){
-    kn = k*n;
-    for (i=0; i<rB; i++){
-      in = i*n;
-      t0 = 0.;
-      for (col=0; col<n; col++){
-	t0 += A[kn+col]*B[in+col];
-      }
-      C[rB*k+i] = t0;
+    if (rA*rB > xf_USEMKL)
+	cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasTrans, rA, rB, n, 1.e0, A, n, B, n, 1.e0, C, rB);
+    else {
+	int k, i, col, kn, in;
+	real t0;
+	
+	for(k=0; k<rA; k++){
+	    kn = k*n;
+	    for (i=0; i<rB; i++){
+		in = i*n;
+		t0 = 0.;
+		for (col=0; col<n; col++){
+		    t0 += A[kn+col]*B[in+col];
+		}
+		C[rB*k+i] = t0;
+	    }
+	}
     }
-  }
 }
 
 
@@ -526,7 +560,7 @@ xf_MxMT_Set(const real *A, const real *B, int rA, int n, int rB, real *C)
 void
 xf_ColMult(real *A, const real *v, int rA, int cA, int dv)
 {
-  int r, c, k;
+   int r, c, k;
   real t;
 
   for (r=0; r<rA; r++){
@@ -846,11 +880,14 @@ xf_dMxMT(const real *D, real f, int d, int n, int offset, real *A)
 void
 xf_DotProduct(const real *a, const real *b, int n, real *dp)
 {
-  int i;
-  real t;
-
-  for (i=0, t=0.; i<n; i++) t += a[i]*b[i];
-  (*dp) = t;
+    (*dp) = cblas_ddot(n, a, 1, b, 1);
+    /*
+      int i;
+      real t;
+      
+      for (i=0, t=0.; i<n; i++) t += a[i]*b[i];
+      (*dp) = t;
+    */
 }
 
 

@@ -17,7 +17,7 @@ extern "C" {
 }
 
 using namespace std;
-/*
+
 TEST(xf_V_Add, All)
 {
     int n = 3;
@@ -41,7 +41,52 @@ TEST(xf_V_Add, All)
     xf_V_Add(u, n, xfe_Neg, v);
     EXPECT_TRUE(AssertRealVectorWithin(v, v3, 3, UTOL0));
 }
-*/
+
+TEST(xf_cV_Add, All)
+{
+    int n = 3;
+    double c0 = 0.4;
+    double c1 = 0.9;
+    double c2 = 1.5;
+    double c3 = 2.9;
+    
+    real u[3] = {1, 2, 3};
+    real v[3] = {4, 5, 6};
+    real v0[3] = {4.4, 5.8, 7.2};
+    real v1[3] = {3.5, 4.0, 4.5};
+    real v2[3] = {1.5, 3.0, 4.5};
+    real v3[3] = {-2.9, -5.8, -8.7};
+
+    cout << u[0] << " " << u[1] << " " << u[2] << endl;
+    xf_cV_Add(u, c0, n, xfe_Add, v);
+    EXPECT_TRUE(AssertRealVectorWithin(v, v0, 3, UTOL1));
+
+    cout << u[0] << " " << u[1] << " " << u[2] << endl;
+    xf_cV_Add(u, c1, n, xfe_Sub, v);
+    EXPECT_TRUE(AssertRealVectorWithin(v, v1, 3, UTOL1));
+
+    cout << u[0] << " " << u[1] << " " << u[2] << endl;
+    xf_cV_Add(u, c2, n, xfe_Set, v);
+    EXPECT_TRUE(AssertRealVectorWithin(v, v2, 3, UTOL1));
+
+    cout << u[0] << " " << u[1] << " " << u[2] << endl;
+    xf_cV_Add(u, c3, n, xfe_Neg, v);
+    ASSERT_TRUE(AssertRealVectorWithin(v, v3, 3, UTOL1));
+}
+
+TEST(xf_cV_Add, Neg)
+{
+    int n = 3;
+    double c = 2.9;
+    
+    real u[3] = {1, 2, 3};
+    real v[3] = {10, 20, 30};
+    real v0[3] = {-2.9, -5.8, -8.7};
+
+    xf_cV_Add(u, c, n, xfe_Neg, v);
+    ASSERT_TRUE(AssertRealVectorWithin(v, v0, 3, UTOL0));
+}
+
 TEST(xf_PowInt, All)
 {
   real y;
@@ -97,6 +142,7 @@ TEST(xf_MTxV, All)
   real v[3] = {-1, 0, 2};
   real v0[3] = {3, 10, 18};
   real v1[3] = {-1, 0, 2};
+  real v2[3] = {4, 10, 16};
 
   xf_MTxV_Add(A, u, 3, 2, v);
   EXPECT_TRUE(AssertRealVectorWithin(v, v0, 3, UTOL0));
@@ -104,7 +150,8 @@ TEST(xf_MTxV, All)
   xf_MTxV_Sub(A, u, 3, 2, v);
   EXPECT_TRUE(AssertRealVectorWithin(v, v1, 3, UTOL0));
 
-    
+  xf_MTxV_Set(A, u, 3, 2, v);
+  EXPECT_TRUE(AssertRealVectorWithin(v, v2, 3, UTOL0));
 }
 
 TEST(xf_MxM, All)
@@ -170,8 +217,6 @@ TEST(xf_cMxM_Add, All)
 
   xf_cMxM_Add(-0.5, A, B, 2, 3, 2, C);
   EXPECT_TRUE(AssertRealVectorWithin(C, C0, 4, UTOL0));
-
-    
 }
 
 
@@ -233,8 +278,6 @@ TEST(xf_MxMT_Set, All)
     
 }
 
-
-
 TEST(xf_ColMult, All)
 {
   real A[6] = {1, 2, 3, 4, 5, 6};
@@ -243,8 +286,6 @@ TEST(xf_ColMult, All)
 
   xf_ColMult(A, v, 3, 2, 2);
   EXPECT_TRUE(AssertRealVectorWithin(A, A_true, 6, UTOL0));
-
-    
 }
 
 TEST(xf_ColMult_Set, All)
